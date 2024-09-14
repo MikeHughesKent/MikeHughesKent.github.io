@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Section 1 - Nuclear Properties</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Section 1 - Nuclear Properties</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>This section covers some of the fundamental properties of atomic
+nuclei. At this stage we will simply describe some simple properties and
+give definitions without any real attempt to explain <em>why</em> things
+are this way. In later sections we will try to develop models of the
+nucleus that allows us, to a greater or lesser extent, to predict some
+of these properties.</em></p>
+<h1 id="nuclear-scales">Nuclear Scales</h1>
+<p>An atom consists of a positively charged nucleus surrounded by a
+cloud of negatively charged electrons. Atoms are typically <span
+class="math inline">\(10^{-10}\)</span> m in diameter, a distance also
+known as an Angstrom, Å. You have studied atomic physics in detail
+previously and should review the basic properties if you do not remember
+them. In particular, the concept of electronic energy levels and quantum
+numbers will translate directly when we study the shell model of
+nuclei.</p>
+<p>The nucleus contains <strong>protons</strong> and
+<strong>neutrons</strong>, which are collectively known as
+<strong>nucleons</strong>. A nucleus is typically <span
+class="math inline">\(10^{-14}\)</span> m in diameter, four orders of
+magnitude smaller than the atom. We will therefore often work in lengths
+scales of <strong>femtometres</strong> (fm), <span
+class="math inline">\(10^{-15}\)</span> m. Femtometres are also
+sometimes referred to as Fermis (after Enrico Fermi) which conveniently
+has the same abbreviation of fm. Nuclear diameters are usually in the
+range of 1 to 7 fm (we will come back to what exactly we <em>mean</em>
+by the diameter of a nucleus later). Since nucleons are not fundamental
+particles they have a finite diameter of around 1.7 fm. (The exact value
+is still under investigation<a href="#fn1" class="footnote-ref"
+id="fnref1" role="doc-noteref"><sup>1</sup></a>).</p>
+<h2 id="nuclear-charge">Nuclear charge</h2>
+<p>Nucleons are each made of three quarks. Protons have a charge of +1e,
+where <span class="math inline">\(e\)</span> is the fundamental charge,
+<span class="math inline">\(1.6\times10^{-19}\)</span> C. Neutrons are
+uncharged. The nucleus has a positive charge of <span
+class="math inline">\(Ze\)</span> where <span
+class="math inline">\(Z\)</span> is the number of protons. An atom with
+a full set of <span class="math inline">\(Z\)</span> electrons of charge
+<span class="math inline">\(-e\)</span> is therefore exactly
+neutral.</p>
+<h2 id="energy-units">Energy units</h2>
+<p>For energy we will work in units of <strong>electronvolts</strong>
+(eV). An electronvolt is the energy gained by an electron as it is
+accelerated through a potential difference of 1 V. 1 eV = <span
+class="math inline">\(1.6 \times 10^{-19}\)</span> J. Energies dealt
+with in the nucleus are on the order of MeV (i.e. <span
+class="math inline">\(10^6\)</span> eV) (often 10s of MeV). Compare this
+to atomic physics, where we are dealing with energies of merely 10s of
+eV. This is why nuclear reactions, which involve the nucleus, are a lot
+more powerful than chemical reactions, which involve electrons in
+atoms.</p>
+<h1 id="nuclides">Nuclides</h1>
+<p>A nuclide is a specific combination of numbers of protons and
+neutrons. For any nuclide we write <span class="math inline">\(\rm
+^A_ZX_N\)</span> where</p>
+<ul>
+<li><p>X is the <strong>chemical symbol</strong> for the corresponding
+element</p></li>
+<li><p>Z is the <strong>atomic number</strong></p></li>
+<li><p>N is the <strong>number of neutrons</strong></p></li>
+<li><p>A = Z + N is the <strong>atomic mass number</strong></p></li>
+</ul>
+<p>However, since the chemical symbol allows <span
+class="math inline">\(Z\)</span> to be looked up, and <span
+class="math inline">\(N = A -Z\)</span>, both <span
+class="math inline">\(Z\)</span> and <span
+class="math inline">\(N\)</span> are redundant information. So we will
+often instead see simpler notations such as <span
+class="math inline">\(^{56}\)</span>Fe or Iron-56. Iron has an atomic
+number, <span class="math inline">\(Z\)</span>, of 26, and so this
+nucleus has <span class="math inline">\(N = 56 - 26 =
+30\)</span> neutrons.</p>
+<p>It can still be sometimes useful to explicitly provide <span
+class="math inline">\(Z\)</span> and <span
+class="math inline">\(N\)</span> depending on the context, an example
+being when writing nuclear reactions where it makes it easier to check
+that everything is conserved.</p>
+<p>We then have certain names for variations:</p>
+<ul>
+<li><p><strong>Isotopes:</strong> Nuclides with identical Z and
+different N</p></li>
+<li><p><strong>Isobars:</strong> Nuclides with identical A.</p></li>
+<li><p><strong>Isotones:</strong> Nuclides with identical N</p></li>
+<li><p><strong>Isomers:</strong> Long-lived excited states of
+nuclei.</p></li>
+</ul>
+<p>While there are only 118 different elements (different values of Z)
+there are over 3000 nuclides (with different values of N and/or Z) that
+have been experimentally observed, with around 330 occurring naturally.
+Of these around 250 are stable, in the sense that they do not decay over
+timescales comparable to the age of the universe. The nuclides found
+naturally correspond to only around 90 elements. That is to say that the
+list of stable nuclides includes isotopes of many elements (same number
+of protons but different number of neutrons). Stable nuclei typically
+have <span class="math inline">\(N\)</span> slightly larger than <span
+class="math inline">\(Z\)</span>, i.e. slightly more neutrons that
+protons, as shown in Figure <a href="#fig:nuclei"
+data-reference-type="ref" data-reference="fig:nuclei">1</a>.</p>
+<figure id="fig:nuclei">
+<img src="figs/nuclei.png" style="width:2.5in" />
+<figcaption>Plot of nuclides, showing N against Z. The diagonal black
+line is a plot of <span class="math inline">\(Z=N\)</span>, showing that
+the stable nuclei (in black) generally have <span
+class="math inline">\(N &gt; Z\)</span> for all but very small <span
+class="math inline">\(Z\)</span>. The decay modes of the non-stable
+nuclei are also shown, these are discussed later in the course. License:
+CC BY-SA 3.0.</figcaption>
+</figure>
+<p>Most nuclides are <strong>spherical in shape</strong>, but some are
+deformed. We will discuss the reasons for this later on.</p>
+<h1 id="masses-of-nuclei">Masses of nuclei</h1>
+<p>Nuclear masses are normally given in terms of the <strong>atomic mass
+unit</strong>, <span class="math inline">\(u = 1.661 \times
+10^{-27}\)</span> kg, which is 1/12th the mass of a neutral carbon atom.
+The mass of a proton is <span class="math inline">\(m_p =
+1.00727u\)</span>, and a neutron is <span class="math inline">\(m_n =
+1.0087u\)</span>. We also sometimes give masses in units of <span
+class="math inline">\(\mathrm{MeV/c^2}\)</span>, using the mass energy
+relationship <span class="math inline">\(E = mc^2\)</span> (Consult your
+Stage 1 special relativity notes for more on this). We have then that
+<span class="math inline">\(1u = 931.5~\mathrm{MeV/c^2}\)</span>, so
+that nuclei have masses of a few <span
+class="math inline">\(\mathrm{GeV/c^2}\)</span>. Sometimes the <span
+class="math inline">\(\rm c^2\)</span> is omitted for convenience and we
+refer to masses in units of <span
+class="math inline">\(\mathrm{MeV}\)</span>, you will see both forms
+during this module.</p>
+<p>The masses of nuclei are slightly less than the sum of the masses of
+their constituent nucleons, typically by about 0.08<span
+class="math inline">\(u\)</span> per nucleon (i.e. a nucleus with 100
+nucleons would be about <span class="math inline">\(8u\)</span> short.)
+This is known as the <strong>mass deficit</strong> or <strong>mass
+defect</strong>. The existence of the mass deficit is obvious for
+Carbon-12 which has a mass of exactly <span
+class="math inline">\(12u\)</span>; since protons and neutrons both
+haves masses of greater than <span class="math inline">\(u\)</span>,
+their total mass must be greater than <span
+class="math inline">\(12u\)</span> even before we count the electrons.
+The mass deficit is associated with the binding energy of the nucleus
+which is discussed in the next section.</p>
+<p>The mass of a nucleus can be measured with a <strong>mass
+spectrometer</strong>, where essentially a magnetic field bends a stream
+of ionised nuclei into an arc with a radius of curvature depending on
+the mass of the nuclei. Refer back to the PHYS3220 notes (provided on
+the PHYS6660 Moodle page) for details on the mass spectrometer, or see
+<em>Krane Section 3.2</em>. A mass spectrometer can also be used to find
+the <strong>relative abundance</strong> of different isotopes within a
+sample, since nuclides of each isotope will have a different mass and
+hence strike the detector of the mass spectrometer at a different
+point.</p>
+<h1 id="discovery-of-the-nucleus-revision">Discovery of the nucleus
+(Revision)</h1>
+<p>It was understood since the discovery of the electron in 1897 that
+atoms consist of positive and negatively charged elements. After he
+discovered the electron, J.J. Thompson proposed in 1904 the <strong>Plum
+Pudding Model</strong>, in which the negatively charged electrons are
+imagined to be distributed in some continuous positively charged medium.
+(If you’re wondering why this is a ‘plum pudding’, in those days people
+called raisins plums, so it is really a raisin pudding!) This model was
+not completely accepted and raised some questions over whether charges
+could penetrate each other.</p>
+<p>In 1909, Hands Geiger and Ernest Marsden, under the supervision of
+Ernest Rutherford, were conducting experiments in Manchester. They were
+firing alpha particles at pieces of thin gold foil. You will study alpha
+emission later, but for now you should know that alpha particles are
+Helium nuclei, 2 protons and 2 neutrons, although at the time all was
+known was that they were small, positively charged pieces of matter.
+They expected that the alpha particles would be slightly deflected by
+the atoms making up the gold foil.</p>
+<p>We can estimate the deflection we might expect using classical
+physics. If we have a uniform sphere of positive charge, with negatively
+charged electrons dotted within it, then near the surface of the sphere,
+unless we happen to be very close to an electron, the net charge is
+going to be positive. So the positively charged alpha particle will be
+deflected by a Coulomb force. Recall that the magnitude of the Coulomb
+force, <span class="math inline">\(F\)</span>, between two charges is
+<span class="math display">\[F = \frac{k q_1 q_2}{r^2},\]</span></p>
+<p>where <span class="math inline">\(k\)</span> is Coulomb’s constant,
+<span class="math inline">\(q_1\)</span> and <span
+class="math inline">\(q_2\)</span> are the two charges and <span
+class="math inline">\(r\)</span> is their separation. Referring to
+Figure 1, the change in the y component of momentum due to an impulse
+from the Coulomb force is given by</p>
+<p><span class="math display">\[\delta p_y = F \delta t,\]</span></p>
+<p>where <span class="math inline">\(\delta t\)</span> is the
+interaction time, and a change in velocity of</p>
+<p><span class="math display">\[\delta v_y = \frac{F \delta
+t}{m_\alpha},\]</span></p>
+<p>where <span class="math inline">\(m_\alpha\)</span> is the mass of
+the alpha particle.</p>
+<figure id="fig:rutherford">
+<img src="figs/scattering.png" style="width:2.5in" />
+<figcaption>Rutherford scattering in the Plum Pudding Model, showing
+deflection of an alpha particle due to Coulomb repulsion.</figcaption>
+</figure>
+<p>Let’s assume the force is significant while the alpha particle is
+close to the atom, as shown in the diagram, i.e. in a region of length
+<span class="math inline">\(2r\)</span> where <span
+class="math inline">\(r\)</span> is the radius of atom. If the alpha
+particle is initially travelling at a velocity of <span
+class="math inline">\(v_x\)</span>, then the interaction time will be
+<span class="math inline">\(2r/v_x\)</span>. So that:</p>
+<p><span class="math display">\[\delta v_y = \frac{k q_1q_2}{m_\alpha
+r^2} \frac{2r}{v_x} = \frac{2k q_1 q_2}{m_\alpha rv_x^2}\]</span>.</p>
+<p>Putting in the numbers give an angle <span
+class="math inline">\(\theta\)</span> of less than <span
+class="math inline">\(0.02^o\)</span>. We have made a lot of assumptions
+and approximations here, but we can at least say that we expect a very
+small deflection.</p>
+<p>What Geiger and Muller actually found was that some alpha particles
+were indeed deflected by a small angle while others seemed to pass
+through without any deflection at all. But some were scattered at huge
+angles, some even heading back the way they had come. These particles
+had clearly experienced a huge electrostatic force of repulsion. The
+only way that was possible would be if all of the positive charge was
+concentrated in a small area. If the alpha particle travelled through an
+area that was empty space, it would barely be deflected. But if it
+happened to go near or hit this dense region of positive charge, it
+would experience a large force of repulsion and be scattered at a large
+angle. This was the discovery of the nucleus, and the idea that the
+electrons orbited this positively charged centre.</p>
+<p>Rutherford, Geiger and Muller refined this model over a series of
+further experiments, allowing them to estimate the size and charge of
+the nucleus. The model did have a huge problem (essentially that in
+classical physics, the electrons, as accelerating charges, would quickly
+radiate all their energy and spiral into the nucleus), which would later
+be solved by the quantum mechanical model of the atom.</p>
+<h1 id="nuclear-radius">Nuclear radius</h1>
+<p>Measuring the nuclear radius is not simple, particularly as there is
+no unambiguous boundary between being inside and outside the
+nucleus.</p>
+<p>Let’s suppose we fire an alpha particle straight at a nucleus. It
+starts with some kinetic energy, <span
+class="math inline">\(E_K\)</span>. It will be slowed by Coulomb
+repulsion as it approaches the nucleus, eventually slowing to a complete
+stop before it begins to accelerate back away. The electrostatic
+potential energy a distance <span class="math inline">\(d\)</span> from
+the nucleus will be <span class="math display">\[U = \frac{1}{4 \pi
+\epsilon_0} \frac{(2e)(Ze)}{d},\]</span></p>
+<p>where <span class="math inline">\(Z\)</span> is the atomic number of
+the nucleus and <span class="math inline">\(e\)</span> is the
+fundamental charge. At the turn-around point all of the kinetic energy
+has been transformed into electrostatic energy, so we have <span
+class="math inline">\(U = E_K\)</span>. From the known <span
+class="math inline">\(E_K\)</span> we can therefore calculate the
+distance of closest approach, <span class="math inline">\(r\)</span>. In
+Rutherford’s experiment the alpha particles had kinetic energy of around
+<span class="math inline">\(E_K = 7.7\)</span> MeV, giving <span
+class="math inline">\(r = 30\)</span> fm.</p>
+<p>However, this is only an upper limit on the radius. If we started
+with a more energetic alpha particle we would get a different value.</p>
+<p>An alternative method is electron scattering. Recall the phenomenon
+of diffraction, whereby a wave is diffracted depending on the size of an
+aperture. If we fire high energy electrons at a nucleus, then the de
+Broglie wavelength of the electrons can be made comparable to the size
+of the nucleus. So when we detect the scattered electrons we observe
+diffraction rings. The radius of the first minimum is then related to
+the size of the nucleus.</p>
+<p>For example, let’s suppose we fire some electrons with a de Broglie
+wavelength of <span class="math inline">\(3 \times 10^{-15}\)</span> m
+at a nucleus. (The de Broglie wavelength is <span
+class="math inline">\(\lambda = h/p\)</span>, and for very fast
+electrons where the kinetic energy dominates over the rest energy, <span
+class="math inline">\(p \approx E_K/c\)</span>). Let’s imagine we see a
+first order minimum at an angle of <span
+class="math inline">\(44^o\)</span>.</p>
+<p>The angle <span class="math inline">\(\theta\)</span> of the first
+minimum of the diffraction pattern from a circular apertures of diameter
+<span class="math inline">\(d\)</span> is given by: <span
+class="math display">\[\sin \theta = 1.22\frac{\lambda}{d}\]</span></p>
+<p>Putting in the numbers for <span class="math inline">\(\theta =
+44^o\)</span> gives <span class="math inline">\(d= 4.3\)</span> fm.
+Despite the approximations involved (e.g. treating a spherical object of
+unknown charge distribution as a uniform disc of charge) this turns out
+to be in agreement with other ways of estimating the size of a
+nucleus.</p>
+<p>In general, the radii of nuclei are found to approximately follow the
+rule that: <span class="math display">\[r = r_0A^{1/3}\]</span> where
+<span class="math inline">\(r_0 = 1.25\)</span> fm. (Slight variations
+on this value will be found in different texts). <span
+class="math inline">\(r_0\)</span> does not have any particularly
+physical meaning; it is a fitted parameter. Note that since the volume
+of the nucleus is simply <span class="math inline">\(V \propto
+r^3\)</span>, this means that the volume is roughly proportional to the
+number of nucleons, <span class="math inline">\(A\)</span>, suggesting
+that the packing of the nucleons (and hence the nuclear density)
+<strong>doesn’t change much with <span
+class="math inline">\(A\)</span></strong>.</p>
+<h1 id="nuclear-charge-and-mass-distribution-and-skin-thickness">Nuclear
+charge and mass distribution, and skin thickness</h1>
+<p>We can now ask how exactly the charge of the nucleus is distributed
+within its volume. Experimentally this can be determined using more
+elaborate analysis of the scattering type experiments we have already
+discussed (see <em>Krane Section 3.1</em> for details). It is found that
+the charge density is roughly constant up to a certain point, after
+which it decays down to zero, as shown in Figure <a href="#fig:mskin"
+data-reference-type="ref" data-reference="fig:mskin">3</a>. The distance
+over which the density drops from 90% to 10% of the value at the centre
+of the nucleus is called the <strong>skin thickness</strong>, or <span
+class="math inline">\(t\)</span>. Interestingly, this turns out to be
+largely independent of the atomic mass, with <span
+class="math inline">\(t \approx 2.3\)</span> fm.</p>
+<figure id="fig:mskin">
+<img src="figs/thickness.png" style="width:2.5in" />
+<figcaption>Skin thickness is the radial range over which the nuclear
+charge density drops between 0.9 and 0.1 of the maximum. </figcaption>
+</figure>
+<p>Note that, since electron scattering experiment involve only the
+Coulomb force, these are only telling us about the distribution of the
+charged nucleons, the protons. It could be, for example, that the
+neutrons are arranged entirely differently (for example surrounding the
+protons), giving a much large radius of nuclear matter (as opposed to
+radius of nuclear charge).</p>
+<p>If we were to fire helium nuclei (alpha particles) at a heavier
+nucleus, as in Rutherford’s experiments, at sufficiently high energies
+we would begin to see effects due to the nuclear force which is felt by
+neutrons as well as protons (more on this in the next section). Detailed
+experiments (beyond the scope of this course) show that the radius of
+nuclear matter is very similar to the radius of nuclear charge,
+suggesting that the protons and neutrons are intermingled. We will
+therefore not really need to distinguish between these two definitions
+of the nuclear radius.</p>
+<h1 id="review-of-radioactive-decay-and-half-life-revision">Review of
+Radioactive Decay and Half Life (Revision)</h1>
+<p>Most nuclides are unstable and decay over time periods ranging from
+fractions of a second to millions of years. The three most common types
+of decay (alpha, beta and gamma) are studied is more detail in Section
+5, but briefly:</p>
+<ul>
+<li><p>Alpha Decay is the emission of a helium nucleus (2p2n) and occurs
+mostly in heavier nuclei</p></li>
+<li><p>Beta Decay is the emission of an electron or positron</p></li>
+<li><p>Gamma Decay is the emission of a photon, and usually occurs
+alongside other kinds of decay</p></li>
+</ul>
+<p>Regardless of the type of decay, the occurrence is stochastic - we
+cannot determine exactly when a decay will occur, only define the
+probability of it occurring within a certain time period. As each
+individual nucleus has its own independent probability of decaying, the
+decay rate of a sample depends on the number of non-decayed nuclei,
+<span class="math inline">\(N\)</span> present, and so:</p>
+<p><span class="math display">\[- \frac{dN}{dt} = \lambda N\]</span></p>
+<p>where we have defined the constant of proportionality, <span
+class="math inline">\(\lambda\)</span>, known as the decay constant. The
+negative shows us that the number of non-decayed nuclei decreases with
+time.</p>
+<p>The solution to this equation, obtained simply by separation of
+variables, is: <span class="math display">\[N(t) = N_0 \exp{(-\lambda
+t)}\]</span></p>
+<p>which shows us that the number of un-decayed nuclei drops
+exponentially.</p>
+<p>We further define:</p>
+<ul>
+<li><p>The activity, A as the number of decays in a sample per unit
+time. We define 1  (Becquerel) as 1 decay per second.</p></li>
+<li><p>The half life, <span class="math inline">\(t_{1/1}\)</span>, as
+the time for half of the sample to decay</p></li>
+<li><p>The specific activity, as the number of decays per unit time per
+amount of sample (e.g. measured by mass or number of nuclei).</p></li>
+</ul>
+<p>When radiation interacts with matter, it deposits energy. We measure
+this dose in units of Grays, Gy, equivalent to 1 J/kg. When dealing with
+health effects of radiation, we instead use units of Sievert, Sv, which
+weights the dose to take account of the biological effects of the
+particular type of radiation. This is not discussed further here but if
+you are taking the medical physics module you will study this in
+detail.</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p><a
+href="https://www.nature.com/articles/d41586-019-03432-4"
+class="uri">https://www.nature.com/articles/d41586-019-03432-4</a><a
+href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

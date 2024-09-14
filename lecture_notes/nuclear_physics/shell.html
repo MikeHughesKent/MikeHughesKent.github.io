@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Section 4 - The Shell Model</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Section 4 - The Shell Model</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>In this section we move on from deuteron to consider more complex
+nuclei and develop the shell model. Now we have no hope of solving the
+Schrödinger equation exactly and will need to make some simplifying
+approximations.</em></p>
+<h1 id="evidence-for-the-shell-model">Evidence for the Shell Model</h1>
+<p>We can now extend our treatment to other nuclei and postulate a shell
+model. This is a conceptually similar idea to the shell model for atoms.
+There is certainly ample evidence for a shell model for nuclei.</p>
+<p>Firstly, it is found that nuclei with even number of protons and
+neutrons are more stable than those with odd numbers (this was captured
+in our pairing term for the SEMF). This suggests that some type of
+pairing is going on, similar to the idea of having two electrons per
+energy level in an atom. There are certain magic numbers of protons and
+neutrons which seem to produce very stable nuclei with high natural
+abundances. These magic numbers are: 2, 8, 20, 28, 50, 82 and 126.
+Nuclei which have these numbers of both N and Z are ‘doubly magic’ and
+even more stable.</p>
+<p>This seems to suggest some sort of ‘filling’ of shells, again
+analogous to filling electron shells in an atom. The neutron
+cross-section, the probability of these nuclei absorbing a further
+neutron, is also lower than for other nuclei.</p>
+<p>The liquid drop model does not explain these features, and the
+binding energy of magic number nuclei is poorly modelled by the
+semi-empirical mass formula.</p>
+<h1 id="the-shell-model">The Shell Model</h1>
+<p>The shell model makes some basic assumptions:</p>
+<ul>
+<li><p>Each nucleon moves in a potential which is the average effect of
+all of the other nucleons in the nucleus. This is known as the
+<strong>mean field approximation</strong>.</p></li>
+<li><p>The motion of the nucleons means that this potential can be
+considered smooth.</p></li>
+<li><p>Each nucleon in the nucleus is bound, i.e. each sits inside a
+potential well.</p></li>
+<li><p>There is a sense in which each nucleon is in an orbit of the
+potential well it sits in.</p></li>
+<li><p>For the protons, this potential also includes a Coulomb component
+due the electrostatic repulsion.</p></li>
+</ul>
+<p>The huge simplification here is that, rather than trying to model
+individual interactions between individual nucleons, we are assuming
+that each nucleon sees an average ‘net’ potential due to all the other
+nucleons. This net potential is then the potential in the Schrödinger
+equation. However, as when we modelled the deuteron, we have the problem
+that we don’t know exactly what this potential is.</p>
+<p>Some experimentation can determined that a good guess for the
+potential is to assume that is spherically symmetric and takes the form:
+<span class="math display">\[V(r) = - \frac{V_0}{1 + \exp \frac{r-R}{a}}
+    \label{eqn:fermiPot}\]</span> where <span
+class="math inline">\(V_0\)</span> is a constant, <span
+class="math inline">\(r\)</span> is the radial co-ordinate and <span
+class="math inline">\(R\)</span> and <span
+class="math inline">\(a\)</span> are constants. You may remember that we
+studied this equation in Workshop 1 in a slightly different context, so
+you will know that <span class="math inline">\(R\)</span> is the radius
+of the potential and <span class="math inline">\(a\)</span> is related
+to the skin thickness. We can choose <span class="math inline">\(R =
+r_0A^{1/3}\)</span> and we determined in the worksheet that a value of
+<span class="math inline">\(a\approx 0.5\)</span> fm gives a skin
+thickness that matches experiment. The potential energy (well depth)
+<span class="math inline">\(V_0\)</span> is again an unknown, so we
+would have to try different values until we reproduce experimental
+binding energies, it turns out <span class="math inline">\(V_0 =
+50\)</span> MeV gives the best results.</p>
+<p>The solution to this spherical potential will then have the form:
+<span class="math display">\[\Psi =
+R_{nl}Y_{lm_l}(\theta,\phi)\]</span></p>
+<p>As before, the <span class="math inline">\(R\)</span> is a radial
+component and the <span class="math inline">\(Y\)</span> is the angular
+component and these solutions are separable. The solutions for <span
+class="math inline">\(R\)</span> are spherical Bessel functions and the
+solutions for <span class="math inline">\(Y\)</span> are spherical
+harmonics. The solutions are parameterised by the principal quantum
+number (<span class="math inline">\(n\)</span>), the angular momentum
+quantum number (<span class="math inline">\(l\)</span>) and the magnetic
+quantum number (<span class="math inline">\(m_l\)</span>). Each solution
+has an an associated energy, <span class="math inline">\(E_{nl}\)</span>
+which depends on <span class="math inline">\(n\)</span> and <span
+class="math inline">\(l\)</span> but not on <span
+class="math inline">\(m_l\)</span>. We say that solutions with different
+<span class="math inline">\(m_l\)</span> are degenerate.</p>
+<p>The degeneracy of each level, i.e. the number of nucleons that can
+have each energy level, is <span class="math inline">\(2(2l +
+1)\)</span>, where the initial factor of two allows for the two <span
+class="math inline">\(m_s\)</span> spin states and the <span
+class="math inline">\(2l + 1\)</span> allows for the different <span
+class="math inline">\(m_l\)</span> states.</p>
+<p><strong>The important thing to realise that protons and neutrons fill
+up their own shells. Protons and neutrons are not identical particles
+and so the Pauli exclusion principle doesn’t apply between a proton and
+a neutron.</strong></p>
+<h2 id="comparison-with-atomic-energy-levels">Comparison with Atomic
+Energy Levels</h2>
+<p>If we compare with the atomic shell mode, we can also identify two
+other important difference:</p>
+<ul>
+<li><p>The energy and radius scales are very different.</p></li>
+<li><p>The shape of the potential is different, resulting in a different
+distribution of allowed energy levels. In particular, they do not bunch
+up so much at higher energies.</p></li>
+</ul>
+<p>We label the levels with a number and a letter, the letter being the
+<span class="math inline">\(s\)</span>, <span
+class="math inline">\(p\)</span>, <span
+class="math inline">\(d\)</span>, <span
+class="math inline">\(f\)</span>, ... of the spectroscopic notation,
+representing <span class="math inline">\(l\)</span>. So for example,
+<span class="math inline">\(1s\)</span>, <span
+class="math inline">\(2\)</span>p etc. The <strong>difference with
+similar looking notation for atomic energy levels</strong> is that the
+number does not indicate the principal quantum number, but the <span
+class="math inline">\(n\)</span>th state of that <span
+class="math inline">\(l\)</span>. For example <span
+class="math inline">\(2p\)</span> is the second <span
+class="math inline">\(p\)</span> (<span class="math inline">\(l =
+1\)</span>) state. So we see states such as <span
+class="math inline">\(1f\)</span> which would not occur in atomic
+physics.</p>
+<p>Like in atomic physics, the energy-ordering of the levels is not as
+nice as we might have hoped, as shown in Table <a href="#tab:levels"
+data-reference-type="ref" data-reference="tab:levels">1</a>. (There is
+no need to memorise the order, I would give you this in an exam, but you
+would need to known how to work out the degeneracy.)</p>
+<div id="tab:levels">
+<table>
+<caption>Shell filling predicted by a simple shell model</caption>
+<tbody>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">1s</td>
+<td style="text-align: left;">1p</td>
+<td style="text-align: left;">1d</td>
+<td style="text-align: left;">2s</td>
+<td style="text-align: left;">1f</td>
+<td style="text-align: left;">2p</td>
+<td style="text-align: left;">1g</td>
+<td style="text-align: left;">2d</td>
+<td style="text-align: left;">3s</td>
+</tr>
+<tr>
+<td style="text-align: left;">Degeneracy, <span
+class="math inline">\(2(2l +1)\)</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">10</td>
+<td style="text-align: left;">2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Running total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">18</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">34</td>
+<td style="text-align: left;">40</td>
+<td style="text-align: left;">58</td>
+<td style="text-align: left;">68</td>
+<td style="text-align: left;">70</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We would expect nuclei with full shells to be particularly stable,
+i.e. these should be the nuclei corresponding to magic numbers of
+protons and neutrons. Unfortunately, these totals do not match the
+observed magic numbers, so we have not managed to accurately predict
+shell-filling effects. Tweaking the potential does not fix this
+problem.</p>
+<h1 id="spin-orbit-coupling">Spin-Orbit Coupling</h1>
+<p>As we discussed previously, the total angular momentum for a nucleus
+is a combination of the orbital angular momentum and spin of its
+constituents. An effect called ‘spin-orbit’ coupling requires a
+modification to the potential.</p>
+<p>The modified potential is: <span class="math display">\[V&#39; =
+V_{Fermi}(r) - V_{SO}(r)(l \cdot s)
+   \label{eqn:SOPot}\]</span> where we have labelled the original
+potential from Equation <a href="#eqn:fermiPot"
+data-reference-type="ref"
+data-reference="eqn:fermiPot">[eqn:fermiPot]</a> as <span
+class="math inline">\(V_{Fermi}\)</span>. The form of <span
+class="math inline">\(V_{SO}\)</span> is not so critical for the magic
+numbers, it is the <span class="math inline">\(l \cdot s\)</span> term
+which causes a re-ordering of the energy levels.</p>
+<p>This new term is attractive when <span
+class="math inline">\(l\)</span> and <span
+class="math inline">\(s\)</span> are parallel and repulsive when they
+are anti-parallel (we look at this in more detail later). To put it
+another way, states for which <span class="math inline">\(l\)</span> and
+<span class="math inline">\(s\)</span> are anti-parallel are more
+tightly bound.</p>
+<p>We label states by their total angular momentum, <span
+class="math inline">\(\vec{J} = \vec{L} + \vec{S}\)</span>. This means
+that the quantum number <span class="math inline">\(j\)</span> can
+either be <span class="math inline">\(|l - s|\)</span> or <span
+class="math inline">\(l + s\)</span>. (This is derived below).</p>
+<p>The simplest way to see what happens is via an example. Consider a
+<span class="math inline">\(1f\)</span> state (<span
+class="math inline">\(l = 3\)</span>). In this case, spin-orbit coupling
+could give us two possible values for the nucleus spin, we could have
+<span class="math inline">\(j = |l - 1/2| = 5/2\)</span> or <span
+class="math inline">\(j = l + 1/2 = 7/2\)</span>. We label these states
+as <span class="math inline">\(1f_{5/2}\)</span> and <span
+class="math inline">\(1f_{7/2}\)</span>.</p>
+<p>Each of these states has degeneracy <span class="math inline">\(2j +
+1\)</span> (recall that <span class="math inline">\(m_j\)</span> runs
+from <span class="math inline">\(-j\)</span> to <span
+class="math inline">\(+j\)</span>):</p>
+<ul>
+<li><p><span class="math inline">\(1f_{5/2}\)</span> has <span
+class="math inline">\(2j + 1 = 6\)</span> states</p></li>
+<li><p><span class="math inline">\(1f_{7/2}\)</span> has <span
+class="math inline">\(2j + 1 = 8\)</span> states</p></li>
+</ul>
+<p>So there are 14 states in total. Before we took into account
+spin-orbit coupling we had <span class="math inline">\(2(2l+1) =
+2(2[3]+1) =
+14\)</span> states. <strong>So, we haven’t created any more
+states</strong>. We have just regrouped previously degenerate states
+into two groups of different energies.</p>
+<p>Calculating the energy levels of these new groups is a little messy
+(see <em>Krane p124</em> for details), but when we do work out the new
+series of energy levels (Figure <a href="#fig:levels"
+data-reference-type="ref" data-reference="fig:levels">1</a> and Table <a
+href="#tab:soshells" data-reference-type="ref"
+data-reference="tab:soshells">2</a>) we find we can reproduce the magic
+numbers perfectly. This is a huge vindication for the shell model and
+spin-orbit coupling.</p>
+<figure id="fig:levels">
+<img src="figs/shells.png" style="width:5in" />
+<figcaption>Nuclear energy levels without (left) and with (right)
+spin-orbit coupling. Reproduced from <em>Krane, Introductory Nuclear
+Physics</em>.</figcaption>
+</figure>
+<div id="tab:soshells">
+<table>
+<caption>Shell filling with spin-orbit coupling</caption>
+<tbody>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"><span
+class="math inline">\(1s_{1/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1p_{3/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1p_{1/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1d_{5/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(2s_{1/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1d_{3/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1f_{7/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(2p_{3/2}\)</span></td>
+<td style="text-align: left;"><span
+class="math inline">\(1f_{5/2}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: left;">Degeneracy <span>[</span><span
+class="math inline">\((2j+1)\)</span><span>]</span></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">6</td>
+</tr>
+<tr>
+<td style="text-align: left;">Running Total</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">14</td>
+<td style="text-align: left;">16</td>
+<td style="text-align: left;">20</td>
+<td style="text-align: left;">28</td>
+<td style="text-align: left;">32</td>
+<td style="text-align: left;">38</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>We also predict a new magic number of 184 that has not yet been
+observed. This ‘island of stability’ could mean super-heavy nuclei with
+long decay half-lives. However, they do not occur naturally and the
+technology to produce them artificially has not yet been developed.</p>
+<h2 id="derivation-of-level-splitting">Derivation of level
+splitting</h2>
+<p>We can check how <span class="math inline">\(\vec{L}.\vec{S}\)</span>
+in Equation <a href="#eqn:SOPot" data-reference-type="ref"
+data-reference="eqn:SOPot">[eqn:SOPot]</a> modifies the potential.
+Beginning with <span class="math inline">\(\vec{J} = \vec{L} +
+\vec{S}\)</span>, from geometry we can also say: <span
+class="math display">\[J^2 = L^2 + S^2 - 2\vec{L}\cdot \vec{S}\]</span>
+where <span class="math inline">\(J = |\vec{J}|\)</span> and so on.
+Re-arranging: <span class="math display">\[\vec{L}\cdot \vec{S} =
+1/2(J^2 - L^2 - S^2)\]</span></p>
+<p>We parameterise <span class="math inline">\(J\)</span> with the
+quantum number <span class="math inline">\(j\)</span>, such that <span
+class="math display">\[J^2 = j(j+1)\hbar^2\]</span></p>
+<p>For the case where the <span class="math inline">\(l\)</span> and
+<span class="math inline">\(s\)</span> are aligned, we have <span
+class="math inline">\(J = L + S = L + 1/2\)</span> and so: <span
+class="math display">\[\begin{aligned}
+    J_{(L+S)}^2 &amp;= (l + 1/2)(l + 3/2)\hbar^2 \\
+    &amp;=(l^2 + 2l +3/4) \hbar^2
+\end{aligned}\]</span> and so <span
+class="math display">\[\begin{aligned}
+    \vec{L} \cdot \vec{S} &amp;= 1/2[(l^2 + 2l +3/4)\hbar^2 -
+l(l+1)\hbar^2 - s(s+1)\hbar^2] \\
+    &amp;= 1/2[(l^2 + 2l +3/4)\hbar^2 - l(l+1)\hbar^2 -
+1/2(1/2+1)\hbar^2] = (1/2)l \hbar^2
+\end{aligned}\]</span> where we have used that <span
+class="math inline">\(S = s(s+1)\hbar^2\)</span> and <span
+class="math inline">\(L =l(l+1)\hbar^2\)</span>.</p>
+<p>Similarly for for the anti-aligned, <span class="math inline">\(J = L
+- S\)</span>, case we have: <span class="math display">\[\begin{aligned}
+    J_{(L-S)}^2 &amp;= (l - 1/2)(l + 3/2)\hbar^2 \\
+    &amp;=(l^2 - 1/4) \hbar^2
+\end{aligned}\]</span> and then <span
+class="math display">\[\begin{aligned}
+    \vec{L} \cdot \vec{S} &amp;= 1/2[(l^2 - 1/4)\hbar^2 - l(l+1)\hbar^2
+- s(s+1)\hbar^2] \\
+    &amp;= 1/2[(l^2 -1/4)\hbar^2 - (l^2+l)\hbar^2 - 3/4\hbar^2] =
+-(1/2)(l+1) \hbar^2
+\end{aligned}\]</span> So we can see that there is a difference in sign,
+as we would expect, and also a different in the magnitude. The
+difference in energy between the split states will therefore be
+proportional to: <span class="math display">\[\begin{aligned}
+    \Delta_{\vec{L} \cdot \vec{S}} &amp; = (\vec{L}\cdot \vec{S})_{(L +
+S)} - (\vec{L}\cdot \vec{S})_{(L - S)}  \\
+    &amp;= (1/2) l \hbar^2 - [ -(1/2)(l + 1)\hbar^2] \\
+    &amp;= (l + 1/2)\hbar^2
+\end{aligned}\]</span></p>
+<h1 id="nuclear-spin-and-parity-from-the-shell-model">Nuclear Spin and
+Parity from the Shell Model</h1>
+<p>The shell model allows us to predict the spins and parities of the
+ground states of certain nuclei:</p>
+<ul>
+<li><p>Nuclei with even numbers of protons and neutron.</p></li>
+<li><p>Nuclei with odd numbers of protons or neutrons (with the other
+even) <strong>and</strong> which are one short of filling
+shell.</p></li>
+<li><p>Nuclei with odd numbers of protons or neutrons (with the other
+even) <strong>and</strong> which have a single nucleon in a
+shell.</p></li>
+</ul>
+<p><strong>Even-Even nuclei</strong> have spin (i.e. total angular
+momentum) of 0 and parity even. This is a very simple rule to apply.</p>
+<p>The spin and parity of on <strong>odd-even or even-odd</strong>
+nucleus is determined by the single unpaired nucleon. This can be either
+a single nucleon in a level, or a single hole in a level. For example,
+take <span class="math inline">\(^{15}_8O\)</span>. There are 8 protons,
+completely filling to the <span class="math inline">\(1p_{1/2}\)</span>
+level. There is one fewer neutron, leaving the <span
+class="math inline">\(1p_{1/2}\)</span> level unfilled. This is the
+state that determines the spin of the nucleus, <span
+class="math inline">\(j = 1/2\)</span>. The unpaired neutron is in the
+<span class="math inline">\(p\)</span> state, which is <span
+class="math inline">\(l = 3\)</span>. Recall parity =<span
+class="math inline">\((-1)^l\)</span>, so the parity is odd. We write
+this state as <span class="math inline">\(^{15}_8O(1/2-)\)</span></p>
+<p>For another example, take <span
+class="math inline">\(^{17}_8O\)</span>. Now there is a single neutron
+in the <span class="math inline">\(1d_{5/2}\)</span> level. So we have
+spin <span class="math inline">\(j=5/2\)</span>. The unpaired neutron is
+in the <span class="math inline">\(d\)</span> state, which is <span
+class="math inline">\(l = 2\)</span>. So now the parity is even. So the
+state is <span class="math inline">\(^{17}_8 O(5/2+)\)</span>. The
+configurations of these two isotopes of oxygen are illustrated in Figure
+<a href="#fig:oxylevels" data-reference-type="ref"
+data-reference="fig:oxylevels">2</a>.</p>
+<figure id="fig:oxylevels">
+<embed src="figs/levels.eps" style="width:4in" />
+<figcaption>Occupation of energy levels for O-15 and O-17. The two
+possible spin states are shown by up and down arrows; these are arranged
+in (<span class="math inline">\(2j + 1\)</span>) degenerate groups for
+each level. Note that levels are shown for protons (Z) and neutrons (N)
+separately. The level with a hole or single neutron determines the spin
+and parity of the nucleus.</figcaption>
+</figure>
+<p><strong>Odd-odd nuclei</strong> have spin which is sum of the spins
+of last two unpaired neutrons and protons. These nuclei are rarely
+stable.</p>
+<p>Remember, these last three rules only apply for nuclei which are 1
+nucleon under or 1 nucleon over a full shell. They also only work
+reliably for nuclei in the ground state. Nevertheless, it is another
+strong piece of evidence that the nuclear shell model is a good one.</p>
+<h1 id="predictions-of-the-shell-model">Predictions of the Shell
+Model</h1>
+<h2 id="spin-parity-pairing-and-symmetry">Spin, Parity, Pairing and
+Symmetry</h2>
+<p>In the previous section we saw that the shell model allows us to
+predict the ground state spin (<span class="math inline">\(j\)</span>)
+and parities for a range of nuclei. In particular, nuclei with even
+numbers of both protons and neutrons (<strong>even-even</strong> nuclei)
+are found to have <span class="math inline">\(j=0\)</span> and even
+parity. This is due to pairing effect, whereby the <span
+class="math inline">\(m_j\)</span>s effectively cancel each other out,
+leading to no net angular momentum.</p>
+<p>For nuclei with odd numbers of one type of nucleon (protons or
+neutrons), known as <strong>even-odd nuclei</strong>, we also saw that
+in the cases where this led to them being one short or one over filling
+a shell, the nuclear spin and parity was equal to the under-filled or
+singly-filled shell, respectively.</p>
+<p>These pairing effects (or lack thereof) are the origin of the
+<strong>pairing term</strong> in the semi-empirical mass formula. Nuclei
+with even-even are the most stable, while stable nuclei with odd-odd
+configuration are very rare.</p>
+<p>The existence of two separate shell structures (protons and neutrons)
+goes a good way to explaining the symmetry term in the semi-empirical
+mass formula. It is obvious that it will be energetically favourable to
+fill up both shell systems rather than to have a large excess of protons
+or neutrons.</p>
+<p>We also observe experimentally that larger nuclei tend to have an
+excess of neutrons. We can explain this by considering the Coulomb
+repulsion between protons. This means that the total potential is not
+identical for protons and neutron, i.e. they sit in slightly different
+potentials with slightly different energy levels. Since the Coulomb
+force opposes the nuclear force, the protons sit in a shallower well
+with slightly higher energy levels. Hence why we might expect neutrons
+levels to fill up slightly faster.</p>
+<p>Why does this have more of an effect for heavier nuclei? Recall that
+the Coulomb force is proportional to <span class="math inline">\(Z(Z-1)
+\approx Z^2\)</span> while the nuclear force is proportional to <span
+class="math inline">\(A\)</span>. So for larger nuclei the Coulomb force
+is relatively more significant, and so the difference in the energy
+levels between the proton and the neutron shells becomes greater.</p>
+<h2 id="dipole-and-quadrupole-moments">Dipole and Quadrupole
+Moments</h2>
+<p>The nuclear magnetic dipole moment is given by: <span
+class="math display">\[\mu = \mu_N(g_l L_z + g_sS_z),\]</span></p>
+<p>where <span class="math inline">\(\mu_N\)</span> is the nuclear
+magneton (a constant), <span class="math inline">\(g_l\)</span> is the
+gyromagnetic ratio associated with orbital angular momentum, <span
+class="math inline">\(g_s\)</span> is the gyromagnetic ratio associated
+with spin angular moment, <span class="math inline">\(L_z\)</span> is
+the z-component of the orbital angular momentum, and <span
+class="math inline">\(S_z\)</span> is the z component of the spin. (Note
+here that the capital ‘<span class="math inline">\(L\)</span>’ and
+‘<span class="math inline">\(S\)</span>’ have been used to distinguish
+the physical quantities from quantum numbers.)</p>
+<p><span class="math inline">\(g_l\)</span> is a convenient notation to
+express the fact that the orbital angular momentum of the proton
+contributes to the magnetic dipole moment, but that orbital angular
+momentum of the neutron does not (since it is uncharged). Hence <span
+class="math inline">\(g_l\)</span> is 1 for protons and 0 for
+neutrons.</p>
+<p>As discussed previously, the spin of both protons and neutrons does
+contribute, with <span class="math inline">\(g_s = 5.59\)</span> for
+protons and <span class="math inline">\(g_s = -3.83\)</span> for
+neutrons.</p>
+<p>Using this model predicts the observed dipole moments very well.</p>
+<p>We can also predict electric quadrupole moments. If you are not
+familiar with quadrupole moments, essentially we can think of a
+progression from a single monopole, through an electric dipole (which
+you studied in PHYS5040), which has a separation of charges and hence an
+axis, to higher order shapes which have multiple poles. This is
+illustrated in Figure <a href="#fig:quadrupole"
+data-reference-type="ref" data-reference="fig:quadrupole">3</a>.</p>
+<figure id="fig:quadrupole">
+<embed src="figs/quadrupole.eps" style="width:2.5in" />
+<figcaption>Illustration of concepts of monopoles, dipoles and
+quadrupoles.</figcaption>
+</figure>
+<p>Certain nuclei are found to have large electric quadrupole moments,
+beyond anything which could be predicted by the shell model alone. This
+suggests that there is some non-spherical-uniformity to these nuclei and
+lends support to the idea of the <strong>Collective Model</strong>.</p>
+<h1 id="the-collective-model-and-beyond">The Collective Model and
+Beyond</h1>
+<p>The shell model does not explain all the observed properties of
+nuclei. In particular, when we study nuclei in excited states, not all
+of the observed energy levels are predicted by the shell model. It turns
+out that there are three main ways that a nucleus can be put in an
+excited state</p>
+<ul>
+<li><p>Pair-breaking, a single proton or neutron is moved into a higher
+energy level, leaving a hole.</p></li>
+<li><p>The nucleus gains vibrational energy.</p></li>
+<li><p>The nucleus gain rotational energy. This mainly occurs for nuclei
+with <span class="math inline">\(150 &lt; A &lt; 190\)</span> and <span
+class="math inline">\(A &gt; 230\)</span>.</p></li>
+</ul>
+<p>The first way is predicted by the shell model. The vibrational and
+rotational energy levels are not predicted by the shell model. Extending
+the shell model to include these effects leads to the Collective Model,
+so-called because the vibrational and rotational states involve the
+whole of the nucleus. We will not study these further, but you can read
+more about them in an appendix if you are interested.</p>
+<p>In these first four lectures we have made a number of attempts to
+model the nucleus, ranging through the SEMF, our finite square well
+model of the deuteron, the simple shell model, the introduction of
+spin-orbit coupling and finally (briefly) the idea of the collective
+model. While all of these models have some success a at predicting
+experimental observations, it should be clear that none of them provides
+a complete description. They all attempt to simplify what is, in
+essence, an incredibly complex quantum-mechanical system of many
+interacting bodies. Of course there are many further complicated
+refinements to these models which are beyond the scope of this course,
+and research continues. Nevertheless, you will find the simple models we
+have developed useful we move on to study nuclear reactions and
+decays.</p>
+</body>
+</html>

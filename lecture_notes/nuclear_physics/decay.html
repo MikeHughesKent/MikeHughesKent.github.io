@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Section 5 - Radioactive Decay</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Section 5 - Radioactive Decay</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>This section looks at alpha, beta and gamma decay. First ensure
+you are happy with the basic idea of radioactive decay rates reviewed in
+Section 1 and the Q-factor discussed in Section 2.</em></p>
+<h1 id="alpha-decay">Alpha Decay</h1>
+<p>Some heavy nuclei are found to be unstable to the ejection of a
+helium 4-nucleus (2 protons and 2 neutrons), known as alpha decay (<span
+class="math inline">\(\alpha\)</span>-decay). This tends to occur for
+heavier nuclei, particularly those where the proton-to-neutron ratio is
+too high (recalling that larger nuclei require an excess of neutrons to
+overcome the Coulomb force.) The process is spontaneous, i.e. it doesn’t
+need to be triggered by anything. Below we will study some basic
+properties of <span class="math inline">\(\alpha\)</span>-decay, before
+looking at the underlying quantum physics.</p>
+<h2 id="energetics">Energetics</h2>
+<p>Alpha decay can only occur if the energetics are favourable. We
+require that the binding energies of the resultant daughter particles
+sum to more than the binding energies of the parent particle. The
+generic equation for <span class="math inline">\(\alpha\)</span>-decay
+is:</p>
+<p><span class="math display">\[\isotope[A][Z]{X}_N \rightarrow
+\isotope[A-4][Z-2]{Y}_{N-2} + \alpha,\]</span></p>
+<p>where we can see that the parent nucleus has lost 4 units of atomic
+mass number (A) and 2 units of atomic number (Z), and where</p>
+<p><span class="math display">\[\alpha =
+\isotope[4][2]{He}_2.\]</span></p>
+<figure id="fig:alpha">
+<img src="figs/alpha.png" style="width:1.5in" />
+<figcaption>Illustration of parent nucleus, <span
+class="math inline">\(X\)</span>, decaying into daughter nucleus, <span
+class="math inline">\(Y\)</span>, by emission of an <span
+class="math inline">\(\alpha\)</span> particle.</figcaption>
+</figure>
+<p>By conservation of mass-energy: <span class="math display">\[m_X c^2
+= m_Y c^2 + T_Y + m_{\alpha}c^2 + T_{\alpha},\]</span></p>
+<p>where <span class="math inline">\(T_Y\)</span> is the resulting
+kinetic energy of the daughter nucleus and <span
+class="math inline">\(T_\alpha\)</span> is the kinetic energy of the
+<span class="math inline">\(\alpha\)</span> particle. We define the
+Q-factor as the sum of the kinetic energy released <span
+class="math display">\[Q = T_Y + T_\alpha,\]</span></p>
+<p>such that <span class="math display">\[Q = (m_X - m_Y -
+m_\alpha)c^2.\]</span></p>
+<p>The total numbers of protons and neutrons does not change, so the
+Q-factor really depends on the differences in binding energies between
+the parent and daughter particles, <span class="math display">\[Q =
+(B_{\alpha} + B_Y - B_X).\]</span></p>
+<p>Since we cannot have negative kinetic energy, it must be the case
+that <span class="math inline">\(Q &gt; 0\)</span> and <span
+class="math inline">\(\alpha\)</span>-decay cannot otherwise occur. So
+we require that the combined binding energy of the daughter particles is
+greater than the parent particle, i.e. they are more tightly bound.
+Recalling that binding energy is really a negative thing, this releases
+kinetic energy which goes into the daughter particles. This is also
+explains why emission of other sized groups of protons and neutrons
+mostly does not occur (with one or two rare exception), these are less
+tightly bound and hence the calculations for these hypothetical decays
+would give <span class="math inline">\(Q &lt; 0\)</span>.</p>
+<p>For example, <span class="math display">\[\isotope[228][90]{Th}
+\rightarrow \isotope[224][88]{Ra}  + \alpha\]</span></p>
+<p>has a Q-value of <span class="math inline">\(5.5~\rm MeV\)</span>,
+whereas a decay resulting in the emission of a proton, rather than an
+<span class="math inline">\(\alpha\)</span> particle,</p>
+<p><span class="math display">\[\isotope[228][90]{Th} \rightarrow
+\isotope[227][87]{Ac} +   \isotope[1][1]{H}\]</span></p>
+<p>has a Q Value of <span class="math inline">\(-6.4~\rm MeV\)</span>,
+i.e. it cannot occur.</p>
+<p>Therefore, we can see that it is the very high binding energy (i.e
+low mass) of an <span class="math inline">\(\alpha\)</span> particle
+(<span class="math inline">\(\rm 28.3~MeV\)</span>) that is the reason
+for this particle to be ejected, since this makes <span
+class="math inline">\(Q &gt; 0\)</span> more likely.</p>
+<p>Nuclides which decay by <span
+class="math inline">\(\alpha\)</span>-decay are those with a deficit of
+neutrons (excess of protons) with respect to the line of stability.
+(Recall that larger nuclei require <span class="math inline">\(N \approx
+1.4Z\)</span> to be stable due to the effect of the Coulomb
+interaction). <span class="math inline">\(\alpha\)</span>-decay moves
+the daughter particle slightly closer to the line of stability as the
+required excess of neutrons is smaller for lighter nuclei. We usually
+find that <span class="math inline">\(Q &gt; 0\)</span> only occurs for
+<span class="math inline">\(A &gt; 150\)</span>, and <span
+class="math inline">\(Q \approx 6~\mathrm{MeV}\)</span> is typical.</p>
+<h2 id="features-of-alpha-decay">Features of Alpha Decay</h2>
+<p>We find that there is a structure to the observed kinetic energy of
+the <span class="math inline">\(\alpha\)</span> particles: the energies
+are found to take one of a set of discrete energies rather than
+continuous spectrum. We also observe an enormous range in the decay
+rates of different nuclei by <span
+class="math inline">\(\alpha\)</span>-decay. This range is from <span
+class="math inline">\(10^{-7} \rm~s\)</span> to <span
+class="math inline">\(10^{10}\rm~years\)</span>, some 24 order of
+magnitude. Any model we develop should therefore explain these two
+experimental observations.</p>
+<p>Geiger and Nuttall found, in 1911, a simple empirical relationship
+between the decay constant, <span
+class="math inline">\(\lambda\)</span>, and the <span
+class="math inline">\(\alpha\)</span> particle kinetic energy, <span
+class="math inline">\(T_{\alpha}\)</span>, <span
+class="math display">\[\ln(\lambda) = c\ln(T_{\alpha}) + D\]</span></p>
+<p>where <span class="math inline">\(c\)</span> and <span
+class="math inline">\(D\)</span> are fitted constants. Remarkably, this
+relationship holds roughly true over a huge range of decay constants and
+energies. This is illustrated in Figure <a href="#fig:geiger"
+data-reference-type="ref" data-reference="fig:geiger">2</a>, where it
+should be remembered that <span class="math inline">\(t_{1/2} = \ln(2) /
+\lambda\)</span>.</p>
+<figure id="fig:geiger">
+<img src="figs/geiger_nuttal.png" style="width:3.5in" />
+<figcaption>The empirical relationship determined by Geiger and Nuttal
+between decay constant, <span class="math inline">\(\lambda\)</span>,
+and <span class="math inline">\(\alpha\)</span> particle energy.
+</figcaption>
+</figure>
+<h2 id="alpha-decay-energetics">Alpha Decay Energetics</h2>
+<p>Since the <span class="math inline">\(\alpha\)</span> particle is
+much lighter than the daughter nucleus, most of the energy released by
+<span class="math inline">\(\alpha\)</span> decay goes into kinetic
+energy of the <span class="math inline">\(\alpha\)</span> particle (i.e.
+<span class="math inline">\(T_\alpha \gg T_Y\)</span>). We can perform
+this calculation for a specific decay as follows.</p>
+<p>Consider the decay: <span
+class="math display">\[\isotope[214][84]{Po} \rightarrow
+\isotope[210][82]{Pb} + \alpha\]</span></p>
+<p>The binding energies of <span
+class="math inline">\(\isotope[214][84]{Po}\)</span>, <span
+class="math inline">\(\isotope[210][82]{Pb}\)</span> and <span
+class="math inline">\(\alpha\)</span> are 1.66601 GeV, 1.64555 GeV, and
+28.296 MeV, respectively. The Q-value for this decay is therefore: <span
+class="math display">\[Q = B_{Pb} + B_{\alpha} - B_{Po} =
+1.64555~\mathrm{GeV} + 28.296~\mathrm{MeV} - 1.66601~\mathrm{GeV} =
+7.82~\mathrm{MeV}\]</span></p>
+<p>This is positive, as it must be for <span
+class="math inline">\(\alpha\)</span>-decay to occur.</p>
+<p>If all this energy went to the <span
+class="math inline">\(\alpha\)</span> particle it would have a speed of
+<span class="math display">\[v = \sqrt{\frac{2Q}{m}} = \sqrt{\frac{2
+\times (7.82~\mathrm{MeV})}{3727.37~\mathrm{MeV/c^2}}} = 0.0042c \approx
+1260~\mathrm{km/s},\]</span></p>
+<p>where we used that <span class="math inline">\(m_{\alpha} =
+3727.37~\mathrm{MeV/c^2}\)</span>. The speed, while large, is much less
+than <span class="math inline">\(c\)</span>, and so <strong>no
+relativistic corrections are required here</strong>.</p>
+<p>In reality, some of the energy will go into kinetic energy of the
+daughter nucleus. We can see how much using conservation of momentum.
+Working in the rest frame of the parent nucleus, we have: <span
+class="math display">\[m_Yv_Y = -m_{\alpha}v_{\alpha},\]</span> where we
+have denoted the daughter nucleus with <span
+class="math inline">\(Y\)</span>. Hence the ratio of the speeds is <span
+class="math display">\[\frac{v_{\alpha}}{v_Y} =
+\frac{m_{Y}}{m_{\alpha}}.\]</span> In the case of the reaction above
+this ratio is approximately the ratio of atomic mass numbers, <span
+class="math inline">\(210 / 4 \approx 52\)</span>. In terms of energy:
+<span class="math display">\[\frac{E_{\alpha}}{E_Y} =
+\frac{m_{\alpha}v_{\alpha}^2}{m_Yv_Y^2}  =  \frac{m_{\alpha}}{m_Y}
+\frac{m_Y^2}{m_{\alpha}^2} = \frac{m_Y}{m_{\alpha}}.\]</span></p>
+<p>and so the same ratio applies, 98% of the energy goes to the <span
+class="math inline">\(\alpha\)</span> particle.</p>
+<h2 id="the-coulomb-barrier">The Coulomb Barrier</h2>
+<p>To understand the decay rates of different nuclei by <span
+class="math inline">\(\alpha\)</span>-decay, we must understand what
+prevents nuclei simply decaying in the cases where <span
+class="math inline">\(Q&gt;0\)</span>. In order for a single nucleus to
+split into a daughter nucleus and an alpha particle, we can imagine an
+intermediate state where the <span class="math inline">\(\alpha\)</span>
+particle and the daughter nucleus have just split apart, but are still
+close enough for the strong interaction to be a consideration. We can
+therefore think of the formed <span
+class="math inline">\(\alpha\)</span> particle sitting in the potential
+well of the nucleus, as shown in Fig <a href="#fig:alpha_well"
+data-reference-type="ref" data-reference="fig:alpha_well">3</a>. Note
+that here the potential well is due to both the strong nuclear
+interaction and the Coulomb interaction.</p>
+<p>In order to be free of the nucleus, the <span
+class="math inline">\(\alpha\)</span> particle must pass through a
+potential barrier. Classically it does not have sufficient energy, and
+this is only possible using quantum mechanical tunnelling, i.e. due to
+the wavefunction being non-zero beyond the barrier. (If the energy was
+above the barrier than the decay would have happened almost immediately
+and we wouldn’t observe it). This explains the random nature of the
+decay. It also explains the huge range in decay rates.</p>
+<figure id="fig:alpha_well">
+<img src="figs/alpha_well.png" style="width:2.5in" />
+<figcaption>The <span class="math inline">\(\alpha\)</span> particle
+sits in a potential well due to interaction with the remainder of the
+nucleus. The <span class="math inline">\(\alpha\)</span> particle has
+energy <span class="math inline">\(E_{\alpha}\)</span>, less than the
+height of the Coulomb barrier, <span class="math inline">\(V_C\)</span>.
+To be emitted it must tunnel through the Coulomb barrier.</figcaption>
+</figure>
+<p>This potential barrier is sometimes called the Coulomb barrier,
+although this can be slightly confusing because the Coulomb force is
+tending to push the <span class="math inline">\(\alpha\)</span> particle
+away from the nucleus, it is really the strong interaction that needs to
+be overcome.</p>
+<p>Working semi-classically, we can imagine the <span
+class="math inline">\(\alpha\)</span> particle ‘bouncing’ within the
+well, reflecting off the barrier with frequency <span
+class="math inline">\(f\)</span>. If the probability of tunnelling
+through the barrier at each strike is <span
+class="math inline">\(P\)</span> then the decay rate <span
+class="math inline">\(\lambda\)</span> can be approximated simple as</p>
+<p><span class="math display">\[\lambda = fP.\]</span></p>
+<p>We can estimate <span class="math inline">\(f\)</span> to be roughly
+<span class="math inline">\(v/a\)</span>, where <span
+class="math inline">\(v\)</span> is the speed of the <span
+class="math inline">\(\alpha\)</span> particle as it bounces between the
+walls (related simply to its kinetic energy, <span
+class="math inline">\(K\)</span>, and mass <span
+class="math inline">\(m\)</span> by <span
+class="math inline">\(v=\sqrt{2mK}\)</span>.</p>
+<p>We can obtain a rough estimate the height of the barrier by computing
+the Coulomb potential between an alpha particle and the daughter nucleus
+that are just touching,</p>
+<p><span class="math display">\[U = k \frac{q_1q_1}{r} = k \frac{
+2(Z-2)e^2}{r}\]</span> We obtain an estimate of their radii using <span
+class="math inline">\(r = r_oA^{1/13}\)</span> and hence the separation
+of their centres when just touching is the sum of the two radii.</p>
+<p>For example, for the decay</p>
+<p><span class="math display">\[\isotope[211][83]{Bi} \rightarrow
+\isotope[207][81]{X} + \alpha\]</span> the daughter nucleus has <span
+class="math inline">\(A = 207\)</span> and the <span
+class="math inline">\(\alpha\)</span> particle, as always, has <span
+class="math inline">\(A=4\)</span>. The two radii can be estimated using
+<span class="math display">\[r_X = (1.2~\mathrm{fm})A^{1/3} =
+7.1~\mathrm{fm},\]</span> and <span class="math display">\[r_{\alpha} =
+1.9 ~\mathrm{fm},\]</span> giving a separation of <span
+class="math inline">\(9.0 ~\mathrm{fm}\)</span>.</p>
+<p>We then estimate the Coulomb barrier height as <span
+class="math display">\[U =k \frac{ 2(Z-2)e^2}{r} = (9\times 10^9)\frac{
+2(81-2)(1.6\times 10^{-19})^2}{9\times 10^{-15}} = 4.0\times
+10^{-12}~\mathrm{J} = 25~\mathrm{MeV}.\]</span></p>
+<p>As expected, this is (several times) larger than the typical kinetic
+energies of <span class="math inline">\(\alpha\)</span> particles (and
+so several times larger than the Q-value). Therefore, classically, this
+barrier cannot be penetrated (otherwise the decay would be immediate),
+and so <span class="math inline">\(\alpha\)</span>-decay requires
+quantum tunnelling. This is what leads to the stochastic (random) nature
+of <span class="math inline">\(\alpha\)</span>-decay.</p>
+<p>To determine the probability of the <span
+class="math inline">\(\alpha\)</span> particle tunnelling through the
+Coulomb barrier we need to solve the Schrodinger equation and hence
+integrate the square of the wavefunction beyond the barrier. This is
+quite difficult, and you are not expected to do this, but some of the
+details can be found in Krane Section 8.4. For interest, the result is
+that the probability is given by</p>
+<p><span class="math display">\[P=\exp{(-2G)}\]</span></p>
+<p>where <span class="math inline">\(G\)</span>, the Gammow factor, is
+given by <span class="math display">\[G =
+\sqrt{\frac{2m}{\hbar^2}}\int_{a}^{b}[V(r)-Q]^{1/2} dr\]</span></p>
+<p>where <span class="math inline">\(a\)</span> is the radius of the
+well, <span class="math inline">\(b\)</span> is the distance at which
+the <span class="math inline">\(\alpha\)</span> particle would be
+classically free (i.e. its kinetic energy is above the potential), <span
+class="math inline">\(Q\)</span> is the kinetic energy of the <span
+class="math inline">\(\alpha\)</span> particle, <span
+class="math inline">\(m\)</span> is its mass, and <span
+class="math inline">\(V(r)\)</span> is the height of the Coulomb
+barrier.</p>
+<p>The important thing to note here is that the probably depends on the
+exponential of the Gammow Factor, which itself depends on the <span
+class="math inline">\(\alpha\)</span> particle energy. This shouldn’t be
+surprising, the exponential came up when you studied the finite square
+well.</p>
+<p>Due to the exponential, small changes in the Q-value therefore lead
+to a huge change in the probability and hence a huge change in the decay
+rate and half life. In fact a change in the Q-value by a factor of 2 can
+change the half life from a tiny fraction of a second to the age of the
+Universe.</p>
+<h1 id="beta-decay">Beta Decay</h1>
+<p>Beta Decay (<span class="math inline">\(\beta\)</span>-decay) is the
+emission of an electron or a positron from the nucleus. If the nucleus
+has an excess of neutrons, a neutron can decay into a proton and an
+electron - the protons remains in the nucleus and the electron is
+emitted. This is referred to as Beta-minus, <span
+class="math inline">\(\beta^-\)</span>, decay. Similarly, a proton can
+decay in a neutron and a positron, with the positron emitted, known as
+Beta-plus (<span class="math inline">\(\beta^+\)</span>) decay. Both of
+these decays are mediated by the weak interaction, which you will study
+later in the module.</p>
+<p>A positron is the anti-particle of an electron, it has identical mass
+but opposite charge. The positron will quickly annihilate with any
+electron encountered. This results in the emission of two gamma rays,
+each of energy 0.511 MeV (the rest energy of the electron/positron)
+emitted in (almost) opposite directions. This is convenient for the
+technology called Positron Emission Tomography (PET) as detecting these
+two photons allows the emission to be localised and hence a 3D image
+(tomogram) to be created. Those of you taking Medical Physics will learn
+more about this.</p>
+<p>Unlike in alpha decay, where discrete values of energy are released,
+the emitted electron or positron has a range of possible energies up to
+some maximum. The maximum is the Q-value of the decay, i.e.</p>
+<p><span class="math display">\[Q = m_X - m_Y - m_e\]</span> where <span
+class="math inline">\(m_X\)</span> and <span
+class="math inline">\(m_Y\)</span> are the masses of the parent and
+daughter nuclei, respectively. As for <span
+class="math inline">\(\alpha\)</span>-decay, the Q-value must be
+positive, meaning that the daughter nucleus must be more tightly bound
+(more stable) than the parent.</p>
+<figure id="fig:beta_energy">
+<img src="figs/beta_energy.png" style="width:3.5in" />
+<figcaption>The electrons or positrons emitted in <span
+class="math inline">\(\beta\)</span>-decay are found to have a spectra
+of energies up to some maximum.</figcaption>
+</figure>
+<p>At first sight it is quite strange that the electron/positron does
+not take practically all of the energy (with a small amount going to the
+much more massive nucleus) - where does it go? This was a mystery for
+some time, and led to the discovery of neutrinos.</p>
+<h2 id="neutrinos">Neutrinos</h2>
+<p>Beta decay is always accompanied by the emission of an electron
+neutrino. <span class="math inline">\(\beta^-\)</span> decay results in
+the emission of an anti-neutrino, <span
+class="math inline">\(\beta^+\)</span> decay results in the emission of
+a neutrino. You will study neutrinos in the particle physics section of
+the module, but here you should be aware that they are uncharged and
+have a very small rest mass (<span class="math inline">\(&lt; 1~\rm
+eV\)</span>) We know they must be emitted because:</p>
+<ol>
+<li><p>The neutrino carries away some energy, allowing for the observed
+spectrum of energy for the electrons/positrons</p></li>
+<li><p>Without the neutrino, we do not conserve spin</p></li>
+</ol>
+<p>For <span class="math inline">\(\beta^-\)</span> decay, the process
+is <span class="math display">\[n \rightarrow p + e^- +
+\bar{\nu_e},\]</span></p>
+<p>while for <span class="math inline">\(\beta^+\)</span> decay, the
+process is <span class="math display">\[p \rightarrow n + e^+ +
+\nu_e,\]</span></p>
+<p>where <span class="math inline">\(\nu_e\)</span> and <span
+class="math inline">\(\bar{\nu_e}\)</span> are the (electron) neutrino
+and anti-neutrino, respectively. There is a third possible decay called
+electron capture, <span class="math display">\[p + e^-\rightarrow n
++  \nu_e,\]</span> where one of the orbital electrons is absorbed into
+the nucleus. This has the same net effect as <span
+class="math inline">\(\beta^+\)</span> decay as the positron from the
+<span class="math inline">\(\beta^+\)</span> decay will annihilate with
+an electron. Positron capture, while technically possible, is hindered
+by the lack of positrons in normal environments.</p>
+<h2 id="examples-of-decays">Examples of Decays</h2>
+<p>In <span class="math inline">\(\beta^+\)</span> decay a nucleus
+converts a proton intro a neutron, while in <span
+class="math inline">\(\beta^-\)</span> decay a nucleus converts a
+neutron into a proton. <span class="math inline">\(\beta^+\)</span>
+decay therefore occurs for nuclei with an excess of protons and <span
+class="math inline">\(\beta^-\)</span> decay for nuclei with a deficit
+of protons with respect to the line of stability. There is no change in
+the nucleon number, <span class="math inline">\(A\)</span>.</p>
+<p>For example, Cobalt-60 decays into Nickel-60 by <span
+class="math inline">\(\beta^-\)</span> decay with a half-life of
+5.27 days, reducing its excess of neutrons: <span
+class="math display">\[\isotope[60][27]{Co} \rightarrow
+\isotope[60][28]{Ni} + e^- + \bar{\nu_e}.\]</span></p>
+<p>An example of <span class="math inline">\(\beta^+\)</span> decay is:
+<span class="math display">\[\isotope[230][91]{Pa} \rightarrow
+\isotope[230][90]{Th} + e^+ +  \nu_e.\]</span></p>
+<p>Equivalently, we could have electron capture: <span
+class="math display">\[\isotope[230][91]{Pa} + e^- \rightarrow
+\isotope[230][90]{Th} + \nu_e.\]</span></p>
+<h2 id="beta-decay-chains">Beta Decay Chains</h2>
+<p>For a nucleus that is some way from the line of stability, multiple
+<span class="math inline">\(\beta\)</span> decays may occur. These take
+a slightly different form if the original nucleus has odd or even <span
+class="math inline">\(A\)</span>. (Recalling that <span
+class="math inline">\(\beta\)</span>-decay does not change <span
+class="math inline">\(A\)</span>, so the daughter particles will have
+the same <span class="math inline">\(A\)</span>). The difference can be
+explained by reference to the SEMF formula. For a nucleus with odd <span
+class="math inline">\(A\)</span>, each decay toggles the nucleus between
+being and even-even and an odd-odd nucleus. This leads to a significant
+change in binding energy and a ‘zig-zag’ pattern, as shown in Figure <a
+href="#fig:beta_paths" data-reference-type="ref"
+data-reference="fig:beta_paths">5</a>. For even <span
+class="math inline">\(A\)</span> nucleus, there are two different
+end-points, depending on which decay path was followed. Even though one
+of these end-points is lower, <span class="math inline">\(\beta\)</span>
+decay between them is not possible - <span
+class="math inline">\(\beta\)</span>-decay takes us from an even-even to
+an odd-even, not a different even-even, and going via an odd-even would
+decrease the binding energy, i.e. going ‘uphill’.</p>
+<figure id="fig:beta_paths">
+<img src="figs/beta_paths.png" style="width:5.5in" />
+<figcaption>Beta decay chains for even and odd <span
+class="math inline">\(A\)</span> nuclei.</figcaption>
+</figure>
+<h1 id="gamma-decay">Gamma Decay</h1>
+<p>We will not study Gamma Decay (<span
+class="math inline">\(\gamma\)</span>-decay) in detail in this module,
+but you should know the following:</p>
+<ul>
+<li><p><span class="math inline">\(\gamma\)</span>-decay is the emission
+of a photon from the nucleus due to a change in its internal energy
+state.</p></li>
+<li><p><span class="math inline">\(\gamma\)</span>-ray energies range
+from a few keV to 8 MeV.</p></li>
+<li><p><span class="math inline">\(\gamma\)</span>-decay is usually the
+by-product of another decay which leaves the daughter nucleus in an
+excited state. When the nucleus relaxes to the ground states, a photon
+is emitted.</p></li>
+<li><p>While <span class="math inline">\(\gamma\)</span> decay usually
+occurs almost instantly (<span
+class="math inline">\(10^{-12}~\mathrm{s}\)</span>), some excited states
+are <strong>metastable</strong>, meaning that the <span
+class="math inline">\(\gamma\)</span> emission is delayed by some period
+of time. The most famous is Technicium-99m, <span
+class="math inline">\(\isotope[99m]Tc\)</span>, where the ‘m’ stands for
+a metastable state created when Mo-99 decays via <span
+class="math inline">\(\beta\)</span> decay. Technicium-99m has a half
+life of about 6 hours and emits photons with an energy of 140 keV, two
+properties which turn out to be ideal for use as a tracer for medical
+imaging. Those taking medical physics will discover much more about this
+when studying nuclear medicine and gamma cameras.</p></li>
+</ul>
+</body>
+</html>

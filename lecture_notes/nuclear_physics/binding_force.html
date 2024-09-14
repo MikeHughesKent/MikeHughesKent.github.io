@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Section 2 - Binding Energy and the Semi-Empirical Mass Formula</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Section 2 - Binding Energy and the
+Semi-Empirical Mass Formula</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>In this section we begin to discuss how the nucleus is held
+together, introducing the concept of the nuclear force and binding
+energy. We will then develop a semi-classical model to predict the
+binding energy of different nuclei.</em></p>
+<h1 id="strong-nuclear-force">Strong Nuclear Force</h1>
+<p>The Coulomb force cannot be the dominant force inside the nucleus,
+otherwise the positively charged protons would ﬂy apart. We can
+therefore assume the existence of some force (which we will call the
+strong nuclear force) which overcomes the Coulomb repulsion within the
+nucleus. However, this force must be weak enough at the atomic scale not
+to interfere with the electron orbits, since we can model these
+perfectly well using only the Coulomb potential.</p>
+<p>We therefore conclude that the nuclear force has a very short range.
+The maximum force is experienced by nucleons separated by around 0.8 fm
+and beyond 2 fm it increasingly becomes negligible. At distances shorter
+than 0.7 fm it becomes repulsive (stopping the nucleons penetrating each
+other). The force seems to apply equally well to protons and neutrons
+(otherwise there would be nothing keeping neutrons bound in the
+nucleus). In fact, experimentally it appears that the strong nuclear
+force attracts protons and neutrons equally to a very high level of
+precision.</p>
+<h1 id="binding-energy">Binding Energy</h1>
+<p>Nucleons bound together in a nucleus are sitting in a potential well.
+To pull nucleons out of the nucleus we need to put in energy. Or, to put
+it another way, a nucleus is a bound (lower energy) state for this set
+of nucleons. The total energy required to completely separate all the
+nucleons is the binding energy of the nucleus. Alternatively, the
+binding energy is the energy that would be liberated were we to assemble
+a nucleus from its constituent nuclei.</p>
+<p>If we were to introduce energy in order to break the nucleus apart,
+that energy would go into mass. Recall from relativity the relation
+<span class="math inline">\(E = mc^2\)</span>. The mass of a nucleus,
+<span class="math inline">\(M(Z, A)\)</span>, is less than the mass of
+its constituent protons, <span class="math inline">\(Zm_p = Z \times
+1.00727u\)</span>, and neutrons <span class="math inline">\(Nm_n = N
+\times 1.0087u\)</span>. The difference is the binding energy, <span
+class="math inline">\(B(Z, A)/c^2\)</span>:</p>
+<p><span class="math display">\[M(Z, A) = Zm_p + Nm_n - B(Z,
+A)/c^2\]</span></p>
+<p>or</p>
+<p><span class="math display">\[B(Z, A) = c^2[Zm_p + Nm_n - M(Z,
+A)]\]</span></p>
+<p>The binding energy is plotted for several hundred stable nuclei as a
+function of their atomic mass number, <span
+class="math inline">\(A\)</span>, in Figure 1. We can see that it
+increases with the number of nucleons (<span
+class="math inline">\(A\)</span>) is a fairly, but not exactly, linear
+way.</p>
+<figure id="fig:binding">
+<img src="figs/b_stable.png" style="width:3.5in" />
+<figcaption>Binding energy for stable nuclei as a function of atomic
+mass number. Plotted from data taken from:
+https://en.wikipedia.org/wiki/List of nuclides</figcaption>
+</figure>
+<p>A slightly more interesting plot is the binding energy per nucleon,
+<span class="math inline">\(B/A\)</span> (i.e. the binding energy
+divided by the mass number), plotted for stable nuclei in Figure 2. The
+features now become clearer. For heavier nuclei, the binding energy per
+nucleon is just over 8 MeV, decreasingly slightly for heavier nuclei.
+For very light nuclei, the behaviour is a little more erratic, generally
+increasing with A, but with several outliers.</p>
+<figure id="fig:b_stable">
+<img src="figs/b_per_a_stable_labelled.png" style="width:3.5in" />
+<figcaption>Binding energy per nucleon (B/A) as a function of atomic
+mass number for stable nuclei. Except for the lightest nuclei, B/A is
+approximately a constant. Plotted from data taken from:
+https://en.wikipedia.org/wiki/List of nuclides</figcaption>
+</figure>
+<p>The peak of the curve is for <span class="math inline">\(\rm
+^{62}Ni\)</span>, an isotope of nickel. However, sometimes <span
+class="math inline">\(\rm ^{56}Fe\)</span> - iron - is highlighted as
+being the peak; while the <span class="math inline">\(B/A\)</span> value
+is actually slightly lower, iron-56 is much more abundant in the
+universe than nickel-62 (due to lack of favourable pathways to produce
+nickel-62 in stellar nuclear synthesis). Iron-56 also has a smaller mass
+per nucleon because less of its mass is made of neutrons which are
+slightly heavier than protons.</p>
+<p>This B/A peak marks a boundary between two effects - nuclear fission
+and fusion. You will learn more about these later, but essentially
+fission is the liberating of energy as two smaller nuclei join to form a
+larger nuclei, and fission is liberation of energy as a large nuclei
+breaks into smaller nuclei. We can see that fusion will only occur for
+an end product which is to the left of Nickel/Iron, since combining
+nuclei leads to a nucleus with a larger binding energy per nucleon.
+Since the number of nucleons remains the same, the total binding energy
+is now larger, meaning a release of energy. Fission will only occur to
+the right of Nickel/Iron if a nucleus splits into two smaller nuclei,
+they will have larger binding energy per nucleon, and so again, energy
+will be released.</p>
+<p>For any nuclear reaction we can define the Q-Value. This is the
+difference between the sum of the binding energy of the nuclei before
+(<span class="math inline">\(M_i\)</span>) and after (<span
+class="math inline">\(M_f\)</span>) the nuclear reaction, or
+equivalently the change in the mass deficit before and after the
+reaction. It is given by</p>
+<p><span class="math display">\[Q = (\sum M_i - \sum M_f
+)c^2\]</span></p>
+<p>For example, consider the reaction fusing helium and carbon nuclei to
+form an oxygen nucleus:</p>
+<p><span class="math display">\[^4_2He + ^{12}_6 C \rightarrow
+^{16}_8O\]</span></p>
+<p>Without worrying about the details of this type of nuclear reaction
+(which will be covered later), we can calculate the Q value by looking
+up the masses of these nuclei:</p>
+<p><span class="math display">\[\begin{aligned}
+    Q &amp;= (4.00260u+12u - 15.99491u)c^2 \\
+    &amp;= (0.00769u)c^2 \\
+    &amp;= (0.00769)(931.5~\mathrm{MeV/c^2})c^2 \\
+    &amp;= 7.16~\mathrm{MeV}
+\end{aligned}\]</span> where we have used that <span
+class="math inline">\(u = 931.5~\mathrm{MeV/c^2}\)</span>.</p>
+<p>This Q-value is positive: the mass of the products of the reaction
+are less than the mass of the reactants; the product is more tightly
+bound than the reactants; the binding energy is larger. We therefore
+have a release of energy. A reaction with a negative Q-value captures
+kinetic energy into binding energy. You will use the Q-value when you
+study nuclear reactions later in the course, and we will not delve into
+it more now. Trying to explain the shape of the B/A curve will be our
+next task.</p>
+<h2 id="sign-of-binding-energy">Sign of Binding Energy</h2>
+<p>In the above discussion we were only really talking about the
+magnitude of the binding energy. So is it positive or negative? With
+energy, signs and the zero crossing are a matter of convention, but we
+can think about the binding energy as being negative. The mass of a
+nucleus is less than the mass of its constituents, so we need a negative
+energy to give us that negative mass. This is consistent with the
+convention that we set the potential energy to zero when two particles
+are separated by an infinite distance. As they come together they then
+lose potential energy, and so the energy becomes negative. However, when
+talking about binding energy we often talk about it as a positive thing,
+such that nuclei with larger binding energy are more tightly bound, and
+we will adopt this convention in what follows.</p>
+<h1 id="liquid-drop-model-and-semi-empirical-mass-formula">Liquid Drop
+Model and Semi-Empirical Mass Formula</h1>
+<p>The liquid drop model is based on the idea that a nucleus behaves in
+some respects like a drop of liquid – thought of as collection of bound
+molecules which are in constant motion. From this we can develop the
+semi-empirical mass formula, predicting properties of nuclei including
+binding energies, mass, stability and decays. The formula for the total
+binding energy is made up of a number of terms, each of which has a
+physically explainable (or at least plausible) origin, weighted by
+constants. Some of these weighting factors can be estimated from
+theoretical considerations, but in general they can only be determined
+accurately from fitting to experimental data. Hence why we talk about
+this as a ‘semi-empirical’ model.</p>
+<h2 id="volume-term">Volume Term</h2>
+<p>As we saw previously, the binding energy per nucleon is approximately
+constant for all but the lightest nuclei, typically 8 MeV per nucleon.
+We therefore assume that each nucleon attracts its neighbours only, so
+that the total binding energy is proportional to the number of
+nucleons,</p>
+<p><span class="math display">\[B_1 = a_v A,\]</span></p>
+<p>where <span class="math inline">\(a_v\)</span> is a constant to be
+determined. (If each nucleon attracted every other nucleon then this
+term would be roughly proportional to <span
+class="math inline">\(A^2\)</span> which is definitely not what we
+observe.)</p>
+<h2 id="surface-term">Surface Term</h2>
+<p>A nucleon on the surface of the nucleus has fewer neighbours than
+those near the middle. Therefore, nuclei with a larger surface to volume
+ratio will have a smaller binding energy. The volume is proportional to
+nucleon number, <span class="math inline">\(A\)</span>, and <span
+class="math inline">\(A \propto R^3\)</span>, where <span
+class="math inline">\(R\)</span> is the nuclear radius. The surface
+area, <span class="math inline">\(S \propto R^2\)</span> and so <span
+class="math inline">\(S \propto A^{2/3}\)</span>. The surface term is
+therefore</p>
+<p><span class="math display">\[B_2 = -a_s A^{2/3},\]</span></p>
+<p>where <span class="math inline">\(a_s\)</span> is a constant to be
+determined. Note that it is negative since a larger surface area means a
+reduced binding energy.</p>
+<h2 id="coulomb-term">Coulomb Term</h2>
+<p>Protons repel each other due to the Coulomb force. If we have <span
+class="math inline">\(Z\)</span> protons then the number of interactions
+is <span class="math inline">\(Z(Z-1)\)</span> (i.e. each proton repels
+each other proton). Recall the Coulomb force is long range, all the
+protons interact, so this varies roughly as <span
+class="math inline">\(Z^2\)</span>, unlike the volume term which varies
+as <span class="math inline">\(A\)</span> rather than <span
+class="math inline">\(A^2\)</span>. The strength of the Coulomb force
+varies with inverse of separation (squared), and acts between all pairs
+of protons, so we expect a <span class="math inline">\(Z(Z-1)\)</span>
+dependence. From electrostatics it is possible to show that the
+electrostatic energy of a sphere of radius <span
+class="math inline">\(r\)</span> of uniform charge is:</p>
+<p><span class="math display">\[U =
+-\frac{3}{5}\frac{Q^2}{4\pi\epsilon_0 r},\]</span> where <span
+class="math inline">\(Q\)</span> is the total charge and <span
+class="math inline">\(\epsilon_0\)</span> is the permittivity of free
+space. Using <span class="math inline">\(Q = Ze\)</span> and recalling
+<span class="math inline">\(r = r_0A^{1/3}\)</span> gives us
+immediately</p>
+<p><span class="math display">\[U =
+-\frac{3}{5}\frac{Z^2e^2}{4\pi\epsilon_0 r_0 A^{1/3}}.\]</span></p>
+<p>However, this seems a little incorrect, since it would still give us
+some repulsion when <span class="math inline">\(Z = 1\)</span>, but a
+proton does not repel itself. So let’s write (without too much
+justification):</p>
+<p><span class="math display">\[B_3 =-
+\frac{3}{5}\frac{Z(Z-1)e^2}{4\pi\epsilon_0 r_0 A^{1/3}}  = -a_c
+\frac{Z(Z-1)}{A^{1/3}},\]</span></p>
+<p>where <span class="math inline">\(a_c\)</span> can be evaluated by
+substituting in the constants to be 0.72 MeV. Note that <span
+class="math inline">\(B_3\)</span> is a negative term since the Coulomb
+force is repulsive.</p>
+<h2 id="symmetry-term">Symmetry Term</h2>
+<p>If we were to use only the surface, volume and Coulomb terms then we
+would expect a nucleus made up entirely of neutrons to be more stable
+than one made up of protons and neutrons, since there is no Coulomb
+force to push them apart. This is obviously not what we observe. The
+next term in the equation, the symmetry term, tries to deal with this by
+invoking quantum mechanical arguments. From here on in, the terms are
+sometimes referred to as a ‘Fermi gas’ model rather than a liquid drop
+model.</p>
+<p>Neutrons and protons are both fermions, and spin 1/2 particles.
+Pauli’s exclusion principle forbids identical fermions from occupying
+the same quantum mechanical state. This influences the nucleons’ states
+in the potential well, as only two nucleons (with opposite spin, more on
+that later) can occupy each state. But protons and neutrons are
+different particles, and so they have their own sets of states.
+Essentially, if we were to fill up a nucleus with just protons, they
+would fill up the higher energy states more quickly for a given <span
+class="math inline">\(A\)</span> than if we had roughly equal numbers of
+protons and neutrons, each filling half as high in their own sets of
+states. (We will discuss this more when we talk about the shell model,
+for now we should just accept this.)</p>
+<p>In general, this means than stable nuclei have approximately <span
+class="math inline">\(Z = A/2\)</span>, or roughly equal numbers of
+protons and neutrons. This is a very strong factor in the binding energy
+for small nuclei, slightly less so for larger nuclei which tend to be
+stable with a slight excess of neutrons (due to the closer spacing of
+higher energy levels, again we will discuss this more later). We can
+capture this <span class="math inline">\(A\)</span> dependence with the
+following term:</p>
+<p><span class="math display">\[B_4 = -a_{symm}\frac{(A-2Z)^2}{A}
+.\]</span></p>
+<p>Since <span class="math inline">\(A = Z + N\)</span> we can also
+write <span class="math display">\[B_4 =
+-a_{symm}\frac{(N-Z)^2}{A}.\]</span></p>
+<p>The physical justification for this form of the <span
+class="math inline">\(A\)</span> dependence may not be so clear, but a
+bit of thought (or plotting it out) should convince you that this gives
+a term which increases the binding energy for <span
+class="math inline">\(Z\approx A/2\)</span> more for lower <span
+class="math inline">\(Z\)</span> nuclei than for higher <span
+class="math inline">\(Z\)</span> nuclei.</p>
+<h2 id="pairing-term">Pairing Term</h2>
+<p>Empirically it is found that nuclei with pairs of nucleons of the
+same type (e.g. 2p or 2n) have a higher binding energy than nuclei with
+one of each (1p + 1n). In fact, there are only 4 stable nuclei with an
+odd <span class="math inline">\(N\)</span> and an odd <span
+class="math inline">\(Z\)</span>, and they are all fairly small (<span
+class="math inline">\(^2\)</span>He, <span
+class="math inline">\(^6\)</span>Li, <span
+class="math inline">\(^{10}\)</span>B and <span
+class="math inline">\(^{14}\)</span>N) compared to over 160 nuclei with
+even <span class="math inline">\(N\)</span> and even <span
+class="math inline">\(Z\)</span>! This is not accounted for by the terms
+we have introduce so far, so we need to add an additional term called
+the pairing term, sometimes labelled <span
+class="math inline">\(\delta\)</span>.</p>
+<ul>
+<li><p>For odd <span class="math inline">\(A\)</span> (either even <span
+class="math inline">\(Z\)</span>, odd <span
+class="math inline">\(N\)</span> or odd <span
+class="math inline">\(Z\)</span>, even <span
+class="math inline">\(N\)</span>), there is no effect, <span
+class="math inline">\(\delta = 0\)</span></p></li>
+<li><p>For even <span class="math inline">\(A\)</span> due to even <span
+class="math inline">\(Z\)</span> and even <span
+class="math inline">\(N\)</span>, <span class="math inline">\(\delta =
+a_pA^{-1/2}.\)</span></p></li>
+<li><p>For even <span class="math inline">\(A\)</span> due to odd <span
+class="math inline">\(Z\)</span> and odd <span
+class="math inline">\(N\)</span>, <span class="math inline">\(\delta =
+-a_pA^{-1/2}\)</span>.</p></li>
+</ul>
+<p>Here <span class="math inline">\(a_p\)</span> is our final constant
+to be determined. If you look in older books you may well find this term
+written as <span class="math inline">\(A^{-3/4}\)</span> instead (In
+fact the justification for this power not being 1 is not obvious, why
+does the pairing term become less significant for larger nuclei?)</p>
+<h2 id="total-binding-energy">Total Binding Energy</h2>
+<p>The total binding energy is the sum of the five terms (volume,
+surface, Coulomb, symmetry and pairing):</p>
+<p><span class="math display">\[B(Z,A) = a_vA - a_sA^{2/3}
+-a_cZ(Z-1)A^{-1/3} - a_{sym} \frac{(A-2Z)^2}{A} + \delta\]</span></p>
+<p>The constants are worked out empirically by fitting to measured
+binding energies of nucleons. A good set of values is:</p>
+<ul>
+<li><p><span class="math inline">\(a_v\)</span> = 15.8 MeV</p></li>
+<li><p><span class="math inline">\(a_s\)</span> = 18.3 MeV</p></li>
+<li><p><span class="math inline">\(a_c\)</span> = 0.714 MeV</p></li>
+<li><p><span class="math inline">\(a_{sym}\)</span> = 23.2 MeV</p></li>
+<li><p><span class="math inline">\(a_p\)</span> = 12 MeV</p></li>
+</ul>
+<p>Python code to fit values to experimental data is here: <a
+href="https://mybinder.org/v2/gh/MikeHughesKent/nuclear/master?filepath=SEMF.ipynb"
+class="uri">https://mybinder.org/v2/gh/MikeHughesKent/nuclear/master?filepath=SEMF.ipynb</a></p>
+<p>The first three terms can be understood well in terms of a classical
+model of a nucleus. They are often referred to as the <strong>liquid
+drop model</strong> by analogy to a drop of liquid which is held
+together by molecular forces. The symmetry and pairing terms are quantum
+mechanical in nature, and are sometimes referred to as the <strong>Fermi
+gas</strong> terms; their origin and will be considered later in the
+context of the shell model.</p>
+<h2 id="mass-formula">Mass formula</h2>
+<p>To obtain the mass of a given nuclei, we now add up the masses of the
+constituent protons and neutrons and <em>subtract</em> the binding
+energy (because we made it a positive thing) divided by <span
+class="math inline">\(c^2\)</span> (from <span class="math inline">\(m =
+E/c^2\)</span>):</p>
+<p><span class="math display">\[M(Z,A) = Zm_p + Nm_n - B(Z,A) /
+c^2,\]</span></p>
+<p>or,</p>
+<p><span class="math display">\[M(Z,A) = Zm_p + Nm_n - a_vA + a_sA^{2/3}
++ a_cZ(Z-1)A^{-1/3} + a_{sym} \frac{(A-2Z)}{A} - \delta.\]</span></p>
+<h2 id="nuclear-stability">Nuclear Stability</h2>
+<p>Stable nuclei have high binding energies and hence low masses.
+Suppose we would like to find the most stable nuclide among all those
+with the same atomic mass number, <span
+class="math inline">\(A\)</span>. For a given number of nucleons, <span
+class="math inline">\(A\)</span>, we therefore want a minimum in the
+mass (largest binding energy), i.e.: <span class="math display">\[\bigg(
+\frac{  \partial M}{\partial Z} \bigg ) _A = 0\]</span></p>
+<p>Differentiating the expression for mass w.r.t <span
+class="math inline">\(Z\)</span> gives</p>
+<p><span class="math display">\[z_{min} = \frac{(m_n - m_p)c^2 +
+a_cA^{-1/3} + 4 a_{sym}}{2a_cA^{-1/3} + 8a_{sym}A^{-1}}.\]</span></p>
+<p>Since <span class="math inline">\(a_c \ll a_{sym}\)</span> the first
+two terms on the numerator are very small, and so <span
+class="math display">\[z_{min} \approx \frac{A}{2} \frac{1} {1 +
+\frac{1}{4}A^{2/3} a_c / a_{sym}}.\]</span></p>
+<p>When <span class="math inline">\(A\)</span> is small <span
+class="math inline">\(\frac{1}{4}A^{2/3} a_c / a_{sym} \approx
+0\)</span> and so <span class="math inline">\(Z \approx A/2\)</span>.
+When <span class="math inline">\(Z\)</span> is larger, <span
+class="math inline">\(Z/A \approx 0.4\)</span>. This is what we observe
+for stable nuclei in practice, and so the model is a good fit. Less
+stable nuclei decay into more stable nuclei (i.e. heavier nuclei decay
+into lighter nuclei (with the same <span
+class="math inline">\(A\)</span>). This can be achieved by converting a
+neutron into a proton or a proton into a neutron (<span
+class="math inline">\(\beta\)</span> decay - more on this later). Heavy
+nucleons that are far from the line of stability with excess neutrons
+may also decay by alpha emission (2 protons and 2 neutrons)</p>
+</body>
+</html>

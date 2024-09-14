@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Section 6 - Fission and Fusion</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Section 6 - Fission and Fusion</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>Finally, we study the principles of nuclear fission and nuclear
+fusion, including some applications, and touch upon some modern
+developments.</em></p>
+<h1 id="fission">Fission</h1>
+<p>Larger nuclei, particularly with <span class="math inline">\(A &gt;
+56\)</span> (iron), can in principle release energy by fissioning
+(splitting) into two or more smaller nuclei with larger binding energy
+per nucleon, <span class="math inline">\(B/A\)</span>. We can
+distinguish between <strong>spontaneous</strong> and
+<strong>induced</strong> fission.</p>
+<h2 id="spontaneous-fission">Spontaneous Fission</h2>
+<p>Consider U-238, an isotope of Uranium, with <span
+class="math inline">\(B/A = 7.6~\rm MeV\)</span>. If it were to split
+into two equal fragments, both with <span class="math inline">\(A =
+119\)</span>, then the SEMF predicts that they would each have <span
+class="math inline">\(B/A = 8.5~\rm MeV\)</span>, yielding a huge total
+energy release of <span class="math inline">\((8.5 - 7.6) \times 238 =
+214~\rm MeV\)</span>. And yet the half life for this decay to occur
+spontaneously is <span class="math inline">\(10^{16}\)</span> years! The
+first question to answer is therefore, why don’t all heavy nuclei
+undergo fission until they reach Fe-56?</p>
+<p>The simplest answer to this question is a similar one to what limits
+the rate of <span class="math inline">\(\alpha\)</span>-decay - the
+Coulomb barrier. We can imagine the parent nucleus just at the point of
+splitting. Each fragment sits in a potential well, and must overcome the
+Coulomb barrier to escape. As with the <span
+class="math inline">\(\alpha\)</span>-decay, we can estimate the height
+of the barrier by considering the point where the two fragments are just
+touching. Each has a radius of</p>
+<p><span class="math display">\[r = (1.2~\mathrm{fm})A^{1/3} =
+(1.2~\mathrm{fm})(119)^{1/3} \approx 6~\mathrm{fm}\]</span></p>
+<p>and so the separation is <span class="math inline">\(r_s =
+12~\mathrm{fm}\)</span>. The electric potential is then <span
+class="math display">\[V = k\frac{q_1q_2}{r_s} =
+250~\mathrm{MeV}\]</span></p>
+<p>In this case this is sufficiently far above the <span
+class="math inline">\(214~\mathrm{MeV}\)</span> energy release (i.e. the
+excess energy that the fission products would have) that we might expect
+that the probability of tunnelling through the barrier is low, and
+indeed this is the case. However, in other cases this is not so clear
+cut, and we can find possible fissions that, by this calculation, should
+occur readily, but in fact do not.</p>
+<p>Greater understanding can be obtained by using the liquid drop model
+to consider what happens as the nucleus splits. In order to divide into
+two fragments it must first deform and become elongated. Considering the
+SEMF, we would expect the volume term to not change (since it concerns
+neighbouring nucleons), the surface term to increase (since the surface
+area increases) and the Coulomb term to decrease (since the protons are,
+on average, more spaced out). The outcome therefore depends on how these
+two changes balance. If the Coulomb term decreases faster than the
+binding energy increases as the nucleus is stretched then the process
+will run away until it fissions. If the increase in the surface term
+dominates then the stretching reduces binding energy and so the nucleus
+will tend to hold together.</p>
+<p>Mathematically, we can approximate the surface area of an ellipsoid
+by the first two terms of a Taylor series: <span
+class="math display">\[S = 4\pi R^2 (1 + \frac{2}{5}\epsilon^2)\]</span>
+where <span class="math inline">\(\epsilon\)</span> is the eccentricity
+of the ellipse and <span class="math inline">\(R\)</span> is the radius
+of a sphere of the same volume. The increase in the average separation
+between points within the volume (which is relevant for the Coulomb
+term) goes as: <span class="math display">\[D = (1 -
+\frac{1}{5}\epsilon^2)\]</span></p>
+<p>The change in binding energy for a given eccentricity relative to an
+unstretched nucleus is therefore: <span
+class="math display">\[\begin{aligned}
+    \Delta B &amp;= B(\epsilon)  - B(\epsilon  = 0) \\
+    &amp;= - a_s A^{2/3}(1 + \frac{2}{5} \epsilon^2)  -
+a_cZ^2A^{-1/3}(1-\frac{1}{5}\epsilon^2) + a_sA^{2/3} + a_cZ^2A^{-1/3} \\
+    &amp;= (-\frac{2}{5}a_sA^{2/3} +
+\frac{1}{5}a_cZ^2A^{-1/3})\epsilon^2
+\end{aligned}\]</span></p>
+<p>In practice, regardless of the value of <span
+class="math inline">\(\epsilon\)</span>, stretching increases the
+binding energy (i.e. releases energy) when <span
+class="math display">\[\frac{1}{5}a_cZ^2A^{-1/3} &gt;
+\frac{2}{5}a_sA^{2/3}\]</span></p>
+<p>Putting in the values for <span class="math inline">\(a_s\)</span>
+and <span class="math inline">\(a_c\)</span> this gives <span
+class="math display">\[\frac{Z^2}{A} &gt; 47\]</span> as the condition
+for when fission should occur. In practice the condition can be slightly
+relaxed, as ever, due to quantum tunnelling, but this nevertheless gives
+us a rough estimate. Nevertheless, if we were to put in the values for
+U-235 (Z = 92, A = 235) we get <span class="math inline">\(Z^2/A =
+36\)</span>, suggesting that spontaneous fission should not readily
+occur.</p>
+<h2 id="induced-fusion">Induced Fusion</h2>
+<p>There are certain nuclei which do not undergo spontaneous fission but
+that can nevertheless be made unstable to fission by absorption of a
+neutron. The neutron may carry kinetic energy, or may be a
+<strong>thermal neutron</strong>, meaning that it carries only the
+energy associated with the temperature of the environment (<span
+class="math inline">\(E=k_BT\)</span>). Some nuclei, such as U-235, will
+fission just from absorbing a thermal neutron. Such nuclei are said to
+be <strong>fissile</strong>. Others, such as U-238, require the neutron
+to carry kinetic energy. These are <strong>fissionable</strong>, but not
+fissile.</p>
+<p>Following the absorption of the nucleus, we obtain a <strong>compound
+state</strong> (excited state). The <strong>excitation energy</strong>
+of this state is obtained from the mass difference between the excited
+compound state and the equivalent ground state nucleus. For example, if
+U-235 absorbs a neutron, to form the compound state <span
+class="math inline">\(^{235}\mathrm{U}^*\)</span>, then the excitation
+energy is <span class="math display">\[E_{\mathrm{ex}} =
+m(^{236}\mathrm{U}^*) - m(^{236}\mathrm{U}),\]</span> where <span
+class="math display">\[m(^{236}\mathrm{U}^*) = m(^{235}\mathrm{U}) +
+m_n,\]</span> where <span class="math inline">\(m_n\)</span> is the
+neutron mass. This gives <span class="math inline">\(E =
+6.5~\mathrm{MeV}\)</span>, sufficient to overcome the <strong>activation
+energy</strong> (energy to overcome to fission barrier) of <span
+class="math inline">\(6.2~\mathrm{MeV}\)</span>.</p>
+<p>In comparison, for U-238, the same calculation gives <span
+class="math inline">\(E_{ex} = 4.8~\mathrm{MeV}\)</span> which is
+insufficient to overcome the activation energy of <span
+class="math inline">\(6.6~\mathrm{MeV}\)</span>. (The difference can be
+understood in terms of the pairing term of the SEMF, since U-235 is
+even-odd and U-238 is even-even). The extra energy for fission must
+therefore come from kinetic energy of the neutron, hence why thermal
+neutrons cannot induce fission in U-238.</p>
+<h2 id="fission-products">Fission Products</h2>
+<p>A general induced fusion reaction of U-235 looks like:</p>
+<p><span class="math display">\[\isotope{n} + \isotope[235][92]{U}
+\rightarrow \isotope[236][92]U^* \rightarrow \isotope{X}^* +
+\isotope{Y}^* \rightarrow \isotope{X} + \isotope{Y} + \kappa
+\isotope{n}\]</span> where <span
+class="math inline">\(\isotope{X}\)</span> and <span
+class="math inline">\(\isotope{Y}\)</span> are the decay products and
+<span class="math inline">\(\kappa \approx 2.4\)</span> is the average
+number of <strong>prompt neutrons</strong> which are released almost
+immediately (<span
+class="math inline">\(10^{-14}~\mathrm{s}\)</span>).</p>
+<p>While we might expect that <span
+class="math inline">\(\isotope{X}\)</span> and <span
+class="math inline">\(\isotope{Y}\)</span> would be roughly equal in
+size, this is not the most probable outcome. Typically the fission
+fragments from U-235 are around <span class="math inline">\(A =
+95\)</span> and <span class="math inline">\(A= 137\)</span>. The exact
+reasons for this are still being worked out, but are thought to be
+connected to shell filling effects.</p>
+<p>Even after the emission of the prompt neutrons, this decay products
+still have an excess of neutrons and hence are unstable. <span
+class="math inline">\(\beta\)</span>-decay often follows, followed by
+further emission of neutrons, known as <strong>delayed neutrons</strong>
+as they are emitted around 1 s after the fission. These only make up
+less than 1% of the total neutrons emitted, but turn out to be very
+useful for fission power generation, as discussed below.</p>
+<h2 id="chain-reactions">Chain Reactions</h2>
+<p>When a nucleus, such as U-235, undergoes fission, it results in two
+unequal daughter nuclei and several neutrons. The neutrons are emitted
+because the daughter nuclei have an excess of neutrons (recall that
+light nuclei require a smaller excess of neutrons to be stable.). These
+neutrons can then be absorbed by other U-235 nuclei, which then fission
+and release more neutrons. If, on average, each fission results in the
+less than one subsequent fission, then the situations is
+<strong>sub-critical</strong> and things quickly stop. If each fission
+results in another fission then the situation is
+<strong>critical</strong> and we have a stable reaction. If each fission
+results in more than one further fission then we are
+<strong>super-critical</strong> and we have a run-away reaction.</p>
+<h2 id="nuclear-power">Nuclear Power</h2>
+<p>To generate power from nuclear fission we would like to have a
+stable, self-sustaining, nuclear reaction. We certainly do not want
+something that runs away. Most nuclear power is generated using U-235.
+Naturally occurring Uranium only contains about 0.7% U-235, with the
+remainder mostly U-238 which is not fissile. For most nuclear reactors
+the Uranium must be enriched to increase the U-235 fraction to about 4%
+using a centrifuge. The waste product from this process, which has a
+lower concentration of U-235 and a higher concentration of U-238, is
+called <strong>depleted Uranium</strong> and has several applications,
+including in armour-piercing shells.</p>
+<p>With U-235 it turns out that, by default, the reaction is
+sub-critical. Even though several neutrons are produced by a fission, on
+average less than one will be absorbed by another U-235 nucleus. This is
+because they are created with sufficient kinetic energy that they are
+not easily absorbed. We refer to the chance of the neutron being
+absorbed as the <strong>cross-section</strong>. The cross-section
+rapidly decreases as the kinetic energy increases.</p>
+<p>To achieve a self sustaining nuclear reaction we need to slow the
+neutrons down, i.e. <strong>thermalise</strong> them. This is done with
+a medium called the <strong>moderator</strong>. In a nuclear reactor
+this will often be graphite. Neutrons entering this material lose
+kinetic energy and then are more likely to absorbed by a U-235 nucleus,
+increasing the rate of fission. Layers of the nuclear fuel (Uranium) and
+moderator were traditionally referred to as the
+<strong>pile</strong>.</p>
+<p>The rate of energy generation in a nuclear reactor is controlled by
+using the correct amount of moderator. The reaction rate can be fine
+tuned by inserting <strong>control rods</strong> of materials such as
+Cadmium or Boron which absorb neutrons and hence reduce the rate of the
+reaction. However, given the rate of the reaction and the emission of
+prompt neutrons, the control rods cannot be inserted or removed fast
+enough into a critical pile to prevent a run-away reaction and meltdown.
+This problem is solved by designing the pile to be slightly sub-critical
+for prompt neutrons. This means that the delayed neutrons are needed for
+the pile to become critical. Since these delayed neutrons are slower to
+be emitted, the control rods can be moved fast enough to tune the rate
+of fission and hence control the power generation. An example of a power
+station design is shown in Figure <a href="#fig:magnox"
+data-reference-type="ref" data-reference="fig:magnox">1</a>.</p>
+<figure id="fig:magnox">
+<img src="figs/magnox.png" style="width:5in" />
+<figcaption>Simplified schematic of Magnox gas cooled reactor, one of
+the earliest in the UK (and the world). Diagram by Emoscopes, reproduced
+from <span>https://en.wikipedia.org/wiki/Magnox</span></figcaption>
+</figure>
+<p>To generate power from a nuclear reactor we need to somehow capture
+the energy released by fission. Almost all of the energy goes into
+kinetic energy of the daughter particles, generating heat. Coolant, such
+as pressured water or gas, flows through the reactor and transfers the
+heat to water which turns to steam and the expansion drives a turbine,
+just as in a conventional power station. As discussed above, the fission
+products are radioactive and must not be released directly into the
+environment. Some of the neutrons will also be absorbed by materials in
+and around the reactor, resulting in radioactive products. The whole of
+the reactor is therefore enclosed in a containment vessel.</p>
+<p>This is all a gross simplification, and you don’t need to know any
+more details of how a reactor works for the exam, but for interest there
+are links to more detailed resources on Moodle.</p>
+<h2 id="nuclear-fission-weapons-not-examinable">Nuclear Fission Weapons
+(Not Examinable)</h2>
+<p>To create a weapon we want to release as much energy as possible in a
+short space of time. We therefore want (a) lots of neutrons emitted (b)
+quickly. We therefore want increased purity of the fissile material
+(further enrichment), and make use of prompt neutrons. To generate a
+high yield, the key is to ensure that as much fission as possible occurs
+before the fissile material is blown apart. Approaches include
+gun-types, where two masses of the fissile materials are fired together,
+and implosion types, where a ring of explosives force the fissile
+material together in the centre. Links to more information are on
+Moodle.</p>
+<h1 id="nuclear-fusion">Nuclear Fusion</h1>
+<p>In nuclear fusion, light nuclei (to the left of the peak on the <span
+class="math inline">\(B/A\)</span> against <span
+class="math inline">\(A\)</span> plot) combine to form heavier nuclei,
+resulting in a positive Q-Value and hence a release of energy. Once
+again, we can explain why fusion does not happen all the time by
+invoking the Coulomb barrier. This time, of course, we want to bring
+positively charged nuclei together, and so the considerations are fairly
+straightforward. In order to bring two nuclei together so that they are
+touching (and hence so that the strong nuclear force comes into play),
+we must overcome a Coulomb potential of <span class="math display">\[V =
+k \frac{q_1 q_2}{r} = k \frac{Z_1eZ_2e}{r},\]</span></p>
+<p>where <span class="math inline">\(Z_1\)</span> and <span
+class="math inline">\(Z_2\)</span> are the atomic numbers of the two
+nuclei, and the separation, <span class="math inline">\(r\)</span>, is
+equal to the sum of their radii. For example, to fuse two deuterium
+nuclei (deuterons) to form He-4, we would have <span
+class="math display">\[V = k \frac{(e^2)}{2 \times r_0(2)^{1/3}} \approx
+0.47~\mathrm{MeV}\]</span></p>
+<p>From <span class="math inline">\(E = k_BT\)</span> this is equivalent
+to a temperature of over <span class="math inline">\(10^{10}\)</span> K!
+In practice, quite such high temperatures are not needed. Firstly, while
+a certain temperature gives an average kinetic of energy of <span
+class="math inline">\(k_BT\)</span>, there are a distribution of
+energies, and so some nuclei will have more. Secondly, quantum
+tunnelling allows for a non-zero probability of fusion even if the
+kinetic energy is below the Coulomb potential. Nevertheless, extremely
+high temperature are still required (100s of millions of K for a viable
+fusion reactor); such a temperature is difficult to create, but is
+present in the core of stars due to the huge compressive gravitational
+forces.</p>
+<h2 id="stellar-fusion">Stellar fusion</h2>
+<p>In nature, fusion is much more important that fission, since it is
+the process that drives energy generation in stars. Those of you taking
+astrophysics modules will learn about this in far more detail there, but
+for this module we will look at the the Hydrogen burning process, the
+dominant process in stars that fuses four protons to form a Helium-4
+nucleus (also involving some Beta Decays). The first step is the fusion
+of two protons:</p>
+<p><span class="math display">\[\isotope{p} + \isotope{p} \rightarrow
+\isotope[2][1]D  + \isotope{e}^+ + \nu_e\]</span> releasing 0.42 MeV, or
+a total of 1.442 MeV after the position annihilates with an electron.
+This reaction is extremely rare, occurring on the order of once every
+few billion years (depending on the mass of the star). This limits the
+rate of fusion in stars. The deuteron formed in the first step then
+fuses with another proton:</p>
+<p><span class="math display">\[\isotope{p} + \isotope[2][1]D
+\rightarrow \isotope[3][2]{He}     + \gamma\]</span> releasing a further
+4.493 MeV and a gamma ray. There are several possible routes to form
+He-4, including the nost common (84%) fusion of two He-3 nuclei: <span
+class="math display">\[\isotope[3][2]{He} + \isotope[3][2]{He}
+\rightarrow \isotope[4][2]{He} + 2\isotope{p}\]</span> which releases
+12.859 MeV.</p>
+<h2 id="power-from-fusion">Power from fusion</h2>
+<p>It has long been a goal to obtain useful amounts of energy from
+nuclear fusion here on Earth. This has several potential benefits over
+fission:</p>
+<ul>
+<li><p>The materials needed for fusion (light nuclei such as the
+deuteron) are more readily available, or can be easily created, compared
+with fissile materials such as U-235.</p></li>
+<li><p>A fusion reactor would produce much less radioactive
+waste.</p></li>
+</ul>
+<p>Although the energy released in a fusion event is generally less than
+a fission event (i.e. the Q-Value is smaller), the energy released per
+unit mass of the reactants is larger. Therefore power from fusion is
+said to be more energy dense.</p>
+<p>There is no question that fusion power is possible in principle, as
+we know it occurs in stars and fusion weapons, but it remains to be seen
+if the conditions for fusion can be generated on Earth in such a way as
+to generate stable and safe power at an acceptable cost. It turns out to
+be rather difficult to create the conditions for fusion without the
+gravitational field of a star to create the required pressure and hence
+temperature. (The idea of <strong>cold fusion</strong>, making fusion
+happen without these high temperature, is of course, complete
+nonsense.)</p>
+<p>There have been several fusion reactions proposed as a power source.
+In order for the reaction to be sufficiently likely to occur it must,
+among other things:</p>
+<ul>
+<li><p>Only involve two reactants (probability for reactions between 3+
+nuclei are very small).</p></li>
+<li><p>Produce two products.</p></li>
+<li><p>Conserve protons and neutrons (conversion is possible via the
+Weak Force, but too unlikely).</p></li>
+</ul>
+<p>A particularly strong candidate is <strong>deuterium-tritium (D+T)
+fusion</strong>: <span class="math display">\[\isotope[2][1]{D} +
+\isotope[3][1]{T} \rightarrow \isotope[4][2]{He} + \isotope{n}\]</span>
+which releases 17.6 MeV. Notice that this does not produce radioactive
+products intrinsically (unlike fission), but the free neutron may go on
+to be absorbed by other materials, activating them. Deuterium is readily
+obtained from sea-water, while tritium can be produced by bombarding
+lithium with neutrons. This could be done using the neutrons created in
+the D-T fusion, known as <strong>tritium breeding</strong>.</p>
+<p>To create the conditions for fusion, the reactants must be pushed
+together with sufficient energy to overcome the Coulomb barrier. There
+are two approaches to this which have been investigated in detail:</p>
+<ul>
+<li><p>Magnetic Confinement - The reactant mixture, once heated, becomes
+a plasma (i.e electrons are stripped from the nuclei to leave charged
+ions) and so can be directed using magnetic fields in a device such as a
+Tokamak.</p></li>
+<li><p>Inertial Confinement - The reactants are forced together using
+momentum imparted from a high energy laser beam.</p></li>
+</ul>
+<p>In practice, the engineering challenges are immense, and no-one has
+yet demonstrated anything close to a viable fusion reactor. On 5th
+December 2022, a major step forward was made when the United States
+Department of Energy managed to achieve 3.25 MJ of energy generation
+from only 2.05 MJ of laser energy used to inject energy to the target,
+resulting in 1.15 MJ of fusion energy output. However, this ignores the
+huge amount of energy required to run the laser, i.e. there was no a
+viable way of generating power. Several private sector companies have
+attracted large amount of investor funding in recent years, but whether
+this means that we are on the cusp of a new source of clean energy, or
+simply living through the hype before the next ‘fusion winter’ remains
+to be seen.</p>
+</body>
+</html>
