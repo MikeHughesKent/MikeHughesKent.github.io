@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Section 8</title>
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 8s - Relativistic Energy</title>
   <style>
     html {
       color: #1a1a1a;
@@ -172,7 +173,9 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Section 8</h1>
+<h1 class="title">Section 8s - Relativistic Energy</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
 </header>
 <p>In this final lecture we will discuss one more relativistic
 correction - to energy. As we will see, while this correction is not
@@ -234,36 +237,36 @@ class="math display">\[E_K = \int F ds,\]</span> where <span
 class="math inline">\(F\)</span> is the force and <span
 class="math inline">\(s\)</span> is the distance. Secondly, we recall
 that force is equal to the rate of change in momentum: <span
-class="math display">\[F = \frac{\diff p}{\diff t}.\]</span> Therefore,
-if we consider an object that has accelerated from rest to a velocity
-<span class="math inline">\(v\)</span>, the kinetic energy is given by:
-<span class="math display">\[E_K = \int^{v=v}_{v=0} \frac{\diff p}{\diff
-t} \diff s.\]</span> Now, <span class="math inline">\(ds/dt\)</span> is
-simply velocity, <span class="math inline">\(v\)</span>, so <span
-class="math display">\[E_K = \int^{v=v}_{v=0} v \diff p,\]</span> and
+class="math display">\[F = \frac{dp}{dt}.\]</span> Therefore, if we
+consider an object that has accelerated from rest to a velocity <span
+class="math inline">\(v\)</span>, the kinetic energy is given by: <span
+class="math display">\[E_K = \int^{v=v}_{v=0} \frac{dp}{dt} ds.\]</span>
+Now, <span class="math inline">\(ds/dt\)</span> is simply velocity,
+<span class="math inline">\(v\)</span>, so <span
+class="math display">\[E_K = \int^{v=v}_{v=0} v~dp,\]</span> and
 relativistic momentum is given by <span class="math inline">\(p=\gamma
 m_0 u\)</span>, so that: <span class="math display">\[E_K =
 \int^{v=v}_{v=0} vd\bigg(\frac{m_0v}{\sqrt{1-v^2/c^2}}\bigg) =
-\int^{v=v}_{v=0} v \diff \bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
+\int^{v=v}_{v=0} v~d\bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
 \bigg)^{-1/2}\bigg],\]</span> where we have expanded out <span
 class="math inline">\(\gamma\)</span>.</p>
 <p>We want to get this integral in terms of <span
-class="math inline">\(\diff v\)</span> so that we can integrate and
-apply the limits. To do this, we can use the chain rule to show that
-<span class="math display">\[\begin{aligned}
-\frac{\diff}{\diff v} \bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
-\bigg)^{-1/2}\bigg] &amp;= m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-1/2} +
+class="math inline">\(dv\)</span> so that we can integrate and apply the
+limits. To do this, we can use the chain rule to show that <span
+class="math display">\[\begin{aligned}
+\frac{d}{dv} \bigg[(m_0v)\bigg(1-\frac{v^2}{c^2} \bigg)^{-1/2}\bigg]
+&amp;= m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-1/2} +
 m_0\frac{v^2}{c^2}\bigg(1-\frac{v^2}{c^2}\bigg)^{-3/2}.
 \end{aligned}\]</span> If we divide the first term top and bottom by
 <span class="math inline">\((1-v^2/c^2)\)</span> to put everything over
 a common denominator we get: <span
-class="math display">\[\diff\bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
-\bigg)^{-1/2}\bigg] = m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-3/2} \diff
-v.\]</span> Substitute this back into the equation for <span
-class="math inline">\(E_K\)</span> and we get <span
-class="math display">\[E_K = \int m_0 \bigg(1-
-\frac{v^2}{c^2}\bigg)^{-3/2}v \diff v.\]</span> This integral can be
-solved using the substitution <span class="math inline">\(w=\sqrt{1 /
+class="math display">\[d\bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
+\bigg)^{-1/2}\bigg] =
+m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-3/2}~dv.\]</span> Substitute this
+back into the equation for <span class="math inline">\(E_K\)</span> and
+we get <span class="math display">\[E_K = \int m_0 \bigg(1-
+\frac{v^2}{c^2}\bigg)^{-3/2}v~dv.\]</span> This integral can be solved
+using the substitution <span class="math inline">\(w=\sqrt{1 /
 (1-v^2/c^2)}\)</span>, to give <span class="math display">\[E_K =
 \frac{m_0c^2}{\sqrt{1-v^2/c^2}} - m_0c^2,\]</span> and so <span
 class="math display">\[\boxed{E_K = (\gamma - 1)m_0c^2}\]</span> which
@@ -302,27 +305,28 @@ of <span class="math inline">\(c\)</span> (and hence where the effects
 of special relativity become noticeable) tend to be particles (for
 example in a particle accelerator). In this case, the Joule is not a
 sensible unit to use. Instead we use electron-volts (eV). <span
-class="math display">\[1 \si{\electronvolt} = 1.6 \times  10^{-19}
-\si{\joule}\]</span> (This comes from the energy gained by an electron
-moving across a voltage of 1 V, but that isn’t important here.)</p>
+class="math display">\[1~\mathrm{eV} = 1.6
+\times  10^{-19}~\mathrm{J}\]</span> (This comes from the energy gained
+by an electron moving across a voltage of 1 V, but that isn’t important
+here.)</p>
 <p>Since we know that rest mass is equivalent to rest energy, linked by
 the constant <span class="math inline">\(c^2\)</span>, <span
 class="math inline">\(E_0=m_0c^2\)</span>, we can also specify the rest
 mass in eV type units.<br />
-A particle with a rest energy of <span class="math inline">\(1 \
-\si{\electronvolt}\)</span> would have a rest mass of <span
-class="math inline">\(1 \ \si{\electronvolt} /c^2\)</span>.<br />
+A particle with a rest energy of <span
+class="math inline">\(1~\mathrm{eV}\)</span> would have a rest mass of
+<span class="math inline">\(1~\mathrm{eV/c^2}\)</span>.<br />
 In practice we will actually find ourselves working with larger units of
 energy and mass, in which case we will talk about <span
-class="math inline">\(\si{\mega\electronvolt}\)</span> and <span
-class="math inline">\(\si{\mega\electronvolt} /c^2\)</span>, or <span
-class="math inline">\(\si{\giga\electronvolt}\)</span> and <span
-class="math inline">\(\si{\giga\electronvolt} /c^2\)</span><br />
+class="math inline">\(\mathrm{MeV}\)</span> and <span
+class="math inline">\(\mathrm{MeV/c^2}\)</span>, or <span
+class="math inline">\(\mathrm{GeV}\)</span> and <span
+class="math inline">\(\mathrm{GeV/c^2}\)</span><br />
 We can also use these kinds of units for momentum. Recall that <span
 class="math inline">\(p=\gamma mv\)</span>. If we specify mass in <span
-class="math inline">\(MeV/c^2\)</span> and velocity as a fraction of
+class="math inline">\(\rm MeV/c^2\)</span> and velocity as a fraction of
 <span class="math inline">\(c\)</span>, then we can specify our momentum
-in units of <span class="math inline">\(MeV/c\)</span>.<br />
+in units of <span class="math inline">\(\rm MeV/c\)</span>.<br />
 Using these kinds of units makes dealing with mass/energy/momentum
 problems in particle physics and relativity much simpler (since the
 <span class="math inline">\(c\)</span>s also cancel out) and <strong>you
@@ -330,25 +334,22 @@ should be very comfortable with them going into the exam.</strong></p>
 <h1 id="example-energy-and-momentum-calculations">Example Energy and
 Momentum Calculations</h1>
 <div class="example">
-<p>A neutron has a rest mass of 940 <span
-class="math inline">\(\si{\mega\electronvolt} /c^2\)</span> and is
-travelling at 0.9c. What is its rest energy, total energy, kinetic
-energy and momentum?<br />
-If the rest mass is 940 <span
-class="math inline">\(\si{\mega\electronvolt} /c^2\)</span> , then to
-get the rest energy we use <span class="math inline">\(E=mc^2 =
-(940~\mathrm{MeV/c^2})c^2  =\)</span>940 <span
-class="math inline">\(\si{\mega\electronvolt}\)</span>.<br />
+<p>A neutron has a rest mass of <span
+class="math inline">\(940~\mathrm{MeV/c^2}\)</span> and is travelling at
+0.9c. What is its rest energy, total energy, kinetic energy and
+momentum?<br />
+If the rest mass is <span
+class="math inline">\(940~\mathrm{MeV/c^2}\)</span>, then to get the
+rest energy we use <span class="math inline">\(E=mc^2 =
+(940~\mathrm{MeV/c^2})c^2  = 940~\mathrm{MeV}\)</span>.<br />
 The total energy is given by <span class="math inline">\(E=\gamma
 mc^2\)</span>. For <span class="math inline">\(v=0.9c\)</span> then
 <span class="math inline">\(\gamma = \sqrt{\frac{1}{1 -0.9^2}} =
 2.294\)</span>.<br />
 Therefore <span class="math inline">\(E =
-(2.294)(940~\mathrm{MeV}/c^2)c^2 = 2156
-~  \si{\mega\electronvolt}\)</span>.<br />
+(2.294)(940~\mathrm{MeV}/c^2)c^2 = 2156~\mathrm{MeV}\)</span>.<br />
 Then, <span class="math inline">\(E_K = (\gamma - 1)mc^2 = E - mc^2 =
-2156~\mathrm{MeV} - 940~\mathrm{MeV} = 1316 ~
-\si{\mega\electronvolt}\)</span>.<br />
+2156~\mathrm{MeV} - 940~\mathrm{MeV} = 1316~\mathrm{MeV}\)</span>.<br />
 Finally, <span class="math inline">\(p=\gamma mv =
 (2.294)(940~\mathrm{MeV}/c^2)(0.9c) = 1940
 ~\mathrm{MeV/c}\)</span>.<br />

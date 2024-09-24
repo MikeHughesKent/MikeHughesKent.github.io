@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Section 7</title>
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 7 - Relativistic Momentum</title>
   <style>
     html {
       color: #1a1a1a;
@@ -172,7 +173,9 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Section 7</h1>
+<h1 class="title">Section 7 - Relativistic Momentum</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
 </header>
 <p>In this lecture we will discuss further implications of special
 relativity on momentum. Since momentum is dependent on velocity, it’s
@@ -189,14 +192,14 @@ because this value is <em>conserved</em>. More generally, the total
 value of the momentum, summed over all objects, is conserved for any
 system that has no external forces acting on it.</p>
 <p>To take a simple example, consider two blocks, each with a mass of
-<span class="math inline">\(1\)</span> kg. One is stationary, and the
-other is moving towards it at a velocity of <span
-class="math inline">\(10\)</span> m s<sup>−1</sup>, as shown in the
-diagram in Figure <a href="#fig:momentum" data-reference-type="ref"
+<span class="math inline">\(1\,\rm kg\)</span>. One is stationary, and
+the other is moving towards it at a velocity of <span
+class="math inline">\(10\,\rm m/s\)</span>, as shown in the diagram in
+Figure <a href="#fig:momentum" data-reference-type="ref"
 data-reference="fig:momentum">1</a>.</p>
 <figure id="fig:momentum">
-<p><embed src="Pictures/collision.pdf" style="width:12cm" /> <span
-id="fig:momentum" data-label="fig:momentum"></span></p>
+<p><img src="Pictures/collision.png" style="width:12cm" alt="image" />
+<span id="fig:momentum" data-label="fig:momentum"></span></p>
 <figcaption>Before and after a collision between two
 blocks.</figcaption>
 </figure>
@@ -204,16 +207,16 @@ blocks.</figcaption>
 given by: <span class="math display">\[\begin{aligned}
 p &amp;= m_1v_1 + m_2v_2 \\
 &amp;= (1~\mathrm{kg})(10~\mathrm{ms^{-1}}) + (1 ~\mathrm{kg})(0) \\
-&amp;= 10 \; \si{\kilo\gram\metre\per\second}
+&amp;= 10 \; ~\mathrm{kgms^{-1}}
 \end{aligned}\]</span></p>
 <p>After the collision, the total momentum will still be equal to 10
 kg m s<sup>−1</sup>. So if, for example, the left-most block bounces
 back at 5 m s<sup>−1</sup>, the second block must have a velocity <span
 class="math inline">\(v_2\)</span> such that: <span
 class="math display">\[\begin{aligned}
-p &amp;= 10~\si{\kilo\gram\metre\per\second} =
-(1~\mathrm{kg})(-5~\mathrm{ms^{-1}}) + (1~\mathrm{kg})v_2 \\
-v_2 &amp;= 15 \; \si{\metre\per\second}
+p &amp;= 10~\mathrm{kgms^{-1}} = (1~\mathrm{kg})(-5~\mathrm{ms^{-1}}) +
+(1~\mathrm{kg})v_2 \\
+v_2 &amp;= 15 \; \mathrm{ms^{-1}}
 \end{aligned}\]</span></p>
 <p>Using the classical Galilean transformation between inertial frames,
 if momentum is conserved in one frame of reference then it will also be
@@ -259,8 +262,8 @@ class="math inline">\(S&#39;\)</span>, B moving directly down the y-axis
 (i.e. it has zero x-velocity) with velocity <span
 class="math inline">\(v_{B,y} = -v_{A,y}\)</span>.</p>
 <figure id="fig:momentumBA">
-<p><embed src="Pictures/momentum.pdf" style="width:12cm" /> <span
-id="fig:momentumBA" data-label="fig:momentumBA"></span></p>
+<p><img src="Pictures/momentum.png" style="width:8cm" alt="image" />
+<span id="fig:momentumBA" data-label="fig:momentumBA"></span></p>
 <figcaption>Collision between two balls, viewed from two different
 frames of reference.</figcaption>
 </figure>
@@ -331,8 +334,8 @@ agreement with non-relativistic physics in the limit <span
 class="math inline">\(v \ll c\)</span>. More generally, for any
 reference frame, <span class="math inline">\(dt = \gamma d\tau\)</span>,
 so we straight-away see that <span class="math display">\[p = m_0 \gamma
-\frac{\diff x}{\diff t} = \gamma m_0 v.\]</span> This isn’t a true
-derivation of course, since we chose <span
+\frac{d x}{d t} = \gamma m_0 v.\]</span> This isn’t a true derivation of
+course, since we chose <span
 class="math inline">\(p=m_0(dx/d\tau)\)</span> without any real
 justification, but it shows that this is a plausible definition for
 relativistic momentum</p>

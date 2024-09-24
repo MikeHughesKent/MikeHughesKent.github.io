@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 4 - Spacetime and the Relativity of Simultaneity</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 4 - Spacetime and the Relativity of
+Simultaneity</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p>In this lecture, we will focus on some deeper aspects of special
+relativity, studying the breakdown in our ideas of absolute
+simultaneity, and the idea of the spacetime interval, a quantity which
+<em>can</em> be considered absolute in the sense that it does not change
+under a Lorentz transformation.</p>
+<h1 id="ladder-paradox">Ladder Paradox</h1>
+<p>The ladder ‘paradox’ is a classic situation in special relativity. If
+you understand the ladder paradox you are a good way to understanding
+the key ideas of the theory.</p>
+<p>A farmer is standing next to his shed. He would like to put his the
+ladder inside the shed, but he has a problem. The shed is 2 m in length
+while the ladder is 4 m long. Luckily, he has studied PH304, and he has
+an idea. He realises that if he moves the ladder at a velocity of <span
+class="math inline">\(\sqrt{3}c/2\)</span>, he will have a gamma factor
+of <span class="math inline">\(\gamma = 2\)</span>. The ladder will then
+be length contracted, in the frame of the farmer and the non-moving
+shed, by a factor of 2, making it 2 m in length and just able to fit
+inside the shed.</p>
+<p>Of course, it won’t be in the shed for very long before it crashes
+through the other side. However, in a second stroke of luck, the shed
+has two sets of doors, front and back. The ladder will enter the front
+door, which he can then quickly close, momentarily trapping the ladder
+inside. To prevent any damage to his shed doors, he will then
+immediately open the back door, allowing the ladder to pass through and
+carry on its way at <span
+class="math inline">\(\sqrt{3}c/2\)</span>.</p>
+<p>Leaving aside questions of how he accelerates the ladder, or opens
+and closes the doors so fast, does this work?</p>
+<p>From the rest frame of the shed, it looks like it will indeed work.
+The difficulty comes when we consider things from the rest frame of the
+ladder. From the ladder’s point of view it is the shed that it is
+moving, and so length contracted by a factor of 2. So now the shed is
+only 1 m in length, while the ladder maintains its length of 4 m in its
+rest frame. So in the rest frame of the ladder, things are even worse
+than they were to start with!</p>
+<p>How is this paradox resolved? The answer is that the closing of the
+front and back doors of the shed are events separated in space. This
+means that while they are simultaneous for the farmer/shed, the are not
+simultaneous for the ladder. The ladder will see the back door open
+<em>before</em> the front door closes, and so it will never be entirely
+within the shed.</p>
+<p>There is a problem on Worksheet 2 in which you will work through this
+in more detail.</p>
+<h1 id="twin-paradox">Twin Paradox</h1>
+<p>The twin paradox is less illustrative of the principles of special
+relativity, but is nevertheless important for other reasons. It is
+illustrated in Figure <a href="#fig:twin" data-reference-type="ref"
+data-reference="fig:twin">1</a>.</p>
+<p>An astronaut sets out from Earth at a speed <span
+class="math inline">\(v\)</span>, which is some appreciable fraction of
+the speed of light. She travels for some distance, turns around and
+comes back. The question is, will her clock agree with the clock of her
+twin sister who has stayed on Earth? Or to put it another way, will they
+have aged differently?</p>
+<p>From the point of view of the twin on Earth, the astronaut has been
+moving, and so time should have been running slower for the astronaut;
+while the astronaut measures a time <span
+class="math inline">\(t\)</span> on her clock, the twin at home measures
+a time <span class="math inline">\(\gamma t\)</span> on her clock. So
+when the astronaut arrives back at Earth, she will be have aged less and
+be younger than the twin who stayed behind. So far, so good.</p>
+<p>But now let’s look at it from the point of view of the astronaut. In
+her rest frame, she says that it is actually the Earth that moves away
+and then comes back. So from her point of view, everything is reversed,
+and she says that it will be the twin who stayed on Earth who will be
+the younger.</p>
+<figure id="fig:twin">
+<img src="Pictures/twin.jpg" />
+<figcaption>Twin paradox, from the point of view of the Earth (left) and
+the spaceship pilot (right).</figcaption>
+</figure>
+<p>Clearly both can’t be correct; when they stand next to each other an
+compare their clocks, they cannot both be the slow ones. So what has
+happened?</p>
+<p>To find the answer we return to the first postulate, which says that
+the laws of physics are the same in all <em>inertial</em> frames. But
+the astronaut was not in an inertial frame, she would have felt the
+acceleration as she left Earth, the deceleration at the mid-way point
+and acceleration back towards Earth and then a final deceleration as she
+arrived.</p>
+<p>In principle we can ignore the accelerations at Earth - we could
+always synchronise clocks in a flypast. But there is no way to avoid the
+acceleration at the mid-way point. One way of thinking about it is that,
+at the time she turned around, the astronaut jumped between two
+different inertial frames travelling in opposite directions.</p>
+<p>So who is correct? The answer is the twin who stayed on Earth. Since
+she stayed in an inertial frame at all times, it is perfectly valid for
+her to calculate everything using the Lorentz transformations. For the
+astronaut, it is not.</p>
+<p>This goes to the heart of the matter of symmetry in special
+relativity. Two observers moving relative to each other both say that
+the other’s clock is running slow. This is not a paradox, because the
+clocks are spatially separated at all times (except for time <span
+class="math inline">\(t=0\)</span> for which <span
+class="math inline">\(t&#39;=0\)</span> so they both still agree.) In
+order to bring the clocks together, so we can look at them side by side,
+we require an acceleration, in which case we change the calculation!</p>
+<h1 id="aside---spacetime-diagrams-useful-but-not-examinable">Aside -
+Spacetime Diagrams [Useful, but not examinable]</h1>
+<p>We can represent objects in space and time by a diagram called a
+<strong>spacetime diagram</strong>, shown in Figure <a
+href="#fig:spacetime" data-reference-type="ref"
+data-reference="fig:spacetime">2</a>. Since there are three spatial
+dimensions (x,y,z) plus time, a true spacetime diagram would need to be
+four dimensional! However, since we are normally only interested in the
+position along the axis of motion, which we label as <span
+class="math inline">\(x\)</span>, we can draw useful spacetime diagrams
+only involving <span class="math inline">\(x\)</span> and <span
+class="math inline">\(t\)</span>.</p>
+<figure id="fig:spacetime">
+<p><img src="Pictures/spacetime.png" style="width:10cm" alt="image" />
+<span id="fig:spacetime" data-label="fig:spacetime"></span></p>
+<figcaption>Examples of spacetime diagrams. </figcaption>
+</figure>
+<p>Individual events can be plotted, and the path an object takes
+through a spacetime diagram is called its <strong>worldline</strong>.
+Notice a couple of things. Firstly, we plot <span
+class="math inline">\(ct\)</span> rather than <span
+class="math inline">\(t\)</span>. This is so that the wordline of light
+is at 45 degrees. Secondly, <span class="math inline">\(ct\)</span> is
+plotted on the y-axis and <span class="math inline">\(x\)</span> on the
+x-axis. This may be slightly counter-intuitive, as we are used to
+thinking of <span class="math inline">\(t\)</span> as the independent
+variable going on the x-axis, but it quickly becomes natural with
+practice. Try to think of <span class="math inline">\(x\)</span> and
+<span class="math inline">\(ct\)</span> as just two different
+co-ordinates in spacetime.</p>
+<h1 id="relativity-of-simultaneity">Relativity of Simultaneity</h1>
+<p>It is clear from the Lorentz transform for time: <span
+class="math display">\[t&#39; = \gamma(t - ux/c^2),\]</span></p>
+<p>that time is measured differently for observers moving in different
+inertial frames. A consequence of this, which may not be immediately
+apparent, is that two events which are separated in space, and which one
+observer considers to occur at the same time (i.e. they are
+simultaneous), will not be simultaneous in a different inertial frame.
+Indeed, in some circumstances it may even be that the two observers do
+not even agree on the ordering of the events. It is often the failure to
+fully appreciate the breakdown of absolute simultaneity which can leads
+to difficulties in our understanding and apparent ‘paradoxes’.</p>
+<p>Consider two events occurring, events 1 and 2. They occur at two
+positions along the x-axis, <span class="math inline">\(x_1\)</span> and
+<span class="math inline">\(x_2\)</span>, at times <span
+class="math inline">\(t_1\)</span> and <span
+class="math inline">\(t_2\)</span>, as measured by an observer in
+reference frame <span class="math inline">\(S\)</span>. Let’s say that
+in reference frame <span class="math inline">\(S\)</span> they are
+simultaneous, that is <span class="math inline">\(t_1 = t_2\)</span> ,
+and let’s call this time <span class="math inline">\(t_1 = t_2 =
+0\)</span>.</p>
+<p>Now consider a second reference frame, <span
+class="math inline">\(S&#39;\)</span> moving at <span
+class="math inline">\(u\)</span>. From the Lorentz transformations, we
+can calculate the times of the events in <span
+class="math inline">\(S&#39;\)</span>: <span
+class="math display">\[t_1&#39; =\gamma(t_1 - ux_1/c^2) =
+\gamma(-ux_1/c^2)\]</span> and <span class="math display">\[t_2&#39;
+=\gamma(t_2 - ux_2/c^2) = \gamma(-ux_2/c^2)\]</span> It’s immediately
+obvious that <span class="math inline">\(t&#39;_1 \neq t&#39;_2\)</span>
+unless <span class="math inline">\(x_1 = x_2\)</span>. That is to say
+that events which are separated in space and are simultaneous in <span
+class="math inline">\(S\)</span> are not simultaneous in <em>any other
+frame</em> <span class="math inline">\(S&#39;\)</span>. We can also see
+that the order of <span class="math inline">\(t_1&#39;\)</span> and
+<span class="math inline">\(t_2&#39;\)</span> is not fixed, and depends
+on the values of <span class="math inline">\(x_1\)</span> and <span
+class="math inline">\(x_2\)</span>.</p>
+<h1 id="spacetime-interval---an-invariant">Spacetime interval - an
+invariant</h1>
+<p>We speak about a quantity being <strong>Lorentz Invariant</strong> if
+it does not change <em>when we switch between reference frames</em>.
+Note that this is a very different concept from a conserved quantity
+(such as momentum) which doesn’t change <em>in time</em>.</p>
+<p>Clearly <span class="math inline">\(x\)</span> and <span
+class="math inline">\(t\)</span> are not Lorentz invariant, since the
+Lorentz transformations tell us that they change between reference
+frames. But we can ask whether there is some other invariant quantity
+which is a combination of <span class="math inline">\(x\)</span> and
+<span class="math inline">\(t\)</span>.</p>
+<p>An analogy which may be useful is to think of the points on a
+circumference of a circle. As we move around the circle, which we can
+think of as a rotation, our x and y co-ordinates change. However, the
+radius of the circle (our distance from the centre) is invariant, given
+simply by <span class="math inline">\(r^2 = x^2 + y^2\)</span>.</p>
+<p>There is something similar we can calculate for space and time under
+Lorentz transformations. While space and time (<span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(t\)</span>) change, there is a value that we can
+calculate which is invariant. This invariant is called the
+<strong>spacetime interval</strong> or <strong>spacetime
+distance</strong> and is given by:</p>
+<div class="definition">
+<p><span class="math display">\[(\Delta s)^2 = (\Delta x)^2 - (c\Delta
+t)^2\]</span></p>
+</div>
+<p>This looks a little similar to our circle invariant, although with
+some obvious differences. In particular, we notice that it is <span
+class="math inline">\(- (c\Delta t)^2\)</span> and not <span
+class="math inline">\(+(c\Delta t)^2\)</span>. This means that the
+spacetime interval can be negative or positive, depending on whether
+<span class="math inline">\((c\Delta t)^2\)</span> is smaller or bigger
+than <span class="math inline">\((\Delta x)^2\)</span>. By analogy to
+the circle we can think of a Lorentz transformation being something like
+a rotation in spacetime, with the proviso that the geometry of spacetime
+is a little different from the Euclidean geometry we are used to.</p>
+<p>Whether the right-hand-side is positive or negative (or 0) has a very
+important physical meaning. First lets consider the very special case of
+<span class="math inline">\((\Delta s)^2\)</span> = 0. This means that
+<span class="math display">\[\begin{aligned}
+(\Delta x)^2 &amp;= (c \Delta t)^2
+\\\Delta x&amp;=c \Delta t
+\end{aligned}\]</span></p>
+<p>If the distance travelled is <span class="math inline">\(c\)</span>
+times the time, then the velocity is obviously <span
+class="math inline">\(c\)</span>. We call this
+<strong><em>lightlike</em></strong> or <em>‘null’</em>.</p>
+<p>If two events are separated by <span class="math inline">\((\Delta
+s)^2 &gt; 0\)</span> then this means than the distance between them is
+larger than <span class="math inline">\(c \Delta t\)</span>. We call
+this a <strong><em>spacelike</em></strong> interval. It means that there
+is some reference frame where the two events are simultaneous, in which
+case they will be separated by a distance of <span
+class="math inline">\(\Delta d\)</span> (but only in that special
+reference frame). There can be no causal link between the two events,
+because even a signal travelling at the speed of light couldn’t have
+covered the distance in time. Therefore a change in the order of the
+events does not violate causality - there can be no mixing of cause and
+effect.</p>
+<p>If two events are separated by <span class="math inline">\((\Delta
+s)^2 &lt; 0\)</span> then we call this interval
+<strong><em>timelike</em></strong>. There is no reference frame where
+these two events are simultaneous, but there is a reference frame where
+they occur at the same place at different times, with a time difference
+of <span class="math inline">\(t=\sqrt{-\Delta s^2)}/c^2\)</span>. All
+observers must agree on the order in which the two events occurred. This
+is critical because, if two events are timelike separated, then there
+could have been a causal link between them, and no-one can observe an
+effect happening before its cause!</p>
+<h1 id="aside---intervals-on-spacetime-diagrams-not-examinable">Aside -
+Intervals on Spacetime Diagrams [Not examinable]</h1>
+<p>A nice way to visualise spacelike and timelike spacetime distance is
+using our spacetime diagrams. If we place an observer at the origin and
+draw lines for <span class="math inline">\(x=ct\)</span> and <span
+class="math inline">\(x=-ct\)</span> we obtain what are known as
+‘light-cones’, shown in Figure <a href="#fig:lightcone"
+data-reference-type="ref" data-reference="fig:lightcone">3</a>. For
+positive times this is the ‘future light cone’ and for negative times it
+is the ‘past light cone’. Only events in your past light cone can
+influence you now, and you can only influence events in your future
+light cone. Signals from events which are outside your past light cone
+(events which are <em>spacelike separated</em> from you) cannot possibly
+have reached you yet, and you cannot possible send a signal to events
+outside your future light cone.</p>
+<figure id="fig:lightcone">
+<p><img src="Pictures/lightcone.png" style="width:8cm" alt="image" />
+<span id="fig:lightcone" data-label="fig:lightcone"></span></p>
+<figcaption>Past and future lightcones illustrated on spacetime
+diagram</figcaption>
+</figure>
+</body>
+</html>
