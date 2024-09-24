@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Section 8</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 8</h1>
+</header>
+<p>In this final lecture we will discuss one more relativistic
+correction - to energy. As we will see, while this correction is not
+quite as straightforward as the one for momentum, it has hugely
+important consequences, leading us to discover the equivalence between
+mass and energy.</p>
+<h1 id="classical-kinetic-energy">Classical Kinetic Energy</h1>
+<p>In classical, non-relativistic Newtonian mechanics, the kinetic
+energy of an object is defined as <span class="math display">\[E_K =
+\frac{1}{2} mv^2,\]</span> where <span class="math inline">\(m\)</span>
+is the object’s mass and <span class="math inline">\(v\)</span> is it’s
+velocity. As with momentum, this is the definition that we choose for
+kinetic energy precisely because it is this quantity which is conserved
+(providing we take into account all other types of energy in the
+system). Since <span class="math inline">\(v\)</span> is
+frame-dependent, we expect <span class="math inline">\(E_K\)</span> to
+also be frame dependent.</p>
+<h1 id="relativistic-kinetic-energy">Relativistic Kinetic Energy</h1>
+<p>Based on the pattern we have seen so far, we might hope that
+relativistic energy might be as simple as <span
+class="math inline">\(E_K=(1/2) \gamma m_0v^2\)</span>. However, this is
+not the case. Instead, it is something very strange looking indeed.
+<span class="math display">\[\boxed{E_K = (\gamma  - 1)
+m_0c^2}.\]</span> Firstly, we need not worry that there is no <span
+class="math inline">\(v\)</span> in there, for this is hidden inside
+<span class="math inline">\(\gamma\)</span>.</p>
+<p>Before we work out where this equation comes from, let’s check our
+requirement that this reduces to the classical form for <span
+class="math inline">\(v \ll c\)</span>. It is not a simple as saying
+that <span class="math inline">\(\gamma = 1\)</span> because then we
+have <span class="math inline">\(E_K = 0\)</span> which is what we want
+for <span class="math inline">\(v=0\)</span>, but doesn’t tell us
+anything about small but non-zero values of <span
+class="math inline">\(v\)</span>.</p>
+<p>To get there, we instead make use of the binomial expansion. For
+small values of <span class="math inline">\(x\)</span>: <span
+class="math display">\[(1-x)^{-1/2} = \frac{1}{\sqrt{1-x}} \approx 1 +
+x/2.\]</span></p>
+<p>If we expand out <span class="math inline">\(\gamma\)</span> in the
+equation for relativistic kinetic energy, we have <span
+class="math display">\[E_K = \bigg(\frac{1}{\sqrt{1-v^2/c^2}} -1\bigg)
+m_0c^2.\]</span></p>
+<p>Then, using the binomial expansion, we obtain <span
+class="math display">\[\begin{aligned}
+    E_k &amp;= (1 + v^2/2c^2- 1)m_0c^2 \\
+    E_k &amp;=(1/2)m_0v^2,
+\end{aligned}\]</span></p>
+<p>which is exactly the non-relativistic expression for kinetic energy.
+So once again, it turns out that our familiar definition is really an
+approximation which is good only for <span class="math inline">\(v \ll
+c\)</span>.</p>
+<h1
+id="derivation-of-relativistic-kinetic-energy-not-examinable">Derivation
+of Relativistic Kinetic Energy (Not Examinable)</h1>
+<p>To derive the equation for relativistic energy we need to recall that
+the change in kinetic energy of an object is given by the integral of
+the force applied over the distance it is applied through, i.e. <span
+class="math display">\[E_K = \int F ds,\]</span> where <span
+class="math inline">\(F\)</span> is the force and <span
+class="math inline">\(s\)</span> is the distance. Secondly, we recall
+that force is equal to the rate of change in momentum: <span
+class="math display">\[F = \frac{\diff p}{\diff t}.\]</span> Therefore,
+if we consider an object that has accelerated from rest to a velocity
+<span class="math inline">\(v\)</span>, the kinetic energy is given by:
+<span class="math display">\[E_K = \int^{v=v}_{v=0} \frac{\diff p}{\diff
+t} \diff s.\]</span> Now, <span class="math inline">\(ds/dt\)</span> is
+simply velocity, <span class="math inline">\(v\)</span>, so <span
+class="math display">\[E_K = \int^{v=v}_{v=0} v \diff p,\]</span> and
+relativistic momentum is given by <span class="math inline">\(p=\gamma
+m_0 u\)</span>, so that: <span class="math display">\[E_K =
+\int^{v=v}_{v=0} vd\bigg(\frac{m_0v}{\sqrt{1-v^2/c^2}}\bigg) =
+\int^{v=v}_{v=0} v \diff \bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
+\bigg)^{-1/2}\bigg],\]</span> where we have expanded out <span
+class="math inline">\(\gamma\)</span>.</p>
+<p>We want to get this integral in terms of <span
+class="math inline">\(\diff v\)</span> so that we can integrate and
+apply the limits. To do this, we can use the chain rule to show that
+<span class="math display">\[\begin{aligned}
+\frac{\diff}{\diff v} \bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
+\bigg)^{-1/2}\bigg] &amp;= m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-1/2} +
+m_0\frac{v^2}{c^2}\bigg(1-\frac{v^2}{c^2}\bigg)^{-3/2}.
+\end{aligned}\]</span> If we divide the first term top and bottom by
+<span class="math inline">\((1-v^2/c^2)\)</span> to put everything over
+a common denominator we get: <span
+class="math display">\[\diff\bigg[(m_0v)\bigg(1-\frac{v^2}{c^2}
+\bigg)^{-1/2}\bigg] = m_0\bigg(1-\frac{v^2}{c^2}\bigg)^{-3/2} \diff
+v.\]</span> Substitute this back into the equation for <span
+class="math inline">\(E_K\)</span> and we get <span
+class="math display">\[E_K = \int m_0 \bigg(1-
+\frac{v^2}{c^2}\bigg)^{-3/2}v \diff v.\]</span> This integral can be
+solved using the substitution <span class="math inline">\(w=\sqrt{1 /
+(1-v^2/c^2)}\)</span>, to give <span class="math display">\[E_K =
+\frac{m_0c^2}{\sqrt{1-v^2/c^2}} - m_0c^2,\]</span> and so <span
+class="math display">\[\boxed{E_K = (\gamma - 1)m_0c^2}\]</span> which
+is the expression for relativistic kinetic energy.</p>
+<h1 id="total-energy">Total Energy</h1>
+<p>If we expand out our newly discovered expression for kinetic energy
+<span class="math display">\[E_K = \gamma mc^2 - mc^2,\]</span> we
+notice that it consists of one quantity subtracted from another. We
+might wonder what these two terms represent physically. As we will show
+below, it turns out that this equation really means: <span
+class="math display">\[\textrm{kinetic energy =  total energy - rest
+energy}\]</span> and so, <span class="math display">\[\boxed{E_{total} =
+\gamma mc^2}\]</span></p>
+<h1 id="rest-energy-and-mass-energy-equivalence">Rest Energy and
+Mass-Energy Equivalence</h1>
+<p>In the rest frame of the object, where <span
+class="math inline">\(v=0\)</span>, then <span
+class="math inline">\(\gamma = 1\)</span> and so <span
+class="math display">\[\boxed{E=mc^2}\]</span> This shows that a
+non-moving object, i.e. an object viewed from its rest frame, still has
+some energy. We call this the <strong>rest energy</strong>.</p>
+<p>We see that this rest energy depends only on the mass, <span
+class="math inline">\(m\)</span>, and a constant, <span
+class="math inline">\(c\)</span>. Since mass and energy are linked by a
+fixed constant, this demonstrates an equivalence between the two. In
+particle accelerators we can see this in action, as kinetic energy is
+converted to rest energy, and hence rest mass. So if we smash two
+particles together with a certain total rest mass, <span
+class="math inline">\(m_0\)</span>, it doesn’t follow that the rest mass
+of a new particle created must be equal to <span
+class="math inline">\(m_0\)</span>.</p>
+<h1 id="energy-and-mass-units">Energy and Mass Units</h1>
+<p>The SI Unit for energy is the Joule, J. However, the kinds of objects
+we most often observe moving at speeds which are an appreciable fraction
+of <span class="math inline">\(c\)</span> (and hence where the effects
+of special relativity become noticeable) tend to be particles (for
+example in a particle accelerator). In this case, the Joule is not a
+sensible unit to use. Instead we use electron-volts (eV). <span
+class="math display">\[1 \si{\electronvolt} = 1.6 \times  10^{-19}
+\si{\joule}\]</span> (This comes from the energy gained by an electron
+moving across a voltage of 1 V, but that isn’t important here.)</p>
+<p>Since we know that rest mass is equivalent to rest energy, linked by
+the constant <span class="math inline">\(c^2\)</span>, <span
+class="math inline">\(E_0=m_0c^2\)</span>, we can also specify the rest
+mass in eV type units.<br />
+A particle with a rest energy of <span class="math inline">\(1 \
+\si{\electronvolt}\)</span> would have a rest mass of <span
+class="math inline">\(1 \ \si{\electronvolt} /c^2\)</span>.<br />
+In practice we will actually find ourselves working with larger units of
+energy and mass, in which case we will talk about <span
+class="math inline">\(\si{\mega\electronvolt}\)</span> and <span
+class="math inline">\(\si{\mega\electronvolt} /c^2\)</span>, or <span
+class="math inline">\(\si{\giga\electronvolt}\)</span> and <span
+class="math inline">\(\si{\giga\electronvolt} /c^2\)</span><br />
+We can also use these kinds of units for momentum. Recall that <span
+class="math inline">\(p=\gamma mv\)</span>. If we specify mass in <span
+class="math inline">\(MeV/c^2\)</span> and velocity as a fraction of
+<span class="math inline">\(c\)</span>, then we can specify our momentum
+in units of <span class="math inline">\(MeV/c\)</span>.<br />
+Using these kinds of units makes dealing with mass/energy/momentum
+problems in particle physics and relativity much simpler (since the
+<span class="math inline">\(c\)</span>s also cancel out) and <strong>you
+should be very comfortable with them going into the exam.</strong></p>
+<h1 id="example-energy-and-momentum-calculations">Example Energy and
+Momentum Calculations</h1>
+<div class="example">
+<p>A neutron has a rest mass of 940 <span
+class="math inline">\(\si{\mega\electronvolt} /c^2\)</span> and is
+travelling at 0.9c. What is its rest energy, total energy, kinetic
+energy and momentum?<br />
+If the rest mass is 940 <span
+class="math inline">\(\si{\mega\electronvolt} /c^2\)</span> , then to
+get the rest energy we use <span class="math inline">\(E=mc^2 =
+(940~\mathrm{MeV/c^2})c^2  =\)</span>940 <span
+class="math inline">\(\si{\mega\electronvolt}\)</span>.<br />
+The total energy is given by <span class="math inline">\(E=\gamma
+mc^2\)</span>. For <span class="math inline">\(v=0.9c\)</span> then
+<span class="math inline">\(\gamma = \sqrt{\frac{1}{1 -0.9^2}} =
+2.294\)</span>.<br />
+Therefore <span class="math inline">\(E =
+(2.294)(940~\mathrm{MeV}/c^2)c^2 = 2156
+~  \si{\mega\electronvolt}\)</span>.<br />
+Then, <span class="math inline">\(E_K = (\gamma - 1)mc^2 = E - mc^2 =
+2156~\mathrm{MeV} - 940~\mathrm{MeV} = 1316 ~
+\si{\mega\electronvolt}\)</span>.<br />
+Finally, <span class="math inline">\(p=\gamma mv =
+(2.294)(940~\mathrm{MeV}/c^2)(0.9c) = 1940
+~\mathrm{MeV/c}\)</span>.<br />
+Note here that MeV units have been used throughout, making the problem
+much simpler.</p>
+<p><em><strong>See also examples R-4 and R-5 in
+Tipler.</strong></em></p>
+</div>
+<h1
+id="demonstration-that-massless-particles-travel-at-the-speed-of-light">Demonstration
+that Massless Particles Travel at the Speed of Light</h1>
+<p>It is sometimes useful to write energy in terms of momentum. In
+classical mechanics, since <span
+class="math inline">\(E_K=(1/2)mv^2\)</span> and <span
+class="math inline">\(p=mv\)</span>, we have <span
+class="math display">\[E = \frac{p^2}{2m}\]</span> The relativistic
+equivalent is: <span class="math display">\[E^2 = p^2c^2 +
+m_0^2c^4\]</span> We can see this by recognising that <span
+class="math inline">\(p=\gamma m_0v\)</span> and so <span
+class="math inline">\(p^2 = \gamma^2m_0^2v^2.\)</span> So we can write
+<span class="math display">\[c^2p^2 =
+\gamma^2m_0^2c^4\frac{u^2}{c^2}.\]</span> From <span
+class="math inline">\(\gamma^2 = 1/(1-u^2/c^2)\)</span>, a bit of
+algebra shows us that <span class="math display">\[c^2p^2 = \gamma^2
+m_0^2c^4 - m_0^2c^4.\]</span> Since <span class="math inline">\(E=\gamma
+m_0c^2\)</span>, the first term is simply <span
+class="math inline">\(E^2\)</span>, giving us <span
+class="math display">\[\boxed{E^2 = p^2c^2 + m_0^2c^4}\]</span></p>
+<p>This is an important equation which relates the total energy, rest
+energy and momentum of a particle (without explicitly including the
+velocity). When the energy is much greater than the rest energy, it
+becomes <span class="math inline">\(E\approx pc\)</span>.</p>
+<p>Continuing, from <span class="math inline">\(E=\gamma m_0
+c^2\)</span> and p = <span class="math inline">\(\gamma m_0v\)</span>
+<span class="math display">\[p = \frac{Ev}{c^2}\]</span> Now, if we
+consider a massless particle, so that <span
+class="math inline">\(m_0=0\)</span>, then <span
+class="math inline">\(E^2=p^2c^2\)</span> and we have the exact equation
+<span class="math display">\[E=pc.\]</span> Substituting in <span
+class="math inline">\(p=Ev/c^2\)</span> gives us <span
+class="math display">\[E = \frac{Evc}{c^2}\]</span> which immediately
+tells us that <span class="math display">\[v = c.\]</span> <strong>This
+shows that massless particles must have a velocity equal to <span
+class="math inline">\(c\)</span>, the speed of light!</strong></p>
+<p>The more observant might notice that, if <span
+class="math inline">\(m_0 = 0\)</span>, then we have a division by zero
+when we calculated <span class="math inline">\(p=Ev/c^2\)</span> (and if
+<span class="math inline">\(v=c\)</span> then <span
+class="math inline">\(\gamma\)</span> is undefined!). So this
+’derivation’, as we have presented it, is not entirely convincing.
+However, it turns out that <span class="math inline">\(p=Ev/c^2\)</span>
+<em>is</em> true when <span class="math inline">\(m_0=0\)</span> and
+<span class="math inline">\(v=c\)</span>, in which case the only
+possible reconciliation with <span class="math inline">\(E=pc\)</span>
+is that <span class="math inline">\(v=c\)</span>. More on this will have
+to wait until you learn about the energy-momentum 4-vector in
+PHYS6660!</p>
+</body>
+</html>

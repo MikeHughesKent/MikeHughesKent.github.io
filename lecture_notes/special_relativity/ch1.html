@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>ch1</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<p>In 1905 Albert Einstein published his classic paper <em>"On the
+Electrodynamics of Moving Bodies"</em>. This was the birth of special
+relativity, although it was not given that name at the time. By the end
+of this course you should be able to follow much of the kinematical part
+of this paper (or at least the English translation of it - see the link
+on Moodle).</p>
+<p>Einstein’s ideas were quickly built on by Hermann Minkowski and
+others and - despite special relativity’s apparently counter-intuitive
+predictions - it almost immediately gained acceptance as the correct
+physical theory describing the relationship between space and time.
+Together with the later theory of general relativity, which we will not
+study in this course, it has since been experimentally verified to an
+extraordinary degree of accuracy.</p>
+<p>We will follow a quasi-historical approach to learning the theory,
+beginning in this lecture by exploring the classical notions of
+relativity and the Galilean transformations between reference frames.
+You need to be very comfortable dealing with transformations between
+reference frames before moving on. We will then discover a fundamental
+incompatibility between these ideas and the electromagnetic theory which
+was developed in the mid-18th century. Attempts to resolve this
+discrepancy by introducing the idea of the ‘ether’ failed, leading us in
+the next lecture to the derivation of the Lorentz transformations, to
+the discovery of time dilation and length contraction, and to a
+breakdown in our notions of absolute simultaneity.</p>
+<p>In later lectures we will encounter the more modern idea of
+‘spacetime’ and the invariant spacetime interval. We will discover that
+we must modify our definitions of momentum and energy, and we will show
+that there is an equivalence between energy and mass, leading to perhaps
+the most famous physics equation of all: <span
+class="math inline">\(E=mc^2\)</span>.</p>
+<h1 id="frames-of-reference-and-events">Frames of Reference and
+Events</h1>
+<p>A frame of reference can be thought of, informally, as a
+‘<em>point-of-view from which a measurement is made by an
+observer’</em>. We will study how measurements made by observers in
+different reference frames are related to one another. The measurements
+will be, initially, of the locations and times at which events occur,
+and the spatial and time intervals between the events.</p>
+<div class="definition">
+<p>An event is something that happens at a particular point in space and
+time (its co-ordinates). Observers in different reference frames will
+measure different co-ordinates for the event.</p>
+</div>
+<p>We will deal mostly with non-accelerating reference frames, i.e.
+observers who are not accelerating. These non-accelerating reference
+frames are called <strong>inertial reference frames</strong>. We can
+tell we are in an inertial reference frame because we don’t feel ‘pseudo
+forces’. For example, think of when you are in an accelerating car, and
+you seem to feel a force pushing you back onto the seat (sometimes known
+as ‘G-forces’). In inertial reference frames we don’t have these extra
+forces, the simple laws of mechanics hold; whenever we see an
+acceleration we also see a force that causes that acceleration (<span
+class="math inline">\(F=ma\)</span>).</p>
+<div class="definition">
+<p>A frame of reference in which the laws of mechanics hold good, i.e. a
+body remains at rest or moves with a constant velocity unless acted upon
+by a force.</p>
+</div>
+<p>A person in an inertial frame of reference, i.e. moving at a constant
+speed, cannot tell that they are moving expect by reference to other
+objects. That is, <strong>no experiment can tell you what your absolute
+velocity is</strong>, only your velocity relative to something else. For
+example, if you are standing on the ground and looking at a train going
+past, you will measure it to have a velocity of <span
+class="math inline">\(u\)</span> in a certain direction. But from the
+point of view (the frame of reference) of someone on the train, they are
+not moving, and it is the Earth and you moving at a velocity of <span
+class="math inline">\(-u\)</span> relative to them. This is the
+Principle of Relativity, which predates the theory of special relativity
+by several hundred years.</p>
+<div class="definition">
+<p>No experiment can determine the absolute velocity of a frame of
+reference. Only relative velocities between different frames of
+reference can be measured.</p>
+</div>
+<p>It’s also useful to define what we mean by a ‘rest frame’ at this
+point.</p>
+<div class="definition">
+<p>The rest frame of an object is the frame of reference in which it is
+not moving (i.e. its velocity is zero).</p>
+</div>
+<h1 id="transformation-between-inertial-reference-frames">Transformation
+between Inertial Reference Frames</h1>
+<p>If we measure the co-ordinates of an event in two different reference
+frames, we can convert between those measurements using
+<strong>transformations</strong>.</p>
+<p>Let’s return to our example of a train passing by someone standing by
+the side of the tracks. For the driver and the observer we will define
+two reference frames and co-ordinate systems. We could define these in
+all sorts of ways, and of course it wouldn’t change the physics, but
+there is particular way of defining things which makes the problems we
+will encounter as simple as possible.</p>
+<p>The scheme we will use is shown in Figure <a href="#fig:refFrames"
+data-reference-type="ref" data-reference="fig:refFrames">1</a>.</p>
+<figure id="fig:refFrames">
+<embed src="frames.eps" />
+<figcaption>Frames of reference <span class="math inline">\(S\)</span>
+and <span class="math inline">\(S&#39;\)</span>. <span
+class="math inline">\(S&#39;\)</span> is moving with speed <span
+class="math inline">\(u\)</span> along the x-axis of frame <span
+class="math inline">\(S\)</span>. At time <span class="math inline">\(t
+= 0\)</span>, the origins of the two frames coincide, at all other times
+(<span class="math inline">\(t &lt; 0\)</span>, <span
+class="math inline">\(t &gt; 0\)</span>) they do not (providing <span
+class="math inline">\(u \ne 0\)</span>)</figcaption>
+</figure>
+<p>We call the reference frames, and their associated co-ordinate
+systems, <span class="math inline">\(S\)</span> for the observer and
+<span class="math inline">\(S’\)</span> (which we say ‘S prime‘) for the
+driver. We will measure the location and time at which events occur from
+both reference frames. For the location of the event, we will use
+standard Cartesian co-ordinate systems: <span
+class="math inline">\(x\)</span>, <span
+class="math inline">\(y\)</span>, and <span
+class="math inline">\(z\)</span> for the driver’s frame of reference,
+<span class="math inline">\(S\)</span>, and <span
+class="math inline">\(x’\)</span>, <span
+class="math inline">\(y’\)</span> and <span
+class="math inline">\(z’\)</span> for the trackside observer’s frame,
+<span class="math inline">\(S’\)</span>.</p>
+<p>We will align the two co-ordinate frames (so that <span
+class="math inline">\(x\)</span> is parallel with <span
+class="math inline">\(x&#39;\)</span> and so on). The motion of the
+train, and hence the <span class="math inline">\(S&#39;\)</span>
+reference frame, is along the x-axis of frame <span
+class="math inline">\(S\)</span>, in the positive direction, with speed
+<span class="math inline">\(u\)</span>.</p>
+<p>We will also have a co-ordinate for the time of the event, which we
+will call <span class="math inline">\(t\)</span> and <span
+class="math inline">\(t&#39;\)</span> for the two reference frames.
+Again, for simplicity, we’ll set time <span
+class="math inline">\(t=0\)</span> and <span
+class="math inline">\(t&#39;=0\)</span> at the point where the train
+passes the trackside observer. In Newtonian physics, everyone
+experiences time the same, so for now we have that <span
+class="math inline">\(t=t&#39;\)</span> at all times anyway, but later
+on we will find something quite different.</p>
+<p>Now let’s imagine some event occurring, the driver. Recall that an
+event is something that can be described by space and time co-ordinates
+- it happens at a certain place at a certain time. An event does not
+<em>belong</em> to a reference frame; it can be <em>measured or
+observed</em> from different reference frames.</p>
+<p>To define the co-ordinates of this event we need to know its location
+in space and time (i.e. where and when it happened). In the co-ordinate
+system of the train driver, that is straightforward. For simplicity we
+will say the driver is at <span
+class="math inline">\((x&#39;,y&#39;,z&#39;) = (0,0,0)\)</span>, i.e. at
+the origin of his reference frame, which we call <span
+class="math inline">\(S&#39;\)</span>.</p>
+<p>Now, what is the spatial location and time of the sneeze (the
+‘event’) from the point of view (i.e. in the rest frame) of the observer
+by the side of the track?</p>
+<ul>
+<li><p>The train is moving past at speed <span
+class="math inline">\(u\)</span>, so after an amount of time <span
+class="math inline">\(t\)</span> the car will have moved <span
+class="math inline">\(ut\)</span> along the x-axis.</p></li>
+<li><p>So, the <span class="math inline">\(x\)</span> co-ordinate of the
+event will simply be <span class="math inline">\(x&#39; +
+ut\)</span>.</p></li>
+<li><p>The train has not moved along the y and the z-axes, and so <span
+class="math inline">\(y=y&#39;\)</span> and <span
+class="math inline">\(z=z&#39;\)</span>.</p></li>
+<li><p>Time is the the same for everyone, <span
+class="math inline">\(t=t&#39;\)</span>.</p></li>
+</ul>
+<p>We can now write down the full set of equations to transform the
+co-ordinates of event measured in frame <span
+class="math inline">\(S\)</span> into the co-ordinates measured in frame
+<span class="math inline">\(S&#39;\)</span> and vice versa. These are
+known as the Galilean transformations.</p>
+<div class="definition">
+<p><span class="math display">\[x&#39;=x-ut
+\\y&#39;=y
+\\z&#39;=z
+\\t&#39;=t\]</span></p>
+<p><span class="math display">\[x=x&#39;+ut&#39;
+\\y=y&#39;
+\\z=z&#39;
+\\t=t&#39;\]</span></p>
+</div>
+<p>Notice that when going from <span class="math inline">\(S\)</span> to
+<span class="math inline">\(S&#39;\)</span> we have a <span
+class="math inline">\(-ut\)</span> rather than a <span
+class="math inline">\(+ut&#39;\)</span> or <span
+class="math inline">\(+ut\)</span>. This is because, from the point of
+view of the train driver, the observer is moving backwards along the
+x-axis. Otherwise the equations are the same. It is a requirement of the
+principle of relativity that the transformations going from <span
+class="math inline">\(S\)</span> to <span
+class="math inline">\(S&#39;\)</span> are the same as those going from
+<span class="math inline">\(S\)</span> to <span
+class="math inline">\(S&#39;\)</span> (except for the sign change).</p>
+<div class="example">
+<p>A train passes a man standing by the tracks at a velocity of 10 m/s.
+10 s after it passes him, the train sounds its horn. How far away does
+the man by the tracks measure the horn to be when it sounds?</p>
+<p><strong>Solution:</strong> Let <span class="math inline">\(S\)</span>
+be man’s frame, <span class="math inline">\(S&#39;\)</span> be the train
+frame.<br />
+In <span class="math inline">\(S:\)</span> <span
+class="math inline">\(x\)</span> = ?, <span
+class="math inline">\(t\)</span> = ?<br />
+In <span class="math inline">\(S&#39;\)</span>: <span
+class="math inline">\(x&#39;\)</span> = 0 m, <span
+class="math inline">\(t&#39;\)</span> = 10 s<br />
+Therefore: <span class="math display">\[\begin{aligned}
+        x &amp;= x&#39; + ut&#39; \\
+        &amp;= 0 + (10~\mathrm{m/s})(10~\mathrm{s}) \\
+        &amp;=  100~\mathrm{m}
+    
+\end{aligned}\]</span></p>
+</div>
+<p>Now let’s imagine that the driver of the train leans out of the
+window and throws a ball along the x-axis, with a velocity <span
+class="math inline">\(v&#39;\)</span> relative to himself and the train.
+How fast does the observer think the ball is moving (<span
+class="math inline">\(v\)</span>)? You can probably guess straight away
+that she sees the velocity of the ball added to the velocity of the
+train, i.e. <span class="math inline">\(v=v&#39;+u\)</span>, where we
+remember that <span class="math inline">\(u\)</span> is the velocity of
+the train relative to the track-side observer. Thinking of this in terms
+of the velocities along the x, y and z axes, we have the velocity
+transformations:</p>
+<div class="definition">
+<p><span class="math display">\[v_x&#39;=v_x-u
+\\v_y&#39;=v_y
+\\v_z&#39;=v_z\]</span></p>
+<p><span class="math display">\[v_x=v_x&#39;+ u
+\\v_y=v_y&#39;
+\\v_z=v_z&#39;\]</span></p>
+</div>
+<p>These can also be obtained simply by differentiating the Galilean
+transforms with respect to time which is left a simple exercise.</p>
+<div class="example">
+<p>The train driver from the same train as above (moving at 10 m/s)
+throws a ball out of the window along the direction of the train’s
+motion at 5 m/s relative to himself. What speed does the man at the side
+of the track measure the ball to have?<br />
+<strong>Solution:</strong> Let <span class="math inline">\(S\)</span> be
+man frame, <span class="math inline">\(S&#39;\)</span> be train
+frame.<br />
+In <span class="math inline">\(S\)</span>: <span
+class="math inline">\(v_x\)</span> is unknown.<br />
+In <span class="math inline">\(S&#39;\)</span>: <span
+class="math inline">\(v_x&#39; = 5~\mathrm{ms^{-1}}\)</span><br />
+Therefore: <span class="math display">\[\begin{aligned}
+    v_x &amp;= v_x&#39; + u \\
+    &amp;= 5~\mathrm{ms^{-1}} + 10~\mathrm{ms^{-1}} \\
+    &amp;=  15~\mathrm{ms^{-1}}
+    
+\end{aligned}\]</span></p>
+</div>
+<h1 id="the-speed-of-light">The Speed of Light</h1>
+<p>It has been known since the experiments of Ole Römer in the 17th
+century that light travels with a finite speed. Successive measurements
+over the years have succeeded in fixing the value in a vacuum, known as
+<span class="math inline">\(c\)</span>, at approximately <span
+class="math inline">\(3\times10^8\)</span> m s<sup>−1</sup>. But what is
+this relative to?</p>
+<p>As an analogy, we know that sound travels in air at approximately
+<span class="math inline">\(300\)</span> m s<sup>−1</sup>, and much
+faster in other, denser materials. Sound is a wave in a medium. So it is
+reasonably that the velocity is relative to the medium (e.g. air,) and
+indeed this is what we find experimentally. The speed of sound does not
+depend on the speed of the source of the sound, and so if the source is
+travelling through the air faster than the speed of sound, it’s possible
+for it to overtake sound - this is the effect responsible for the sonic
+boom heard from supersonic jets. Conversely, inside a sealed plane, the
+air is moving along with the plane, so sound will continue to travel at
+<span class="math inline">\(300\)</span> m s<sup>−1</sup> relative to
+the passengers.</p>
+<p>Unlike for sound, where we have an obvious medium supporting the
+sound wave, it is not clear what light is a wave <em>in</em> , since
+light travels through a vacuum.</p>
+<p>In 1862, James Clark Maxwell discovered that light is in fact an
+electromagnetic wave - a wave in electric and magnetic fields. He showed
+that the speed of light can be predicted from the fundamental equations
+describing electricity and magnetism, known as Maxwell’s Equations.
+Crucially, when deriving the wave equation, no account is taken of
+relative velocities, and we don’t define a carrying medium. Maxwell’s
+equations, unlike Newton’s laws, do not appear to remain the same when
+moving between reference frames using the Galilean transformations. So
+it would be possible to determine we are moving by making measurements
+of electrical and magnetic phenomena. In particular, our ‘absolute
+speed’ could be determined simply by measuring the speed of light in our
+reference frame. For example, if we measure the speed of light to be
+<span class="math inline">\(c + 10\)</span> m s<sup>−1</sup> that means
+we are moving at <span class="math inline">\(10\)</span>
+m s<sup>−1</sup> relative to this absolute reference frame.</p>
+<h1 id="the-ether">The Ether</h1>
+<p>If an absolute reference frame were to exist (we will soon see it
+does not), what form would it take?One idea was that there is some
+medium called the ether which fills the universe, and it would be this
+is the material in which light waves travel. The ether, if it existed,
+would allow light waves to travel at very high speed but also seems to
+be undetectable - we cannot feel it and it seems not to slow objects
+down that are moving through it. It does, however, apparently solve the
+problem of the relativity of the speed of light: the speed of light is
+fixed relative to the ether.</p>
+<p>Unfortunately, as we will now see, the idea of the ether doesn’t
+work, or rather, it contradicts the results of experiments in ways that
+are seemingly impossible to resolve.</p>
+<h1 id="experiments-to-detect-the-ether">Experiments to Detect the
+Ether</h1>
+<p>In the second half of the nineteenth century, a number of experiments
+were performed with the intention to detect the presence of the ether,
+or more specifically our motion through it. We shall discuss only one,
+the Michelson-Morley experiment, as it is both simple to understand and
+definitive.</p>
+<p>The assumption behind the experiment is that, if the Earth is moving
+relative to the ether, this would mean that we would measure different
+speeds of light depending on the relative speed of the Earth. If we
+measure the speed of light along the direction of the Earth’s motion, we
+should get a different value than if we measure the speed of light
+moving perpendicular to the Earth’s motion. Furthermore, since the Earth
+is in orbit around the Sun, we would expect that the speed of the Earth
+relative to the ether changes throughout the year. If at one point in
+the year the Earth is moving at <span
+class="math inline">\(v\)</span> m s<sup>−1</sup>, then sixth months
+later, on the other side of the orbit, it will be moving at <span
+class="math inline">\(-v\)</span> m s<sup>−1</sup>. So if we measure the
+speed of light relative to the Earth, we should obtain different
+values.</p>
+<p>This was the idea behind the Michelson-Morley experiment. Clearly it
+is quite difficult to measure the speed of light because it is so fast.
+However, it can be done (and could be even in 1895) with a technique
+called interferometry, illustrated in Figure <a href="#fig:mm"
+data-reference-type="ref" data-reference="fig:mm">2</a>. This idea is to
+split light into two arms of the interferometer. Light bounces of a
+mirror in each arm and is then recombined. Light is a wave and so,
+providing the lengths of the two arms are the same, we see interference
+effects, giving rise to light and dark fringes. These fringes are very
+sensitive to the travel time of the light (either due to a change in its
+speed or a change in the length of one of the arms).</p>
+<figure id="fig:mm">
+<img src="Pictures/mm.jpg" />
+<figcaption>Michelson-Morley experiment. A simplified diagram of the
+interferometer is shown in the left. On the right, the Earth is shown at
+four positions in its orbit of the Sun, where it should have four
+different velocities with respect to the ether, indicated by the
+arrows.</figcaption>
+</figure>
+<p>The idea then is to set up the interferometer and observe the
+fringes. Then, rotate the interferometer by 90 degrees and look at the
+fringes again. If the speed of light is different in the two directions,
+the fringes will change. To avoid the possibility that the experiment
+happened to be carried out at the point in the Earth’s orbit where it
+had zero speed relative to the ether, it can be repeated six months
+later.</p>
+<p>No difference in the speed of light was measured. Regardless of which
+way around the interferometer was, or what time of year the measurements
+were made, the speed of light was always measured to be the same. To put
+it another way, light does not follow the rules for velocity
+transformations, <em>in every reference frame light appears to travel at
+<span class="math inline">\(c\)</span></em>!</p>
+<p>How could this be explained? One possibility was that the ether is
+somehow dragged along with the Earth on its orbit, so that the
+experiment was always measuring the speed of light relative to the
+moving ether. On practical grounds it becomes hard to explain this, and
+it also contradicts other observations (such as stellar aberration,
+which we will not discuss).</p>
+<p>A much more elegant solution, dispensing with the idea of the ether
+altogether, was presented in 1905 by Albert Einstein: the special theory
+of relativity.</p>
+</body>
+</html>

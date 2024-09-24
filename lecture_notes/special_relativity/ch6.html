@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Section 6</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 6</h1>
+</header>
+<p>In this and the following lectures we will discuss further
+implications of special relativity on momentum and energy. Since both
+momentum and kinetic energy depend on velocity, it’s perhaps not
+surprising that our definitions for these will need to be modified.
+However, first we must study the relativistic equivalent of the
+<em>velocity</em> transformations which we looked at in Lecture 1.</p>
+<h1 id="relativistic-velocity-transformations">Relativistic Velocity
+Transformations</h1>
+<p>Just as we replaced the Galilean position transformations with the
+Lorentz transformations, we must now replace the velocity
+transformations with their relativistic equivalents. A little care is
+needed here because there is one critical difference between position
+and velocity. For the position transformations, co-ordinates in which
+the reference frames aren’t moving (<span
+class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span>) experience no relativistic correction
+(i.e. <span class="math inline">\(y=y&#39;\)</span> and <span
+class="math inline">\(z=z&#39;\)</span>). This isn’t the case for
+velocity - the y and z velocities, <span
+class="math inline">\(v_y\)</span> and <span
+class="math inline">\(v_z\)</span> do experience a correction. This is
+because velocity is a function of time, and since the time co-ordinate
+<em>does</em> needs a relativistic correction, it follows that
+<em>all</em> velocities will also experience a correction, regardless of
+the direction.</p>
+<div class="definition">
+<p>The relativistic velocity transformations between frames <span
+class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>, where <span
+class="math inline">\(S\)</span> is moving with velocity <span
+class="math inline">\(u\)</span> along the x-axis with respect to <span
+class="math inline">\(S&#39;\)</span> are: <span
+class="math display">\[v_x = \frac{v_x&#39; + u}{1 + uv_x&#39;/c^2},
+\qquad v_y = \frac{v_y&#39;}{\gamma(1 + uv_x&#39;/c^2)}, \qquad v_z =
+\frac{v_z&#39;}{\gamma(1 + uv_x&#39;/c^2)}\]</span> Similarly, we have
+the inverse transforms <span class="math display">\[v_x&#39; = \frac{v_x
+- u}{1 - uv_x/c^2}, \qquad v_y&#39; = \frac{v_y}{\gamma(1 - uv_x/c^2)},
+\qquad v_z&#39; = \frac{v_z}{\gamma(1 - uv_x/c^2)}\]</span></p>
+</div>
+<p>As for the Lorentz transformation, it should be the case that these
+reduce to our familiar Galilean velocity transformation for speeds far
+below the speed of light (<span class="math inline">\(u &lt;&lt;
+c\)</span>). This is indeed true, because <span
+class="math inline">\(uv_x&#39;/c^2\)</span> is then approximately equal
+to 0 and <span class="math inline">\(\gamma \approx 1\)</span> and so
+<span class="math inline">\(v_x \approx v_x&#39; + u\)</span>, <span
+class="math inline">\(v_y \approx v_y&#39;\)</span> and <span
+class="math inline">\(v_z \approx v_z&#39;\)</span>.</p>
+<p>It must also be the case that a velocity of <span
+class="math inline">\(c\)</span> is one reference frame transforms into
+a velocity of <span class="math inline">\(c\)</span> into another, since
+this is one of the postulates on which the Lorentz transformations are
+based. We can confirm this for light moving along the x-axis by
+substituting in <span class="math inline">\(v_x&#39;=c\)</span>, so
+that:</p>
+<p><span class="math display">\[\begin{aligned}
+v_x &amp;= \frac{c+ u}{1 + uc/c^2} \\
+&amp;= \frac{c+ u}{1 + u/c} \\
+&amp;= \frac{c(c+ u)}{c + u} \\
+&amp; = c
+\end{aligned}\]</span></p>
+<p>For light moving along the y-axis, we can show the same thing. If we
+simply substitute <span class="math inline">\(v_y = c\)</span> into the
+equation for <span class="math inline">\(v_y&#39;\)</span> we get <span
+class="math inline">\(v_y&#39; = c/\gamma\)</span>. However, we have to
+remember that there will be both an <span
+class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> component to the transformed velocity
+(you can verify this by substituting <span class="math inline">\(v_x =
+0\)</span> into the equation for <span
+class="math inline">\(v_x&#39;\)</span>, it can be seen that <span
+class="math inline">\(v_x = u\)</span>).</p>
+<p>The total velocity is then <span class="math inline">\(\sqrt{v_x^2 +
+v_y^2}\)</span>, which can be shown to be <span
+class="math inline">\(c\)</span>. This is an exercise on the problem
+sheet.<br />
+Also note the following:</p>
+<ul>
+<li><p>The equations for <span class="math inline">\(v_y\)</span> and
+<span class="math inline">\(v_z\)</span> contain <span
+class="math inline">\(v_x&#39;\)</span> in the denominator. That is, the
+transformation of the <span class="math inline">\(y\)</span> and <span
+class="math inline">\(z\)</span> velocities depends on the <span
+class="math inline">\(x\)</span> velocity.</p></li>
+<li><p>Don’t confuse the <span class="math inline">\(v\)</span>s with
+<span class="math inline">\(u\)</span>. <span
+class="math inline">\(u\)</span> is the velocity of the frame of
+reference <span class="math inline">\(S&#39;\)</span> relative to <span
+class="math inline">\(S\)</span> (along the <span
+class="math inline">\(x\)</span> direction), while the <span
+class="math inline">\(v\)</span>s and <span
+class="math inline">\(v&#39;\)</span>s are the velocity of some object
+as measured in frames of reference <span
+class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>, respectively.</p></li>
+</ul>
+<h1
+id="derivation-of-the-relativistic-velocity-transformations">Derivation
+of the Relativistic Velocity Transformations</h1>
+<p>The relativistic velocity transformations can be derived from the
+Lorentz transformations. To make this simple, we first need to recognise
+that the Lorentz transformations are equally valid if we replace the
+<span class="math inline">\(x\)</span>, <span
+class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>
+and <span class="math inline">\(t\)</span> co-ordinates and their primed
+counterparts with intervals (or differences), <span
+class="math inline">\(\Delta x\)</span>, <span
+class="math inline">\(\Delta y\)</span>, <span
+class="math inline">\(\Delta z\)</span> and <span
+class="math inline">\(\Delta t\)</span>. We can make these intervals
+infinitesimally small, calling them, <span
+class="math inline">\(dx\)</span>, <span
+class="math inline">\(dy\)</span>, <span
+class="math inline">\(dz\)</span>, and <span
+class="math inline">\(dt\)</span>. Then we also note that the x, y and z
+components of velocity can be written <span class="math inline">\(v_x =
+dx/dt\)</span>, and so on. So, starting with the velocity in the
+x-direction, we have the following to work with: <span
+class="math display">\[dx = \gamma(dx&#39; + udt&#39;), \qquad dt =
+\gamma\bigg(dt&#39; + u\frac{dx&#39;}{c^2}\bigg),\]</span> and <span
+class="math display">\[v_x = \frac{dx}{dt}, \qquad v_x&#39; =
+\frac{dx&#39;}{dt&#39;}.\]</span> Now, plug in the expressions for <span
+class="math inline">\(dx\)</span> and <span
+class="math inline">\(dt\)</span> into the equation for <span
+class="math inline">\(v_x\)</span>, giving us <span
+class="math display">\[\begin{aligned}
+v_x &amp;= \frac{dx}{dt} \\
+&amp;= \frac{\gamma(dx&#39; + udt&#39;)}{\gamma(dt&#39; + udx&#39;/c^2)}
+\end{aligned}\]</span> The <span class="math inline">\(\gamma\)</span>
+factors cancel, <span class="math display">\[v_x = \frac{dx&#39; +
+udt&#39;}{dt&#39; + udx&#39;/c^2}.\]</span> We want to end up with an
+equation containing velocities, <span
+class="math inline">\(v_x&#39;\)</span>, so let’s divide through every
+term by <span class="math inline">\(dt&#39;\)</span> <span
+class="math display">\[\begin{aligned}
+v_x &amp;= \frac{dx&#39;/dt&#39; + u}{1 + udx&#39;/c^2dt&#39;}
+\end{aligned}\]</span> Now, we can simply substitute in <span
+class="math inline">\(v_x&#39; = dx&#39;/dt&#39;\)</span> to get the
+equation for <span class="math inline">\(v_x\)</span> in terms of <span
+class="math inline">\(v_x&#39;\)</span>. <span
+class="math display">\[\boxed{v_x = \frac{v_x&#39; + u}{1 +
+uv_x&#39;/c^2}.}\]</span> To derive the velocity in the <span
+class="math inline">\(y\)</span> direction, <span
+class="math inline">\(v_y\)</span>, we similarly start with <span
+class="math display">\[dy = dy&#39;, \qquad dt = \gamma(dt&#39; +
+u\frac{dx&#39;}{c^2}),\]</span> and <span class="math display">\[v_y =
+\frac{dy}{dt}, \qquad v_y&#39; = \frac{dy&#39;}{dt&#39;}.\]</span> We
+perform a similar substitution to get <span
+class="math display">\[\begin{aligned}
+v_y = \frac{dy}{dt} = \frac{dy&#39;}{\gamma(dt&#39; + udx&#39;/c^2)}.
+\end{aligned}\]</span> Notice it looks a bit different to the <span
+class="math inline">\(v_x\)</span> case, we no longer have a <span
+class="math inline">\(\gamma\)</span> on the top, because <span
+class="math inline">\(dy = dy&#39;\)</span>. Again, we divide through by
+<span class="math inline">\(dt&#39;\)</span> to get velocities: <span
+class="math display">\[v_y = \frac{dy&#39;/dt&#39;}{\gamma(1 +
+udx&#39;/c^2dt)},\]</span> and so <span
+class="math display">\[\boxed{v_y = \frac{v_y&#39;}{\gamma(1 +
+uv_x&#39;/c^2)}.}\]</span> The derivation for <span
+class="math inline">\(v_z\)</span> is the same, replacing <span
+class="math inline">\(z\)</span> every time you see a <span
+class="math inline">\(y\)</span>.</p>
+<h1 id="relativistic-velocity-example">Relativistic Velocity
+Example</h1>
+<div class="example">
+<p>Two rockets are heading straight towards each other, both moving at
+<span class="math inline">\(c/2\)</span> relative to the Earth. What
+does one rocket measure for the velocity of the other?</p>
+<p><strong>Solution:</strong> Common sense (and the Galilean velocity
+transformations) would tell us <span class="math inline">\(c\)</span>.
+But we know that’s not right. Instead, let’s use the velocity
+transformation: <span class="math display">\[\begin{aligned}
+    v_x&#39; = \frac{v_x - u}{1 - uv_x/c^2}
+    
+\end{aligned}\]</span></p>
+<p>We need to decide what <span class="math inline">\(v_x\)</span> and
+<span class="math inline">\(u\)</span> are. The velocities of the
+rockets are measured to be <span class="math inline">\(c/2\)</span> in
+the Earth’s reference frame (<span class="math inline">\(S\)</span>).
+So, for example, one of the rockets (call it rocket A) has <span
+class="math inline">\(v_x = -c/2\)</span> in the Earth’s frame. Now we
+want to transform this velocity to the frame of rocket B (<span
+class="math inline">\(S&#39;\)</span>), so that we know what velocity
+rocket B measures rocket A to have. The reference frame of Rocket B is
+moving relative to Earth at <span class="math inline">\(u=c/2\)</span>,
+and so: <span class="math display">\[\begin{aligned}
+        v_x&#39; &amp;= \frac{v_x - u}{1 - uv_x/c^2} \\
+        v_x &amp;= \frac{-c/2 - c/2}{1 - (-c/2)(c/2)/c^2} \\
+        v_x &amp;= \frac{-c}{1 + 1/4} \\
+        v_x &amp;= -0.8c
+    
+\end{aligned}\]</span> Which, as we would expect, is less than <span
+class="math inline">\(c\)</span>.</p>
+</div>
+</body>
+</html>

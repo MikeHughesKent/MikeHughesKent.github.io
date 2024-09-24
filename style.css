@@ -1,0 +1,103 @@
+/* General Reset to avoid browser inconsistencies */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Clean, easy-to-read font */
+    line-height: 1.6; /* Improves readability */
+    color: #333; /* Neutral dark color */
+    background-color: #f8f9fa; /* Light gray background to reduce eye strain */
+    padding: 20px;
+    max-width: 900px; /* Limits content width for readability */
+    margin: 0 auto; /* Centers the content on the page */
+}
+
+/* Heading Styling */
+h1, h2 {
+    color: #0056b3; /* Soft blue color for headings */
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Paragraph and Link Styling */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+a {
+    color: #0056b3; /* Same soft blue for links */
+    text-decoration: none; /* Removes underline */
+    border-bottom: 1px solid #0056b3; /* Subtle underline effect */
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+a:hover {
+    color: #003d73; /* Darker blue on hover */
+    border-bottom: 1px solid #003d73;
+}
+
+/* Unordered List Styling */
+ul {
+    list-style-type: none; /* Removes default bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+ul li::before {
+    content: "• "; /* Adds a custom bullet */
+    color: #0056b3; /* Matches the link and heading color */
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* Home Link at the Top */
+a.home-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0056b3;
+}
+
+a.home-link:hover {
+    color: #003d73;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, ul li {
+        font-size: 1rem;
+    }
+}

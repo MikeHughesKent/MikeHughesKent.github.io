@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Section 3</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 3</h1>
+</header>
+<p>In this section we will determine some general consequences of the
+Lorentz transformations. We will show that, if I am moving relative to
+you, my clock will appear to you to be running slow by a factor of <span
+class="math inline">\(\gamma\)</span>, and that my length in the
+direction of motion will contract by a factor of <span
+class="math inline">\(\gamma\)</span>. However, from my point of view,
+it is <em>you</em> who is moving, and <em>your</em> clock that will run
+slow and <em>you</em> that will be length contracted. It might seem that
+this leads to paradoxes - how can your clock run slower than mine if
+mine is running slower than yours?. We will explore the resolution of
+this (and other) apparent paradoxes, and see that framework of special
+relativity is in fact, entirely consistent (and, as far as we know,
+correct).</p>
+<h1 id="the-light-clock">The Light Clock</h1>
+<p>The light clock is a thought experiment which provides an
+introduction to time dilation without using the Lorentz transformations,
+and can provide an intuitive explanation of why we must abandon notions
+of absolute time if the postulates of special relativity are to be
+accepted.</p>
+<p>Imagine a pair of mirrors, with a pulse of light bouncing between
+them. Each time light hits a mirror, we can think of this as the tick of
+a clock, and we measure the time interval between two of these ‘ticks’.
+The distance between the mirrors we call <span
+class="math inline">\(h\)</span>.</p>
+<figure id="fig:lightClock">
+<embed src="Pictures/clock.pdf" style="height:5cm" />
+<figcaption>The light clock as observed by an observer moving with the
+clock (left, <span class="math inline">\(S\)</span>) or relative to the
+clock (right, <span class="math inline">\(S&#39;\)</span>).</figcaption>
+</figure>
+<p>For an observer in the frame of reference of the light clock (i.e.
+someone who is not moving with respect to the light clock), which we can
+call <span class="math inline">\(S\)</span>, then the time taken for the
+pulse to pass between the mirrors is given by <span
+class="math inline">\(t=h/c\)</span>, where <span
+class="math inline">\(c\)</span> is the speed of light, as normal in
+classical mechanics.</p>
+<p>An observer who is in a frame of reference moving with a velocity
+<span class="math inline">\(u\)</span> with respect to the light clock
+sees the light travel in a zig-zig pattern, as illustrated below. Let’s
+assume they measure the time between ticks to be <span
+class="math inline">\(t&#39;\)</span>. In <span
+class="math inline">\(t&#39;\)</span> the light clock will have moved a
+distance of <span class="math inline">\(ut&#39;\)</span>. So, from
+Pythogras’ theorem, the pulse of light has travelled a distance <span
+class="math inline">\(d\)</span> where <span class="math inline">\(d^2 =
+h^2 + (ut&#39;)^2\)</span>. It travels this distance in a time <span
+class="math inline">\(t&#39; = d/c\)</span>, and so substituting in
+<span class="math inline">\(d=ct&#39;\)</span> and <span
+class="math inline">\(h=ct\)</span> from above we obtain: <span
+class="math display">\[\begin{aligned}
+c^2t&#39;^2 &amp;= c^2t^2 + u^2t&#39;^2 \\
+t&#39;^2(c^2 - u^2) &amp;= c^2t^2 \\
+t&#39;^2 &amp;= t^2 \frac{c^2}{c^2 - u^2} \\
+t&#39; &amp;= t\sqrt{\frac{1}{1-u^2/c^2}} \\
+t&#39; &amp;= \gamma t
+\end{aligned}\]</span></p>
+<p>As we will see below, this is exactly the time dilation equation.</p>
+<h1 id="statement-of-time-dilation">Statement of Time Dilation</h1>
+<p>Consider a time period, <span class="math inline">\(\Delta
+T\)</span>, measured in a particular frame of reference. For example,
+this could be the time between two ticks of a clock, as measured by
+someone who is not moving relative to the clock (i.e. in the same frame
+of reference as the clock). This is therefore a time interval between
+two events measured on a clock that is present at both events. We call
+this the <strong>proper time</strong>.</p>
+<div class="definition">
+<p>The time measured by a clock in its rest frame.</p>
+</div>
+<p>Now think about the point-of-view of an observer in a different
+reference frame who has their own clock. So for them, the original clock
+is moving. During a tick of the moving clock, the time interval measured
+by the observer on their clock will be: <span
+class="math display">\[\Delta t = \gamma \Delta \tau\]</span></p>
+<p>where <span class="math inline">\(\gamma\)</span> is the normal gamma
+factor and <span class="math inline">\(\Delta \tau\)</span> is the time
+interval measured on the moving clock in that clock’s <em>rest
+frame</em>. Since <span class="math inline">\(\gamma\)</span> is always
+bigger than 1, then they will always measure a bigger time interval on
+their clock. So moving clocks appears to be running slow.</p>
+<div class="definition">
+<p>In a reference frame in which it is moving, a clock runs slow by a
+factor of <span class="math inline">\(\gamma\)</span> compared with its
+rest frame.</p>
+</div>
+<p>We sometime write the proper time as <span
+class="math inline">\(\tau\)</span>.</p>
+<h1 id="time-dilation-from-lorentz-equations">Time Dilation from Lorentz
+Equations</h1>
+<p>The time dilation equation comes quite simply from the Lorentz
+transformations. Imagine a bulb that regularly flashes, say at 1 second
+intervals. We can think of this as a simple kind of clock. Let’s call
+the time between flashes <span class="math inline">\(\Delta t\)</span>,
+as measured by the clock (or someone in the same rest frame of the
+clock, which we will call <span class="math inline">\(S\)</span>). The
+first flash we will label event 1, and the second flash event 2.</p>
+<p>In <span class="math inline">\(S\)</span> the bulb is not moving, it
+is always at the same place, so we can say: <span
+class="math display">\[x_1 = x_2 = 0\]</span></p>
+<p>We’ll call the time of the first flash <span
+class="math inline">\(t_1 = 0\)</span> and the second flash <span
+class="math inline">\(t_2 = \Delta t\)</span>.</p>
+<p>Now let’s use the Lorentz transformations to figure out what someone
+who is moving with respect to the bulb, in frame <span
+class="math inline">\(S&#39;\)</span>, sees: <span
+class="math display">\[t&#39;_2 = \gamma(t_2 -
+\frac{ux_2}{c^2})\]</span></p>
+<p>Since <span class="math inline">\(x_2=0\)</span> this is simply <span
+class="math display">\[t&#39;_2 = \Delta t&#39; = \gamma \Delta
+t.\]</span> This is the same as the time dilation equation (albeit with
+slightly different nomenclature).</p>
+<h1 id="solving-time-dilation-problems">Solving Time Dilation
+Problems</h1>
+<div class="example">
+<p>A spaceship sets out from Earth at a speed of <span
+class="math inline">\(c/4\)</span>. The ship reaches its destination
+after 1 year as measured by the clock of an observer on Earth. How much
+time does the pilot of the spaceship measure the trip took on his
+clock?</p>
+<p><strong>Solution:</strong> To solve this problem we can either start
+from the Lorentz transformations or, with a little thought, simply use
+the time dilation equation, <span class="math inline">\(t=\gamma
+t_0\)</span>. First, we know that <span
+class="math inline">\(u=c/4\)</span> so we can calculate <span
+class="math inline">\(\gamma\)</span>: <span
+class="math display">\[\begin{aligned}
+\gamma &amp;= \sqrt{\frac{1}{1-u^2/c^2} }\\
+&amp;= \sqrt{\frac{1}{1-(1/4)^2}} \\
+&amp;= 1.03
+\end{aligned}\]</span></p>
+<ul>
+<li><p>Define <span class="math inline">\(S\)</span> as the Earth rest
+frame, <span class="math inline">\(S&#39;\)</span> as the spaceship rest
+frame.</p></li>
+<li><p>The first event is the spaceships leaving, which we will set to
+be at <span class="math inline">\(x_0 = x_0&#39; = 0\)</span> and <span
+class="math inline">\(t_0=t_0&#39; =0\)</span> (i.e. the common origin
+of <span class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>).</p></li>
+<li><p>The second event is the spaceship arriving. Hence <span
+class="math inline">\(t = 1\)</span> year and <span
+class="math inline">\(t&#39;\)</span> is the wanted unknown.</p></li>
+<li><p>The location of the arrival event is <span
+class="math inline">\(x&#39;=0\)</span> (since spaceship does not move
+in its frame of reference) and <span class="math inline">\(x\)</span> is
+unknown and not needed.</p></li>
+</ul>
+<p>Possible Lorentz transformations to use are <span
+class="math inline">\(t&#39; = \gamma(t - ux/c^2)\)</span> and <span
+class="math inline">\(t = \gamma(t&#39; + ux&#39;/c^2)\)</span>. Since
+<span class="math inline">\(x\)</span> is unknown, use <span
+class="math display">\[\begin{aligned}
+    t &amp;= \gamma(t&#39; + ux&#39;/c^2) \\
+    &amp;= \gamma(t&#39; + 0) \\
+    &amp;= \gamma t&#39; \\
+    1~\mathrm{yr} &amp;= 1.03t&#39;\\
+    t&#39;&amp;= 0.97~\mathrm{yrs}
+\end{aligned}\]</span></p>
+<p>If we want to start straight from the time dilation equation (<span
+class="math inline">\(t = \gamma t_0\)</span>), we need to be careful to
+work out which time is <span class="math inline">\(t\)</span> and which
+is <span class="math inline">\(t_0\)</span>. Recall that <span
+class="math inline">\(t_0\)</span> is the proper time, it is the time
+measured by a clock in a reference frame where the clock is not moving.
+However, it is very easy to get confused when working with this
+definition.</p>
+<p>It is easier if we <strong>think in terms of events</strong>. Event
+1, in this case, was the spaceship leaving Earth, and Event 2 was the
+spaceship arriving at its destination. For somebody on Earth, these two
+events are at different locations. For somebody on the spaceships these
+two events are at the same location. So, it is the spaceship that
+measures the proper time (<span class="math inline">\(\tau\)</span>). We
+therefore have:</p>
+<p><span class="math display">\[\begin{aligned}
+t &amp;= \gamma \tau \\
+1~\mathrm{yr} &amp;= (1.03)\tau \\
+\tau &amp;= 0.97~\mathrm{years}
+\end{aligned}\]</span></p>
+</div>
+<p>Another way to think about it is that the for an observer on Earth,
+the spaceship is moving. Therefore the observer sees their moving clock
+run slow, i.e it will tick up less time than the clock on Earth.</p>
+<p>The confusion comes because the observer on the spaceship also sees
+the Earth’s clock run slow. The question doesn’t ask you about this, but
+you see how you can easily get it confused. <strong>So, if in doubt,
+start with the Lorentz transformations</strong>; providing you carefully
+define your reference frames then you can’t really go wrong.</p>
+<h1 id="statement-of-length-contraction">Statement of Length
+Contraction</h1>
+<p>Consider a rod of length <span class="math inline">\(L\)</span>, as
+measured in its rest frame (i.e. by an observer who is not moving
+relative to the rod). We call this the <strong>proper
+length</strong>.</p>
+<div class="definition">
+<p>The length of an object measured in its rest frame.</p>
+</div>
+<p>For an observer in a reference frame where the object is moving, the
+length of the object along the direction of motion will reduce by a
+factor of <span class="math inline">\(\gamma\)</span>: <span
+class="math display">\[L = \frac{L_0}{\gamma},\]</span> where <span
+class="math inline">\(L_0\)</span> is the length of the object in its
+<em>rest frame</em>. This is called <strong>length contraction</strong>
+or Lorentz-Fitzgerald contraction.</p>
+<div class="definition">
+<p>In a reference frame in which it is moving, the length of an object
+reduces by a factor of <span class="math inline">\(\gamma\)</span>
+relative to its length in its rest frame.</p>
+</div>
+<h1
+id="demonstration-of-length-contraction-from-lorentz-equations">Demonstration
+of Length Contraction from Lorentz Equations</h1>
+<p>Consider an observer, in frame <span
+class="math inline">\(S&#39;\)</span>, moving past a rod. We will call
+the rest frame of the rod <span class="math inline">\(S\)</span>. We
+will synchronise clocks as the observer passes the front of the rod, and
+call this event 1, so that: <span class="math display">\[x_1 = 0, \quad
+t_1 = 0, \quad x&#39;_1 = 0, \quad t&#39;_1 = 0\]</span> At exactly the
+same time, the moving observer measures the position of the back of the
+rod, <span class="math inline">\(x&#39;_2\)</span>. Their measurement of
+the length of the rod, <span class="math inline">\(L&#39;\)</span>, is
+<span class="math display">\[L&#39; = x&#39;_2 - x&#39;_1 = x&#39;_2 - 0
+= x&#39;_2\]</span></p>
+<p>Since the measurements must be made at the same time <span
+class="math display">\[t&#39;_1 = t&#39;_2 = 0\]</span></p>
+<p>Finally, we know that in the rod’s rest frame the distance between
+the front and back of the rod is its length, i.e. <span
+class="math display">\[L = x_2 - x_1 = x_2 - 0 = x_2\]</span></p>
+<p>Now we can use the Lorentz transformation: <span
+class="math display">\[x_2 = \gamma(x&#39;_2 + ut&#39;_2)\]</span> and
+since <span class="math inline">\(t&#39;_2 = 0\)</span>, we have <span
+class="math inline">\(x_2 = \gamma x&#39;_2\)</span> and hence: <span
+class="math display">\[x&#39;_2 = \frac{x_2}{\gamma},\]</span> or <span
+class="math display">\[L&#39; = \frac{L}{\gamma},\]</span> as we wanted.
+Now, you might wonder, what would happen if we used the inverse
+transform <span class="math display">\[x&#39;_2 = \gamma(x_2 -
+ut_2)\]</span> If we say <span class="math inline">\(t_2 = 0\)</span>
+then we would have <span class="math inline">\(x&#39;_2 = \gamma
+x_2\)</span> and so <span class="math inline">\(L&#39; = \gamma
+L\)</span>! rather than <span class="math inline">\(L&#39; =
+\frac{L}{\gamma}\)</span>, and they can’t both be right!</p>
+<p>The answer is that we have absolutely no business saying that <span
+class="math inline">\(t_2 = 0\)</span>. We said that in the frame of the
+observer, <span class="math inline">\(S&#39;\)</span>, then <span
+class="math inline">\(t&#39;_2 = 0\)</span> because we were setting
+<span class="math inline">\(t&#39;_2 = t&#39;_1\)</span>. To measure the
+length of something that is moving, we have to compare the positions of
+the front and the back <em>at the same time</em>.</p>
+<p>However, there is nothing to say that these two times are equal in
+<span class="math inline">\(S\)</span>. You could work out <span
+class="math inline">\(t_2 = \gamma(t&#39;_2 - ux&#39;_2)\)</span> of
+course, substitute this in, and you would get the correct answer, but
+it’s a bit more maths.</p>
+<h1 id="solving-length-contraction-problems">Solving Length Contraction
+Problems</h1>
+<div class="example">
+<p>A train of proper length 100 m passes by an observer at a speed of
+<span class="math inline">\(c/2\)</span>. What does the observer measure
+the length of the train to be?</p>
+<p><strong>Solution:</strong> The proper length is 100 m, so we expect
+the length measured by any other observer moving relative to the train,
+to be less than this. In this case, <span class="math inline">\(\gamma
+=1.15\)</span> and so:</p>
+<p><span class="math display">\[\begin{aligned}
+L &amp;= L_0/\gamma\\
+&amp;= (100~\mathrm{m})/1.15 \\
+&amp;= 87~ \mathrm{m}
+\end{aligned}\]</span></p>
+</div>
+<h1 id="muon-flight-time">Muon Flight Time</h1>
+<p>An experimental demonstration of the effect of time dilation on Earth
+comes from muons. Muons are particles created in the upper atmosphere
+from the decay of pions, at a height of several thousand kilometres.
+They are unstable, and themselves decay with a half life of around <span
+class="math inline">\(2\)</span> μs.</p>
+<p>A typical muon moving at <span
+class="math inline">\(u=0.998c\)</span> only travels around <span
+class="math inline">\(600\)</span> m in <span
+class="math inline">\(2\)</span> μs. Therefore, since the distance that
+needs to be travelled is several times this, very few muons should reach
+the Earth’s surface. However, we actually a significantly larger flux of
+muons reaching the Earth’s surface than expected.</p>
+<p>This is explained by time dilation. The <span
+class="math inline">\(2\)</span> μs is a proper time interval, i.e. it
+is the time measured from the rest frame of the muon (the muon is at the
+event of the muon’s creation and the event of it reaching the Earth’s
+surface, so it must measure the proper time). From the point of view of
+us on earth, however, the muons experience time dilation. At a velocity
+of <span class="math inline">\(0.998c\)</span>, <span
+class="math inline">\(\gamma\)</span> is about <span
+class="math inline">\(15\)</span>, meaning that the observer on earth
+sees the internal ‘clock’ of the muon seem to run 15 times slower. To
+put it another way, the decay half life increases by a factor of 15.</p>
+<p>But what happens if we look at things from the rest frame of the
+muon. From here it is the Earth that is moving towards the muon at a
+speed of <span class="math inline">\(u\)</span>. So the muon sees time
+running more slowly for the Earth, it obviously does not see it own
+clock running slow - its proper time does not change, and it is the
+proper time that determines the decay rate.</p>
+<p>The answer is length contraction. In the rest frame of the muon, the
+Earth is moving towards it at a speed of <span
+class="math inline">\(0.998c\)</span>. The distance that it has to
+travel is therefore length contracted by a factor of <span
+class="math inline">\(\gamma = 15\)</span>. Therefore, while the muon
+still decays in <span class="math inline">\(2\)</span> μs, now it only
+has to travel a distance of <span class="math inline">\(L/15\)</span>
+before hitting the Earth.</p>
+<p>The fact that something that looks time dilation in one frame of
+reference can look like length contraction in another tells us something
+about the inter-connectedness of space and time, that in a sense we are
+looking at two different aspects of the same thing. We will explore this
+idea of ‘spacetime’ more in the next lecture.</p>
+</body>
+</html>

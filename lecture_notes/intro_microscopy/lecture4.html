@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Michael Hughes" />
+  <title>PH800 Biomedical Optics Introduction to Microscopy Lecture 4. Phase Microscopy</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PH800 Biomedical Optics<br />
+<strong>Introduction to Microscopy</strong><br />
+Lecture 4. Phase Microscopy</h1>
+<p class="author">Michael Hughes</p>
+</header>
+<h1 id="reading">Reading</h1>
+<p>The notes below are a summary of the key points needed for the exam.
+For more details and background they should be read in conjunction with
+linked documents, papers or websites and the general reading:</p>
+<ol>
+<li><p>Mertz, Introduction to Microscopy, Chapter 11.</p></li>
+<li><p>Kim, Myung K. "Principles and techniques of digital holographic
+microscopy." SPIE reviews 1, no. 1 (2010): 018005.</p></li>
+</ol>
+<p>If you are unfamiliar with scalar diffraction theory and the concept
+of the free space propagator, Chapter 2 of Mertz and Goodman’s
+‘Introduction to Fourier Optics’ may also be useful background, although
+it is not essential.</p>
+<h1 id="scalar-wave-approximation">Scalar Wave Approximation</h1>
+<p>Light is a wave in electric and magnetic fields, and so can be
+described by classical electromagnetic field theory (i.e. Maxwell’s
+Equations). Electric and magnetic fields are vector quantities, and a
+full treatment of light in this framework is quite complicated. Happily,
+it is often possible to make what is known as the ‘scalar wave
+approximation’, it which we describe light simply by the amplitude and
+phase of the electric field. Therefore, at any point in a light field,
+we can write <span class="math display">\[E(x,y,z) = |E|cos\phi\]</span>
+Here, <span class="math inline">\(E(x,y,z)\)</span> is the electric
+field at each point in space (we will drop the explicit spatial
+dependence from now on, except when we need to clarify what we are
+talking about), <span class="math inline">\(|E|\)</span> is the
+amplitude of the electric field at that point and <span
+class="math inline">\(\phi\)</span> is the phase at that point. We can
+think of light as simply a 1D wave in the electric field, where <span
+class="math inline">\(E\)</span> is the height (amplitude) of the wave,
+and <span class="math inline">\(\phi\)</span> is the point along the
+wave (the phase).</p>
+<p>Unless you are very good at manipulating trigonometric identities, it
+is often more useful to write this in a different way. Recall Euler’s
+formula:</p>
+<p><span class="math display">\[e^{i\phi} = \cos \phi + i \sin
+\phi\]</span></p>
+<p>where <span class="math inline">\(i=\sqrt{-1}\)</span>. So we can
+write:</p>
+<p><span class="math display">\[E =  \operatorname{Re}\{|E|{e^{i
+\phi}}\}\]</span></p>
+<p>where <span class="math inline">\(\operatorname{Re}\{x\}\)</span>
+denotes the real part of <span class="math inline">\(x\)</span>. This is
+known as the <strong>phasor representation</strong> (the <span
+class="math inline">\(e^{i \phi}\)</span> part is the phasor). We
+sometimes refer to this as the <strong>complex field</strong> (because
+there is an <span class="math inline">\(i\)</span> in there), although
+this is arguably slightly misleading as the field isn’t a complex
+number, because we take only the real part. In practice we don’t usually
+bother writing <span class="math inline">\(\operatorname{Re}\)</span>;
+we just remember that we take the real part at the end.</p>
+<p>Recall that if we write a complex number in the following way:</p>
+<p><span class="math display">\[C =  a + ib\]</span></p>
+<p>then the argument/phase <span class="math inline">\(\phi\)</span> is
+given by <span class="math inline">\(\arctan(b/a)\)</span> and the
+amplitude is <span class="math inline">\(\sqrt{a^2 + b^2}\)</span>.</p>
+<p>Any kind of detector (cameras, photodetectors, photographic film, the
+human eye) is sensitive to the absolute square of the field, i.e.</p>
+<p><span
+class="math display">\[I  =EE^*=|E|^2e^{i\phi}e^{-i\phi}=|E|^2\]</span></p>
+<p>where we have used that when we square a complex number, this means
+we multiply it by its complex conjugate.</p>
+<p>This means that we don’t normally detect the phase part of the field,
+only the square of the amplitude.</p>
+<h2 id="fresnel-diffraction-propagator">Fresnel Diffraction
+Propagator</h2>
+<p>If we know the field, <span class="math inline">\(E(x,y,0)\)</span>,
+at some initial plane, we can calculate the field at a distance <span
+class="math inline">\(z\)</span> from this plane, <span
+class="math inline">\(E(x,y,z)\)</span> using the diffraction integral
+from scalar diffraction theory. This is beyond the scope of the lecture,
+consult Goodman’s ‘Introduction to Fourier Optics’ for details.</p>
+<p>However, a good approximation, known as the Fresnel approximation,
+can be used when the distance to the plane is comparable to the lateral
+extent of the field. In which case, we can calculate the field at a
+distance <span class="math inline">\(z\)</span> by a convolution:</p>
+<p><span class="math display">\[E(x,y,z) =  E(x,y,0) \ast
+h(x,y,z)\]</span></p>
+<p>where <span class="math inline">\(h(x,y,z)\)</span> is the Fresnel
+propagator, given by:</p>
+<p><span class="math display">\[h(x,y,z) =  \frac{e^{ikz}}{i\lambda
+z}e^{i\frac{k}{2z}(x^2 +y^2)}\]</span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is wavelength. We
+can think of this as being a bit like the PSF we defined in Lecture 1,
+although now we are in talking about what happens in free-space, rather
+than because of a lens, and it is acting on the complex field rather
+than the intensity.</p>
+<h2 id="benefits-of-phase-imaging">Benefits of Phase Imaging</h2>
+<p>In a transmission microscope, we obtain image contrast because parts
+of the sample absorb different amount of light. This means they reduce
+the <span class="math inline">\(|E|\)</span> part of the field. However,
+as discussed in Lecture 1, many objects (such as cells) are not very
+absorbing, and so contrast can be quite low.</p>
+<p>As light travels a distance <span class="math inline">\(z\)</span>
+through a material of refractive index <span
+class="math inline">\(n\)</span> (i.e. of optical thickness <span
+class="math inline">\(nz\)</span>), the phase progresses by <span
+class="math inline">\(knz\)</span> where <span
+class="math inline">\(k\)</span> is the wavenumber. <span
+class="math display">\[k= \frac{2\pi}{\lambda}\]</span> and where <span
+class="math inline">\(\lambda\)</span> is the wavelength. So, if we
+initially have some light with phase <span
+class="math inline">\(\phi\)</span>, then after passing through the
+material it will have a phase of: <span
+class="math display">\[\phi&#39;= \phi+nzk\]</span> and so, <span
+class="math display">\[E&#39;= |E|e^{i[\phi + nzk]}\]</span> Remember
+than our phase wraps round every time we get to <span
+class="math inline">\(2\pi\)</span>, since <span
+class="math inline">\(\cos \phi = \cos (\phi + 2\pi)\)</span>.</p>
+<p>Now, if we consider a sample such as a cell on a microscope slide,
+the refractive index of the cell is different to the surrounding medium.
+So the light which has travelled through the cell will have a different
+phase to the light which hasn’t. So, if we could see the phase this
+would provide some extra contrast in the image. If we could measure the
+phase, we might also be able to measure the optical thickness of the
+cell (although this is complicated if the phase difference has gone past
+<span class="math inline">\(2 \pi\)</span> and wrapped around). If we
+know the physical thickness this can tell us <span
+class="math inline">\(n\)</span>, or if we know <span
+class="math inline">\(n\)</span> then it tells us the thickness.</p>
+<p>A second benefit of phase imaging is that, once we have determined
+the complex field, we can use the Fresnel propagator to determine the
+field at other axial positions. This means we can numerically ‘focus’ at
+different depths in the sample without moving anything (or even go back
+and refocus our images later on). It also means that, in some cases, we
+can dispense with a lens altogether, and perform all the focusing
+numerically.</p>
+<h1 id="phase-contrast-qualitative-phase-imaging">Phase Contrast
+(Qualitative Phase Imaging)</h1>
+<p>Phase contrast imaging is a very old idea, it was first developed in
+the 1930s and won Fritz Zernike the 1953 Nobel Prize in Physics. The
+idea is to somehow convert phase information into intensity information
+so that we can see it (either by eye or on a camera). This is possible
+using interference, because the intensity pattern produced by the
+interference between different beams depends on their relative
+phase.</p>
+<p>There are two common methods: Zernike phase contrast and Differential
+Interference Contrast (DIC) microscopy. Both improve contrast for
+specimens which add an optical delay but do not significantly absorb
+(known as <strong>phase objects</strong>). You do not need to know how
+these work, but you can read about them at:</p>
+<p><a
+href="https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/dic/dichome/">https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/dic/dichome/</a></p>
+<p><a
+href="https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/phasecontrast/phaseindex/">https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/phasecontrast/phaseindex/</a></p>
+<p>Note that, in both cases, the relationship between the actual phase
+and the intensity pattern we see is quite complicated and generally not
+reversible, i.e. we can’t figure out the actual value of the phase. So
+we sometimes refer to this as <strong>qualitative phase
+imaging</strong>.</p>
+<h1
+id="quantitative-phase-imagingdigital-holographic-microscopy">Quantitative
+Phase Imaging/Digital Holographic Microscopy</h1>
+<p>The goal of Quantitative Phase Imaging (QPI) is to reconstruct the
+complex field (amplitude and phase) by encoding phase information in the
+intensity recorded by the camera in such a way that we can recover the
+value of the phase.</p>
+<p>Let us define the 2D complex field at the sample as <span
+class="math inline">\(E_S(x,y)\)</span> and the square modulus of this
+as the intensity <span class="math inline">\(I_S = |E_S|^2\)</span>. If
+we have no lens, and place the camera some distance <span
+class="math inline">\(z\)</span> from the sample, then the field at the
+camera can be calculated using a free-space propagator such as the
+Fresnel propagator. (You should be familiar with this idea, but you
+don’t need to be able to reproduce it in the exam).</p>
+<figure id="machzender">
+<img src="figs/machzender.png" style="width:8cm" />
+<figcaption>Interferometer for phase imaging. Light from the laser is
+split between the sample and reference arms and recombined at the
+camera. The lens is optional.</figcaption>
+</figure>
+<p>We introduce a second, reference, beam, of field <span
+class="math inline">\(E_R(x,y)\)</span>, which is coherent with the
+sample beam (i.e. we will see interference effects). Usually, this will
+be created using a beamsplitter and then recombined with the sample at
+the camera using another beamsplitter, as shown in Fig. <a
+href="#machzender" data-reference-type="ref"
+data-reference="machzender">1</a>. For simplicity we can assume it is a
+flat field with no spatial dependency, i.e. <span
+class="math inline">\(E_R(x,y) = E_R\)</span>. If the sample and
+reference fields coincide at the camera, then we have</p>
+<p><span class="math display">\[E_{cam} = E_S(x,y) + E_R\]</span></p>
+<p>The intensity at the camera is then: <span
+class="math display">\[I_{cam} = |E_{cam}|^2 = I_S + I_R + E_R E_S^* +
+E_S E_R^*\]</span></p>
+<p>where <span class="math inline">\(*\)</span> denotes the complex
+conjugate. Note that this is a real quantity which, due to the last two
+terms (the cross-terms), will depend on the relative phase of <span
+class="math inline">\(E_R\)</span> and <span
+class="math inline">\(E_S\)</span> at each point on the camera. The
+third and fourth term are therefore an interferogram which depends on
+the complex value of <span class="math inline">\(E_S\)</span>. Since the
+reference field is simply a (known) constant, if we could isolate the
+fourth term then we have <span class="math inline">\(E_S\)</span> which
+is complex and tells use the amplitude and phase at the camera. There
+are several different ways of isolating this term.</p>
+<p>Now, if the sample is imaged onto the camera, this is then also the
+field at the sample (subject to any magnification and the effect of the
+PSF). If the sample is not imaged onto the sample, then we can use an
+appropriate free space propagator (usually the Fresnel propagator) to
+transform the field at the camera to the field at the sample.</p>
+<p><strong>Aside:</strong> We have made the simplification of ignoring
+the fact the the E field also varies in time, that is we should really
+write <span class="math inline">\(E(x,y,z,t) = |E|\cos(kx-\omega t) =
+\operatorname{Re}\{|E|e^{i[kx-\omega t]}\}\)</span> where <span
+class="math inline">\(\omega\)</span> is the angular frequency of light,
+related to the frequency <span class="math inline">\(\omega=2\pi
+f\)</span>, where <span class="math inline">\(f = c/\lambda\)</span>. If
+we follow this through we find that the time dependence cancels in the
+cross terms as it is the same for the reference and the sample beams -
+we are sensitive only to the difference in the path length. The time
+dependence is still present in the <span
+class="math inline">\(|E_S|^2\)</span> and <span
+class="math inline">\(|E_R|^2\)</span> terms, but as the frequency on
+light is much higher than the frequency bandwidth of any detector we
+might use, we essentially average over the sinusoidal time dependence,
+and again we don’t see it.</p>
+<h2 id="phase-stepping-holography">Phase Stepping Holography</h2>
+<p>One method of isolating the <span class="math inline">\(E_S\)</span>
+term is called phase shifting digital holography. We acquire several
+images with slightly different length reference arms. This introduces
+additional phase shifts (<span class="math inline">\(\phi\)</span>) into
+the reference arm. This is normally achieved using a mirror mounted on a
+piezo actuator, replacing one of the mirrors in Fig. <a
+href="#machzender" data-reference-type="ref"
+data-reference="machzender">1</a>. We can write this as: <span
+class="math display">\[E_R&#39; = E_Re^{i \phi}\]</span> There are a
+variety of algorithms for recovering the phase of <span
+class="math inline">\(E_S\)</span> in this way. The classic method is
+four-step phase shifting; if we acquire four images with four different
+phase shifts of <span class="math inline">\(\theta = 0\)</span>, <span
+class="math inline">\(\theta = \pi/2\)</span>, <span
+class="math inline">\(\theta = \pi\)</span>, and <span
+class="math inline">\(\theta = 3\pi/4\)</span> then the complex field is
+given by: <span class="math display">\[E_S = \frac{1}{4E_R} [(I_0 -
+I_{\pi})] + i(I_{3\pi/2} - I_{\pi/2})]\]</span></p>
+<p>We can then calculate the phase from this complex representation:
+<span class="math display">\[\phi = \arctan \frac{I_{3\pi/2} -
+I_{\pi/2}}{I_0 - I_{\pi}}\]</span></p>
+<p>There are other schemes involving fewer images, but they are
+generally either more sensitive to noise or small errors in the phase
+stepping or more computationally expensive.</p>
+<h2 id="off-axis-digital-holography">Off-axis Digital Holography</h2>
+<p>By introducing a tilt into the reference beam, as shown in Fig. <a
+href="#offaxis" data-reference-type="ref" data-reference="offaxis">2</a>
+it’s possible to recover the complex field without multiple
+phase-stepped images. First, note that tilting a beam with an angle of
+<span class="math inline">\(\theta\)</span> is equivalent to adding a
+phase ramp of the form <span class="math inline">\(e^{i2\pi k x sin
+\theta}\)</span>. The total field at the camera is then:</p>
+<figure id="offaxis">
+<img src="figs/offaxis.png" style="width:8cm" />
+<figcaption>Interferometer for off-axis holography phase imaging. The
+beamsplitter near the camera is tilted, adding a linear phase ramp to
+the reference field.</figcaption>
+</figure>
+<p><span class="math display">\[E_{cam} = E_Re^{i2\pi k x sin \theta} +
+E_S(x,y)\]</span></p>
+<p>And hence the camera records intensity:</p>
+<p><span class="math display">\[I_{cam} = I_R + I_S(x,y) +
+E_RE_S^*(x,y)e^{i2\pi k x sin \theta} + E_R^*E_S(x,y) e^{-i2\pi k x sin
+\theta}\]</span></p>
+<p>We can now see that the components which depend on the complex field
+<span class="math inline">\(E_S\)</span>, rather than its square (<span
+class="math inline">\(I_S\)</span>), are modulated by the exponential
+terms, and so in Fourier space are shifted compared with the <span
+class="math inline">\(I_R\)</span> and <span
+class="math inline">\(I_S\)</span> terms.</p>
+<p>To recover the complex field, <span
+class="math inline">\(E_S\)</span>, we extract the region in Fourier
+space which is occupied by one of the modulated components and shift it
+to be centred on zero, before inverse Fourier transforming back to real
+space. This is equivalent to demodulating around the carrier frequency
+which comes from the tilted reference beam. The effect is that the
+resulting image is complex, and we can now directly extract the
+amplitude and phase. This procedure is shown in Fig. <a
+href="#offaxisex" data-reference-type="ref"
+data-reference="offaxisex">3</a>.</p>
+<figure id="offaxisex">
+<img src="figs/offaxisex.png" style="width:15cm" />
+<figcaption>Interferometer for off-axis holography phase imaging. The
+beamsplitter near the camera is tilted, adding a linear phase ramp to
+the reference field.</figcaption>
+</figure>
+<h3 id="pros-and-cons-of-off-axis-digital-holography">Pros and Cons of
+Off-axis Digital Holography</h3>
+<p>Off-axis holography allows the phase to be recovered from a single
+image, so it is fast. The processing is also relatively simple,
+requiring only Fourier transforms. However, the modulated component must
+be shifted sufficiently far in Fourier space for there to be no overlap
+with high spatial frequencies coming directly from the sample (In the
+<span class="math inline">\(I_S\)</span> term.). Therefore one needs
+more pixels on the camera to achieve Nyquist sampling of the spatial
+frequencies present in the sample field (or, if insufficient pixels are
+available or the tilt angle cannot be increased sufficiently, to limit
+the spatial frequencies coming from the sample by reducing the numerical
+aperture). We also have to ensure that there is no vibration which
+changes the relative path length (sample and reference), or our phase
+values will vary in time.</p>
+<h2 id="in-line-digital-holography">In-line Digital Holography</h2>
+<p>In in-line holography (sometimes known as on-axis or Gabor
+holography), instead of using a separate reference beam, we rely on
+interference between light scattered from the sample and the
+illumination beam itself. The camera is placed a short distance behind
+the sample, and generally no lens is used. This results in a an
+interference pattern on the camera. We can then try to estimate the
+complex field at the sample plane using a technique called back
+propagation. Both planar and point source illumination geometries can be
+used, as shown in Fig. <a href="#inline" data-reference-type="ref"
+data-reference="inline">4</a></p>
+<figure id="inline">
+<img src="figs/inline.png" style="width:8cm" />
+<figcaption>Planar and point source geometries for inline digital
+holographic microscopy.</figcaption>
+</figure>
+<p>We first calculate the reference field at the camera plane. We then
+calculate the conjugate of this field, meaning we reverse its direction.
+We then multiply this conjugate field by the image and numerically
+propagate it back to the sample plane. This is essentially a digital
+equivalent of the very earliest forms of holography, in which the
+interference a pattern between the object and a reference beam was
+recorded on photographic film. Shining light back through the film then
+produces a hologram.</p>
+<p>A problem with in-line holography is that the reconstructed field at
+the sample is corrupted by zero order diffraction and the ‘twin image’.
+The twin image is due to an ambiguity in the reconstruction The former
+can be dealt with by subtracting the mean of the hologram. The twin
+image problem is more troublesome, and can prevent quantitative phase
+imaging. There are a number of approaches which attempt to reduce the
+twin image problem, and these do allow effective recovery of the phase.
+Choosing a point source geometry with sufficient sample to detector
+distance means that the twin image is heavily blurred, minimising its
+contribution. There are also numerical approaches but they are iterative
+and slow and generally require some prior information about the sample.
+Further discussion of these methods are beyond the scope of this
+lecture, but there is a large amount of literature on the subject, and
+it is an active research topic.</p>
+<h3 id="pros-and-cons-of-in-line-digital-holography">Pros and cons of
+in-line Digital Holography</h3>
+<p>In-line holography is optically simple, requiring only a light source
+(which can be an LED) and a camera. It is less sensitive to disturbance
+or vibrations, since these are common to both beams. This makes it ideal
+for portable, low cost imaging applications, especially as there is no
+need for a lens. A partially spatially coherent source can be used for
+off-axis holography, since interference only takes places over a
+relatively small spatial area. The temporal coherence length can also be
+very short, since there is little path length difference between the
+deflected and un-deflected light. A pinhole of 50-100 microns placed in
+front of a high power LED can work well as a source. This makes inline
+holography attractive for low-cost microscopy.</p>
+<p>However, since no lens is used, the pixel size of the camera directly
+limits the resolution. There is the ’twin image problem’ which requires
+an iterative phase recovery algorithm, making this a slow approach to
+quantitative phase imaging.</p>
+<h2 id="applications">Applications</h2>
+<p><strong>Contrast:</strong> As for conventional phase contrast
+imaging, QPI allows samples which do not absorb or scatter strongly
+enough to be seen in intensity images to be viewed.<br />
+<br />
+<strong>Thickness measurements:</strong> Since the phase delay depends
+on the thickness of the samples (assuming constant refractive index)
+then the phase measurements can be used to infer the thickness of the
+sample at each <span class="math inline">\((x,y)\)</span> point and
+hence recover a 3D representation of the sample.<br />
+<br />
+<strong>Numerical Refocusing:</strong> Once the complex field is known
+as some distance from the sample, we can adjust the focus position
+numerically using the Fresnel propagator to compute the field at any
+other distance. This allows post-acquisition adjustments in the focus
+position, or acquisition of extended depth of field images, with no
+physical turning of knob.<br />
+<br />
+<strong><strong>Index of Refraction Measurements:</strong></strong> The
+phase changes induced by a sample depending on the optical path, <span
+class="math inline">\(D,\)</span> length through the sample. <span
+class="math inline">\(D = nL\)</span> where <span
+class="math inline">\(L\)</span> is the physical thickness and <span
+class="math inline">\(n\)</span> is the refractive index. Hence if the
+physical thickness of an object is known then phase measurements can be
+used to recover the refractive index (or rather than line integral
+through the sample).</p>
+</body>
+</html>

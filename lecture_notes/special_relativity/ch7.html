@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Section 7</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 7</h1>
+</header>
+<p>In this lecture we will discuss further implications of special
+relativity on momentum. Since momentum is dependent on velocity, it’s
+not surprising that our non-relativistic definition will need to be
+modified.</p>
+<h1 id="classical-momentum">Classical Momentum</h1>
+<p>In classical, Newtonian mechanics, momentum is defined as: <span
+class="math display">\[p = mv\]</span> At first glance, there is no
+obvious reason why the thing that we call momentum should be defined in
+this way. Why not define momentum to be <span class="math inline">\(p =
+m/v\)</span> or <span class="math inline">\(p=mv^8\)</span>? The reason
+that momentum is defined as <span class="math inline">\(mv\)</span> is
+because this value is <em>conserved</em>. More generally, the total
+value of the momentum, summed over all objects, is conserved for any
+system that has no external forces acting on it.</p>
+<p>To take a simple example, consider two blocks, each with a mass of
+<span class="math inline">\(1\)</span> kg. One is stationary, and the
+other is moving towards it at a velocity of <span
+class="math inline">\(10\)</span> m s<sup>−1</sup>, as shown in the
+diagram in Figure <a href="#fig:momentum" data-reference-type="ref"
+data-reference="fig:momentum">1</a>.</p>
+<figure id="fig:momentum">
+<p><embed src="Pictures/collision.pdf" style="width:12cm" /> <span
+id="fig:momentum" data-label="fig:momentum"></span></p>
+<figcaption>Before and after a collision between two
+blocks.</figcaption>
+</figure>
+<p>The total momentum of the system before the two blocks collide is
+given by: <span class="math display">\[\begin{aligned}
+p &amp;= m_1v_1 + m_2v_2 \\
+&amp;= (1~\mathrm{kg})(10~\mathrm{ms^{-1}}) + (1 ~\mathrm{kg})(0) \\
+&amp;= 10 \; \si{\kilo\gram\metre\per\second}
+\end{aligned}\]</span></p>
+<p>After the collision, the total momentum will still be equal to 10
+kg m s<sup>−1</sup>. So if, for example, the left-most block bounces
+back at 5 m s<sup>−1</sup>, the second block must have a velocity <span
+class="math inline">\(v_2\)</span> such that: <span
+class="math display">\[\begin{aligned}
+p &amp;= 10~\si{\kilo\gram\metre\per\second} =
+(1~\mathrm{kg})(-5~\mathrm{ms^{-1}}) + (1~\mathrm{kg})v_2 \\
+v_2 &amp;= 15 \; \si{\metre\per\second}
+\end{aligned}\]</span></p>
+<p>Using the classical Galilean transformation between inertial frames,
+if momentum is conserved in one frame of reference then it will also be
+conserved in another. This doesn’t mean that we calculate the same value
+of momentum for different reference frames. If an object is moving at
+<span class="math inline">\(2\)</span> m s<sup>−1</sup> in frame <span
+class="math inline">\(S\)</span> and <span
+class="math inline">\(4\)</span> m s<sup>−1</sup> in <span
+class="math inline">\(S&#39;\)</span>, then since <span
+class="math inline">\(p=mv\)</span>, the value for momentum will be
+different in <span class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>. But within <span
+class="math inline">\(S\)</span>, a certain value of momentum, <span
+class="math inline">\(p\)</span>, will be conserved (i.e. not change),
+and within <span class="math inline">\(S&#39;\)</span> a different value
+of <span class="math inline">\(p\)</span> will be conserved.</p>
+<p>Given that momentum conservation is such as well-established
+principle, we might hope that it continues to be conserved after we make
+relativistic transformations between reference frames. Unfortunately, in
+the way we have defined momentum, after we make velocity transformations
+between reference frames, momentum conservation will no longer be true
+for at least one of the frames. Below, we will show that this is the
+case, and then make a new definition of momentum, that reduces to the
+classical definition for <span class="math inline">\(u &lt;&lt;
+c\)</span>, but which is also correctly conserved in relativistic
+frames.</p>
+<h1 id="breakdown-of-momentum-conservation-not-examinable">Breakdown of
+Momentum Conservation (Not Examinable)</h1>
+<p>To see that momentum as defined classically is not conserved in
+relativistic situations, consider the situation shown in Figure <a
+href="#fig:momentumBA" data-reference-type="ref"
+data-reference="fig:momentumBA">2</a>. There are two balls, ball A and
+ball B which are going to collide. We will consider two reference
+frames, <span class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>. <span
+class="math inline">\(S&#39;\)</span> is moving with respect to <span
+class="math inline">\(S\)</span> with a velocity <span
+class="math inline">\(u\)</span> along the x-axis.</p>
+<p>In reference frame <span class="math inline">\(S\)</span>, A is
+moving directly up the y-axis with velocity <span
+class="math inline">\(v_{A,y}\)</span>. In reference frame <span
+class="math inline">\(S&#39;\)</span>, B moving directly down the y-axis
+(i.e. it has zero x-velocity) with velocity <span
+class="math inline">\(v_{B,y} = -v_{A,y}\)</span>.</p>
+<figure id="fig:momentumBA">
+<p><embed src="Pictures/momentum.pdf" style="width:12cm" /> <span
+id="fig:momentumBA" data-label="fig:momentumBA"></span></p>
+<figcaption>Collision between two balls, viewed from two different
+frames of reference.</figcaption>
+</figure>
+<p>Let’s consider what happens in reference frame <span
+class="math inline">\(S\)</span>. We know the y-velocity of A, but we
+don’t know the y-velocity of B in this frame, only in <span
+class="math inline">\(S&#39;\)</span>. In classical mechanics, <span
+class="math inline">\(v_y = v_y&#39;\)</span>, and so ball B simply has
+the opposite velocity and momentum to ball A. After a totally elastic
+collision, they would each then have the opposite velocity and momentum
+in the y direction.</p>
+<p>In the relativistic case, however, we must use the relativistic
+velocity transform <span class="math display">\[v_y =
+\frac{v_y&#39;}{\gamma(1+uv_x&#39;/c^2)}.\]</span> Ball B has no
+x-velocity in <span class="math inline">\(S&#39;\)</span>, so <span
+class="math inline">\(v_x&#39; = 0\)</span>, and so we simply have:
+<span class="math display">\[v_y = \frac{v_y&#39;}{\gamma}\]</span> Or,
+to put it another way, the y-velocity of B is smaller than that for A,
+and so the total momentum in the y-direction is not zero (it is positive
+because A, which is moving in the +y direction has more positive
+momentum than has B has negative momentum). But after the collision, the
+y-components of the velocity are reversed. Now there is more momentum in
+the -y direction, and so momentum is not conserved. Therefore, the
+classic definition of momentum is only approximately conserved for <span
+class="math inline">\(u &lt;&lt; c\)</span>. We need to work out a
+relativistic correction to momentum to recover its more general
+conservation.</p>
+<h1 id="relativistic-momentum">Relativistic Momentum</h1>
+<div class="definition">
+<p>The relativistic momentum of an object, measured in a reference frame
+in which the object is moving at velocity <span
+class="math inline">\(v\)</span>, is given by: <span
+class="math display">\[p = \gamma m_0 v\]</span></p>
+<p>Gamma is defined almost the same as before: <span
+class="math display">\[\gamma = \sqrt{\frac{1}{1 - v^2/c^2}}\]</span>
+<strong>except that we are using <span class="math inline">\(v\)</span>
+rather than the velocity of the reference frame, <span
+class="math inline">\(u\)</span>.</strong></p>
+</div>
+<p>We have also introduced a new concept, the rest mass, <span
+class="math inline">\(m_0\)</span>.</p>
+<div class="definition">
+<p>The rest mass of an object is its mass measured in its rest frame
+(the frame of reference in which it is not moving).</p>
+</div>
+<p>This implies that mass of an object is effectively different in
+different reference frames. We could think about defining this
+relativistic mass as something like <span class="math inline">\(m =
+\gamma m_0\)</span>, but we tend not to write it this way unless we are
+writing the full equation for relativistic momentum. As ever, for low
+velocities, we have <span class="math inline">\(\gamma \approx
+1\)</span> and so we recover the non-relativistic equation for
+momentum.</p>
+<h1 id="an-argument-for-relativistic-momentum">An Argument for
+Relativistic Momentum</h1>
+<p>We can motivate <span class="math inline">\(p=\gamma m_0 v\)</span>
+in the following way. Since <span class="math inline">\(v=dx/dt\)</span>
+we can write <span class="math display">\[p = m_0v =
+m_0\frac{dx}{dt}\]</span> When we change reference frame, then now <span
+class="math inline">\(dt&#39; \neq dt\)</span>. However, the proper
+time, <span class="math inline">\(d\tau\)</span>, (the time measured in
+the object’s reference frame) doesn’t change with the reference frame.
+So, let’s define: <span class="math display">\[p = m_0
+\frac{dx}{d\tau}.\]</span> This is fine because in the rest frame of the
+object (<span class="math inline">\(\gamma = 1\)</span>), we have <span
+class="math inline">\(dt=d\tau\)</span> by definition, so this is in
+agreement with non-relativistic physics in the limit <span
+class="math inline">\(v \ll c\)</span>. More generally, for any
+reference frame, <span class="math inline">\(dt = \gamma d\tau\)</span>,
+so we straight-away see that <span class="math display">\[p = m_0 \gamma
+\frac{\diff x}{\diff t} = \gamma m_0 v.\]</span> This isn’t a true
+derivation of course, since we chose <span
+class="math inline">\(p=m_0(dx/d\tau)\)</span> without any real
+justification, but it shows that this is a plausible definition for
+relativistic momentum</p>
+</body>
+</html>

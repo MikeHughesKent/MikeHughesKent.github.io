@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Michael Hughes" />
+  <title>PH800 Biomedical Optics Introduction to Microscopy Lecture 2 Lateral Resolution</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">PH800 Biomedical Optics<br />
+<strong>Introduction to Microscopy</strong><br />
+Lecture 2 Lateral Resolution</h1>
+<p class="author">Michael Hughes</p>
+</header>
+<h1 id="reading">Reading</h1>
+<p>The notes below are a summary of the key points needed for the exam.
+For more details and background they should be read in conjunction with
+linked documents, papers or websites and the general reading:</p>
+<ol>
+<li><p>Olympus Microcsopy Resource Centre: <a
+href="https://www.olympus-lifescience.com/en/microscope-resource/">https://www.olympus-lifescience.com/en/microscope-resource/</a></p></li>
+<li><p>Nikon MicroscopyU <a
+href="https://www.microscopyu.com/">https://www.microscopyu.com/</a></p></li>
+</ol>
+<p>The resolution of a microscope is fundamentally limited by
+diffraction. The image of an infinitesimal point will be ‘blurred’ by
+the system’s point spread function (PSF). In the spatial frequency
+domain we can think of this as an attenuation of higher spatial
+frequency components, described by the modulation transfer function
+(MTF). These terms are defined more rigorously later.</p>
+<p>The finite resolution of a microscope can be understood in terms of
+the spatial frequencies which are passed from the object to the image
+plane. Roughly speaking, to reconstruct a feature of a certain small
+size, our microscope must transmit spatial frequencies on the order of
+the feature’s size.</p>
+<h1 id="abbe-limit">Abbe Limit</h1>
+<p>To understand what happens to a given spatial frequency, consider a
+fine sinusoidal periodic structure in the object, as shown in Fig. <a
+href="#cutoff1" data-reference-type="ref"
+data-reference="cutoff1">1</a>. The structures are separated by a
+distance <span class="math inline">\(d\)</span> and so have spatial
+frequency <span class="math inline">\(1/d\)</span>. This structure acts
+like a diffraction grating, and hence if we consider only the first
+diffraction order, normally incident light of wavelength <span
+class="math inline">\(\lambda\)</span> will be diffracted by an angle
+<span class="math inline">\(\theta\)</span>, where:</p>
+<p><span class="math display">\[d \sin \theta = \lambda\]</span></p>
+<figure id="cutoff1">
+<img src="figs/cutoff1.png" style="width:8cm" />
+<figcaption>Cut-off frequency for planar illumination.</figcaption>
+</figure>
+<p>In order to capture a spatial frequency of <span
+class="math inline">\(1/d\)</span>, our lens must collect light
+diffracted at an angle <span class="math inline">\(\theta\)</span>. If
+the lens is at a focal length of <span class="math inline">\(f\)</span>,
+then it must have an aperture diameter, <span
+class="math inline">\(D\)</span>, such that: <span
+class="math display">\[\frac{D}{2f} = \sin \theta.\]</span></p>
+<p>We define the numerical aperture of our microscope objective as <span
+class="math display">\[NA = n \sin \theta = D / 2f,\]</span> where <span
+class="math inline">\(n\)</span> is the refractive index of the medium
+between the sample and the objective. In general this is air, and so
+<span class="math inline">\(n = 1\)</span>, but in oil immersion
+objectives it can be higher.</p>
+<p>Hence, for our microscope to capture a spatial frequency <span
+class="math inline">\(1/d\)</span>, and resolve objects of size <span
+class="math inline">\(d\)</span>, we have: <span
+class="math display">\[d = \frac{\lambda}{NA}\]</span></p>
+<p>However, this assumes we illuminate the sample with plane waves. Say
+now we illuminate from all angles using a condenser with the same NA as
+the objective. Now, as shown in Fig <a href="#cutoff2"
+data-reference-type="ref" data-reference="cutoff2">2</a>, we can collect
+spatial frequencies which have been diffracted through <span
+class="math inline">\(2 \theta\)</span>, and hence which are twice as
+high. So our final formula becomes:</p>
+<figure id="cutoff2">
+<img src="figs/cutoff2.png" style="width:8cm" />
+<figcaption>Cut-off frequency for high NA illumination.</figcaption>
+</figure>
+<p><span class="math display">\[d_{abbe} =
+\frac{\lambda}{2NA}\]</span></p>
+<p>This is known as the <strong>Abbe limit</strong>, it tells us the
+maximum spatial frequency we can collect, known as the <strong>cut-off
+frequency</strong>. Alternatively it tells us the objective NA we
+require in order to capture features with a certain spatial frequency.
+However, it is not necessarily the best way to determine if we can
+actually resolve those objects, as we are ignoring the extent to which
+these frequencies are attenuated through diffraction.</p>
+<h1
+id="incoherent-point-spread-function-psf-and-modulation-transfer-function-mtf">Incoherent
+Point Spread Function (PSF) and Modulation Transfer Function (MTF)</h1>
+<p>For an incoherent imaging system, an infinitesimally small point of
+intensity at the object plane will be spread out at the image plane. The
+‘spreading out’ is defined by the <strong>incoherent point spread
+function</strong> (PSF). Ideally the PSF is shift invariant, i.e. it is
+the same for all positions in the object/image, but in practice this is
+never quite the case. The PSF is a 2D function, but when it is radially
+symmetric we often plot a 1D profile through it.</p>
+<p>We can consider any intensity distribution at the object plane to be
+a super-position of an arbitrarily large number of infinitesimal points.
+Hence, the image can be expressed as a summation of PSFs, one for each
+point on the object. Mathematically, we express this as a
+convolution.</p>
+<p>Consider an object <span class="math inline">\(O(u,v)\)</span>, where
+<span class="math inline">\(u\)</span> and <span
+class="math inline">\(v\)</span> are the lateral co-ordinates at the
+object plane. For some perfect (and physically impossible) imaging
+system (i.e. one which exactly reproduces the object), we can write the
+image <span class="math inline">\(I(x_0,y_0)\)</span> as</p>
+<p><span class="math display">\[I(x,y) = \int \int O(u,v) \delta(x_0 -u,
+y_0 - u)~du~dv,\]</span> where <span
+class="math inline">\(\delta\)</span> is the delta function. For any
+real system we replace this delta function with a finite point spread
+function <span class="math inline">\(PSF(x_i,y_i)\)</span>, and the
+image is then similarly given by:</p>
+<p><span class="math display">\[I(x_0,y_0) = \int \int O(u,v) PSF(x_i -
+u,y_i - v)~du~dv\]</span></p>
+<p>or <span class="math display">\[I= O\ast PSF\]</span> where <span
+class="math inline">\(*\)</span> represents convolution.</p>
+<p>In the spatial frequency domain, the analogue of the PSF is the
+<strong>modulation transfer function</strong>, MTF (i.e. the 2D MTF is
+the 2D Fourier transform of the 2D PSF).</p>
+<p>Recall from Fourier theory that a convolution in the spatial domain
+is equivalent to a multiplication in the spatial frequency domain. The
+MTF can be thought of a weighting function by which we attenuate each
+spatial frequency (i.e. it is a <em>function</em> telling us what
+fraction of each frequency of <em>modulation</em> the system is able to
+<em>transfer</em>.).</p>
+<p>We also define the <strong>optical transfer function (OTF)</strong>.
+This contains the same information as the MTF but also describes the
+phase delay that different spatial frequency components receive. Usually
+the OTF is expressed as a complex number, and the MTF is then the
+magnitude/modulus of the OTF.</p>
+<p>We further define the <strong>pupil function</strong>, which tells us
+how the amplitude of light passing through different points of the
+aperture of the microscope is attenuated (as well as any phase change).
+For an ideal microscope with a circular aperture, this is just a
+circle.</p>
+<p>The pupil plane is a Fourier plane with respect to the object plane.
+So we can think of this as effectively a ‘spatial frequency plane’, the
+size of the pupil determines the cut-off spatial frequency (refer to the
+discussion earlier).</p>
+<p>The PSF is the absolute square of the Fourier transform of the pupil
+function. This means, from Fourier theory, that the OTF is the
+autocorrelation of the pupil function, and the MTF is the magnitude of
+this. This is a slightly confusing point and requires some thought.</p>
+<p>An example of a pupil function and the corresponding PSF and MTF are
+shown in Fig. <a href="#pupil" data-reference-type="ref"
+data-reference="pupil">3</a>. Matlab code to generate these plots is on
+Moodle. We can see from the MTF plot that a microscope is a low-pass
+filtering system with a cut-off frequency.</p>
+<p>Some caution is needed here, these are slices through 2D functions,
+not 1D functions. The slice through the MTF is not simply the
+autocorrelation of the slice through the pupil function, we must perform
+the 2D autocorrelation on the 2D pupil function and then take the slice.
+Otherwise the MTF would be a triangular function (the autocorrelation of
+a ‘rect’ function) whereas careful observation will reveal a slight
+curvature.</p>
+<figure id="pupil">
+<img src="figs/pupil.png" style="width:16cm" />
+<figcaption>Profiles through an example (circular) pupil function and
+the corresponding PSF and MTF. These plots are for a wavelength of
+500 nm and a numerical aperture of 0.5.</figcaption>
+</figure>
+<p>A final subtlety is that, again, a 1D slice thought the 2D MTF is
+<strong>NOT</strong> the 1D Fourier transform of a 1D profile through
+the 2D PSF (You may need to convince yourself this is the case). The 1D
+Fourier transform of the MTF is actually the line spread funtion (LSF),
+which describes how a line, rather than a point, spreads. It is related
+to the PSF via the Abel transform. An excellent tutorial discussing this
+is available here:</p>
+<p><a
+href="https://www.dspguide.com/ch25/1.htm">https://www.dspguide.com/ch25/1.htm</a></p>
+<h1 id="coherent-point-spread-function">Coherent Point Spread
+Function</h1>
+<p>The incoherent point spread function is an <em>intensity</em> point
+spread function, i.e. it allows the intensity value at the camera plane
+to be written in terms of the intensity values at the object plane. This
+is possible because an incoherent microscope is linear in intensity.</p>
+<p>We cannot define an intensity point spread function for a coherent
+imaging system due to the presence of interference. An coherent
+microscopy is linear in electric field, not the intensity. The image
+therefore depends on the phase of the object.</p>
+<p>Instead of the incoherent PSF we must define an <strong>amplitude
+point spread function</strong>, also known as the <strong>coherent point
+spread function</strong> or cPSF, which acts on the complex electric
+field. Once we have convolved the (complex) object with this amplitude
+point spread function we can then take the square modulus to determine
+the resulting intensity on the camera. Note that this is emphatically
+<strong>not</strong> the same as convolving the object plane intensity
+with the square of the amplitude PSF.</p>
+<p>A detailed (and excellent) discussion on this and the ways can define
+resolution for coherent imaging systems was published in Nature
+Photonics in 2016:</p>
+<p><a
+href="https://www.nature.com/articles/nphoton.2015.279">https://www.nature.com/articles/nphoton.2015.279</a></p>
+<h1 id="airy-pattern">Airy pattern</h1>
+<p>For a perfect, diffraction-limited objective, the corresponding PSF
+is an Airy pattern, as shown in Fig. <a href="#airy"
+data-reference-type="ref" data-reference="airy">4</a>. The left version
+of the image has been scaled to make the ringing clearer.</p>
+<figure id="airy">
+<img src="figs/airy.png" style="width:8cm" />
+<figcaption>Airy pattern, the PSF of an ideal microscope. The left image
+has been scaled to make the rings more obvious, the right image is a
+true linearly-mapped image.</figcaption>
+</figure>
+<p>This is in fact the 2D Fourier transform of a circular aperture, as
+discussed above. Mathematically it is given by <span
+class="math display">\[{I = I_0\Big(\frac{2J_1(r)}{r}\Big)},\]</span>
+where <span class="math inline">\(I_0\)</span> is the maximum intensity
+at the centre of the pattern, <span class="math inline">\(J_1\)</span>
+is a 1st order Bessel function of the first kind, and <span
+class="math inline">\(r\)</span> is the radial co-ordinate. The first
+minimum occurs at a distance of: <span class="math display">\[r = 0.61
+\lambda/NA\]</span></p>
+<p>The central disk inside this radius is called the Airy disc.</p>
+<h1 id="rayleigh-and-sparrow-criteria">Rayleigh and Sparrow
+Criteria</h1>
+<p>Resolution is not unambiguously defined. Informally, it is usually
+taken to mean the ability to tell whether two point objects are actually
+two separate objects, but in practice this depends on things other than
+the MTF of the microscope (such as noise levels). To quantify resolution
+we require a formal definition of when two points can be resolved. These
+are illustrated in Fig <a href="#res_crit" data-reference-type="ref"
+data-reference="res_crit">5</a>.</p>
+<p>The <strong>Rayleigh criterion</strong> states that two points can be
+distinguished when the peak of the Airy pattern from one of the points
+is aligned with the first minimum of the Airy pattern from the second.
+For an ideal microscope with a circular aperture, this comes out to be:
+<span class="math display">\[d_{Rayleigh} = 0.61
+\frac{\lambda}{NA}\]</span></p>
+<p>The <strong>Sparrow criterion</strong>, says instead that the two
+objects can be resolved when the sum of their intensity patterns no
+longer has a dip (see diagram). This occurs at</p>
+<p><span class="math display">\[d_{Sparrow} = 0.47 \frac{\lambda}{2
+NA}\]</span></p>
+<figure id="res_crit">
+<img src="figs/res_crit.png" style="width:8cm" />
+<figcaption>Rayleigh and Sparrow resolution criteria.</figcaption>
+</figure>
+<p>So the Sparrow limit gives a smaller (better) value for resolution
+than either the Rayleigh or Abbe limits. In all cases, the rule of thumb
+is that the resolution is of order <span class="math inline">\(\lambda
+/2NA\)</span>.</p>
+<h1 id="sampling-limit">Sampling Limit</h1>
+<p>All the resolution considerations above do not affect our choice of
+magnification. However, when a pixelated detector, such as a camera is
+used, we must also consider the effect of the pixelation on the
+resolution. Let’s define:</p>
+<p><strong>Pixel pitch:</strong> The spacing between the centres of the
+pixels.</p>
+<p><strong>Pixel size:</strong> The size of the active area of the
+pixel.</p>
+<p><strong>The fill factor:</strong> Ratio of the pixel size to the
+pixel pitch.</p>
+<p>From the point of view of sampling theory, it is the pixel pitch
+which matters. Nyquist theory tells us that the sampling pitch must be
+half the spacing corresponding to the highest spatial frequency in order
+to sample that frequency without aliasing. (Or equivalently, the
+sampling frequency must be twice the maximum spatial frequency we wish
+to sample.)</p>
+<p>This does not trivially relate to the resolution criteria defined
+above, but the common rule of thumb is to assume we require a pixel
+pitch which is twice the diffraction limited resolution as magnified
+onto the camera. For example, if our resolution is 1 m and we have a 40X
+magnification, then we require a pixel pitch of less than 20 m.</p>
+<p><em><strong>Aside:</strong> There is a secondary effect due to the
+fact that each pixel integrates over an area. This reduces the contrast
+of higher spatial frequencies, and so may reduced the signal to noise
+ratio for the spatial frequencies to such a point that they cannot be
+observed, but this is different from the sampling theory.</em></p>
+<p>In the (usually avoided) case where the pixel pitch is too large to
+sample the highest spatial frequency reaching the camera, then the
+resolution is pixel-limited. Pixel limited resolution is shift variant -
+the ability to resolve two objects depends on their position relative to
+the pixel grid. So we cannot define a shift invariant point spread
+function or define an unambiguous MTF.</p>
+<figure id="nyq">
+<img src="figs/nyquist.png" style="width:8cm" />
+<figcaption>Examples of Nyquist sampling and under-sampling. The light
+blue sinusoid is the true signal and the intensities of the squares are
+the measured pixel values. In the top pane, the sinusoid is sampled at
+exactly the Nyquist frequency (twice the signal frequency). In the
+middle panel the sampling frequency is equal to the signal frequency and
+happens to sample the sinusoid only at the peaks. In the bottom pane the
+sampling frequency is 1.5 times the signal frequency, and the measured
+samples appear to correspond to a sinusoid of a different spatial
+frequency, an effect known as aliasing</figcaption>
+</figure>
+</body>
+</html>
