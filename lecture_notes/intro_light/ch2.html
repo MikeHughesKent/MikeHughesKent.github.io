@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 2 - Geometrical Optics</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 2 - Geometrical Optics</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<h1 id="geometrical-optics">Geometrical Optics</h1>
+<p>Geometrical optics is a much simpler way to treat light than wave
+optics, but it is sufficient for many applications. We treat light as
+‘rays’ which, in a uniform medium, travel in straight lines. At
+interfaces these rays can be reflected or refracted, resulting in a
+change of direction that can be derived from Fermat’s Principle.</p>
+<p>We must always remember that geometrical optics is not physical, in
+reality there is no such thing as a ray of light. So we mustn’t take
+geometrical optics too far, if we seem to predict something that is at
+odds with the wave theory of light then we know that it is the wave
+theory of light that is correct. Geometrical optics, for example, has
+nothing to say about diffraction. Nevertheless, it is a very useful
+model; a great deal of industrial optical design is performed using ray
+tracing software such as Zemax and Code V, which for the most part use
+geometrical optics.</p>
+<h1 id="fermats-principle">Fermat’s principle</h1>
+<p>Fermat’s principle is simple to state, but allows us to calculate and
+derive a number of important rules in geometrical optics, including the
+laws of reflection and refraction.</p>
+<div class="definition">
+<p>The path taken by light in travelling from one point to another is
+such that the travel time is minimum.</p>
+</div>
+<p>In uniform media, this is equivalent to saying that light travels in
+straight lines. When light moves between media with different refractive
+indices, things become more interesting.</p>
+<h1 id="snell">Reflection, Refraction and Snell’s Law</h1>
+<p>When a ray of light hits the boundary between two transparent media
+with different refractive indices, the beam is partially reflected and
+partially refracted. The angle of the reflected beam is equal to the
+angle of the incident beam, when both are measured with respect to the
+normal of the interface.</p>
+<figure id="snell">
+<img src="figs/snell.png" style="width:6cm" />
+<figcaption>Reflection and refraction at a surface.</figcaption>
+</figure>
+<div class="definition">
+<p><span class="math display">\[\theta_1&#39; = \theta_1\]</span></p>
+</div>
+<p>The portion of the beam which enters the second medium experiences a
+change in direction, known as refraction (providing the ray is not
+perpendicular to the boundary). The relationship between the angle of
+incidence, <span class="math inline">\(\theta_1\)</span>, and the angle
+of refraction, <span class="math inline">\(\theta_2\)</span> (i.e. the
+angles before and after passing the boundary) is given by Snell’s
+Law.</p>
+<div class="definition">
+<p><span class="math display">\[n_1 \sin\theta_1 = n_2 \sin \theta_2
+\label{snell}\]</span> where <span class="math inline">\(n_1\)</span> is
+the refractive index of the first medium, <span
+class="math inline">\(n_2\)</span> is the refractive index of the second
+medium, <span class="math inline">\(\theta_1\)</span> is the angle of
+incidence and <span class="math inline">\(\theta_2\)</span> is the angle
+of refraction. The angles are measured with respect to the surface
+normal, an imaginary line perpendicular to the boundary.</p>
+</div>
+<p>It is useful to remember that as light enters a medium with a higher
+refractive index (e.g. from air to glass) it bends towards the normal.
+As it goes to a lower refractive index, it bends away from the
+normal.</p>
+<p>For normally incident light, <span class="math inline">\(\theta_1 =
+0\)</span>, the fraction of the intensity which is reflected, rather
+than refracted, is: <span
+class="math display">\[\frac{I_{reflected}}{I_{incident}} = \bigg(
+\frac{n_1 - n_2}{n_1 + n_2} \bigg)^2\]</span></p>
+<p>For other angles of incidence, the fraction reflected is dependent on
+several other factors, beyond the scope of this course. For light
+normally incident on an air/glass interface, the reflected intensity is
+around 4%. This means that, in an optical system, every (untreated)
+glass surface which light hits results in a 4% loss. In practice,
+special coatings can be applied to reduce the reflected intensity to a
+fraction of one percent. Or, we may want to make a mirror, in which case
+we apply a coating or backing which increases the reflected intensity to
+90% or more (depending on how much you want to spend on your mirror)</p>
+<h1 id="total-internal-reflection">Total Internal Reflection</h1>
+<p>If we look at Snell’s Law we might notice that, when going from a
+higher to lower refractive index, there is going to be some range of
+incident angles for which the angle of refraction becomes larger than
+<span class="math inline">\(90^o\)</span>. What happens then? At this
+point there is no refraction, and all the light is reflected. This is
+called total internal reflection. This has many important applications,
+in fact it is the geometrical optics explanation for how fibre optics
+transmit light without losses (although a full understanding of fibre
+optics requires an analysis using a wave model of light).</p>
+<p>The angle of incidence for which the angle of refraction is <span
+class="math inline">\(90^o\)</span> is called the <strong>critical
+angle</strong>. For angles of incidence greater than this, there is no
+refracted ray. We can find this critical angle, <span
+class="math inline">\(\theta_c\)</span> by setting the angle of
+refraction equal to <span class="math inline">\(90^o\)</span> in Snell’s
+Law (Equation <a href="#snell" data-reference-type="ref"
+data-reference="snell">1</a>). <span class="math display">\[\sin
+\theta_c = \frac{n_2}{n_1} \sin 90^o = \frac{n_2}{n_1}\]</span></p>
+<p>and so <span class="math display">\[\theta_c = \arcsin
+\frac{n_2}{n_1}\]</span></p>
+<p>Note that total internal reflection can only happen inside the medium
+with higher refractive index.</p>
+<h1 id="dispersion">Dispersion</h1>
+<p>In Chapter 1 we saw that the refractive index of materials has a
+wavelength dependence. Now we can see from Snell’s Law that the angle of
+refraction will then depend on wavelength. This explains why we see a
+spectrum from a prism (or a rainbow in the sky!).</p>
+<h1 id="the-paraxial-approximation">The Paraxial Approximation</h1>
+<p>In the paraxial approximation we assume that all light rays travel at
+a small angle relative to the <strong>optical axis</strong>. The optical
+axis is the line running perpendicular to elements such as lenses and
+mirrors. Among other simplifications, this allows us to make the small
+angle approximation, <span class="math inline">\(\sin \theta \approx
+\theta\)</span>. We will see example of this in what follows.</p>
+<h1 id="images">Images</h1>
+<p>In the following sections and Chapter 3 we will be studying optical
+elements used to create images, so it is important to understand what we
+mean by an image. If we have an object, it will scatter (or emit) light
+in all directions. In order to form an image, we need to collect rays
+coming from a particular point on the image, and focus them to a point.
+Rays from other points on the object must also be focused to points on
+the image plane, with their geometrical relationship maintained. This
+allows for magnification and inversion, as illustrated in Figure <a
+href="#imaging" data-reference-type="ref"
+data-reference="imaging">2</a>.</p>
+<figure id="imaging">
+<img src="figs/imaging.png" style="width:14cm" />
+<figcaption>Concept of imaging. All rays leaving a point on the object
+converge to the same point on the image. Left: no magnification. Right:
+magnification and inversion.</figcaption>
+</figure>
+<h1 id="the-plane-mirror">The Plane Mirror</h1>
+<p>When we look at an object in a mirror, we see a <strong>virtual
+image</strong> of the object behind the mirror. This is illustrated in
+Figure <a href="#mirror" data-reference-type="ref"
+data-reference="mirror">3</a>, where a bundle of rays from an object is
+reflected from a plane mirror. For someone looking at the object in the
+mirror, the rays appear to converge from a point behind the mirror. This
+is the location of the virtual image, and we can find this point by
+tracing the rays back, as shown.</p>
+<p>The virtual image is the same distance from the mirror as the object,
+it is the same way up (i.e. not inverted), and it is the same size.
+However, it is <strong>depth-inverted</strong> - a right hand viewed in
+a mirror looks like a left hand. Our brains tend to interpret this as a
+horizontal flip (because depth inversion is quite a tricky thing to
+visualise), but this is an illusion. After all, why would it flip on
+one-axis but not the other?</p>
+<figure id="mirror">
+<img src="figs/mirror.png" style="width:8cm" />
+<figcaption>Reflection from a plane mirror.</figcaption>
+</figure>
+<h1 id="the-spherical-mirror">The Spherical Mirror</h1>
+<p>A spherical mirror is a mirror shaped like part of the surface of a
+sphere. We define the <strong>radius of curvature</strong> , <span
+class="math inline">\(R\)</span> as the radius of the sphere which the
+surface is part of. If we have collimated rays striking a spherical
+mirror on-axis, they will be focused to a point P, as shown in Figure <a
+href="#sph_mirror" data-reference-type="ref"
+data-reference="sph_mirror">4</a>. The distance from the mirror to this
+point is the <strong>focal length</strong> of the mirror, <span
+class="math inline">\(f\)</span>. It is given by <span
+class="math display">\[f = \frac{R}{2}\]</span></p>
+<figure id="sph_mirror">
+<img src="figs/sph_mirror.png" style="width:14cm" />
+<figcaption>Reflection from a spherical mirror.</figcaption>
+</figure>
+<p>So, if we have an object at infinity, creating collimated rays, then
+an image will be formed at the focal length, <span
+class="math inline">\(f\)</span>. If we have an object at a finite
+distance, <span class="math inline">\(s\)</span>, then the image will
+instead be formed at <span class="math inline">\(s&#39;\)</span>. These
+distances are related by the mirror equation:</p>
+<div class="definition">
+<p><span class="math display">\[\frac{1}{s} + \frac{1}{s&#39;} =
+\frac{1}{f}\]</span></p>
+</div>
+<p>The image is inverted and has <strong>linear or lateral
+magnification</strong> given by: <span class="math display">\[M =
+-\frac{s&#39;}{s}\]</span> The minus sign is to remind us that the image
+is inverted. If the object is placed between the mirror and the focal
+length, <span class="math inline">\(s &lt; f\)</span>, then there is no
+real image. Reflected rays appear to emerge from a virtual image a
+distance <span class="math inline">\(s&#39;\)</span> behind the
+mirror.</p>
+<p>Note that a spherical lens only forms an image correctly under the
+paraxial approximation.</p>
+<h2 id="derivation-of-mirror-equation">Derivation of Mirror
+Equation</h2>
+<p>To relate the positions of the image and the object to the radius of
+curvature, and ultimately the focal length of the mirror, we start with
+the diagram shown in Figure <a href="#mirror_der"
+data-reference-type="ref" data-reference="mirror_der">5</a>. We have an
+object at <span class="math inline">\(O\)</span> and and image at <span
+class="math inline">\(I\)</span>. The point is <span
+class="math inline">\(C\)</span> is the centre of the ‘circle’, i.e. all
+points on the mirror are a distance <span
+class="math inline">\(R\)</span> from this point. A ray from the object
+hits the mirror at point <span class="math inline">\(A\)</span>, a
+height <span class="math inline">\(h\)</span> above the optical axis. We
+label the angles <span class="math inline">\(\alpha\)</span>, <span
+class="math inline">\(\beta\)</span> and <span
+class="math inline">\(\gamma\)</span> as shown, and we also identify the
+two angles <span class="math inline">\(\theta\)</span> which are equal
+as per the law of reflection.</p>
+<figure id="mirror_der">
+<img src="figs/mirror_der.png" style="width:14cm" />
+<figcaption>Set up for deriving mirror equation.</figcaption>
+</figure>
+<p>From the triangle OAC we have <span class="math inline">\(\alpha +
+\theta + (180^0 - \beta) = 180^o\)</span>. From the triangle CAI we have
+<span class="math inline">\(\beta + \theta + (180 - \gamma) =
+180^o\)</span>. Eliminating <span class="math inline">\(\theta\)</span>
+gives: <span class="math display">\[2 \beta = \alpha + \gamma
+\label{beta_eqn}\]</span></p>
+<p>From the paraxial approximation, <span class="math inline">\(\alpha =
+h/s\)</span> and <span class="math inline">\(\beta = h/R\)</span> and
+<span class="math inline">\(\gamma = h/s&#39;\)</span>. Substituting
+into Equation <a href="#beta_eqn" data-reference-type="ref"
+data-reference="beta_eqn">[beta_eqn]</a> gives: <span
+class="math display">\[\begin{aligned}
+\frac{2h}{R} &amp;= \frac{h}{s} + \frac{h}{s&#39;} \\
+\frac{2}{R} &amp;= \frac{1}{s} + \frac{1}{s&#39;} \\
+\end{aligned}\]</span></p>
+<p>To show that <span class="math inline">\(f = 1/R\)</span> we consider
+what happens as the object position <span
+class="math inline">\(s\)</span> tends to infinity, which means that, by
+definition, the image will now be at the focal point, i.e. <span
+class="math display">\[\begin{aligned}
+\frac{2}{R} &amp;= \frac{1}{s&#39;} \\
+\frac{2}{R} &amp;= \frac{1}{f} \\
+f &amp;= \frac{2}{R}
+\end{aligned}\]</span> and so: <span class="math display">\[\frac{1}{f}
+= \frac{1}{s} + \frac{1}{s&#39;} \\\]</span></p>
+<h1 id="the-thin-lens">The Thin Lens</h1>
+<p>A lens is piece of glass with one or both of its surfaces curved in
+such a way as to cause light rays to converge or diverge due to
+refraction. In what is follows, we use the <strong>thin lens
+approximation</strong>, which ignores the thickness of the lens. In
+which case, the locations of the object (<span
+class="math inline">\(s\)</span>) and image (<span
+class="math inline">\(s&#39;\)</span>) for a lens are linked to the
+focal length of the lens, <span class="math inline">\(f\)</span>, by the
+lens equation:</p>
+<div class="definition">
+<p><span class="math display">\[\frac{1}{f} = \frac{1}{s} +
+\frac{1}{s&#39;}\]</span></p>
+</div>
+<p>If we have a lens of focal length <span
+class="math inline">\(f\)</span>, and we place an object a distance of
+<span class="math inline">\(s\)</span> one side of the lens, we obtain
+an image a distance <span class="math inline">\(s&#39;\)</span> the
+other side of the lens.</p>
+<p><strong>Note that <span class="math inline">\(s\)</span> and <span
+class="math inline">\(s&#39;\)</span> are both measured from the lens
+outwards</strong> (i.e. <span class="math inline">\(s\)</span> is
+measured from right to left and <span class="math inline">\(s\)</span>
+is measured from left to right.) An object to the left of the lens has a
+positive <span class="math inline">\(s\)</span> and an image to the
+right of the lens has a negative <span
+class="math inline">\(s&#39;\)</span>. This is called the
+<strong>Gaussian co-ordinate system</strong>. An alternative system, the
+Cartesian co-ordinates system, measures everything from left to right
+which is useful when dealing with some kinds of systems. In this case,
+the lens equation would have a minus sign before the <span
+class="math inline">\(1/s&#39;\)</span> term.</p>
+<p>The focal length <span class="math inline">\(f\)</span> is fixed for
+a given lens, it depends on the curvature of its surface according to
+the lens makers’ equation: <span class="math display">\[\frac{1}{f}
+=(n-1)\bigg(\frac{1}{r_1}-\frac{1}{r_2} \bigg)\]</span></p>
+<p>where <span class="math inline">\(r_1\)</span> is the radius of
+curvature of the first surface of the lens, <span
+class="math inline">\(r_2\)</span> is the radius of curvature of the
+second surface, and <span class="math inline">\(n\)</span> is the
+refractive index of the lens material.</p>
+<figure id="lens">
+<img src="figs/lens.png" style="width:14cm" />
+<figcaption>The thin lens.</figcaption>
+</figure>
+<p>A real image is obtained for <span class="math inline">\(s &gt;
+f\)</span>. Otherwise there will be no real image, and <span
+class="math inline">\(s&#39;\)</span> is negative, with rays appearing
+to diverge from a virtual image at <span
+class="math inline">\(s&#39;\)</span> (i.e. on the left side of the
+lens, as drawn).</p>
+<p>The linear magnification, the ratio of the size of the image to the
+size of the object, <span class="math inline">\(M\)</span>, is given by
+<span class="math display">\[M = -\frac{s&#39;}{s}\]</span></p>
+<p>The minus sign tells us that the image is inverted.</p>
+</body>
+</html>

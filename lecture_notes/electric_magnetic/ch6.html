@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 6 - Electromagnetic waves</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 6 - Electromagnetic waves</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p>In this final section, we move to looking at wave phenomena in
+electric and magnetic fields, otherwise known as electromagnetic
+radiation or light. A full description of the propagation of light is a
+complex endeavour, understanding it rigorously involves solving
+Maxwell’s Equations. Here, we will look at some of the underlying
+concepts of electromagnetic waves, relating to the physics of waves you
+studied earlier in the module. We will also introduce the idea of
+polarisation of light. Combined with the geometric optics studies in
+PHYS3040, this will complete your introductory optics, which will be
+built on later in PHYS6040.</p>
+<h1 id="light-as-a-wave">Light as a Wave</h1>
+<p>Light is a wave in the electromagnetic field (and so you should make
+sure you are happy with the waves section of the module before
+continuing). Later in your degree you will derive the wave equation from
+Maxwell’s equations, but for now we will just begin with the wave
+equation for the electric field in a vacuum. <span
+class="math display">\[\frac{\partial^2 E(x,y,z,t)}{\partial x^2} +
+\frac{\partial^2 E(x,y,z,t)}{\partial y^2} + \frac{\partial^2
+E(x,y,z,t)}{\partial z^2} - \frac{1}{c^2} \frac{\partial^2
+E(x,y,z,t)}{\partial t^2} = 0.\]</span> We can write a similar equation
+for the magnetic field, but it turns out that the solutions are
+essentially the same, so by convention we only work with the electric
+field. Although you may not have studied vector calculus yet, and so we
+will not use it here, you will often see this written more compactly as
+<span class="math display">\[\nabla^2 E - \frac{1}{c^2} \frac{\partial^2
+E}{\partial t^2} = 0.\]</span> The two equations mean the same thing (at
+least in Cartesian co-ordinates), <span
+class="math inline">\(\nabla^2\)</span> is a shorthand for taking the
+sum of the 2nd order partial derivatives with respect to <span
+class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>
+and <span class="math inline">\(z\)</span>. Notice that we have written
+<span class="math inline">\(E\)</span> and not <span
+class="math inline">\(\vec{E}\)</span>, i.e. we are treating the field
+as a scalar and not a vector. For this reason, the equation is sometimes
+called the <em>scalar wave equation</em>. A full treatment would need to
+use the vector form of <span class="math inline">\(E\)</span> which
+makes things a lot more complicated and requires maths you may not have
+seen yet.</p>
+<p>However, we can cheat a little and only worry about the direction the
+wave is travelling in, and align our co-ordinate system so that we call
+this the z-axis. Then, working in 1D we have the simpler and more
+familiar wave equation <span class="math display">\[\frac{\partial^2
+E(z,t)}{\partial z^2} - \frac{1}{c^2} \frac{\partial^2 E(z,t)}{\partial
+t^2} = 0.\]</span> Now, it turns out that there are quite a lot of
+solutions to this equation (and remember that any linear combinations of
+solutions will also be solutions). A useful way to write the solutions
+is as harmonic waves, <span class="math display">\[E(z) = A \sin(kz -
+\omega t + \theta).\]</span></p>
+<p>Depending on how far you have progressed with studying differential
+equations this may or may not be obvious to you, but we can check it is
+a solution by substituting it back into the left hand side of the 1D
+wave equation.</p>
+<p><span class="math display">\[\begin{aligned}
+    \frac{\partial^2 E(z,t)}{\partial z^2} - \frac{1}{c^2}
+\frac{\partial^2 E(z,t)}{\partial t^2} &amp;= \frac{\partial^2 \left( A
+\sin(kz - \omega t + \theta) \right)}{\partial z^2} - \frac{1}{c^2}
+\frac{\partial^2 \left( A \sin(kz - \omega t + \theta) \right)}{\partial
+t^2} \\
+    &amp;= Ak^2\sin(kz - \omega t + \theta) - \frac{1}{c^2} A\omega^2
+\sin(kz- \omega t + \theta) \\
+    &amp;= k^2 - \frac{\omega^2}{c^2}
+\end{aligned}\]</span> There is no no <span
+class="math inline">\(z\)</span> or <span
+class="math inline">\(t\)</span> dependence, so this is a solution.
+Setting equal to 0, as in the wave equation gives, <span
+class="math display">\[c=\omega / k.\]</span></p>
+<p>Since any linear combination of solutions is also a solution, we can
+make all kinds of interesting solutions by taking sums of large numbers
+of our sine-wave solutions with different values of <span
+class="math inline">\(k\)</span>, <span
+class="math inline">\(\omega\)</span>, and <span
+class="math inline">\(\theta\)</span>. If we take an infinite number of
+solutions we can even make a square-shaped wave! When you later study
+Fourier transforms this will become more apparent, so we won’t dwell on
+it for now.</p>
+<p>Instead, let’s look at what the terms in the solution mean in more
+detail. Like any wave, a light wave can be described in terms of its
+amplitude (<span class="math inline">\(A\)</span>), frequency (<span
+class="math inline">\(f\)</span>), wavelength (<span
+class="math inline">\(\lambda\)</span>), period (<span
+class="math inline">\(T\)</span>), and initial phase (<span
+class="math inline">\(\theta\)</span>). We also define the wavenumber,
+<span class="math inline">\(k = 2\pi/ \lambda\)</span> and the angular
+frequency <span class="math inline">\(\omega = 2\pi f\)</span>, with
+<span class="math inline">\(f = 1/T\)</span>. Note that since we have
+shown <span class="math inline">\(c=\omega /k\)</span> we immediately
+then get <span class="math inline">\(c = f \lambda\)</span>.</p>
+<p>From the solution for <span class="math inline">\(E\)</span> it is
+clear that the field varies in both time and space, so when we draw a
+wave we need to be clear what we are drawing - either the spatial wave
+at a fixed point in time (<span class="math inline">\(t\)</span>), or
+the temporal wave at a fixed point in space (<span
+class="math inline">\(z\)</span>) (see Figure <a href="#waves"
+data-reference-type="ref" data-reference="waves">1</a>).</p>
+<figure id="waves">
+<img src="pictures/waves.png" style="width:12cm" />
+<figcaption>Light waves, viewed at a single point in space (left) and a
+single point in time (right)</figcaption>
+</figure>
+<p>The argument of the <span class="math inline">\(\sin\)</span>
+function is called the phase, <span class="math inline">\(\phi\)</span>
+where <span class="math display">\[\phi = kx - \omega t +
+\theta,\]</span> and so <span class="math display">\[E = A
+\sin(\phi).\]</span></p>
+<p>This phase tells us the point in the wave cycle we have reached at
+particular point in space and time. This is expressed as an angle, with
+a phase of <span class="math inline">\(2\pi\)</span> equivalent to a
+complete cycle of the wave. After a phase of <span
+class="math inline">\(2\pi\)</span> we are back where we started, so for
+example a phase of <span class="math inline">\(5\pi/2\)</span> is the
+same as a phase of <span class="math inline">\(\pi/2\)</span>. Don’t
+confuse the total phase (which is everything inside the sine) with the
+initial phase, <span class="math inline">\(\theta\)</span> which is an
+offset to the phase.</p>
+<p>Notice that we can write <span class="math display">\[k =
+\frac{\partial \phi}{\partial z},\]</span> and, <span
+class="math display">\[\omega = -\frac{\partial \phi}{\partial
+t}  ,\]</span> which makes it explicit that wavenumber <span
+class="math inline">\(k\)</span> tells us how the phase changes with
+<em>position</em>, and the angular frequency <span
+class="math inline">\(\omega\)</span> tells us how the phase changes
+with <em>time</em>.</p>
+<h1 id="refractive-index-and-dispersion">Refractive Index and
+Dispersion</h1>
+<p>You will have come across refractive index already in the context of
+geometrical optics, but now we can think about it in the context of the
+wave theory of light. The velocity of light depends on the medium it is
+travelling through. It can never exceed the speed of light in a vacuum,
+<span class="math inline">\(c\)</span>, that is to say it propagates
+more slowly in other materials. The refractive index, <span
+class="math inline">\(n\)</span>, of that medium determines the
+velocity.</p>
+<div class="definition">
+<p>The refractive index, <span class="math inline">\(n\)</span>, of a
+medium is the inverse of the ratio of the speed of light in that medium,
+<span class="math inline">\(v\)</span>, to the speed of light in a
+vacuum, <span class="math inline">\(c\)</span>: <span
+class="math display">\[n=c/v\]</span></p>
+</div>
+<p>By definition, the refractive index of a vacuum is 1. Air is about
+1.003, which we often take to be 1 for practical purposes. Water has a
+refractive index of 1.4, and glass varies from 1.4-1.7.</p>
+<p>From the solution to the wave equation in free space, we saw that
+<span class="math display">\[v = c = \frac{\omega}{k},\]</span></p>
+<p>or equivalently <span class="math display">\[v = c =
+f\lambda,\]</span> which you can verify from <span
+class="math inline">\(\omega = 2\pi f\)</span> and <span
+class="math inline">\(k = 2\pi/\lambda\)</span>. When light enters a
+medium with <span class="math inline">\(n &gt; 1\)</span>, then <span
+class="math inline">\(v &lt; c\)</span>. In which case either <span
+class="math inline">\(f\)</span> or <span
+class="math inline">\(\lambda\)</span> must change. In fact it is the
+wavelength, <span class="math inline">\(\lambda\)</span>, which changes
+with <span class="math inline">\(n\)</span>, so that <span
+class="math display">\[\lambda_{medium} = n\lambda.\]</span> The
+frequency and angular frequency, <span class="math inline">\(f\)</span>
+or <span class="math inline">\(\omega\)</span>, are fixed, and do not
+depend on the refractive index of the medium.</p>
+<p>For most materials, <span class="math inline">\(n\)</span> decreases
+slightly with wavelength over the visible region. This gives rise to an
+effect known as <strong>dispersion</strong>. Since different wavelengths
+of light will travel at different speeds in the material, a short pulse
+of multi-wavelength light will become spread out. This is the ultimate
+limit on how much data can be sent over fibre optics. It also explains
+how a spectrum is produced from a prism.</p>
+<h1 id="phase-velocity-and-group-velocity">Phase Velocity and Group
+Velocity</h1>
+<p>Earlier in the module you will have discussed the difference between
+phase velocity and group velocity. The velocity we are referring to
+above is the phase velocity of light, and the refractive index, <span
+class="math inline">\(n\)</span>, tells us what happens to the phase
+velocity.</p>
+<p>If we have light of a single wavelength, then the phase velocity and
+the group velocity are the same. But if we have light made up of
+multiple wavelengths, then each wavelength will see a different
+refractive index and so have a different phase velocity. The group
+velocity is given by <span class="math display">\[v_g = \frac{d
+\omega}{d k}.\]</span> In a non-dispersive material, i.e. where the
+refractive index is constant with wavelength, then from <span
+class="math inline">\(v = \omega/k\)</span> we can easily see that <span
+class="math display">\[\frac{d \omega}{d k} = v\]</span> which is known
+as linear dispersion. A particular example is a vacuum, in which case
+<span class="math inline">\(v = c\)</span>.</p>
+<p>More generally through, when <span class="math inline">\(n\)</span>
+depends on <span class="math inline">\(k\)</span>, then <span
+class="math inline">\(v_g \ne v\)</span>. A pulse of light, which for
+reasons you will study more deeply later in your degree must be made up
+of more than one wavelength of light, therefore has different group and
+phase velocities, i.e. the pulse travels at a different speed. In some
+special circumstances it is possible to have <span
+class="math inline">\(v &gt; c\)</span>, but we always have that <span
+class="math inline">\(v_g &lt;c\)</span>. Information travels at the
+group velocity, not the phase velocity, and so this is consistent with
+the theory of special relativity.</p>
+<h1 id="wavefronts-and-huygens-principle">Wavefronts and Huygen’s
+Principle</h1>
+<p>It is often helpful to talk about the <strong>wavefront</strong> of a
+wave. A wavefront is a surface of constant phase. The shape of the
+wavefront can tell us how the light is propagating. For example, a
+planar wavefront describes a <strong>collimated</strong> beam of light
+(i.e. plane waves). A spherical wavefront describes light which is
+converging from - or diverging to - a point.</p>
+<p>If we have a point source, then the wavefront at a time <span
+class="math inline">\(t\)</span> is at a distance <span
+class="math inline">\(r\)</span> from the point, where <span
+class="math inline">\(r(t) = c t\)</span>. Here, <span
+class="math inline">\(c\)</span> is the speed of light in a vacuum. If
+we working inside a material then we will need to modify this, as
+described below.</p>
+<p>Huygen’s principle provides a simple rule to predict the propagation
+of a wavefront of light. It is empirical, in the sense that is was
+derived by observations rather than than from any fundamental
+considerations.</p>
+<div class="definition">
+<p>Each point on a wavefront acts as source of secondary wavelets. These
+wavelets have the same velocity and frequency as the original wave. The
+envelope of these wavelets forms the new wavefront.</p>
+</div>
+<p>This says that if we have a wavefront, we can calculate how the
+wavefront at some future point in time will look by assuming that each
+point on the wavefront acts as a source of spherical waves. We then take
+the envelope of these new waves, and that is now the new wave.</p>
+<figure id="huygens">
+<img src="pictures/huygens.png" style="width:12cm" />
+<figcaption>Illustration of Huygen’s Principle of planar wave (left) and
+spherical diverging wave (right)</figcaption>
+</figure>
+<p><strong>Non-examinable Aside:</strong> Huygen had no explanation of
+why this seemed to be true. In fact the reason can only be understood in
+terms of a travelling wave solution to Maxwell’s equations, and in
+particular the approximate description of this given by scalar
+diffraction theory, which you will be introduced to in PHYS6040.</p>
+<p>The flaw with Huygen’s principle is that it also suggests that there
+is a wave running backwards, i.e. there is nothing to encode the
+direction of the wave. This problem was later solved by Kirchhoff, but
+that is beyond the scope of this course. Suffice it to say that
+destructive interference results in the ‘backwards’ wave having zero
+intensity.</p>
+<h1 id="electromagnetic-spectrum">Electromagnetic Spectrum</h1>
+<p>The frequency of electromagnetic radiation, or light, leads to
+radically different interactions with the material world. The
+electromagnetic spectrum is illustrated in Figure <a href="#fig:emspec"
+data-reference-type="ref" data-reference="fig:emspec">3</a> below as a
+function of frequency (or wavelength in a vacuum). We encounter
+electromagnetic waves with frequencies spanning over 16 orders of
+magnitude:</p>
+<ul>
+<li><p><strong>Gamma rays</strong> (<span class="math inline">\(f &gt;
+10^{19}\)</span> Hz) are produced in nuclear and particle physics
+processes. They are highly penetrating and cause damage to biological
+tissue at moderate levels. They also have a number of applications in
+medical imaging (PET, SPECT cameras) and medical radiotherapy (such as
+Iodine therapy).</p></li>
+<li><p><strong>X-rays</strong> (<span
+class="math inline">\(10^{16}~\mathrm{Hz} &lt; f &lt;
+10^{20}~\mathrm{Hz}\)</span>) overlap gamma rays in terms of frequency,
+but are generally distinguished by the method of production - x-rays are
+emitted from outside the nucleus, such as electrons in orbitals or rapid
+deceleration of atom. Again they are highly penetrating but easier to
+produce and work with than gamma rays, and so they are widely used in
+medical and industrial imaging</p></li>
+<li><p><strong>Ultraviolet rays</strong> (<span
+class="math inline">\(7.5\times10^{14}~\mathrm{Hz} &lt; f &lt;
+4\times10^{16}~\mathrm{Hz}\)</span>) are present in sunlight and, while
+non-ionising, can cause damaging to living tissue. Exposure of human
+skin is associated with an increased risk of skin cancer, while
+short-wavelength UV light can be used to sterilise surfaces. Longer
+wavelength UV light can be used to excite fluorescence in some
+molecules.</p></li>
+<li><p><strong>Visible light</strong> (<span
+class="math inline">\(4.3\times10^{14}~\mathrm{Hz} &lt; f &lt;
+7.5\times10^{14}~\mathrm{Hz}\)</span>), while a small part of the
+spectrum, is the most obvious form of EM radiation and the only part of
+the spectrum directly detectable by the eye. Blue light is at the
+shorter wavelength end, red light is at the longer wavelength
+end.</p></li>
+<li><p><strong>Infrared Light</strong> (<span
+class="math inline">\(3\times10^{11}~\mathrm{Hz} &lt; f &lt;
+4.3\times10^{14}~\mathrm{Hz}\)</span>) is emitted by a black body near
+room temperature, and so has applications in thermal imaging. It has
+many other applications such as in astronomy and communications (e.g.
+your TV remote control).</p></li>
+<li><p><strong>Microwaves</strong> (<span
+class="math inline">\(3\times10^{9}~\mathrm{Hz} &lt; f &lt;
+3\times10^{11}~\mathrm{Hz}\)</span>) are widely used in communications
+and related applications, as well as for cooking in a microwave oven (at
+2.45 GHz)</p></li>
+<li><p><strong>Radio waves</strong> (<span
+class="math inline">\(3\times10^{3}~\mathrm{Hz} &lt; f &lt;
+3\times10^{9}~\mathrm{Hz}\)</span>) are again very widely used for
+communications, and also feature prominently in astronomy.</p></li>
+</ul>
+<figure id="fig:emspec">
+<img src="pictures/em_spectrum.png" style="width:14cm" />
+<figcaption>Illustration of electromagnetic spectrum. Reproduced from
+https://en.wikipedia.org/wiki/Electromagnetic_spectrum with license
+CC-BY-SA-3.0, Credit: InductiveLoad</figcaption>
+</figure>
+<h1 id="polarisation">Polarisation</h1>
+<p>Light is a <strong>transverse wave</strong>, the electric field (and
+the magnetic field) is perpendicular to the direction of propagation of
+the light. In <strong>linearly polarised light</strong>, the E-field
+points negative or positive along a single direction. In
+<strong>circularly polarised light</strong>, the direction of the
+electric field rotates as the light propagates. In elliptically
+polarised light the amplitude of the wave varies as the direction
+rotates. <strong>Unpolarised light</strong> is made of up of fields
+pointing in all directions.</p>
+<p>Unpolarised light can be linearly polarised using a polariser such as
+polarising film. The film has a transmission axis, which is the
+orientation of polarisaton of light which will be transmitted. If the
+incident light is unpolarised then the transmitted light will be
+polarised in the same direction as the transmission axis. The incident
+light will be attenuated by a factor of 2, i.e. half the intensity is
+lost.</p>
+<p>However, if the incident light is already linearly polarised before
+it hits the polariser then the fraction of light which will be
+transmitted is given by Malus’ Law:</p>
+<p><span class="math display">\[\frac{I_{transmitted}}{I_{incident}} =
+\cos^2 \theta\]</span> where <span class="math inline">\(\theta\)</span>
+is the angle between the incident polarisation direction and the
+transmission axis. If two polarisers are placed at 90 degrees to each
+other, known as ‘crossed polarisers’ then the transmitted intensity is
+zero.</p>
+<p>Note that Malus’s Law doesn’t work for unpolarised light. Unpolarised
+light will be polarised along the axis of the polariser with a loss of
+half its intensity.</p>
+<figure id="pol">
+<img src="pictures/pol.png" style="width:12cm" />
+<figcaption>Polarisation. The first polariser creates linearly polarised
+light. The second polariser changes the angle of polarisation, and also
+reduces the intensity</figcaption>
+</figure>
+<p>An interesting consequence of Malus’s Law is illustrated in the
+following. Consider an initial situation with two polarisers, set up
+with their axes at <span class="math inline">\(90^o\)</span> to each
+other (crossed polarisers). Unpolarised light hits the first polariser
+and is then linearly polarised along the axis of the polariser. When it
+strikes the second polariser, we then have <span
+class="math inline">\(\theta = 90^o\)</span> and so the transmitted
+intensity is 0.</p>
+<p>Now imagine inserting a third polariser between the initial two. We
+orient this polariser so that the axis is at <span
+class="math inline">\(45^o\)</span> to the first polariser (and so also
+at <span class="math inline">\(45^o\)</span> to the second).</p>
+<p>The angle between the light polarised by the first polariser, with
+intensity (<span class="math inline">\(I_1\)</span>) and the axis of the
+second polariser is <span class="math inline">\(45^o\)</span> and so:
+<span class="math display">\[I_2 = I_1 \cos^2(\theta) = I_1\cos^2(45^o)
+= 0.5I_1\]</span> Now, when this light hits the final polariser, again
+we have <span class="math inline">\(\theta = 45^o\)</span>, <span
+class="math display">\[I_3 = I_2 \cos^2(\theta) = I_2\cos^2(45^o) =
+0.5I_2 = 0.25I_1\]</span> So by inserting an additional polariser we
+have increased the amount of light making it through the system!</p>
+<p>These kind of effects are strongly associated with wave phenomena,
+and are require more elaborate explanations if we try to explain light
+as a stream of classical particles. But what is even more interesting is
+that we get the same result even if we work with individual photons, at
+which point we are straying into quantum mechanics (and quantum optics),
+which will have to wait for now!</p>
+</body>
+</html>

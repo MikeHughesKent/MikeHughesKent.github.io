@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 1 - Electric Charge and Coulombs's Law</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 1 - Electric Charge and Coulombs's Law</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<h1 id="introduction">Introduction</h1>
+<p>Classical electromagnetic field theory is a description of the
+interactions between electrical charges and electrical currents. The
+theory was well-developed by the end of the nineteenth century, and yet
+remarkably is consistent with the theory of special relativity. (In fact
+you will recall from PH321 that it was electromagnetic theory which told
+us we needed relativity!) Only in the limits of very small distances and
+low field strengths does the theory begin to break down, in which case
+we have to turn quantum electrodynamics, a relativistic quantum field
+theory.</p>
+<p>In this part of PH322 you will begin your study of classical
+electromagnetism. We will study fundamental electrostatics - electric
+fields generated by non-moving electrical charges - as well as taking a
+brief look at magnetic fields. You can consider this section of PH322 to
+be merely the first part of a three-module series (PH322 - PH504 -
+PH604) which will develop classical electromagnetic field theory much
+more fully, and give you a good understanding of Maxwell’s equations.
+These equations completely describe the interactions between electric
+and magnetic fields, but require mastery of the vector calculus you will
+learn in PH312, and so will not be discussed at all in PH322.</p>
+<h1 id="electric-charge">Electric Charge</h1>
+<p>Electrical charge is a fundamental property of matter. It is has a
+number of characteristics:</p>
+<ul>
+<li><p>There are two types of charge: positive and negative.</p></li>
+<li><p>Electrical forces are experienced between electrical
+charges.</p></li>
+<li><p>Like charges experience a repulsive force, unlike charges feel an
+attractive force.</p></li>
+<li><p>Electrical charge is measured in Coulombs (C). In SI units, 1 C =
+1 Ampere-second (As).</p></li>
+<li><p>Electrical charge is quantised, meaning it comes in discrete
+chunks. The fundamental or elemental charge, which is also the magnitude
+of the charge of an electron, is <span
+class="math inline">\(1.6~\times~10^{-19}\)</span> C. All electrical
+charges are integer multiples of the fundamental charge (except for
+quarks which don’t appear in isolation and so we will ignore!)</p></li>
+<li><p>Charge is conserved.</p></li>
+</ul>
+<p><strong>Non-examinable Aside:</strong> We can distinguish between
+<em>local</em> and <em>global</em> charge conservation. Global charge
+conservation says that, if I have a box and the total charge inside is
+<span class="math inline">\(Q\)</span> at some point in time, then at
+some future point, the total charge inside the box is also <span
+class="math inline">\(Q\)</span>. This doesn’t preclude charge
+disappearing at one point in the box and instantaneously appearing at
+another point. In contrast, local charge conservation means that charge
+does not appear and disappear, it can only flow between different
+points. In the classical theory of electromagnetism, charge is
+<strong>locally conserved</strong>.</p>
+<h1 id="electrostatic-attraction-and-repulsion">Electrostatic Attraction
+and Repulsion</h1>
+<p>As described above, electrical charges experience attractive and
+repulsive forces. However, we mostly don’t notice these electrical
+forces. This is because, in most matter, the positive and negative
+charges are almost exactly balanced. However, we can create slight
+inbalances in many ways. The classic demonstration is to rub glass on
+silk. A small number of electrons are transferred from the glass to the
+silk. Electrons are negatively charged (with a charge of <span
+class="math inline">\(-e\)</span> each) and so the glass gains a
+positive charge and the silk a negative charge. The total charge is
+unchanged.</p>
+<h1 id="coulomb-force">Coulomb Force</h1>
+<div class="definition">
+<p>The force between two charged particles, with charges <span
+class="math inline">\(q_1\)</span> and <span
+class="math inline">\(q_2\)</span> and separated by a distance <span
+class="math inline">\(r_{12}\)</span>, is given by Coulomb’s law. The
+magnitude of the force, F, is: <span class="math display">\[F =
+\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{12}^2}\]</span></p>
+<p>where <span class="math inline">\(\epsilon_0\)</span> (‘epsilon
+zero’) is the <strong>permittivity of free space,</strong> sometimes
+known as the vacuum permittivity or the electric constant, <span
+class="math inline">\(\epsilon_0 \approx 8.85 \times
+10^{-12}~\mathrm{C^2N^{-1}m^{-2}}\)</span>. The constant <span
+class="math inline">\(1/(4\pi\epsilon_0)\)</span> is sometimes written
+as <span class="math inline">\(k\)</span>, and called Coulomb’s
+constant, <span class="math inline">\(k \approx 9 \times
+10^9~\mathrm{Nm^2C^{-2}}\)</span>.</p>
+</div>
+<p>While this provides the magnitude of the force, force is a vector and
+hence also has a direction.</p>
+<div class="definition">
+<p>The vector form of Coulomb’s law is: <span
+class="math display">\[\vec{F}_{12}=
+\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r_{12}^2}
+\hat{r}_{12}\]</span></p>
+<p>The expression <span class="math inline">\(\vec{F} _{12}\)</span>
+means the force exerted by charge 1 on charge 2. Try to memorise which
+way around this is to avoid notational confusion. Notice that the right
+hand side now contains a unit vector, <span
+class="math inline">\(\hat{r}_{12}\)</span>, which points from charge 1
+to charge 2. As a unit vector (i.e. a vector of length 1) it has no
+effect on the magnitude of the force, it just tells us the direction in
+which the force acts.</p>
+<p>We can simplify the equations if we write it in terms of Coulomb’s
+constant, <span class="math inline">\(k = 1/(4\pi\epsilon_0)\)</span>:
+<span class="math display">\[\vec{F}_{12}= k\frac{q_1q_2}{r_{12}^2}
+\hat{r}_{12}\]</span></p>
+</div>
+<p>The unit vector <span class="math inline">\(\hat{r}_{12}\)</span> is
+given by <span class="math display">\[\vec{r}_{12}=
+\frac{\vec{r}_{12}}{|r_{12}|}\]</span></p>
+<p>where <span class="math inline">\(|r_{12}|\)</span> is the length
+(magnitude) of the vector <span class="math inline">\(r_{12}\)</span>.
+Another way to write Coulomb’s Law is therefore: <span
+class="math display">\[\vec{F}_{12}= k\frac{q_1q_2}{r_{12}^3}
+\vec{r}_{12}\]</span></p>
+<p>We can see that the direction also depends on the <em>sign</em> of
+the charges. If <span class="math inline">\(q_1\)</span> and <span
+class="math inline">\(q_2\)</span> are the same sign (both negative or
+both positive) then <span class="math inline">\(q_1q_2\)</span> is
+positive. So the force on charge 2 points along the direction of charge
+1 to charge 2. That is, charge 2 feels a force repelling it from charge
+1. On the other hand, if the signs are opposite then <span
+class="math inline">\(q_1q_2\)</span> is negative and hence the force is
+in the opposite direction to the unit vector, i.e. charge 2 feels a
+force pulling it towards charge 1.</p>
+<p>Also notice that it now matters whether we are calculating the force
+on charge 1 due to charge 2, or the force on charge 2 due to charge 1.
+While the magnitude of these two forces is the same, the
+<em>direction</em> is opposite, i.e. <span
+class="math inline">\(\vec{F}_{12} = -\vec{F}_{21}\)</span>. That is
+because the unit vectors <span
+class="math inline">\(\hat{r}_{12}\)</span> and <span
+class="math inline">\(\hat{r}_{21}\)</span> are not the same, they point
+in opposite directions, <span class="math inline">\(\hat{r}_{12} =
+-\hat{r}_{21}\)</span>. This makes sense - if we have two particles
+which are attracted to each other, then the force on the left particle
+points to the right, and the force on the right particle point to the
+left.</p>
+<p><strong>See Tipler/Mosca Examples 21-2, 21-3</strong></p>
+<h1 id="superposition-principle">Superposition Principle</h1>
+<p>Our study of electrostatics is greatly simplified by the
+superposition principle. It says that the combined effect of two
+charges, in terms of the force they exert on a third charge, is simply
+equal to the sum of the forces each of the two charges individually
+exert. This makes calculating the effect of multiple charges simple, we
+just calculate the force due to each charge individually, and add them
+up. However, we must add them as vectors - we care about the
+direction!</p>
+<div class="definition">
+<p>The total force on a charge <span class="math inline">\(q_0\)</span>
+from a collected of <span class="math inline">\(N\)</span> point charges
+of charge <span class="math inline">\(q_i\)</span> is given by: <span
+class="math display">\[\vec{F} = kq_0\sum_{i=1}^{N} \frac{q_i}{r_i^2}
+\hat{r_i}\]</span></p>
+<p>where <span class="math inline">\(\hat{r_i}\)</span> is the unit
+vector pointing from the <span class="math inline">\(i\)</span>th charge
+to <span class="math inline">\(q_0\)</span>, and <span
+class="math inline">\(r_i\)</span> is the distance between <span
+class="math inline">\(q_0\)</span> and the <span
+class="math inline">\(i\)</span>th charge.</p>
+</div>
+<p>Note that this is a <strong>vector sum</strong>. We have to add the
+components of the vectors to obtain another vector. We cannot simply add
+the magnitudes of the of the forces. This is easily seen from a simple
+example: if we have a force of 1 N pushing a charge to the right, and
+another force of 1 N pushing the charge to the left, the total force is
+not 2 N but 0 N (the forces are in opposite directions, so they
+cancel).</p>
+<p><strong>Non-examinable Aside</strong> - In certain media, known as
+non-linear media, the superposition principle does not apply for very
+high electric fields caused by, for example, intense laser light. This
+leads to a branch of physics called non-linear optics which has lots of
+useful and interesting applications, and is an active research field,
+but sadly isn’t a topic for PH322.</p>
+<div class="example">
+<p><em>Consider two electric charges, <span class="math inline">\(q_1 =
+1~\mathrm{nC}\)</span> and <span class="math inline">\(q_2 =
+4~\mathrm{nC}\)</span>, lying on a straight line at distances of 1 m and
+6 m from the origin, respectively, as shown in Figure <a
+href="#line_charge" data-reference-type="ref"
+data-reference="line_charge">1</a></em>.</p>
+<figure id="line_charge">
+<p><img src="pictures/line_charge.png" style="width:5cm" alt="image" />
+<span id="line_charge" data-label="line_charge"></span></p>
+</figure>
+<p>(a) <em>What is the force experienced by a charge of <span
+class="math inline">\(q_0 = -2~\mathrm{nC}\)</span> lying 4 m from the
+origin?</em></p>
+<p><span class="math display">\[\vec{F} =
+\frac{kq_1q_0}{r^2_{1,0}}\hat{r}_{1,0} +
+\frac{kq_2q_0}{r^2_{2,0}}\hat{r}_{2,0}\]</span></p>
+<p>The unit vector from <span class="math inline">\(q_1\)</span> to
+<span class="math inline">\(q_0\)</span>, <span
+class="math inline">\(\hat{r}_{1,0}\)</span>, is along the +ve direction
+of x-axis, and so <span class="math inline">\(\hat{r}_{1,0} =
+\hat{i}\)</span>.</p>
+<p>The unit vector from <span class="math inline">\(q_2\)</span> to
+<span class="math inline">\(q_0\)</span>, <span
+class="math inline">\(\hat{r}_{2,0}\)</span>, is along the -ve direction
+of x-axis, and so <span class="math inline">\(\hat{r}_{1,0} =
+-\hat{i}\)</span>.</p>
+<p><span class="math display">\[\begin{aligned}
+        \vec{F} &amp;= \frac{kq_1q_0}{r^2_{1,0}}\hat{i} -
+\frac{kq_2q_0}{r^2_{2,0}}\hat{i} \\
+        &amp;= (9\times10^9~\mathrm{kgm^3s^{-2}C^{-2}})
+\bigg(\frac{(1~\mathrm{nC})(-2~\mathrm{nC})}{(3~\mathrm{m}^2)} -
+\frac{(4~\mathrm{nC})(-2~\mathrm{nC})}{(2~\mathrm{m})^2}\bigg)\hat{i} \\
+        &amp;= 1.6 \times 10^{-8}\hat{i}~\mathrm{N}      
+    
+\end{aligned}\]</span> Note that the force is along the +ve direction.
+<em>(b) Where should <span class="math inline">\(q_0\)</span> be placed
+so that there is no net force?</em> We can see that this position will
+be somewhere inbetween <span class="math inline">\(q_1\)</span> and
+<span class="math inline">\(q_2\)</span>. <span
+class="math display">\[\begin{aligned}
+        \vec{F} &amp;= \frac{kq_1q_0}{r^2_{1,0}}\hat{i} -
+\frac{kq_2q_0}{r^2_{2,0}}\hat{i} \\
+        0 &amp;= \frac{(1~\mathrm{nC})(-2~\mathrm{nC})}{(r_1-r_0)^2} -
+\frac{(4~\mathrm{nC})(-2~\mathrm{nC})}{(r_2-r_0)^2} \\
+        \frac{1}{[(1~\mathrm{m})-r_0]^2} &amp;=
+\frac{4}{[(6~\mathrm{m})-r_0]^2} \\ %
+    
+\end{aligned}\]</span></p>
+<p>Solving this quadratic gives <span class="math inline">\(r_0 =
+8/3~\mathrm{m}\)</span>. There is another mathematical solution at <span
+class="math inline">\(r_0 = -4~\mathrm{m}\)</span> (i.e. another point
+where <span class="math inline">\(|F_{20}| = |F_{10}|\)</span>), but
+there the two forces are in the same direction and so they don’t
+cancel.</p>
+<p>Another way to see the answer is to note that force goes with <span
+class="math inline">\(1/r^2\)</span> but linearly with <span
+class="math inline">\(q\)</span>. Since <span
+class="math inline">\(q_2\)</span> is four times greater than <span
+class="math inline">\(q_1\)</span>, <span
+class="math inline">\(q_1\)</span> need to be <span
+class="math inline">\(\sqrt{4} = 2\)</span> times closer to balance this
+out. So, we have: <span class="math display">\[\begin{aligned}
+        \frac{r_2 - r_0}{r_0 - r_1} &amp;= 2 \\
+        r_0 &amp;= 3/8~\mathrm{m}
+        %
+    
+\end{aligned}\]</span></p>
+</div>
+<div class="example">
+<p><em>Five charges are arranged as shown in Figure <a
+href="#central_charge" data-reference-type="ref"
+data-reference="central_charge">2</a>. What is the force on <span
+class="math inline">\(q_0\)</span>?</em></p>
+<figure id="central_charge">
+<p><img src="pictures/central_charge.png" style="width:5cm"
+alt="image" /> <span id="central_charge"
+data-label="central_charge"></span></p>
+</figure>
+<p>The total force is given by: <span class="math display">\[\vec{F}_T =
+\vec{F}_{1,0} + \vec{F}_{2,0} + \vec{F}_{3,0} +
+\vec{F}_{4,0}\]</span></p>
+<p>However, notice that <span class="math inline">\(\hat{r}_{1,0} =
+-\hat{r}_{4,0}\)</span> and so <span class="math inline">\(\vec{F}_{1,0}
+= -\vec{F}_{4,0}\)</span>. Similarly, <span
+class="math inline">\(\vec{F}_{2,0} = -\vec{F}_{3,0}\)</span>. And so:
+<span class="math display">\[\begin{aligned}
+        \vec{F}_T = -\vec{F}_{4,0} -\vec{F}_{3,0} + \vec{F}_{3,0} +
+\vec{F}_{4,0} = 0
+    
+\end{aligned}\]</span> And so the net force is zero. In fact this is
+obvious from the symmetry of the problem.</p>
+</div>
+<div class="example">
+<p><em>Charge 1, <span class="math inline">\(q_1 = 3\)</span> nC, lies
+at point (3,4) m and charge, <span class="math inline">\(q_2 =
+-2\)</span> nC, lies at point (6,2) m. What is the force on charge 2 due
+to charge 1?</em><br />
+First write down the vector pointing from charge 1 to charge 2: <span
+class="math display">\[\begin{aligned}
+      \vec{r}_{12} = (6-3)\hat{i}~\mathrm{m} + (2-4)\hat{j}~\mathrm{m} =
+(3\hat{i} -2\hat{j})~\mathrm{m}
+    
+\end{aligned}\]</span></p>
+<p>The magnitude of this vector is: <span
+class="math display">\[|\vec{r}_{12}| = \sqrt{(3~\mathrm{m})^2 +
+(2~\mathrm{m})^2} = \sqrt{13} ~\mathrm{m}\]</span></p>
+<p>And so the unit vector is: <span
+class="math display">\[\begin{aligned}
+        |\hat{r}_{12}| &amp;= \frac{ \vec{r}_{12}^2 } { |\vec{r}_{12}| }
+~\mathrm{m} \\
+        &amp;= \frac{ 3\hat{i} -2\hat{j} }{\sqrt{13}}
+~\mathrm{m}            
+    
+\end{aligned}\]</span></p>
+<p>We can then calculate the force: <span
+class="math display">\[\begin{aligned}
+        \vec{F}_{12} &amp;= k\frac{q_1q_2}{|\vec{r}_{12}^2|}
+\hat{r}_{12} \\
+        &amp;=
+(9\times10^9)\frac{(3\times10^{-9})(-2\times10^{-9})}{|\vec{r}_{12}|^2}
+\hat{r}_{12}~\mathrm{N} \\       
+        &amp;= \frac{(-5.4 \times 10^{-8})}{(13)^{3/2}} (3\hat{i} - 2
+\hat{j})~\mathrm{N} \\
+        &amp;= (-3.5 \hat{i} + 2.3 \hat{j}) \times
+10^{-9}~\mathrm{N}       
+    
+\end{aligned}\]</span></p>
+</div>
+<p><strong>Also see Tipler/Mosca Examples 21-4, 21-5.</strong></p>
+</body>
+</html>

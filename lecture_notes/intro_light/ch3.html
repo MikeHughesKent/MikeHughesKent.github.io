@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 3 - Optical Instruments</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 3 - Optical Instruments</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p>In this chapter we will apply the principles of geometrical optics to
+the study of three instruments: a simple magnifier, a microscope and a
+refracting telescope.</p>
+<h1 id="the-simple-magnifier">The Simple Magnifier</h1>
+<p>Let’s consider the eye to be a simple system, consisting of a thin
+converging lens (eye lens + cornea) and a screen (the retina). The
+distance from the lens to the retina is fixed, but the focal length of
+the thin lens, <span class="math inline">\(f\)</span>, can be changed by
+the muscles in the eye (known as accommodation). If the object has size
+<span class="math inline">\(y\)</span> then the size of the image on the
+retina, <span class="math inline">\(y&#39;\)</span>, depends on the
+object’s distance from the lens, <span class="math inline">\(s\)</span>
+as shown in Figure <a href="#eye" data-reference-type="ref"
+data-reference="eye">1</a>.</p>
+<p>Under the paraxial approximation, an object of size <span
+class="math inline">\(y\)</span> subtends an angle <span
+class="math inline">\(\theta = y/s\)</span>. In principle we can make an
+object as big as we like by bringing it arbitrarily close the lens.
+However, this requires <span class="math inline">\(f\)</span> to be
+adjusted, and there is a limit to how far the eye can accommodate. The
+closest an object can be brought and still focused on the retina is
+called the <strong>near point</strong>, and is comfortably around <span
+class="math inline">\(x_{np} = 25\)</span> cm for a healthy eye. The
+angle subtended by the object is approximately <span
+class="math inline">\(y/x_{np}\)</span>.</p>
+<figure id="eye">
+<img src="figs/eye.png" style="width:14cm" />
+<figcaption>Use of a converging lens as a simple magnifier.</figcaption>
+</figure>
+<p>A simple magnifier is a converging lens placed in front of the eye
+lens, with an object we wish to view placed at the focal length of the
+lens. The lens makes the object appear as though it is at infinity. The
+eye can then view the object relaxed, as though it is at infinity, but
+the image size on the retina is the same as if the object was placed at
+<span class="math inline">\(f\)</span>. That is to say that the angle
+subtended by the object, <span class="math inline">\(\theta\)</span> is
+the same. Since this angle is now given by <span
+class="math inline">\(y/f\)</span>, we can write the angular
+magnification of the magnifier as <span class="math display">\[M =
+\frac{x_{np}}{f}\]</span></p>
+<p>This is also the ratio of the size of the object on the retina when
+viewed through the magnifying glass, at a distance of <span
+class="math inline">\(f\)</span>, compared to the size if we viewed it
+without the magnifying glass, when we would need to move the object out
+to the near point, <span class="math inline">\(x_{np}\)</span></p>
+<h1 id="the-microscope">The Microscope</h1>
+<p>We have seen in Chapter 2 that we can use a simple lens to magnify an
+object. We call a lens used in this way an <strong>objective</strong>.
+If we place a camera where the image is formed, then we have a
+microscope. This is how simple digital microscopes work, although the
+thin lens is replaced with a microscope objective which is optimised for
+resolution and image quality (which is beyond the scope of this
+course).</p>
+<p>More traditional compound microscopes, where we can look directly at
+the image, require an extra element called an eye-piece. This is because
+the image formed by the objective is still quite small, to get it to
+fill a decent portion of the eye’s angular field of view we would have
+to get very close to it, closer than our eyes can focus. The job of the
+eyepiece is to take the image and make it appear as though it is at
+infinity, allowing our eyes to relax - the same job as the simple
+magnifier. This is done by placing the eyepiece so that the image of the
+object is at its focal length, <span class="math inline">\(f_e\)</span>.
+This is shown in Figure <a href="#microscope" data-reference-type="ref"
+data-reference="microscope">2</a></p>
+<figure id="microscope">
+<img src="figs/microscope.png" style="width:14cm" />
+<figcaption>Simple diagram of a compound microscope.</figcaption>
+</figure>
+<p>For the objective, of focal length <span
+class="math inline">\(f_o\)</span>, the linear magnification is given by
+<span class="math inline">\(-s&#39;/s\)</span>. However, we may also
+write this magnification as approximately: <span
+class="math display">\[M = -\frac{L}{f_o}\]</span> where <span
+class="math inline">\(L\)</span> is the distance between the focal
+points of the objective and the eye-piece. This is called the
+<strong>tube length</strong>. This approximation is valid because we
+typically want a large magnification, and so <span
+class="math inline">\(s&#39; \gg s\)</span>. This means that the object
+is quite close to the focal point, i.e. <span class="math inline">\(s
+\approx f_o\)</span>, and <span class="math inline">\(L\gg f_o\)</span>
+such that <span class="math inline">\(L \approx s&#39;\)</span>.</p>
+<p>The magnification of the entire microscope includes the angular
+magnification of the eyepiece (<span
+class="math inline">\(x_{np}/f_e\)</span>) and so the total
+magnification is:</p>
+<div class="definition">
+<p><span class="math display">\[M =
+-\frac{L}{f_o}\frac{x_{np}}{f_e}\]</span></p>
+</div>
+<h1 id="the-telescope">The Telescope</h1>
+<p>A telescope is designed to take an object at infinity (or very far
+away) and create an image of it at the focus of an eyepiece, which then
+allows us to view the object. The effect is to increase the angle
+subtended by the object (i.e. <strong>angular magnification</strong>).
+This is shown in Figure <a href="#telescope" data-reference-type="ref"
+data-reference="telescope">3</a>.</p>
+<figure id="telescope">
+<img src="figs/telescope.png" style="width:14cm" />
+<figcaption>Simple diagram of a telescope.</figcaption>
+</figure>
+<p>We define the magnification of the telescope as the ratio of the two
+angles subtended, <span class="math inline">\(\theta_1\)</span> and
+<span class="math inline">\(\theta_2\)</span>, which gives:</p>
+<div class="definition">
+<p><span class="math display">\[M = -\frac{f_0}{f_e}\]</span></p>
+</div>
+<p>Notice that this is angular magnification. In a microscope we have
+linear magnification due to the objective, i.e. we create a magnified
+image of the object. We then use an eypepiece for angular magnification
+of this image. In a telescope, at no point do we create an image of the
+object which is larger than the object, or this would require
+astronomical telescopes to be somewhat larger than practical.</p>
+</body>
+</html>

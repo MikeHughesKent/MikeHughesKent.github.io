@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 5 - Magnetic Fields</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 5 - Magnetic Fields</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p>Magnetic field are the second part of the electromagnetic field. In
+later courses you will understand more about the origin of the magnetic
+field, and how it is related to the electric field, but in PH322 we will
+restrict ourselves to a description of how charged particles behave in
+magnetic fields, and some applications of this.</p>
+<h1 id="force-from-a-magnetic-field---lorentz-force">Force From a
+Magnetic Field - Lorentz Force</h1>
+<p>If we have a magnetic flux density, <span
+class="math inline">\(\vec{B}\)</span>, then a charge <span
+class="math inline">\(q\)</span> moving at velocity <span
+class="math inline">\(\vec{v}\)</span> in that field experiences a
+force, <span class="math inline">\(\vec{F}\)</span> given by:</p>
+<div class="definition">
+<p><span class="math display">\[\vec{F} =
+q\vec{v}\times\vec{B}\]</span></p>
+</div>
+<p>This defines the unit of magnetic field, the Tesla (T). Note that the
+magnetic flux density is sometimes known informally as the magnetic
+field strength, although strictly this is <span class="math inline">\(H
+= B/\mu_0\)</span>, where <span class="math inline">\(\mu_0\)</span> is
+the permeability of free space, <span class="math inline">\(4 \pi \times
+10^{-7}\)</span>.</p>
+<p><span class="math display">\[1 \mathrm{ T = 1 \frac{N/C}{m/s} = 1
+\frac{N}{Am}}.\]</span></p>
+<p>In practice we rarely experience fields anywhere near 1 T; the
+magnetic field from the Earth is around <span
+class="math inline">\(10^{-4}\)</span> T, an amount which is also known
+as 1 Gauss (G). The magnets in modern Magnetic Resonance Imaging (MRI)
+systems can reach a few Tesla, and require strict protections to prevent
+magnetic materials entering the controlled area and being pulled in the
+magnet.</p>
+<p>Note that the force is the cross product of the velocity and the
+field. So it is perpendicular to both, i.e. <span
+class="math inline">\(\vec{F}.\vec{B} = 0\)</span>. A convenient way to
+remember the direction in which the force points on a positive charge is
+the <strong>Right Hand Rule</strong>, shown in Figure <a href="#rhr"
+data-reference-type="ref" data-reference="rhr">1</a>. Curl your fingers
+as if rotating the velocity vector into the magnetic field vector. Your
+thumb then points in the direction of the force.</p>
+<figure id="rhr">
+<img src="pictures/rhr.png" style="width:8cm" />
+<figcaption>Rule for direction of Lorentz force.</figcaption>
+</figure>
+<p><strong>See Tipler/Mosca Example 26-1.</strong></p>
+<h1 id="work-done-by-a-magnetic-field">Work done by a Magnetic
+Field</h1>
+<p>Recall that the work done by a force is <span
+class="math display">\[W=\int F. d\vec{r}\]</span> where <span
+class="math inline">\(d \vec{r}\)</span> is the vector describing the
+motion of the particle. But the magnetic force is always perpendicular
+to the motion of the particle, i.e. <span
+class="math inline">\(\vec{F}.\vec{dr} = 0\)</span>. So the magnetic
+force does no work. This means it cannot change the kinetic energy of a
+particle. Or, in other words, it changes the direction of the velocity,
+but not the magnitude.</p>
+<h1 id="magnetic-field-lines">Magnetic Field Lines</h1>
+<p>Magnetic field lines are a similar concept to electric field lines,
+but with important differences:</p>
+<ol>
+<li><p>While electric field lines have sources and sinks - electric
+charges - there are no sources or sinks of magnetic field lines. A
+magnetic has two poles - and these two poles always appear as a pair. If
+we break a magnet in half, we end up with two magnets, each with two
+poles. So magnetic field lines always form complete loops. They emerge
+from the North pole end of the magnet and enter the South pole end
+(although they don’t emerge or enter a point at the poles).</p></li>
+<li><p>Magnetic field lines do not point in the direction of the Lorentz
+force. The Lorentz force is perpendicular to the field lines.</p></li>
+</ol>
+<h1 id="motion-in-a-magnetic-field">Motion in a Magnetic Field</h1>
+<p>Consider a particle of charge <span class="math inline">\(q\)</span>
+and mass <span class="math inline">\(m\)</span> moving on the x-y plane
+of a cartesian co-ordinate system i.e. <span
+class="math inline">\(\vec{v} = v_x\hat{i} + v_y\hat{j} + 0\hat{k} =
+(v_x,v_y,0)\)</span>. There is a magnetic field pointing in the z
+direction, i.e. <span class="math inline">\(\vec{B} = 0\hat{i} +
+0\hat{j} + B\hat{k} = (0,0,B)\)</span>.</p>
+<p>The Lorentz force on the particle is given by: <span
+class="math display">\[\begin{aligned}
+\vec{F} &amp;= q\vec{v} \times \vec{B} \\
+&amp;= q(v_yB\hat{i} - v_xB\hat{j})
+\end{aligned}\]</span></p>
+<p>As we expect, there is no <span
+class="math inline">\(\hat{k}\)</span> component of the force. From
+Newton’s Law, a force produces an acceleration, <span
+class="math inline">\(\vec{F}=m\vec{a}\)</span>. So <span
+class="math display">\[q(v_yB\hat{i} - v_xB\hat{j}) = m(a_x\hat{i} +
+a_y\hat{j} + a_z\hat{k})\]</span> and so: <span
+class="math display">\[\begin{aligned}
+a_x &amp;= qBv_y/m\\
+a_y &amp;= -qBv_x/m\\
+a_z &amp;= 0
+\end{aligned}\]</span> You may recognise these as equations of motion
+which describe circular motion. So the charged particle will follow a
+circular path on the x-y plane. We can calculate the radius (<span
+class="math inline">\(r\)</span>) of this circular motion by making use
+of the centripetal acceleration equation. Since the magnitude of the
+velocity will not change (the magnetic field does no work) we can work
+in terms of the magnitude of the velocity <span
+class="math inline">\(v\)</span>, and centripetal acceleration <span
+class="math inline">\(a=v^2/r\)</span>. <span
+class="math display">\[\begin{aligned}
+a &amp;= \frac{v^2}{r} = \frac{qBv}{m} \\
+r &amp;= \frac{mv}{qB}  \label{eq:1}
+\end{aligned}\]</span></p>
+<p>The period, <span class="math inline">\(T\)</span>, is then given by
+<span class="math display">\[\begin{aligned}
+T &amp;= \frac{2\pi r}{v} \\
+T &amp;= \frac{2 \pi (mv/qB)}{v} = \frac{2 \pi m}{qB}
+\end{aligned}\]</span></p>
+<p>And the frequency, <span class="math inline">\(f\)</span>, by <span
+class="math display">\[\begin{aligned}
+f &amp;= 1/T \\
+f &amp;= \frac{qB}{2 \pi m}
+\end{aligned}\]</span></p>
+<p>Note that the radius depends on the initial velocity, <span
+class="math inline">\(v\)</span>, while the period depends only on the
+magnetic field strength, mass and charge. If there is an initial
+velocity in the z direction then the particle will follow a helical
+path.</p>
+<p><strong>See Tipler/Mosca Example 26-4.</strong></p>
+<h1 id="velocity-selector">Velocity Selector</h1>
+<p>A velocity selector is an instrument which allows charged particles
+(ions) with a specific velocity to be separated from particles with a
+different velocity. It is often used with a mass spectrometer, as
+discussed below.</p>
+<p>Opposing electric and magnetic fields are set up in such a way that
+they exactly balance each other for a specific velocity of the charged
+particle, as shown in Figure <a href="#v_sel" data-reference-type="ref"
+data-reference="v_sel">2</a>. The Coulomb force due to the electric
+field from the charged plates is given by <span
+class="math inline">\(F_E = qE\)</span>, and the Lorentz force due to
+the magnets is given by <span class="math inline">\(F_B = qvB\)</span>.
+Hence the two forces balance when <span
+class="math inline">\(v=E/B\)</span>, and so only ions moving at this
+velocity will be un-deflected and pass through the hole.</p>
+<figure id="v_sel">
+<img src="pictures/v_sel.png" style="width:12cm" />
+<figcaption>Concept of a velocity selector. Opposing Lorentz and Coulomb
+forces balance only for a specific velocity. Ions with a different
+velocity will be deflected out of the beam.</figcaption>
+</figure>
+<h1 id="mass-spectrometer">Mass Spectrometer</h1>
+<p>The mass spectrometer allows the mass of isotopes to be measured. It
+exploits the result we derived above, which says that the radius of the
+circular motion of a charged particle in a magnetic field depends on its
+mass.</p>
+<figure id="mass_spec">
+<img src="pictures/mass_spec.png" style="width:15cm" />
+<figcaption>Concept of a simple mass spectrometer. The radius of the
+circular path of the ion in the magnetic field depends on its
+mass.</figcaption>
+</figure>
+<p>A sample is vapourised and ionised (forming charged particles). The
+ions are then accelerated by an electric field, across a potential of
+<span class="math inline">\(\Delta V\)</span>. They therefore lose a
+potential energy of <span class="math inline">\(q\Delta V\)</span> and
+hence gain the same amount of kinetic energy. <span
+class="math display">\[1/2 mv^2 = q\Delta V\]</span></p>
+<p>The ions move into a magnetic field and so experience a Lorentz
+force, moving in a circular path. Re-arranging the equation for the
+radius of this path, <span class="math inline">\(r\)</span>, in terms of
+<span class="math inline">\(v\)</span> and substituting this in, we
+obtain <span class="math display">\[1/2 m\frac{r^2q^2B^2}{m^2} = q\Delta
+V\]</span></p>
+<p>We can write this in terms of the mass to charge ratio: <span
+class="math display">\[\frac{m}{q} = \frac{B^2r^2}{2\Delta
+V}\]</span></p>
+<p>Therefore, by the location where the ion hits the detector, we know
+the radius of its path and hence its mass-to-charge ratio. If we know
+the charge on each ion, this allows us to calculate the mass. We can
+select only ions with a certain charge using a velocity selector
+(described above), since ions with a different charge will have
+experienced a different acceleration due to the electric field, and so
+be moving at a different velocity.</p>
+<p>One application of mass spectrometry it to determine the ratios of
+different isotopes in a material. For example, carbon dating is
+performed by determining the ratio of Carbon-12 to Carbon-14.</p>
+<p><strong>See Tipler/Mosca Example 26-5, 26-6.</strong></p>
+<h1 id="cyclotron">Cyclotron</h1>
+<p>A cyclotron is a type of particle accelerator. It can be used to
+accelerate charged particles to high speed for use in scientific
+experiments or as radiation sources for medical imaging.</p>
+<figure id="cyc">
+<img src="pictures/cyclotron.png" style="width:8cm" />
+<figcaption>Concept of a simple cyclotron.</figcaption>
+</figure>
+<p>The simplest type of accelerator is a linear accelerator, in which an
+electric field is used to accelerate a charged particle via the Coulomb
+force. However, there is limit to the maximum potential difference which
+can be created before the breakdown voltage of air is exceeded, and this
+limits the velocities which can be created in a linear accelerator. In a
+cyclotron, the same electric field is used multiple times.</p>
+<p>As shown in Figure <a href="#cyc" data-reference-type="ref"
+data-reference="cyc">4</a>, charged particles are injected in the middle
+of the cyclotron, in the gap between the ‘D’s. An electric field
+accelerates the charged particles, to the right in the case of the
+diagram. Magnetic fields in the ‘D’s bring the particles in a circular
+path back to the gap. The electric field is then switched, accelerating
+the particles again, this time to the left. Again, the B-field causes
+them to follow a circular path, although this time with a larger radius
+(due to the larger velocity). This continues, with the particles
+spiralling out, accelerating each time they cross the gap, until they
+leave the cyclotron at high speed.</p>
+<p>The final velocity and the radius of the outermost loop are linked by
+Equation <a href="#eq:1" data-reference-type="ref"
+data-reference="eq:1">[eq:1]</a>. <span class="math display">\[r_{max} =
+\frac{mv}{qB} \implies v = \frac{qBr_{max}}{m}\]</span> And so the
+maximum possible velocity depends on both the strength of the B-field
+and the size of the ‘D’s, but not on the accelerating potential
+difference.</p>
+<p><strong>See Tipler/Mosca Example 26-7.</strong></p>
+</body>
+</html>

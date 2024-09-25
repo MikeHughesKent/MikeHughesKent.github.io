@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Section 1 - Light as a Wave</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Section 1 - Light as a Wave</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p>A full description of the propagation of light is a complex
+endeavour. Light is an electromagnetic wave, and so understanding it
+rigorously involves solving Maxwell’s Equations (which you will do in
+later Stages). Luckily, for many practical purposes there are large set
+of simplifications which can be made, allowing us to predict the
+behaviour of light accurately enough to be useful. In these lectures,
+after a brief introduction to the wave nature of light, we will
+introduce the approximation known as ‘geometrical optics’, treating
+light as ‘rays’. This will allow us to model simple ideas such as
+reflection and refraction Even geometrical optics can become fiendishly
+complex, and so we will largely restrict ourselves to a further
+approximation known as the paraxial approximation, which means only
+dealing with light rays which move on, or close to, the optical axis.
+Despite the apparent severity of these approximations, our picture will
+be useful enough to allow us to understand the operation of several
+important optical devices, including telescopes and microscopes.</p>
+<h1 id="light-as-a-wave">Light as a Wave</h1>
+<p>Light is a wave in the electromagnetic field, and so you should
+<strong>review the waves section of PH321 before continuing</strong>.
+Like any wave, a light wave can be described in terms of its amplitude
+(<span class="math inline">\(A\)</span>), frequency (<span
+class="math inline">\(f\)</span>), wavelength (<span
+class="math inline">\(\lambda\)</span>), period (<span
+class="math inline">\(T\)</span>), and phase (<span
+class="math inline">\(\phi\)</span>).We also define the wavenumber,
+<span class="math inline">\(k = 2\pi/ \lambda\)</span> and the angular
+frequency <span class="math inline">\(\omega = 2\pi f\)</span>. Then we
+can write an expression for the magnitude of the electric field as a
+function of position (<span class="math inline">\(z\)</span>) and time
+(<span class="math inline">\(t\)</span>): <span class="math display">\[E
+= sin(kz - \omega t + \phi)\]</span> where <span
+class="math inline">\(\phi\)</span> is some initial phase. We could
+write something similar for <span class="math inline">\(B\)</span>, as
+it turns out for a travelling electromagnetic wave <span
+class="math inline">\(E\)</span> and <span
+class="math inline">\(B\)</span> vary in the same way (they have the
+same frequency/wavelength but the oscillations are perpendicular to each
+other, at least in the idealised case). This is beyond the scope of
+PH322, but you will learn more about it in Stages 2 and 3.</p>
+<p>From the equation it is clear that the field varies in both time and
+space, so when we draw a wave we need to be clear what we are drawing -
+either the spatial wave at a fixed point in time (<span
+class="math inline">\(t\)</span>), or the temporal wave at a fixed point
+in space (<span class="math inline">\(z\)</span>) (see Figure <a
+href="#waves" data-reference-type="ref"
+data-reference="waves">1</a>).</p>
+<figure id="waves">
+<img src="figs/waves.png" style="width:8cm" />
+<figcaption>Light waves, viewed at a single point in space (left) and a
+single point in time (right)</figcaption>
+</figure>
+<p>The argument of the <span class="math inline">\(\sin\)</span>
+function is called the phase. This tells us the point in the wave cycle
+we have reached at particular point in space and time. This is expressed
+as an angle, with a phase of <span class="math inline">\(2\pi\)</span>
+equivalent to a complete cycle of the wave. After a phase of <span
+class="math inline">\(2\pi\)</span> we are back where we started, so for
+example a phase of <span class="math inline">\(5\pi/2\)</span> is the
+same as a phase of <span class="math inline">\(\pi/2\)</span>.</p>
+<p>We will talk about the <strong>wavefront</strong> of a wave. A
+wavefront is a surface of constant phase. The shape of the wavefront can
+tell us how the light is propagating. For example, a planar wavefront
+describes a <strong>collimated</strong> beam of light. A spherical
+wavefront describes light which is converging from - or diverging to - a
+point.</p>
+<p>If we have a point source, then the wavefront at a time <span
+class="math inline">\(t\)</span> is at a distance <span
+class="math inline">\(r\)</span> from the point, where <span
+class="math inline">\(r(t) = c t\)</span>. Here, <span
+class="math inline">\(c\)</span> is the speed of light (for whatever
+medium the wave is propagating in - more on that later).</p>
+<h1 id="huygens-principle">Huygens’ Principle</h1>
+<p>Huygens’ principle provides a simple rule to predict the propagation
+of a wavefront of light. It is empirical, in the sense that is was
+derived by observations rather than than from any fundamental
+considerations.</p>
+<div class="definition">
+<p>Each point on a wavefront acts as source of secondary wavelets. These
+wavelets have the same velocity and frequency as the original wave. The
+envelope of these wavelets forms the new wavefront.</p>
+</div>
+<p>This says that if we have a wavefront, we can calculate how the
+wavefront at some future point in time will look by assuming that each
+point on the wavefront acts as a source of spherical waves. We then take
+the envelope of these new waves, and that is now the new wave.</p>
+<figure id="huygens">
+<img src="figs/huygens.png" style="width:12cm" />
+<figcaption>Illustration of Huygen’s Principle of planar wave (left) and
+spherical diverging wave (right)</figcaption>
+</figure>
+<p><strong>Non-examinable Aside:</strong> Christiaan Huygens had no
+explanation of why this seemed to be true. In fact the reason can only
+be understood in terms of a travelling wave solution to Maxwell’s
+equations, and in particular the approximate description of this given
+by scalar diffraction theory, which you will be introduced to in
+PH604.</p>
+<p>The flaw with Huygens’ principle is that it also suggests that there
+is a wave running backwards, i.e. there is nothing to encode the
+direction of the wave. This problem was later solved by Kirchhoff, but
+that is beyond the scope of this course. Suffice it to say that
+destructive interference results in the ‘backwards’ wave having zero
+intensity.</p>
+<h1 id="refractive-index">Refractive Index</h1>
+<p>The velocity of light depends on the medium it is travelling through.
+It can never exceed the speed of light in a vacuum, <span
+class="math inline">\(c\)</span>, that is to say it propagates more
+slowly in other materials. The refractive index, <span
+class="math inline">\(n\)</span>, of that medium determines the
+velocity.</p>
+<div class="definition">
+<p>The refractive index, <span class="math inline">\(n\)</span>, of a
+medium is the inverse of the ratio of the speed of light in that medium,
+<span class="math inline">\(v\)</span>, to the speed of light in a
+vacuum, <span class="math inline">\(c\)</span>: <span
+class="math display">\[n=c/v\]</span></p>
+</div>
+<p>By definition, the refractive index of a vacuum is 1. Air is about
+1.003, which we often take to be 1 for practical purposes. Water has a
+refractive index of 1.4, and glass varies from 1.4-1.7.</p>
+<h1 id="dispersion">Dispersion</h1>
+<p>For most materials, <span class="math inline">\(n\)</span> decreases
+slightly with wavelength over the visible region. This gives rise to an
+effect known as <strong>dispersion</strong>. Since different wavelengths
+of light will travel at different speeds in the material, a short pulse
+of multi-wavelength light will become spread out. This is the ultimate
+limit on how much data can be sent over fibre optics. It also explains
+how a spectrum is produced from a prism (see Section <a href="#snell"
+data-reference-type="ref" data-reference="snell">[snell]</a>).</p>
+<h1 id="polarisation">Polarisation</h1>
+<p>Light is a <strong>transverse wave</strong>, the electric field (and
+the magnetic field) is perpendicular to the direction of propagation of
+the light. In <strong>linearly polarised light</strong>, the E-field
+points negative or positive along a single direction. In
+<strong>circularly polarised light</strong>, the direction of the
+electric field rotates as the light propagates. In elliptically
+polarised light the amplitude of the wave varies as the direction
+rotates. <strong>Unpolarised light</strong> is made of up of fields
+pointing in all directions.</p>
+<p>Unpolarised light can be linearly polarised using a polariser such as
+polarising film. The film has a transmission axis, which is the
+orientation of polarisaton of light which will be transmitted. If the
+incident light is unpolarised then the transmitted light will be
+polarised in the same direction as the transmission axis. If the
+incident light is polarised then the fraction of light which will be
+transmitted is given by:</p>
+<p><span class="math display">\[\frac{I_{transmitted}}{I_{incident}} =
+\cos^2 \theta\]</span> where <span class="math inline">\(\theta\)</span>
+is the angle between the incident polarisation direction and the
+transmission axis. If two polarisers are placed at 90 degrees to each
+other, known as ‘crossed polarisers’ then the transmitted intensity is
+zero.</p>
+<figure id="pol">
+<img src="figs/pol.png" style="width:12cm" />
+<figcaption>Polarisation. The first polariser creates linearly polarised
+light. The second polariser changes the angle of polarisation, and also
+reduces the intensity</figcaption>
+</figure>
+</body>
+</html>
