@@ -371,11 +371,12 @@ class="math inline">\(\phi\)</span>) rather than Cartesian co-ordinates,
 for reasons that are hopefully obvious.</p>
 <p>The Schrödinger equation in spherical co-ordinates looks unpleasant,
 <span class="math display">\[-\frac{\hbar}{2m}   \bigg[
-\frac{1}{r^2}  \pdv{}{r} \bigg(r^2 \pdv{\psi}{r} \bigg) +
-\frac{1}{r^2\sin\theta} \pdv{}{\theta} \bigg( \sin \theta
-\pdv{\psi}{\theta} \bigg) + \frac{1}{r^2 \sin^2\theta}
-\pdv[2]{\psi}{\theta} \bigg] + V(r,\theta \phi)\psi(r, \theta, \psi) =
-E\psi(r, \theta, \psi)\]</span></p>
+\frac{1}{r^2}  \frac{\partial}{\partial r} \bigg(r^2 \frac{\partial
+\psi}{\partial r} \bigg) + \frac{1}{r^2\sin\theta}
+\frac{\partial}{\partial \theta}\bigg( \sin \theta \frac{\partial
+\psi}{\partial \theta} \bigg) + \frac{1}{r^2 \sin^2\theta}
+\frac{\partial^2 \psi}{\partial \theta^2}\bigg] + V(r,\theta
+\phi)\psi(r, \theta, \psi) = E\psi(r, \theta, \psi)\]</span></p>
 <p>but can now simplify things greatly by assuming a separable solution
 of the form: <span class="math display">\[\psi(r, \theta, \phi) = R(r)
 \Theta(\theta) \Phi(\phi)\]</span></p>
@@ -402,15 +403,16 @@ class="math inline">\(m_l\)</span> but the same <span
 class="math inline">\(l\)</span> have the same energy, such that states
 are <span class="math inline">\((2l + 1)\)</span>-fold degenerate.</p>
 <p>The radial part (known as the radial equation) can be re-written as
-<span class="math display">\[-\frac{\hbar}{2m} \frac{1}{r^2} \dv{}{r}
-\bigg( r^2 \dv{R}{r} \bigg) + \bigg[ V(r)+ \frac{ \hbar^2l(l+1)}{2mr^2}
-\bigg ] R = ER.\]</span> Check back in your PHYS5030 to see how this is
-obtained, but you should recognise that this now looks very similar to
-the 1D wave equation but with a modified ‘effective’ potential, <span
-class="math display">\[V_{eff} = V(r)+ \frac{
-\hbar^2l(l+1)}{2mr^2}\]</span> We also have to be a bit careful because
-we now have that <span class="math inline">\(r&gt;0\)</span> which
-matters when we choose the boundary condition at <span
+<span class="math display">\[-\frac{\hbar}{2m} \frac{1}{r^2}
+\frac{\mathrm{d}}{\mathrm{d}r} \bigg( r^2
+\frac{\mathrm{d}R}{\mathrm{d}r}\bigg) + \bigg[ V(r)+ \frac{
+\hbar^2l(l+1)}{2mr^2} \bigg ] R = ER.\]</span> Check back in your
+PHYS5030 to see how this is obtained, but you should recognise that this
+now looks very similar to the 1D wave equation but with a modified
+‘effective’ potential, <span class="math display">\[V_{eff} = V(r)+
+\frac{ \hbar^2l(l+1)}{2mr^2}\]</span> We also have to be a bit careful
+because we now have that <span class="math inline">\(r&gt;0\)</span>
+which matters when we choose the boundary condition at <span
 class="math inline">\(r=0\)</span>. The <span
 class="math inline">\(l\)</span> is the angular momentum quantum number,
 discussed more below.</p>
