@@ -204,7 +204,7 @@ velocity transformations stated in Lecture 1. Consider the following: I
 am travelling on a train at <span class="math inline">\(50\,\rm
 m/s\)</span> , and you are standing by the side of the track. If I throw
 a ball forwards along the train at <span class="math inline">\(10\, \rm
-m/s\)</span> you will say the velocity of the ball is <span
+m/s\)</span> you will say the speed of the ball is <span
 class="math inline">\(50 + 10 = 60\,\rm m/s\)</span>. This is simply
 applying the velocity transformations.</p>
 <p>But now let’s say I do the same thing, except rather than throwing a
@@ -212,21 +212,19 @@ ball, I shine light from a torch along the direction the train is moving
 in. The second postulate says that, from my point of view, the speed of
 light is equal to <span class="math inline">\(c\)</span>. If we apply
 the velocity transforms, the speed you measure would be <span
-class="math inline">\((c + 50\,\rm m/s\)</span>. But the second
+class="math inline">\((c + 50)\,\rm m/s\)</span>. But the second
 postulate says that you also measure the speed of light to be equal to
 <span class="math inline">\(c\)</span>. Therefore, if we accept the
 postulates, then we need to modify the Gailean transformations.</p>
 <p>In Chapter 1, we stated the Galilean transformations between two
 inertial frames of reference, <span class="math inline">\(S\)</span> and
 <span class="math inline">\(S&#39;\)</span>, to be:</p>
-<p><span class="math display">\[x&#39;=x-ut
-\\y&#39;=y
-\\z&#39;=z
-\\t&#39;=t\]</span></p>
-<p><span class="math display">\[x=x&#39;+ut&#39;
-\\y=y&#39;
-\\z=z&#39;
-\\t=t&#39;\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+x&#39;&amp;=x-ut \iff x = x&#39; + ut           
+\\y&#39;&amp;=y
+\\z&#39;&amp;=z
+\\t&#39;&amp;=t
+\end{aligned}\]</span></p>
 <p>We know that these equations work well for most objects that we
 interact with, so the modified form of the equations must be such that
 they still give (approximately) the same answer for situations where we
@@ -239,14 +237,18 @@ paper by Lorentz as a somewhat <em>ad hoc</em> solution to the problem
 of the Michelson-Morley experiment, although Lorentz still very much
 believed in the ether. The transformations are:</p>
 <div class="definition">
-<p><span class="math display">\[x&#39;=\gamma (x-ut)
-\\y&#39;=y
-\\z&#39;=z
-\\t&#39;=\gamma(t-ux/c^2)\]</span></p>
-<p><span class="math display">\[x=\gamma(x&#39;+ut&#39;)
-\\y=y&#39;
-\\z=z&#39;
-\\t=\gamma(t&#39;+ux&#39;/c^2)\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+x&#39;&amp;=\gamma (x-ut)
+\\y&#39;&amp;=y
+\\z&#39;&amp;=z
+\\t&#39;&amp;=\gamma(t-ux/c^2)
+\end{aligned}\]</span></p>
+<p><span class="math display">\[\begin{aligned}
+x&amp;=\gamma(x&#39;+ut&#39;)
+\\y&amp;=y&#39;
+\\z&amp;=z&#39;
+\\t&amp;=\gamma(t&#39;+ux&#39;/c^2)
+\end{aligned}\]</span></p>
 <p>where</p>
 <p><span class="math display">\[\gamma =
 \sqrt{\frac{1}{1-u^2/c^2}}\]</span></p>
@@ -299,11 +301,13 @@ relativity.</p>
 <p>We will assume that space is isotropic and homogeneous. That is to
 say that the laws of physics do not depend on the direction we are
 moving in or where we are in space. If that is the case then we can
-write the most general possible transformation between two inertial
-frames as <span class="math display">\[x&#39; = \gamma(x-ut)
-\\x = \gamma(x&#39;+ut&#39;)\]</span> Note that we are calling the
-constant <span class="math inline">\(\gamma\)</span>, but at this point
-in the derivation we don’t know what <span
+write the most general possible transformations between two inertial
+frames as <span class="math display">\[\begin{aligned}
+x&#39; &amp;= \gamma(x-ut)
+\\x &amp;= \gamma(x&#39;+ut&#39;)
+\end{aligned}\]</span> Note that we are calling the constant <span
+class="math inline">\(\gamma\)</span>, but at this point in the
+derivation we don’t know what <span
 class="math inline">\(\gamma\)</span> is yet!</p>
 <p>Why must they take this form? They must be linear, i.e. they cannot
 contain some power of <span class="math inline">\(x\)</span> or <span
@@ -325,7 +329,7 @@ class="math inline">\(\gamma=1\)</span>. This gives us the Galilean
 transformations.</p>
 <p>But now let’s abandon the constraint that <span
 class="math inline">\(t=t&#39;\)</span> and see what happens. Moving to
-the second postulate, we have that light travels at the same velocity in
+the second postulate, we have that light travels at the same speed in
 both <span class="math inline">\(S\)</span> and <span
 class="math inline">\(S&#39;\)</span>. So if we imagine a pulse of light
 moving in <span class="math inline">\(S\)</span> at <span
