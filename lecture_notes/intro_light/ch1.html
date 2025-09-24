@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Mike Hughes" />
+  <meta name="author" content="George Dobre, Mike Hughes" />
   <title>Section 1 - Light as a Wave</title>
   <style>
     html {
@@ -174,7 +174,7 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Section 1 - Light as a Wave</h1>
-<p class="author">Mike Hughes</p>
+<p class="author">George Dobre, Mike Hughes</p>
 <p class="date">Physics and Astronomy, University of Kent</p>
 </header>
 <p>A full description of the propagation of light is a complex
@@ -194,28 +194,28 @@ Despite the apparent severity of these approximations, our picture will
 be useful enough to allow us to understand the operation of several
 important optical devices, including telescopes and microscopes.</p>
 <h1 id="light-as-a-wave">Light as a Wave</h1>
-<p>Light is a wave in the electromagnetic field, and so you should
-<strong>review the waves section of PH321 before continuing</strong>.
+<p>Light is a wave in the electromagnetic field, and so this module is
+linked to <strong>the waves section of ‘Mechanics and Waves‘</strong>.
 Like any wave, a light wave can be described in terms of its amplitude
 (<span class="math inline">\(A\)</span>), frequency (<span
 class="math inline">\(f\)</span>), wavelength (<span
 class="math inline">\(\lambda\)</span>), period (<span
 class="math inline">\(T\)</span>), and phase (<span
-class="math inline">\(\phi\)</span>).We also define the wavenumber,
+class="math inline">\(\phi\)</span>). We also define the wavenumber,
 <span class="math inline">\(k = 2\pi/ \lambda\)</span> and the angular
 frequency <span class="math inline">\(\omega = 2\pi f\)</span>. Then we
 can write an expression for the magnitude of the electric field as a
 function of position (<span class="math inline">\(z\)</span>) and time
 (<span class="math inline">\(t\)</span>): <span class="math display">\[E
-= sin(kz - \omega t + \phi)\]</span> where <span
+= A sin(kz - \omega t + \phi)\]</span> where <span
 class="math inline">\(\phi\)</span> is some initial phase. We could
 write something similar for <span class="math inline">\(B\)</span>, as
 it turns out for a travelling electromagnetic wave <span
 class="math inline">\(E\)</span> and <span
 class="math inline">\(B\)</span> vary in the same way (they have the
 same frequency/wavelength but the oscillations are perpendicular to each
-other, at least in the idealised case). This is beyond the scope of
-PH322, but you will learn more about it in Stages 2 and 3.</p>
+other, at least in the idealised case). This is beyond the scope of this
+module, but you will learn more about it in Stages 2 and 3.</p>
 <p>From the equation it is clear that the field varies in both time and
 space, so when we draw a wave we need to be clear what we are drawing -
 either the spatial wave at a fixed point in time (<span
@@ -226,7 +226,10 @@ data-reference="waves">1</a>).</p>
 <figure id="waves">
 <img src="figs/waves.png" style="width:8cm" />
 <figcaption>Light waves, viewed at a single point in space (left) and a
-single point in time (right)</figcaption>
+single point in time (right). In both cases we see apparently similar
+sinusoidal patterns, but on the left (a fixed point in space) we see it
+plotted against time and on the right (a fixed point in time) we see it
+plotted against position.</figcaption>
 </figure>
 <p>The argument of the <span class="math inline">\(\sin\)</span>
 function is called the phase. This tells us the point in the wave cycle
@@ -254,9 +257,10 @@ of a wavefront of light. It is empirical, in the sense that is was
 derived by observations rather than than from any fundamental
 considerations.</p>
 <div class="definition">
-<p>Each point on a wavefront acts as source of secondary wavelets. These
-wavelets have the same velocity and frequency as the original wave. The
-envelope of these wavelets forms the new wavefront.</p>
+<p>Huygens’ Principle states that each point on a wavefront acts as
+source of secondary wavelets. These wavelets have the same velocity and
+frequency as the original wave. The envelope of these wavelets forms the
+new wavefront.</p>
 </div>
 <p>This says that if we have a wavefront, we can calculate how the
 wavefront at some future point in time will look by assuming that each
@@ -264,15 +268,18 @@ point on the wavefront acts as a source of spherical waves. We then take
 the envelope of these new waves, and that is now the new wave.</p>
 <figure id="huygens">
 <img src="figs/huygens.png" style="width:12cm" />
-<figcaption>Illustration of Huygen’s Principle of planar wave (left) and
-spherical diverging wave (right)</figcaption>
+<figcaption>Illustration of Huygens’ Principle for a planar wave (left)
+and spherical diverging wave (right). In both cases we draw expanding
+circular wavefronts emerging from each point along the the wavefront.
+The wavefront at a future point in time is then determined by connecting
+these wavefronts. </figcaption>
 </figure>
 <p><strong>Non-examinable Aside:</strong> Christiaan Huygens had no
 explanation of why this seemed to be true. In fact the reason can only
 be understood in terms of a travelling wave solution to Maxwell’s
 equations, and in particular the approximate description of this given
-by scalar diffraction theory, which you will be introduced to in
-PH604.</p>
+by scalar diffraction theory, which you will be introduced to later in
+your studies.</p>
 <p>The flaw with Huygens’ principle is that it also suggests that there
 is a wave running backwards, i.e. there is nothing to encode the
 direction of the wave. This problem was later solved by Kirchhoff, but
@@ -295,13 +302,15 @@ class="math display">\[n=c/v\]</span></p>
 </div>
 <p>By definition, the refractive index of a vacuum is 1. Air is about
 1.003, which we often take to be 1 for practical purposes. Water has a
-refractive index of 1.4, and glass varies from 1.4-1.7.</p>
+refractive index of around 1.4, and glass varies from 1.4 (lighter
+glasses) to 1.7 (heavier glasses).</p>
 <h1 id="dispersion">Dispersion</h1>
 <p>For most materials, <span class="math inline">\(n\)</span> decreases
-slightly with wavelength over the visible region. This gives rise to an
-effect known as <strong>dispersion</strong>. Since different wavelengths
-of light will travel at different speeds in the material, a short pulse
-of multi-wavelength light will become spread out. This is the ultimate
+(typically by 1-2%) with wavelength over the visible region and beyond
+into infrared. This gives rise to an effect known as
+<strong>dispersion</strong>. Since different wavelengths of light will
+travel at different speeds in the material, a short pulse of
+multi-wavelength light will become spread out. This is the ultimate
 limit on how much data can be sent over fibre optics. It also explains
 how a spectrum is produced from a prism (see Section <a href="#snell"
 data-reference-type="ref" data-reference="snell">[snell]</a>).</p>

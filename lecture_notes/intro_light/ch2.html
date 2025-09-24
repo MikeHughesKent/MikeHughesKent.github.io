@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Mike Hughes" />
+  <meta name="author" content="George Dobre, Mike Hughes" />
   <title>Section 2 - Geometrical Optics</title>
   <style>
     html {
@@ -174,7 +174,7 @@
 <body>
 <header id="title-block-header">
 <h1 class="title">Section 2 - Geometrical Optics</h1>
-<p class="author">Mike Hughes</p>
+<p class="author">George Dobre, Mike Hughes</p>
 <p class="date">Physics and Astronomy, University of Kent</p>
 </header>
 <h1 id="geometrical-optics">Geometrical Optics</h1>
@@ -197,8 +197,8 @@ geometrical optics.</p>
 derive a number of important rules in geometrical optics, including the
 laws of reflection and refraction.</p>
 <div class="definition">
-<p>The path taken by light in travelling from one point to another is
-such that the travel time is minimum.</p>
+<p>Fermat’s principle states that the path taken by light in travelling
+from one point to another is such that the travel time is minimum.</p>
 </div>
 <p>In uniform media, this is equivalent to saying that light travels in
 straight lines. When light moves between media with different refractive
@@ -211,7 +211,12 @@ angle of the incident beam, when both are measured with respect to the
 normal of the interface.</p>
 <figure id="snell">
 <img src="figs/snell.png" style="width:6cm" />
-<figcaption>Reflection and refraction at a surface.</figcaption>
+<figcaption>Reflection and refraction at a surface. For reflection, the
+angle of reflection is equal to the angle of incidence, both measured
+with respect to the surface normal. For refraction, the angle of
+incidence and refraction are related via Snell’s Law. In the case shown,
+light is entering a medium with a higher refractive index, and so
+bending towards the surface normal.</figcaption>
 </figure>
 <div class="definition">
 <p><span class="math display">\[\theta_1&#39; = \theta_1\]</span></p>
@@ -250,26 +255,27 @@ glass surface which light hits results in a 4% loss. In practice,
 special coatings can be applied to reduce the reflected intensity to a
 fraction of one percent. Or, we may want to make a mirror, in which case
 we apply a coating or backing which increases the reflected intensity to
-90% or more (depending on how much you want to spend on your mirror)</p>
+90% or more (depending on how much you want to spend on your
+mirror).</p>
 <h1 id="total-internal-reflection">Total Internal Reflection</h1>
 <p>If we look at Snell’s Law we might notice that, when going from a
 higher to lower refractive index, there is going to be some range of
 incident angles for which the angle of refraction becomes larger than
 <span class="math inline">\(90^o\)</span>. What happens then? At this
-point there is no refraction, and all the light is reflected. This is
-called total internal reflection. This has many important applications,
-in fact it is the geometrical optics explanation for how fibre optics
-transmit light without losses (although a full understanding of fibre
-optics requires an analysis using a wave model of light).</p>
+point there is no refraction, and all the light is reflected back into
+the denser medium. This is called total internal reflection. This has
+many important applications, in fact it is the geometrical optics
+explanation for how fibre optics transmit light without losses (although
+a full understanding of fibre optics requires an analysis using a wave
+model of light).</p>
 <p>The angle of incidence for which the angle of refraction is <span
 class="math inline">\(90^o\)</span> is called the <strong>critical
 angle</strong>. For angles of incidence greater than this, there is no
 refracted ray. We can find this critical angle, <span
 class="math inline">\(\theta_c\)</span> by setting the angle of
 refraction equal to <span class="math inline">\(90^o\)</span> in Snell’s
-Law (Equation <a href="#snell" data-reference-type="ref"
-data-reference="snell">1</a>). <span class="math display">\[\sin
-\theta_c = \frac{n_2}{n_1} \sin 90^o = \frac{n_2}{n_1}\]</span></p>
+Law. <span class="math display">\[\sin \theta_c = \frac{n_2}{n_1} \sin
+90^o = \frac{n_2}{n_1}\]</span></p>
 <p>and so <span class="math display">\[\theta_c = \arcsin
 \frac{n_2}{n_1}\]</span></p>
 <p>Note that total internal reflection can only happen inside the medium
@@ -321,7 +327,9 @@ visualise), but this is an illusion. After all, why would it flip on
 one-axis but not the other?</p>
 <figure id="mirror">
 <img src="figs/mirror.png" style="width:8cm" />
-<figcaption>Reflection from a plane mirror.</figcaption>
+<figcaption>Reflection from a plane mirror. An observer looking at an
+object in a mirror sees a virtual image of the object, as though it is
+behind the mirror.</figcaption>
 </figure>
 <h1 id="the-spherical-mirror">The Spherical Mirror</h1>
 <p>A spherical mirror is a mirror shaped like part of the surface of a
@@ -336,7 +344,14 @@ class="math inline">\(f\)</span>. It is given by <span
 class="math display">\[f = \frac{R}{2}\]</span></p>
 <figure id="sph_mirror">
 <img src="figs/sph_mirror.png" style="width:14cm" />
-<figcaption>Reflection from a spherical mirror.</figcaption>
+<figcaption>Reflection from a spherical mirror. For an object at
+infinity, rays come in parallel and are focused to point <span
+class="math inline">\(P\)</span> at the focal length of the mirror,
+<span class="math inline">\(f\)</span>. For an object at <span
+class="math inline">\(O\)</span>, which is further than <span
+class="math inline">\(f\)</span> from the mirror, the rays converge at
+point <span class="math inline">\(I\)</span>, which is also further than
+<span class="math inline">\(f\)</span> from the mirror.</figcaption>
 </figure>
 <p>So, if we have an object at infinity, creating collimated rays, then
 an image will be formed at the focal length, <span
@@ -378,7 +393,21 @@ two angles <span class="math inline">\(\theta\)</span> which are equal
 as per the law of reflection.</p>
 <figure id="mirror_der">
 <img src="figs/mirror_der.png" style="width:14cm" />
-<figcaption>Set up for deriving mirror equation.</figcaption>
+<figcaption>Set up for deriving mirror equation. <span
+class="math inline">\(O\)</span> is the object, <span
+class="math inline">\(A\)</span> is the point on the mirror that a ray
+from <span class="math inline">\(O\)</span> strikes, and <span
+class="math inline">\(I\)</span> is the point it (and all other rays
+from <span class="math inline">\(O\)</span>) is focused to. The line
+<span class="math inline">\(AC\)</span> is a radial line of the
+spherical mirror, from the centre of the sphere <span
+class="math inline">\(C\)</span> to point <span
+class="math inline">\(A\)</span>. Angle <span
+class="math inline">\(\alpha\)</span> is the angle the incident rays
+makes with the optical axis, <span class="math inline">\(\beta\)</span>
+is the angle the radial line AC makes with the optical axis and <span
+class="math inline">\(\gamma\)</span> is the angle the focused ray makes
+with the optical axis.</figcaption>
 </figure>
 <p>From the triangle OAC we have <span class="math inline">\(\alpha +
 \theta + (180^0 - \beta) = 180^o\)</span>. From the triangle CAI we have
@@ -395,14 +424,14 @@ class="math display">\[\begin{aligned}
 \frac{2h}{R} &amp;= \frac{h}{s} + \frac{h}{s&#39;} \\
 \frac{2}{R} &amp;= \frac{1}{s} + \frac{1}{s&#39;} \\
 \end{aligned}\]</span></p>
-<p>To show that <span class="math inline">\(f = 1/R\)</span> we consider
+<p>To show that <span class="math inline">\(f = R/2\)</span> we consider
 what happens as the object position <span
 class="math inline">\(s\)</span> tends to infinity, which means that, by
 definition, the image will now be at the focal point, i.e. <span
 class="math display">\[\begin{aligned}
 \frac{2}{R} &amp;= \frac{1}{s&#39;} \\
 \frac{2}{R} &amp;= \frac{1}{f} \\
-f &amp;= \frac{2}{R}
+f &amp;= \frac{R}{2}
 \end{aligned}\]</span> and so: <span class="math display">\[\frac{1}{f}
 = \frac{1}{s} + \frac{1}{s&#39;} \\\]</span></p>
 <h1 id="the-thin-lens">The Thin Lens</h1>
@@ -427,15 +456,16 @@ other side of the lens.</p>
 <p><strong>Note that <span class="math inline">\(s\)</span> and <span
 class="math inline">\(s&#39;\)</span> are both measured from the lens
 outwards</strong> (i.e. <span class="math inline">\(s\)</span> is
-measured from right to left and <span class="math inline">\(s\)</span>
-is measured from left to right.) An object to the left of the lens has a
-positive <span class="math inline">\(s\)</span> and an image to the
-right of the lens has a negative <span
-class="math inline">\(s&#39;\)</span>. This is called the
-<strong>Gaussian co-ordinate system</strong>. An alternative system, the
-Cartesian co-ordinates system, measures everything from left to right
-which is useful when dealing with some kinds of systems. In this case,
-the lens equation would have a minus sign before the <span
+measured from right to left and <span
+class="math inline">\(s&#39;\)</span> is measured from left to right.)
+An object to the left of the lens has a positive <span
+class="math inline">\(s\)</span> and an image to the right of the lens
+has a positive <span class="math inline">\(s&#39;\)</span>. This is
+called the <strong>Gaussian co-ordinate system</strong>. An alternative
+system, the Cartesian co-ordinates system, measures everything from left
+to right which can actually be more useful when dealing with some kinds
+of systems and is used in raytracing software. In this case, the lens
+equation would have a minus sign before the <span
 class="math inline">\(1/s&#39;\)</span> term.</p>
 <p>The focal length <span class="math inline">\(f\)</span> is fixed for
 a given lens, it depends on the curvature of its surface according to
@@ -448,7 +478,17 @@ second surface, and <span class="math inline">\(n\)</span> is the
 refractive index of the lens material.</p>
 <figure id="lens">
 <img src="figs/lens.png" style="width:14cm" />
-<figcaption>The thin lens.</figcaption>
+<figcaption>The thin lens. For an object at infinity, rays come in to
+the lens parallel and are focused to a point <em>p</em> a distance <span
+class="math inline">\(f\)</span> from the lens. For an object at
+distance <span class="math inline">\(s\)</span>, which is further from
+the lens than the focal length <span class="math inline">\(f\)</span>,
+rays come in to the lens diverging and are focused to a point <span
+class="math inline">\(I\)</span> on the other side of the lens, which is
+again further than <span class="math inline">\(f\)</span>. The distances
+from the lens to the object and image are labelled <span
+class="math inline">\(s\)</span> and <span
+class="math inline">\(s&#39;\)</span>.</figcaption>
 </figure>
 <p>A real image is obtained for <span class="math inline">\(s &gt;
 f\)</span>. Otherwise there will be no real image, and <span
