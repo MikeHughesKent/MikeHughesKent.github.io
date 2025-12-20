@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Nuclear Physics Section 4 - The Shell Model</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -222,13 +225,15 @@ that each nucleon sees an average ‘net’ potential due to all the other
 nucleons. This net potential is then the potential in the Schrödinger
 equation. However, as when we modelled the deuteron, we have the problem
 that we don’t know exactly what this potential is.</p>
-<p>Some experimentation can determined that a good guess for the
-potential is to assume that is spherically symmetric and takes the form:
-<span class="math display">\[V(r) = - \frac{V_0}{1 + \exp \frac{r-R}{a}}
-    \label{eqn:fermiPot}\]</span> where <span
-class="math inline">\(V_0\)</span> is a constant, <span
-class="math inline">\(r\)</span> is the radial co-ordinate and <span
-class="math inline">\(R\)</span> and <span
+<p>Some experimentation can determine that a good guess for the
+potential is the Woods-Saxon potential which assumes that is spherically
+symmetric and takes the form: <span
+class="math display">\[\begin{equation}
+    V(r) = - \frac{V_0}{1 + \exp \frac{r-R}{a}}
+    \label{eqn:fermiPot}
+\end{equation}\]</span> where <span class="math inline">\(V_0\)</span>
+is a constant, <span class="math inline">\(r\)</span> is the radial
+co-ordinate and <span class="math inline">\(R\)</span> and <span
 class="math inline">\(a\)</span> are constants. You may remember that we
 studied this equation in Workshop 1 in a slightly different context, so
 you will know that <span class="math inline">\(R\)</span> is the radius
@@ -242,8 +247,9 @@ would have to try different values until we reproduce experimental
 binding energies, it turns out <span class="math inline">\(V_0 =
 50\)</span> MeV gives the best results.</p>
 <p>The solution to this spherical potential will then have the form:
-<span class="math display">\[\Psi =
-R_{nl}Y_{lm_l}(\theta,\phi)\]</span></p>
+<span class="math display">\[\begin{equation}
+    \Psi = R_{nl}Y_{lm_l}(\theta,\phi)
+\end{equation}\]</span></p>
 <p>As before, the <span class="math inline">\(R\)</span> is a radial
 component and the <span class="math inline">\(Y\)</span> is the angular
 component and these solutions are separable. The solutions for <span
@@ -264,13 +270,13 @@ have each energy level, is <span class="math inline">\(2(2l +
 class="math inline">\(m_s\)</span> spin states and the <span
 class="math inline">\(2l + 1\)</span> allows for the different <span
 class="math inline">\(m_l\)</span> states.</p>
-<p><strong>The important thing to realise that protons and neutrons fill
-up their own shells. Protons and neutrons are not identical particles
-and so the Pauli exclusion principle doesn’t apply between a proton and
-a neutron.</strong></p>
+<p><strong>The important thing to realise is that protons and neutrons
+fill up their own shells. Protons and neutrons are not identical
+particles and so the Pauli exclusion principle doesn’t apply between a
+proton and a neutron.</strong></p>
 <h2 id="comparison-with-atomic-energy-levels">Comparison with Atomic
 Energy Levels</h2>
-<p>If we compare with the atomic shell mode, we can also identify two
+<p>If we compare with the atomic shell model, we can also identify two
 other important difference:</p>
 <ul>
 <li><p>The energy and radius scales are very different.</p></li>
@@ -299,7 +305,7 @@ physics.</p>
 nice as we might have hoped, as shown in Table <a href="#tab:levels"
 data-reference-type="ref" data-reference="tab:levels">1</a>. (There is
 no need to memorise the order, I would give you this in an exam, but you
-would need to known how to work out the degeneracy.)</p>
+would need to know how to work out the degeneracy.)</p>
 <div id="tab:levels">
 <table>
 <caption>Shell filling predicted by a simple shell model</caption>
@@ -355,11 +361,12 @@ problem.</p>
 is a combination of the orbital angular momentum and spin of its
 constituents. An effect called ‘spin-orbit’ coupling requires a
 modification to the potential.</p>
-<p>The modified potential is: <span class="math display">\[V&#39; =
-V_{Fermi}(r) - V_{SO}(r)(l \cdot s)
-   \label{eqn:SOPot}\]</span> where we have labelled the original
-potential from Equation <a href="#eqn:fermiPot"
-data-reference-type="ref"
+<p>The modified potential is: <span
+class="math display">\[\begin{equation}
+    V&#39; = V_{Fermi}(r) - V_{SO}(r)(l \cdot s)
+   \label{eqn:SOPot}
+\end{equation}\]</span> where we have labelled the original potential
+from Equation <a href="#eqn:fermiPot" data-reference-type="ref"
 data-reference="eqn:fermiPot">[eqn:fermiPot]</a> as <span
 class="math inline">\(V_{Fermi}\)</span>. The form of <span
 class="math inline">\(V_{SO}\)</span> is not so critical for the magic
@@ -380,7 +387,7 @@ class="math inline">\(l + s\)</span>. (This is derived below).</p>
 <p>The simplest way to see what happens is via an example. Consider a
 <span class="math inline">\(1f\)</span> state (<span
 class="math inline">\(l = 3\)</span>). In this case, spin-orbit coupling
-could give us two possible values for the nucleus spin, we could have
+could give us two possible values for the nuclear spin, we could have
 <span class="math inline">\(j = |l - 1/2| = 5/2\)</span> or <span
 class="math inline">\(j = l + 1/2 = 7/2\)</span>. We label these states
 as <span class="math inline">\(1f_{5/2}\)</span> and <span
@@ -479,53 +486,56 @@ in Equation <a href="#eqn:SOPot" data-reference-type="ref"
 data-reference="eqn:SOPot">[eqn:SOPot]</a> modifies the potential.
 Beginning with <span class="math inline">\(\vec{J} = \vec{L} +
 \vec{S}\)</span>, from geometry we can also say: <span
-class="math display">\[J^2 = L^2 + S^2 - 2\vec{L}\cdot \vec{S}\]</span>
-where <span class="math inline">\(J = |\vec{J}|\)</span> and so on.
-Re-arranging: <span class="math display">\[\vec{L}\cdot \vec{S} =
-1/2(J^2 - L^2 - S^2)\]</span></p>
+class="math display">\[\begin{equation}
+    J^2 = L^2 + S^2 - 2\vec{L}\cdot \vec{S}
+\end{equation}\]</span> where <span class="math inline">\(J =
+|\vec{J}|\)</span> and so on. Re-arranging: <span
+class="math display">\[\begin{equation}
+    \vec{L}\cdot \vec{S} = 1/2(J^2 - L^2 - S^2)
+\end{equation}\]</span></p>
 <p>We parameterise <span class="math inline">\(J\)</span> with the
 quantum number <span class="math inline">\(j\)</span>, such that <span
-class="math display">\[J^2 = j(j+1)\hbar^2\]</span></p>
+class="math display">\[\begin{equation}
+    J^2 = j(j+1)\hbar^2
+\end{equation}\]</span></p>
 <p>For the case where the <span class="math inline">\(l\)</span> and
 <span class="math inline">\(s\)</span> are aligned, we have <span
 class="math inline">\(J = L + S = L + 1/2\)</span> and so: <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
     J_{(L+S)}^2 &amp;= (l + 1/2)(l + 3/2)\hbar^2 \\
     &amp;=(l^2 + 2l +3/4) \hbar^2
-\end{aligned}\]</span> and so <span
-class="math display">\[\begin{aligned}
+\end{align}\]</span> and so <span class="math display">\[\begin{align}
     \vec{L} \cdot \vec{S} &amp;= 1/2[(l^2 + 2l +3/4)\hbar^2 -
 l(l+1)\hbar^2 - s(s+1)\hbar^2] \\
     &amp;= 1/2[(l^2 + 2l +3/4)\hbar^2 - l(l+1)\hbar^2 -
 1/2(1/2+1)\hbar^2] = (1/2)l \hbar^2
-\end{aligned}\]</span> where we have used that <span
+\end{align}\]</span> where we have used that <span
 class="math inline">\(S = s(s+1)\hbar^2\)</span> and <span
 class="math inline">\(L =l(l+1)\hbar^2\)</span>.</p>
 <p>Similarly for for the anti-aligned, <span class="math inline">\(J = L
-- S\)</span>, case we have: <span class="math display">\[\begin{aligned}
+- S\)</span>, case we have: <span class="math display">\[\begin{align}
     J_{(L-S)}^2 &amp;= (l - 1/2)(l + 3/2)\hbar^2 \\
     &amp;=(l^2 - 1/4) \hbar^2
-\end{aligned}\]</span> and then <span
-class="math display">\[\begin{aligned}
+\end{align}\]</span> and then <span class="math display">\[\begin{align}
     \vec{L} \cdot \vec{S} &amp;= 1/2[(l^2 - 1/4)\hbar^2 - l(l+1)\hbar^2
 - s(s+1)\hbar^2] \\
     &amp;= 1/2[(l^2 -1/4)\hbar^2 - (l^2+l)\hbar^2 - 3/4\hbar^2] =
 -(1/2)(l+1) \hbar^2
-\end{aligned}\]</span> So we can see that there is a difference in sign,
+\end{align}\]</span> So we can see that there is a difference in sign,
 as we would expect, and also a different in the magnitude. The
 difference in energy between the split states will therefore be
-proportional to: <span class="math display">\[\begin{aligned}
+proportional to: <span class="math display">\[\begin{align}
     \Delta_{\vec{L} \cdot \vec{S}} &amp; = (\vec{L}\cdot \vec{S})_{(L +
 S)} - (\vec{L}\cdot \vec{S})_{(L - S)}  \\
     &amp;= (1/2) l \hbar^2 - [ -(1/2)(l + 1)\hbar^2] \\
     &amp;= (l + 1/2)\hbar^2
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <h1 id="nuclear-spin-and-parity-from-the-shell-model">Nuclear Spin and
 Parity from the Shell Model</h1>
 <p>The shell model allows us to predict the spins and parities of the
 ground states of certain nuclei:</p>
 <ul>
-<li><p>Nuclei with even numbers of protons and neutron.</p></li>
+<li><p>Nuclei with even numbers of protons and neutrons.</p></li>
 <li><p>Nuclei with odd numbers of protons or neutrons (with the other
 even) <strong>and</strong> which are one short of filling
 shell.</p></li>
@@ -545,7 +555,7 @@ class="math inline">\(1p_{1/2}\)</span> level unfilled. This is the
 state that determines the spin of the nucleus, <span
 class="math inline">\(j = 1/2\)</span>. The unpaired neutron is in the
 <span class="math inline">\(p\)</span> state, which is <span
-class="math inline">\(l = 3\)</span>. Recall parity =<span
+class="math inline">\(l = 1\)</span>. Recall parity =<span
 class="math inline">\((-1)^l\)</span>, so the parity is odd. We write
 this state as <span class="math inline">\(^{15}_8O(1/2-)\)</span></p>
 <p>For another example, take <span
@@ -558,7 +568,7 @@ state is <span class="math inline">\(^{17}_8 O(5/2+)\)</span>. The
 configurations of these two isotopes of oxygen are illustrated in Figure
 <a href="#fig:oxylevels" data-reference-type="ref"
 data-reference="fig:oxylevels">2</a>.</p>
-<figure id="fig:oxylevels">
+<figure id="fig:oxylevels" data-latex-placement="H">
 <img src="figs/levels.png" style="width:4in" />
 <figcaption>Occupation of energy levels for O-15 and O-17. The two
 possible spin states are shown by up and down arrows; these are arranged
@@ -617,7 +627,9 @@ levels between the proton and the neutron shells becomes greater.</p>
 <h2 id="dipole-and-quadrupole-moments">Dipole and Quadrupole
 Moments</h2>
 <p>The nuclear magnetic dipole moment is given by: <span
-class="math display">\[\mu = \mu_N(g_l L_z + g_sS_z),\]</span></p>
+class="math display">\[\begin{equation}
+    \mu = \mu_N(g_l L_z + g_sS_z),
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(\mu_N\)</span> is the nuclear
 magneton (a constant), <span class="math inline">\(g_l\)</span> is the
 gyromagnetic ratio associated with orbital angular momentum, <span
@@ -646,7 +658,7 @@ you studied in PHYS5040), which has a separation of charges and hence an
 axis, to higher order shapes which have multiple poles. This is
 illustrated in Figure <a href="#fig:quadrupole"
 data-reference-type="ref" data-reference="fig:quadrupole">3</a>.</p>
-<figure id="fig:quadrupole">
+<figure id="fig:quadrupole" data-latex-placement="H">
 <img src="figs/quadrupole.png" style="width:2.5in" />
 <figcaption>Illustration of concepts of monopoles, dipoles and
 quadrupoles.</figcaption>
@@ -666,9 +678,9 @@ excited state</p>
 <li><p>Pair-breaking, a single proton or neutron is moved into a higher
 energy level, leaving a hole.</p></li>
 <li><p>The nucleus gains vibrational energy.</p></li>
-<li><p>The nucleus gain rotational energy. This mainly occurs for nuclei
-with <span class="math inline">\(150 &lt; A &lt; 190\)</span> and <span
-class="math inline">\(A &gt; 230\)</span>.</p></li>
+<li><p>The nucleus gains rotational energy. This mainly occurs for
+nuclei with <span class="math inline">\(150 &lt; A &lt; 190\)</span> and
+<span class="math inline">\(A &gt; 230\)</span>.</p></li>
 </ul>
 <p>The first way is predicted by the shell model. The vibrational and
 rotational energy levels are not predicted by the shell model. Extending
@@ -680,14 +692,14 @@ more about them in an appendix if you are interested.</p>
 model the nucleus, ranging through the SEMF, our finite square well
 model of the deuteron, the simple shell model, the introduction of
 spin-orbit coupling and finally (briefly) the idea of the collective
-model. While all of these models have some success a at predicting
+model. While all of these models have some success at predicting
 experimental observations, it should be clear that none of them provides
 a complete description. They all attempt to simplify what is, in
 essence, an incredibly complex quantum-mechanical system of many
 interacting bodies. Of course there are many further complicated
 refinements to these models which are beyond the scope of this course,
 and research continues. Nevertheless, you will find the simple models we
-have developed useful we move on to study nuclear reactions and
+have developed useful as we move on to study nuclear reactions and
 decays.</p>
 </body>
 </html>

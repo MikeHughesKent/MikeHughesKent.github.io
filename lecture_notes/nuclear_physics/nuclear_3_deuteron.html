@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Nuclear Physics Section 3 - The Deuteron</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -217,7 +220,7 @@ class="math display">\[V(x) =
     \end{cases}\]</span> and this is shown in Figure <a
 href="#fig:infinite_well_energy" data-reference-type="ref"
 data-reference="fig:infinite_well_energy">1</a>.</p>
-<figure id="fig:infinite_well_energy">
+<figure id="fig:infinite_well_energy" data-latex-placement="!h">
 <img src="figs/infinite_well_energy.png" />
 <figcaption>Infinite square well. The shaded regions represent the
 barrier potential, the unshaded region is the inside of the potential
@@ -226,8 +229,9 @@ well.</figcaption>
 <p>We can find the wavefunction for the particle, <span
 class="math inline">\(\psi\)</span>, using the time-independent,
 non-relativistic Schrödinger equation, <span
-class="math display">\[-\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} +
-V(x)\psi(x) = E\psi.\]</span></p>
+class="math display">\[\begin{equation}
+    -\frac{\hbar^2}{2m} \frac{d^2\psi}{dx^2} + V(x)\psi(x) = E\psi.
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(\hbar\)</span> is a constant, <span
 class="math inline">\(m\)</span> is the mass of the particle, <span
 class="math inline">\(V(x)\)</span> is the potential energy and <span
@@ -235,23 +239,28 @@ class="math inline">\(E\)</span> is the particle’s energy. If we solve
 this equation for the infinite potential well, we find that the
 wavefunction must be zero in the region of infinite potential, whereas
 inside the well it takes the general form <span
-class="math display">\[\psi = A \sin kx + B \cos kx,\]</span> where
-<span class="math display">\[k = \frac{\sqrt{2mE}}{\hbar}.\]</span></p>
+class="math display">\[\begin{equation}
+    \psi = A \sin kx + B \cos kx,
+\end{equation}\]</span> where <span
+class="math display">\[\begin{equation}
+    k = \frac{\sqrt{2mE}}{\hbar}.
+\end{equation}\]</span></p>
 <p>However, the wavefunction must be continuous everywhere. Generally
 the derivative must also be continuous, but we will have to allow
 ourselves to sidestep this rule for infinite discontinuities in the
-potential (these aren’t terrible physical in any case, so we can think
+potential (these aren’t terribly physical in any case, so we can think
 of this more of an abstraction rather than a real physical system). The
 first condition essentially means that the wavefunction must be zero at
 the box boundaries (<span class="math inline">\(x = 0\)</span> and <span
 class="math inline">\(x=L\)</span>), which means that only certain
 values of <span class="math inline">\(k\)</span> are allowed, and also
 that <span class="math inline">\(B = 0\)</span> (since <span
-class="math inline">\(\cos 0 \ne 0)\)</span> If we substitute the
+class="math inline">\(\cos 0 \ne 0\)</span>) If we substitute the
 wavefunction in and impose these conditions, we find the allowed energy
-values are: <span class="math display">\[E_n = \frac{\hbar^2
-\pi^2}{2mL^2}n^2 \quad  \mathrm{where} \quad n \in
-\mathbb{N}\]</span></p>
+values are: <span class="math display">\[\begin{equation}
+    E_n = \frac{\hbar^2 \pi^2}{2mL^2}n^2 \quad  \mathrm{where} \quad n
+\in \mathbb{N}
+\end{equation}\]</span></p>
 <p>(Note <span class="math inline">\(\mathbb{N}\)</span> is the set of
 natural numbers, or positive integers, 1,2,3 etc, so <span
 class="math inline">\(n \in \mathbb{N}\)</span> means <span
@@ -259,17 +268,19 @@ class="math inline">\(n=1,2,3...\)</span>). The important thing here is
 that there are only discrete allowed energy levels for the particle, and
 that these are not evenly spaced.</p>
 <p>The corresponding wavefunction is <span
-class="math display">\[\psi_n(x) =
-\sqrt{\frac{2}{L}}\sin(k_nx),\]</span> where the normalisation factor is
-found by ensuring that <span class="math display">\[\int \psi(x)^2 dx =
-1.\]</span> Given that the square of the wavefunction is the probability
-of finding the particle in the interval <span class="math inline">\(x +
-dx\)</span>, this is equivalent to saying that the probability of
-finding the particle somewhere in the box is 1. The first four
-wavefunctions are shown in Figure <a href="#fig:infinite_well_wf"
-data-reference-type="ref"
+class="math display">\[\begin{equation}
+    \psi_n(x) = \sqrt{\frac{2}{L}}\sin(k_nx),  
+\end{equation}\]</span> where the normalisation factor is found by
+ensuring that <span class="math display">\[\begin{equation}
+    \int \psi(x)^2 dx = 1.
+\end{equation}\]</span> Given that the square of the wavefunction is the
+probability of finding the particle in the interval <span
+class="math inline">\(x + dx\)</span>, this is equivalent to saying that
+the probability of finding the particle somewhere in the box is 1. The
+first four wavefunctions are shown in Figure <a
+href="#fig:infinite_well_wf" data-reference-type="ref"
 data-reference="fig:infinite_well_wf">2</a>.</p>
-<figure id="fig:infinite_well_wf">
+<figure id="fig:infinite_well_wf" data-latex-placement="!h">
 <img src="figs/infinite_well_wf.png" />
 <figcaption>Wavefunctions for infinite square well for <span
 class="math inline">\(n\)</span> = 1 to 4. The wavefunctions are
@@ -281,23 +292,30 @@ illustrative purposes.</figcaption>
 <p>If we adjust our potential well so that the potential barrier
 enclosing the box is not infinite, giving a potential energy with some
 finite value <span class="math inline">\(V_0\)</span>, so that we have:
-<span class="math display">\[V(x) =
+<span class="math display">\[\begin{equation}
+    V(x) =
     \begin{cases}
       0, &amp; \text{if}\ -L/2 &lt; x &lt; L/2 \\
       V_0, &amp; \text{otherwise}
-    \end{cases}\]</span> and if we assume that the particle has an
-energy <span class="math inline">\(E &lt; V_0\)</span>, so that it is
-trapped in the box (classically), then the solution to the Schrödinger
-equation is different. We now have a non-zero wavefunction in the region
-with <span class="math inline">\(V(x) = V_0\)</span>, although this
-decays rapidly with distance from the edge of the barrier. After
-applying the wavefunction normalisability condition (i.e. ensuring that
-<span class="math inline">\(\psi\)</span> does not go to infinity), we
-find solutions: <span class="math display">\[\psi_2 = A\sin(kx) + B
-\cos(kx)\]</span> inside the box (<span class="math inline">\(-L/2 &lt;
-x &lt; L/2\)</span>), and solutions <span class="math display">\[\psi_1
-= C\exp(-\alpha x)\]</span> and <span class="math display">\[\psi_3 =
-C\exp(\alpha x)\]</span> in the left (<span class="math inline">\(x &lt;
+    \end{cases}
+\end{equation}\]</span> and if we assume that the particle has an energy
+<span class="math inline">\(E &lt; V_0\)</span>, so that it is trapped
+in the box (classically), then the solution to the Schrödinger equation
+is different. We now have a non-zero wavefunction in the region with
+<span class="math inline">\(V(x) = V_0\)</span>, although this decays
+rapidly with distance from the edge of the barrier. After applying the
+wavefunction normalisability condition (i.e. ensuring that <span
+class="math inline">\(\psi\)</span> does not go to infinity), we find
+solutions: <span class="math display">\[\begin{equation}
+    \psi_2 = A\sin(kx) + B \cos(kx)
+\end{equation}\]</span> inside the box (<span class="math inline">\(-L/2
+&lt; x &lt; L/2\)</span>), and solutions <span
+class="math display">\[\begin{equation}
+    \psi_1 = C\exp(-\alpha x)
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+    \psi_3 = C\exp(\alpha x)
+\end{equation}\]</span> in the left (<span class="math inline">\(x &lt;
 -L/2\)</span>) and right (<span class="math inline">\(x &gt;
 L/2\)</span>) barrier regions, respectively.</p>
 <p>Unfortunately there is no analytical solution this time, but some
@@ -309,7 +327,7 @@ then the particle is no longer bound. The finite potential well and some
 example energy levels for a particular configuration are shown in Figure
 <a href="#fig:finite_well_energy" data-reference-type="ref"
 data-reference="fig:finite_well_energy">3</a>.</p>
-<figure id="fig:finite_well_energy">
+<figure id="fig:finite_well_energy" data-latex-placement="!h">
 <img src="figs/finite_well_energy.png" />
 <figcaption>Energy diagram for finite square well in 1D. Example energy
 levels are shown as dashed blue lines.</figcaption>
@@ -317,7 +335,7 @@ levels are shown as dashed blue lines.</figcaption>
 <p>We can perform the same operation for other potentials. For example,
 the harmonic oscillator has a potential energy of the form <span
 class="math inline">\(V \propto x^2\)</span> and has solutions with
-energy levels <span class="math inline">\(E_n = E(n + 1/2)\hbar
+energy levels <span class="math inline">\(E_n = (n + 1/2)\hbar
 \omega\)</span> where where <span class="math inline">\(\omega\)</span>
 is the angular frequency of oscillation (as defined classically). Here,
 again, there are infinitely many solutions, and in this case they happen
@@ -326,32 +344,39 @@ the well will have non-zero but decaying solutions.</p>
 <h2 id="potentials-in-3d">Potentials in 3D</h2>
 <p>To model the physical world we need to consider potentials in 3D. You
 have already seen this for the <span class="math inline">\(1/r\)</span>
-Coulomb potential when you modelled the atom in PHYS5030.</p>
+Coulomb potential when you modelled the atom.</p>
 <p>Perhaps the simplest 3D potential is a cubical box of dimensions
 <span class="math inline">\(a \times a \times a\)</span>. The potential
-energy is: <span class="math display">\[V(x,y,z) =
+energy is: <span class="math display">\[\begin{equation}
+V(x,y,z) =
     \begin{cases}
         0 &amp; 0 \leq x \leq a, \quad 0 \leq y \leq a, \quad 0 \leq z
 \leq a \\
         \infty &amp; x &lt; 0, \quad x &gt;a, \quad y &lt;0, \quad y&gt;
 a, \quad z &lt; 0, \quad z &gt;a
-    \end{cases}\]</span> Outside of the box the potential is infinite
-and so <span class="math inline">\(\psi = 0\)</span> here.</p>
+    \end{cases}
+\end{equation}\]</span> Outside of the box the potential is infinite and
+so <span class="math inline">\(\psi = 0\)</span> here.</p>
 <p>The 3D time-independent Schrödinger equation is <span
-class="math display">\[-\frac{\hbar}{2m} \nabla^2 \psi + V\psi =
-E\psi,\]</span></p>
+class="math display">\[\begin{equation}
+    -\frac{\hbar^2}{2m} \nabla^2 \psi + V\psi = E\psi,
+\end{equation}\]</span></p>
 <p>or more explicitly in Cartesian co-ordinates <span
-class="math display">\[-\frac{\hbar}{2m} \bigg (\frac{\partial ^2
-\psi}{\partial x^2} + \frac{\partial ^2 \psi}{\partial y^2} +
-\frac{\partial ^2 \psi}{\partial z^2} \bigg) + V(x,y,z)\psi(x,y,z)= E
-\psi(x,y,z).\]</span> Solving this for the 3D square box, we obtain
+class="math display">\[\begin{equation}
+    -\frac{\hbar^2}{2m} \bigg (\frac{\partial ^2 \psi}{\partial x^2} +
+\frac{\partial ^2 \psi}{\partial y^2} + \frac{\partial ^2 \psi}{\partial
+z^2} \bigg) + V(x,y,z)\psi(x,y,z)= E \psi(x,y,z).
+\end{equation}\]</span> Solving this for the 3D square box, we obtain
 eigenfunctions (wavefunctions) of the form <span
-class="math display">\[\psi_{n_x, n_y, n_z} = \sqrt{\bigg (\frac{2}{a}
-\bigg)^2} \sin \frac{n_x \pi x}{a} \sin \frac{n_y \pi y}{a} \sin
-\frac{n_z \pi z}{a},\]</span> with energy eigenvalues <span
-class="math display">\[E_{n_x,n_y,n_z} = \frac{\hbar^2\pi^2}{2ma^2}
-(n_x^2 + n_y^2 + n_z^2).\]</span> The solutions are now parameterised by
-three integers, <span class="math inline">\(n_x\)</span>, <span
+class="math display">\[\begin{equation}
+    \psi_{n_x, n_y, n_z} = \sqrt{\bigg (\frac{2}{a} \bigg)^2} \sin
+\frac{n_x \pi x}{a} \sin \frac{n_y \pi y}{a} \sin \frac{n_z \pi z}{a},  
+\end{equation}\]</span> with energy eigenvalues <span
+class="math display">\[\begin{equation}
+    E_{n_x,n_y,n_z} = \frac{\hbar^2\pi^2}{2ma^2} (n_x^2 + n_y^2 +
+n_z^2).
+\end{equation}\]</span> The solutions are now parameterised by three
+integers, <span class="math inline">\(n_x\)</span>, <span
 class="math inline">\(n_y\)</span>, and <span
 class="math inline">\(n_z\)</span>. The lowest possible energy state
 (the ground state) is (1,1,1). Notice that we have multiple states (i.e
@@ -370,16 +395,18 @@ class="math inline">\(\theta\)</span>, <span
 class="math inline">\(\phi\)</span>) rather than Cartesian co-ordinates,
 for reasons that are hopefully obvious.</p>
 <p>The Schrödinger equation in spherical co-ordinates looks unpleasant,
-<span class="math display">\[-\frac{\hbar}{2m}   \bigg[
-\frac{1}{r^2}  \frac{\partial}{\partial r} \bigg(r^2 \frac{\partial
-\psi}{\partial r} \bigg) + \frac{1}{r^2\sin\theta}
-\frac{\partial}{\partial \theta}\bigg( \sin \theta \frac{\partial
-\psi}{\partial \theta} \bigg) + \frac{1}{r^2 \sin^2\theta}
-\frac{\partial^2 \psi}{\partial \theta^2}\bigg] + V(r,\theta
-\phi)\psi(r, \theta, \psi) = E\psi(r, \theta, \psi)\]</span></p>
+<span class="math display">\[\begin{equation}
+    -\frac{\hbar}{2m}   \bigg[ \frac{1}{r^2}  \frac{\partial}{\partial
+r} \bigg(r^2 \frac{\partial \psi}{\partial r} \bigg) +
+\frac{1}{r^2\sin\theta} \frac{\partial}{\partial \theta}\bigg( \sin
+\theta \frac{\partial \psi}{\partial \theta} \bigg) + \frac{1}{r^2
+\sin^2\theta} \frac{\partial^2 \psi}{\partial \phi^2}\bigg] + V(r,\theta
+\phi)\psi(r, \theta, \phi) = E\psi(r, \theta, \phi)
+\end{equation}\]</span></p>
 <p>but can now simplify things greatly by assuming a separable solution
-of the form: <span class="math display">\[\psi(r, \theta, \phi) = R(r)
-\Theta(\theta) \Phi(\phi)\]</span></p>
+of the form: <span class="math display">\[\begin{equation}
+    \psi(r, \theta, \phi) = R(r) \Theta(\theta) \Phi(\phi)
+\end{equation}\]</span></p>
 <p>The important thing to realise is that as the potential is only a
 function of <span class="math inline">\(r\)</span>, and not <span
 class="math inline">\(\theta\)</span> or <span
@@ -403,16 +430,18 @@ class="math inline">\(m_l\)</span> but the same <span
 class="math inline">\(l\)</span> have the same energy, such that states
 are <span class="math inline">\((2l + 1)\)</span>-fold degenerate.</p>
 <p>The radial part (known as the radial equation) can be re-written as
-<span class="math display">\[-\frac{\hbar}{2m} \frac{1}{r^2}
-\frac{\mathrm{d}}{\mathrm{d}r} \bigg( r^2
-\frac{\mathrm{d}R}{\mathrm{d}r}\bigg) + \bigg[ V(r)+ \frac{
-\hbar^2l(l+1)}{2mr^2} \bigg ] R = ER.\]</span> Check back in your
-PHYS5030 to see how this is obtained, but you should recognise that this
-now looks very similar to the 1D wave equation but with a modified
-‘effective’ potential, <span class="math display">\[V_{eff} = V(r)+
-\frac{ \hbar^2l(l+1)}{2mr^2}\]</span> We also have to be a bit careful
-because we now have that <span class="math inline">\(r&gt;0\)</span>
-which matters when we choose the boundary condition at <span
+<span class="math display">\[\begin{equation}
+    -\frac{\hbar}{2m} \frac{1}{r^2} \frac{\mathrm{d}}{\mathrm{d}r}
+\bigg( r^2 \frac{\mathrm{d}R}{\mathrm{d}r}\bigg) + \bigg[ V(r)+ \frac{
+\hbar^2l(l+1)}{2mr^2} \bigg ] R = ER.
+\end{equation}\]</span> Check back in your PHYS5030 to see how this is
+obtained, but you should recognise that this now looks very similar to
+the 1D wave equation but with a modified ‘effective’ potential, <span
+class="math display">\[\begin{equation}
+    V_{eff} = V(r)+ \frac{ \hbar^2l(l+1)}{2mr^2}
+\end{equation}\]</span> We also have to be a bit careful because we now
+have that <span class="math inline">\(r&gt;0\)</span> which matters when
+we choose the boundary condition at <span
 class="math inline">\(r=0\)</span>. The <span
 class="math inline">\(l\)</span> is the angular momentum quantum number,
 discussed more below.</p>
@@ -446,9 +475,12 @@ class="math inline">\(L_y\)</span> components are then unknown.</p>
 <p>In the case of spherical harmonics, the magnitude of the angular
 momentum and the z-component of angular momentum are related to the
 quantum numbers <span class="math inline">\(l\)</span> and <span
-class="math inline">\(m_l\)</span>. <span class="math display">\[L =
-\hbar \sqrt{l(l+1)}\]</span> <span class="math display">\[L_z = \hbar
-m_l\]</span></p>
+class="math inline">\(m_l\)</span>. <span
+class="math display">\[\begin{equation}
+L = \hbar \sqrt{l(l+1)}
+\end{equation}\]</span> <span class="math display">\[\begin{equation}
+L_z = \hbar m_l
+\end{equation}\]</span></p>
 <p>There is another type of angular momentum which is intrinsic to
 particles, called <strong>spin</strong>. Unlike the angular momentum we
 have defined above, which for atoms and nucleons is generally referred
@@ -458,30 +490,41 @@ classical analogies. Again, spin is a vector <span
 class="math inline">\(\vec{S}\)</span>, and we parameterise the spin in
 terms of quantum numbers <span class="math inline">\(s\)</span> and
 <span class="math inline">\(m_s\)</span>, with the spin magnitude: <span
-class="math display">\[S = \hbar \sqrt{s(s+1)}\]</span> and the <span
+class="math display">\[\begin{equation}
+S = \hbar \sqrt{s(s+1)}
+\end{equation}\]</span> and the <span
 class="math inline">\(z\)</span>-component: <span
-class="math display">\[S_z = \hbar m_s\]</span></p>
+class="math display">\[\begin{equation}
+S_z = \hbar m_s
+\end{equation}\]</span></p>
 <p>Unlike the orbital angular momentum, for which the <span
 class="math inline">\(l\)</span> and <span
 class="math inline">\(m_l\)</span> take integer values, fermions have a
 spin quantum number of <span class="math inline">\(1/2\)</span>, with
 <span class="math inline">\(m_s = \pm 1/2\)</span>.</p>
 <p>The total angular momentum is the vector sum of the orbital and spin
-angular momenta: <span class="math display">\[\vec{J}= \vec{L} +
-\vec{S}\]</span></p>
+angular momenta: <span class="math display">\[\begin{equation}
+\vec{J}= \vec{L} + \vec{S}
+\end{equation}\]</span></p>
 <p>Again we have quantum numbers <span class="math inline">\(j\)</span>
 and <span class="math inline">\(m_j\)</span> which parameterise the
-magnitude <span class="math display">\[J = \hbar \sqrt{j(j+1)}\]</span>
-and the <span class="math inline">\(z\)</span>-component <span
-class="math display">\[J_z = \hbar m_j\]</span> where this time we have
-<span class="math inline">\(m_j = -j, -j +1, ... j-1, j\)</span>.</p>
+magnitude <span class="math display">\[\begin{equation}
+J = \hbar \sqrt{j(j+1)}
+\end{equation}\]</span> and the <span
+class="math inline">\(z\)</span>-component <span
+class="math display">\[\begin{equation}
+J_z = \hbar m_j
+\end{equation}\]</span> where this time we have <span
+class="math inline">\(m_j = -j, -j +1, ... j-1, j\)</span>.</p>
 <p>We call this effect the coupling of the orbital and spin angular
 momenta. A little bit of thought should allow you to check that: <span
-class="math display">\[m_j = m_l + m_s = m_l \pm 1/2\]</span> Given that
-<span class="math inline">\(m_l\)</span> is an integer, we will always
-have that <span class="math inline">\(m_j\)</span> is a half integer
-(-1/2, +1/2 etc), and hence <span class="math inline">\(j\)</span> will
-also be a half integer. In fact we can see that <span
+class="math display">\[\begin{equation}
+    m_j = m_l + m_s = m_l \pm 1/2
+\end{equation}\]</span> Given that <span
+class="math inline">\(m_l\)</span> is an integer, we will always have
+that <span class="math inline">\(m_j\)</span> is a half integer (-1/2,
++1/2 etc), and hence <span class="math inline">\(j\)</span> will also be
+a half integer. In fact we can see that <span
 class="math inline">\(j\)</span> can either be <span
 class="math inline">\(l + 1/2\)</span> or <span
 class="math inline">\(l-1/2\)</span></p>
@@ -492,13 +535,14 @@ two nucleons. As for any two-body problem we can treat this as a central
 force problem, i.e. we are considering one of the nucleons to be at the
 centre of the potential. We then work with the reduced mass. Here we
 have a proton and a neutron and the reduced mass is <span
-class="math display">\[M = \frac{m_pm_n}{m_p + m_n}.\]</span> However,
-since <span class="math inline">\(m_p \approx m_n\)</span>, and we are
-making a first order approximation here, we can use some nominal
-approximate mass <span class="math inline">\(m\)</span> for both
-nucleons, such that <span class="math inline">\(M \approx
-m/2\)</span>.</p>
-<figure id="fig:deuteron_energy">
+class="math display">\[\begin{equation}
+    M = \frac{m_pm_n}{m_p + m_n}.
+\end{equation}\]</span> However, since <span class="math inline">\(m_p
+\approx m_n\)</span>, and we are making a first order approximation
+here, we can use some nominal approximate mass <span
+class="math inline">\(m\)</span> for both nucleons, such that <span
+class="math inline">\(M \approx m/2\)</span>.</p>
+<figure id="fig:deuteron_energy" data-latex-placement="!h">
 <img src="figs/deuteron_energy.png" />
 <figcaption>Energy diagram for deuteron. The potential <span
 class="math inline">\(V_0\)</span> is unknown, but we can experimentally
@@ -515,22 +559,26 @@ and that <span class="math inline">\(r &gt; 0\)</span>, which has some
 consequences for what must happen to the wavefunction at <span
 class="math inline">\(r=0\)</span>.</p>
 <p>We now need to solve the Schrödinger equation in 3D: <span
-class="math display">\[\bigg[ -\frac{\hbar}{2M} \nabla^2 + V(r) \bigg]
-\psi(r,\theta, \phi) = E \psi(r, \theta, \phi)\]</span> where we have
-used <span class="math inline">\(\nabla^2\)</span> to represent the
-Laplacian.</p>
+class="math display">\[\begin{equation}
+    \bigg[ -\frac{\hbar}{2M} \nabla^2 + V(r) \bigg] \psi(r,\theta, \phi)
+= E \psi(r, \theta, \phi)
+\end{equation}\]</span> where we have used <span
+class="math inline">\(\nabla^2\)</span> to represent the Laplacian.</p>
 <p>As discussed above, for a spherically symmetrical potential the
-solution is separable: <span class="math display">\[\psi_{n,l,m} (r,
-\theta, \psi)  = R_{nl}Y_{lm}(\theta, \phi)\]</span> where we have
-indicated that we expect the solutions to be paramaterised by the three
-quantum numbers <span class="math inline">\(n\)</span>, <span
+solution is separable: <span class="math display">\[\begin{equation}
+    \psi_{n,l,m} (r, \theta, \psi)  = R_{nl}Y_{lm}(\theta, \phi)
+\end{equation}\]</span> where we have indicated that we expect the
+solutions to be parameterised by the three quantum numbers <span
+class="math inline">\(n\)</span>, <span
 class="math inline">\(l\)</span>, and <span
 class="math inline">\(m_l\)</span>.</p>
 <p>The radial component of the wavefunction, <span
 class="math inline">\(R(r)\)</span> satisfies the radial equation:</p>
-<p><span class="math display">\[\bigg( - \frac{\hbar^2}{2m} \bigg(
-\frac{d}{dr^2} +  \frac{2}{r}\frac{d}{dr} \bigg) + V(r) + \frac{\hbar^2
-l (l+1)}{2mr^2} \bigg) R(r) = -E_bR(r)\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\bigg( - \frac{\hbar^2}{2m} \bigg( \frac{d}{dr^2}
++  \frac{2}{r}\frac{d}{dr} \bigg) + V(r) + \frac{\hbar^2 l (l+1)}{2mr^2}
+\bigg) R(r) = -E_bR(r)
+\end{equation}\]</span></p>
 <p>(Check back in your PHYS5030 notes to see how this is
 determined).</p>
 <p>Let’s begin by making the assumption that we are in the <span
@@ -541,17 +589,21 @@ class="math inline">\(\phi\)</span>). So we only need to find the <span
 class="math inline">\(R\)</span> part of the wavefunction. And setting
 <span class="math inline">\(l=0\)</span> means that the radial part is
 also simplified to:</p>
-<p><span class="math display">\[\bigg( - \frac{\hbar^2}{2m} \bigg(
-\frac{d}{dr^2} +  \frac{2}{r}\frac{d}{dr} \bigg) + V(r) \bigg) R(r) =
--E_bR(r)
-\label{eqn:R_comp}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\bigg( - \frac{\hbar^2}{2m} \bigg( \frac{d}{dr^2}
++  \frac{2}{r}\frac{d}{dr} \bigg) + V(r) \bigg) R(r) = -E_bR(r)
+\label{eqn:R_comp}
+\end{equation}\]</span></p>
 <p>We don’t know the width of the square well, but let’s guess that it
 is the nuclear radius, <span class="math inline">\(r_0 =
-2.1\)</span> fm. So that we have: <span class="math display">\[V(x) =
+2.1\)</span> fm. So that we have: <span
+class="math display">\[\begin{equation}
+    V(x) =
     \begin{cases}
       0, &amp; \text{if}\ 0 &lt; r &lt; r_0 \\
       V_0, &amp; \text{otherwise}
-    \end{cases}\]</span></p>
+    \end{cases}
+\end{equation}\]</span></p>
 <p>The depth of the nuclear potential energy well <span
 class="math inline">\(V_0\)</span> is unknown. We do, however, know the
 binding energy, <span class="math inline">\(E_B = 2.225\)</span> MeV,
@@ -562,39 +614,53 @@ larger than this, otherwise the deuteron wouldn’t be bound.</p>
 class="math inline">\(rR\)</span> rather than <span
 class="math inline">\(r\)</span>. This will allow us to simplify things
 because</p>
-<p><span class="math display">\[\frac{d^2}{dr^2}(rR) = \frac{d}{dr}
-\bigg( r\frac{dR}{dr} + R \bigg) = \frac{dR}{dr} + r\frac{d^2R}{dr^2} +
-\frac{dR}{dr} = r\frac{d^2R}{dr^2} + 2 \frac{dR}{dr}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \frac{d^2}{dr^2}(rR) = \frac{d}{dr} \bigg( r\frac{dR}{dr} + R \bigg)
+= \frac{dR}{dr} + r\frac{d^2R}{dr^2} + \frac{dR}{dr} =
+r\frac{d^2R}{dr^2} + 2 \frac{dR}{dr}.
+\end{equation}\]</span></p>
 <p>Using this result we can write Equation <a href="#eqn:R_comp"
 data-reference-type="ref" data-reference="eqn:R_comp">[eqn:R_comp]</a>
 in a simpler form, and are now looking for a solution (wavefunction)
 that satisfies the differential equation:</p>
-<p><span class="math display">\[\frac{d^2}{dr^2} rR -
-\frac{M}{\hbar^2}[V(r) + E_b](rR) = 0\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\frac{d^2}{dr^2} rR - \frac{M}{\hbar^2}[V(r) + E_b](rR) = 0
+\end{equation}\]</span></p>
 <p>Note that we have also used that the reduced mass <span
 class="math inline">\(M = m/2\)</span>.</p>
 <p>The square well model means that the potential energy <span
 class="math inline">\(V(r)\)</span> is a discontinuous step function. We
 can therefore find piecewise solutions, one for the region outside the
-well satisfying: <span class="math display">\[\frac{d^2}{dr^2}(rR) -
-\frac{M}{\hbar^2}(V_0 - E_b)(rR) = 0\]</span> and one for the region
-inside the well, satisfying:</p>
-<p><span class="math display">\[\frac{d^2}{dr^2}(rR) -
-\frac{M}{\hbar^2}E_b(rR) = 0\]</span> where we have used that <span
+well satisfying: <span class="math display">\[\begin{equation}
+\frac{d^2}{dr^2}(rR) - \frac{M}{\hbar^2}(V_0 - E_b)(rR) = 0
+\end{equation}\]</span> and one for the region inside the well,
+satisfying:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{d^2}{dr^2}(rR) - \frac{M}{\hbar^2}E_b(rR) = 0
+\end{equation}\]</span> where we have used that <span
 class="math inline">\(V_0 = 0\)</span> inside the well.</p>
 <p>Taking inspiration from the 1D finite well, if we define wavenumbers
 <span class="math inline">\(k\)</span> and <span
 class="math inline">\(K\)</span> in the normal way, such that <span
-class="math display">\[k = \frac{\sqrt{2ME_b}}{\hbar} ,\]</span> and</p>
-<p><span class="math display">\[K = \frac{\sqrt{2M(V_0 – E)}}{\hbar}
-,\]</span> then we can then write the differential equations in a
-simpler form: <span class="math display">\[(rR)&#39;&#39; + K^2(rR) =
-0\]</span> and <span class="math display">\[(rR)&#39;&#39; – k^2(rR) =
-0\]</span></p>
-<p>The solutions are <span class="math display">\[rR(r) = \begin{cases}
+class="math display">\[\begin{equation}
+k = \frac{\sqrt{2ME_b}}{\hbar} ,
+\end{equation}\]</span> and</p>
+<p><span class="math display">\[\begin{equation}
+K = \frac{\sqrt{2M(V_0 – E)}}{\hbar} ,
+\end{equation}\]</span> then we can then write the differential
+equations in a simpler form: <span
+class="math display">\[\begin{equation}
+(rR)&#39;&#39; + K^2(rR) = 0
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+(rR)&#39;&#39; – k^2(rR) = 0
+\end{equation}\]</span></p>
+<p>The solutions are <span class="math display">\[\begin{equation}
+    rR(r) = \begin{cases}
        a \sin Kr &amp;  r &lt; r_0 \\
        b \exp(-kr) &amp;  r &gt; r_0
-    \end{cases}\]</span></p>
+    \end{cases}
+\end{equation}\]</span></p>
 <p>Note that mathematical solution <span class="math inline">\(\cos
 (Kr)\)</span> inside the well would cause problems at <span
 class="math inline">\(r = 0\)</span> and <span
@@ -604,7 +670,9 @@ normalisable, so we have rejected these solutions as unphysical.</p>
 class="math inline">\(rR\)</span> and <span
 class="math inline">\((rR)’\)</span> at the discontinuity in <span
 class="math inline">\(V_0\)</span>. With a little bit of manipulation,
-we obtain: <span class="math display">\[K \cot K r_0 = -k\]</span></p>
+we obtain: <span class="math display">\[\begin{equation}
+    K \cot K r_0 = -k
+\end{equation}\]</span></p>
 <p>Referring back to the definition of <span
 class="math inline">\(K\)</span> and <span
 class="math inline">\(k\)</span> we see that they are in terms of
@@ -615,7 +683,7 @@ class="math inline">\(V_0\)</span>. We can therefore solve (numerically)
 for potential, giving us <span class="math inline">\(V_0 \approx
 35\)</span> MeV. This is shown in a Jupyter notebook here: <a
 href="https://mybinder.org/v2/gh/MikeHughesKent/nuclear/master?filepath=deuteron.ipynb">https://mybinder.org/v2/gh/MikeHughesKent/nuclear/master?filepath=deuteron.ipynb</a>.</p>
-<figure id="fig:deuteron_wf">
+<figure id="fig:deuteron_wf" data-latex-placement="!h">
 <img src="figs/deuteron_wf.png" />
 <figcaption>Deuteron wavefunction, assuming a square well
 potential.</figcaption>
@@ -645,8 +713,9 @@ angular momentum is the vector sum of the spin (intrinsic) angular
 momentum, <span class="math inline">\(\vec{S}\)</span> and the orbital
 angular momentum (<span class="math inline">\(\vec{L}\)</span>). Protons
 and neutrons are fermions, with spin 1/2. The total of their spin is the
-vector sum: <span class="math display">\[\vec{S} = \vec{S_n} +
-\vec{S_p}\]</span> Depending on whether the spins are parallel or
+vector sum: <span class="math display">\[\begin{equation}
+    \vec{S} = \vec{S_n} + \vec{S_p}
+\end{equation}\]</span> Depending on whether the spins are parallel or
 anti-parallel, (i.e. whether the <span
 class="math inline">\(m_s\)</span> have the same or opposite sign) this
 means that the total spin magnitude quantum number for the deuteron can
@@ -669,8 +738,9 @@ This is called a <strong>triplet</strong>.</p></li>
 obtain the total angular momentum for the deuteron. (Slightly
 confusingly this is usually called the ‘spin’ of the nucleus, but
 remember that it includes the orbital angular momentum of the nucleons
-as well as their spins). <span class="math display">\[\vec{J} = \vec{L}
-+ \vec{S}\]</span></p>
+as well as their spins). <span class="math display">\[\begin{equation}
+    \vec{J} = \vec{L} + \vec{S}
+\end{equation}\]</span></p>
 <p>Note that this is a vector equation. First try to imagine this
 classically (Figure <a href="#fig:jls_combo" data-reference-type="ref"
 data-reference="fig:jls_combo">6</a>). If <span
@@ -683,7 +753,7 @@ vector of length <span class="math inline">\(|L-S|\)</span>. If there
 was some other angle between the vectors, we would end up with a some
 intermediate length <span class="math inline">\(|L-S| \leq J \leq
 |L+S|\)</span>.</p>
-<figure id="fig:jls_combo">
+<figure id="fig:jls_combo" data-latex-placement="!h">
 <img src="figs/JLS_combo.png" />
 <figcaption>Classical combination of orbital and spin angular momenta,
 showing the general case (left) and the cases leading to the largest
@@ -693,9 +763,12 @@ momentum.</figcaption>
 <p>In quantum mechanics, <span class="math inline">\(J\)</span> comes in
 discrete units, such that <span class="math inline">\(J = \hbar
 \sqrt{j(j + 1)}\)</span> where the quantum number <span
-class="math inline">\(j\)</span> is an integer. So the quantum number,
-<span class="math inline">\(j\)</span>, takes integer values such that
-<span class="math inline">\(|l-s| \leq j \leq |l+s|\)</span>.</p>
+class="math inline">\(j\)</span> is an integer or half integer
+(depending on the values of <span class="math inline">\(l\)</span> and
+<span class="math inline">\(s\)</span>). The quantum number, <span
+class="math inline">\(j\)</span>, can take any value in integer steps
+between <span class="math inline">\(|l-s|\)</span> and <span
+class="math inline">\(\|l+s|\)</span>.</p>
 <p>While we assumed that <span class="math inline">\(l=0\)</span> when
 we found the wavefunction we don’t actually know that this is the case,
 so let’s consider some possibilities (for <span class="math inline">\(l
@@ -752,22 +825,26 @@ more experimental information. Luckily, we have just that.</p>
 sometimes indicated by <span class="math inline">\(\pi\)</span>. Parity
 is a concept related to the symmetry of the wavefunction about the
 origin (the centre of the nucleus in our case). We call the case where
-<span class="math display">\[\psi(-r) = \psi(r)\]</span></p>
-<p>even parity, while: <span class="math display">\[\psi(-r) =
--\psi(r)\]</span> is called odd parity. Even parity is often represented
-with a ‘+’, and odd parity is represented by a ‘-’.</p>
+<span class="math display">\[\begin{equation}
+    \psi(-r) = \psi(r)
+\end{equation}\]</span></p>
+<p>even parity, while: <span class="math display">\[\begin{equation}
+    \psi(-r) = -\psi(r)
+\end{equation}\]</span> is called odd parity. Even parity is often
+represented with a ‘+’, and odd parity is represented by a ‘-’.</p>
 <p>While an arbitrary wavefunction will not have even or odd parity
 (formally it would not be an eigenfunction of the Parity operator), an
 important mathematical result is that states in a 3D potential (i.e.
 spherical harmonics) with an odd <span class="math inline">\(l\)</span>
 have odd parity and states with an even <span
 class="math inline">\(l\)</span> have even parity. Or, more neatly <span
-class="math display">\[\text{parity} = (-1)^l\]</span></p>
+class="math display">\[\begin{equation}
+    \text{parity} = (-1)^l
+\end{equation}\]</span></p>
 <p>Experimentally, the deuteron is found to have even parity. This means
 that it must be in a state with an even <span
 class="math inline">\(l\)</span>. This rules out the <span
-class="math inline">\(p\)</span> and <span
-class="math inline">\(d\)</span> states, it must be in <span
+class="math inline">\(p\)</span> states, it must be in <span
 class="math inline">\(s\)</span> or <span
 class="math inline">\(d\)</span>.</p>
 <p>So we are nearly there, we have narrowed it down to two possible
@@ -781,19 +858,24 @@ the nucleus. This strength and orientation of this effect is called the
 <strong>nuclear magnetic moment</strong>.</p>
 <p>The total magnetic moment is a combination of orbit and spin magnetic
 moments.</p>
-<p><span class="math display">\[\mu = \mu_l + \mu_s\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    \mu = \mu_l + \mu_s
+\end{equation}\]</span></p>
 <p>For the deuteron ground state we assumed initially that <span
 class="math inline">\(l = 0\)</span>, so there is no orbital angular
 momentum and hence no orbital magnetic moment. But we still have the
 spin - the intrinsic angular momentum - and so do expect a spin magnetic
-moment. We write this as: <span class="math display">\[\mu_s  =
-\frac{1}{2} g \mu_N\]</span></p>
+moment. We write this as: <span class="math display">\[\begin{equation}
+    \mu_s  = \frac{1}{2} g \mu_N
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(\mu_N\)</span> is the nuclear
 magneton (a constant which is a similar concept to the Bohr magneton
 studied in Atomic Physics), and is given by: <span
-class="math display">\[\mu_N  = \frac{e\hbar}{2m_p}\]</span> (Recall
-from Atomic Physics that the definition of the Bohr magneton was the
-same, but with <span class="math inline">\(m_e\)</span> replacing <span
+class="math display">\[\begin{equation}
+    \mu_N  = \frac{e\hbar}{2m_p}
+\end{equation}\]</span> (Recall from Atomic Physics that the definition
+of the Bohr magneton was the same, but with <span
+class="math inline">\(m_e\)</span> replacing <span
 class="math inline">\(m_p\)</span>.</p>
 <p>The factor of <span class="math inline">\(1/2\)</span> is the spin
 and <span class="math inline">\(g\)</span> is called the
@@ -811,8 +893,9 @@ charged; it therefore has some internal distribution of charge).</p>
 <p>So we can therefore calculate the magnetic moment of the deuteron, in
 terms of the nuclear magneton (which is a constant), by taking the
 (known) magnetic moments of the proton and the neutron and summing:
-<span class="math display">\[\mu_d = \mu_p + \mu_n = (2.7928 -
-1.9130)\mu_N = 0.8798 \mu_N\]</span></p>
+<span class="math display">\[\begin{equation}
+    \mu_d = \mu_p + \mu_n = (2.7928 - 1.9130)\mu_N = 0.8798 \mu_N
+\end{equation}\]</span></p>
 <p>However, when the magnetic moment is measured, we find it to be <span
 class="math inline">\(0.85741 \mu_N\)</span>. How can this be?</p>
 <p>We have accounted for the contribution of spin, but what about
@@ -837,23 +920,27 @@ even worse.</p>
 <p>The solution is that the nucleus exists in a superposition of these
 states. (In quantum mechanics we can make a new solution or state by
 weighted sums of solutions). That is, the total wavefunction would be:
-<span class="math display">\[\psi = a_0 \psi_{l=0} + a_2
-\psi_{l=2}\]</span></p>
+<span class="math display">\[\begin{equation}
+    \psi = a_0 \psi_{l=0} + a_2 \psi_{l=2}
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(a_0\)</span> and <span
 class="math inline">\(a_2\)</span> are constants such that <span
 class="math inline">\(a_0^2 + a_2^2 = 1.\)</span> Then, from the normal
-rule of probabilities we have that <span class="math display">\[\mu_d =
-a_0^2\mu_{l=0}  +  a_2^2\mu_{l=2}\]</span></p>
+rule of probabilities we have that <span
+class="math display">\[\begin{equation}
+    \mu_d = a_0^2\mu_{l=0}  +  a_2^2\mu_{l=2}
+\end{equation}\]</span></p>
 <p>Using the experimental value for the magnetic momentum of the
 deuteron, <span class="math inline">\(\mu_d\)</span>, then allows us to
 determine that <span class="math inline">\(a_0^2 = 0.96\)</span> and
-<span class="math inline">\(a_2^2 = 0.04\)</span>. So the nucleus spends
-4% of its time in an <span class="math inline">\(l=2\)</span> state.</p>
+<span class="math inline">\(a_2^2 = 0.04\)</span>. So we can, loosely,
+imagine that the nucleus spends 4% of its time in an <span
+class="math inline">\(l=2\)</span> state.</p>
 <p>This suggests that our description of the nuclear potential wasn’t
 quite correct. It turns out that we weren’t quite okay to assume the
 wavefunction (and hence the potential) is spherically symmetric. We also
 know this from experiments, as the deuteron is found to have a
-quadrapole moment (more on this later). But it still gave us a good
+quadrupole moment (more on this later). But it still gave us a good
 first approximation.</p>
 <h1 id="why-are-there-no-pp-or-nn-nuclei">Why are there no pp or nn
 nuclei?</h1>
@@ -865,23 +952,24 @@ by invoking the Coulomb repulsion; perhaps this is sufficient to modify
 the potential so that there is no bound state? However, this turns out
 not to be the answer, and in any case wouldn’t help us with the nn
 nucleus.</p>
-<p>We observe experimentally that the dueteron has total spin of <span
+<p>We observe experimentally that the deuteron has total spin of <span
 class="math inline">\(j = 1\)</span>, which for the <span
 class="math inline">\(l=0\)</span> state must mean that the spins of the
 proton and neutron are aligned (giving us s = 1, the triplet state). We
 don’t find the deuteron in the s = 0 singlet state, where the spins are
 opposite. This suggests that the triplet state is energetically
-favourable. It turns out the the nuclear force is stronger between
+favourable. It turns out that the nuclear force is stronger between
 nucleons with their spins aligned, and in fact for a proton and a
 neutron with anti-aligned spins, there are no bound states.</p>
 <p>So, in order to obtain a bound pp or nn state, we would need to have
-both protons or neutrons in the same spin state. But this is forbidden
-by Pauli’s exclusion principle. One would have to be in a higher energy
+both protons or neutrons in the same spin state (assuming <span
+class="math inline">\(l=0\)</span> as well). But this is forbidden by
+Pauli’s exclusion principle. One would have to be in a higher energy
 state, and as already established this would turn out to be an unbound
 state, the energy would be too high. So we do not have pp or nn
 nuclei.</p>
-<p>This also gives us some hints abut what is coming when we start to
-consider nuclei with more than 2 nucleons, and what the origin of the
+<p>This also gives us some hints about what is coming when we start to
+consider nuclei with more than two nucleons, and what the origin of the
 symmetry term in the SEMF might be.</p>
 </body>
 </html>

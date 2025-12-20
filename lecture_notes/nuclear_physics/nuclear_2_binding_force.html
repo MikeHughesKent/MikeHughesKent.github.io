@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Nuclear Physics Section 2 - Binding Energy and the Semi-Empirical Mass Formula</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -206,7 +209,7 @@ it another way, a nucleus is a bound (lower energy) state for this set
 of nucleons. The total energy required to completely separate all the
 nucleons is the binding energy of the nucleus. Alternatively, the
 binding energy is the energy that would be liberated were we to assemble
-a nucleus from its constituent nuclei.</p>
+a nucleus from its constituent nucleons.</p>
 <p>If we were to introduce energy in order to break the nucleus apart,
 that energy would go into mass. Recall from relativity the relation
 <span class="math inline">\(E = mc^2\)</span>. The mass of a nucleus,
@@ -226,7 +229,7 @@ class="math inline">\(A\)</span>, in Figure 1. We can see that it
 increases with the number of nucleons (<span
 class="math inline">\(A\)</span>) is a fairly, but not exactly, linear
 way.</p>
-<figure id="fig:binding">
+<figure id="fig:binding" data-latex-placement="h">
 <img src="figs/b_stable.png" style="width:3.5in" />
 <figcaption>Binding energy for stable nuclei as a function of atomic
 mass number. Plotted from data taken from:
@@ -239,7 +242,7 @@ features now become clearer. For heavier nuclei, the binding energy per
 nucleon is just over 8 MeV, decreasingly slightly for heavier nuclei.
 For very light nuclei, the behaviour is a little more erratic, generally
 increasing with A, but with several outliers.</p>
-<figure id="fig:b_stable">
+<figure id="fig:b_stable" data-latex-placement="h">
 <img src="figs/b_per_a_stable_labelled.png" style="width:3.5in" />
 <figcaption>Binding energy per nucleon (B/A) as a function of atomic
 mass number for stable nuclei. Except for the lightest nuclei, B/A is
@@ -257,8 +260,8 @@ per nucleon because less of its mass is made of neutrons which are
 slightly heavier than protons.</p>
 <p>This B/A peak marks a boundary between two effects - nuclear fission
 and fusion. You will learn more about these later, but essentially
-fission is the liberating of energy as two smaller nuclei join to form a
-larger nuclei, and fission is liberation of energy as a large nuclei
+fusion is the liberating of energy as two smaller nuclei join to form a
+larger nucleus, and fission is liberation of energy as a large nuclei
 breaks into smaller nuclei. We can see that fusion will only occur for
 an end product which is to the left of Nickel/Iron, since combining
 nuclei leads to a nucleus with a larger binding energy per nucleon.
@@ -273,21 +276,23 @@ difference between the sum of the binding energy of the nuclei before
 class="math inline">\(M_f\)</span>) the nuclear reaction, or
 equivalently the change in the mass deficit before and after the
 reaction. It is given by</p>
-<p><span class="math display">\[Q = (\sum M_i - \sum M_f
-)c^2\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    Q = (\sum M_i - \sum M_f )c^2
+\end{equation}\]</span></p>
 <p>For example, consider the reaction fusing helium and carbon nuclei to
 form an oxygen nucleus:</p>
-<p><span class="math display">\[^4_2He + ^{12}_6 C \rightarrow
-^{16}_8O\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    ^4_2He + ^{12}_6 C \rightarrow ^{16}_8O
+\end{equation}\]</span></p>
 <p>Without worrying about the details of this type of nuclear reaction
 (which will be covered later), we can calculate the Q value by looking
 up the masses of these nuclei:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
     Q &amp;= (4.00260u+12u - 15.99491u)c^2 \\
     &amp;= (0.00769u)c^2 \\
     &amp;= (0.00769)(931.5~\mathrm{MeV/c^2})c^2 \\
     &amp;= 7.16~\mathrm{MeV}
-\end{aligned}\]</span> where we have used that <span
+\end{align}\]</span> where we have used that <span
 class="math inline">\(u = 931.5~\mathrm{MeV/c^2}\)</span>.</p>
 <p>This Q-value is positive: the mass of the products of the reaction
 are less than the mass of the reactants; the product is more tightly
@@ -363,22 +368,24 @@ of protons, so we expect a <span class="math inline">\(Z(Z-1)\)</span>
 dependence. From electrostatics it is possible to show that the
 electrostatic energy of a sphere of radius <span
 class="math inline">\(r\)</span> of uniform charge is:</p>
-<p><span class="math display">\[U =
--\frac{3}{5}\frac{Q^2}{4\pi\epsilon_0 r},\]</span> where <span
-class="math inline">\(Q\)</span> is the total charge and <span
-class="math inline">\(\epsilon_0\)</span> is the permittivity of free
-space. Using <span class="math inline">\(Q = Ze\)</span> and recalling
-<span class="math inline">\(r = r_0A^{1/3}\)</span> gives us
-immediately</p>
-<p><span class="math display">\[U =
--\frac{3}{5}\frac{Z^2e^2}{4\pi\epsilon_0 r_0 A^{1/3}}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    U = -\frac{3}{5}\frac{Q^2}{4\pi\epsilon_0 r},
+\end{equation}\]</span> where <span class="math inline">\(Q\)</span> is
+the total charge and <span class="math inline">\(\epsilon_0\)</span> is
+the permittivity of free space. Using <span class="math inline">\(Q =
+Ze\)</span> and recalling <span class="math inline">\(r =
+r_0A^{1/3}\)</span> gives us immediately</p>
+<p><span class="math display">\[\begin{equation}
+    U = -\frac{3}{5}\frac{Z^2e^2}{4\pi\epsilon_0 r_0 A^{1/3}}.
+\end{equation}\]</span></p>
 <p>However, this seems a little incorrect, since it would still give us
 some repulsion when <span class="math inline">\(Z = 1\)</span>, but a
 proton does not repel itself. So let’s write (without too much
 justification):</p>
-<p><span class="math display">\[B_3 =-
-\frac{3}{5}\frac{Z(Z-1)e^2}{4\pi\epsilon_0 r_0 A^{1/3}}  = -a_c
-\frac{Z(Z-1)}{A^{1/3}},\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    B_3 =- \frac{3}{5}\frac{Z(Z-1)e^2}{4\pi\epsilon_0 r_0 A^{1/3}}  =
+-a_c \frac{Z(Z-1)}{A^{1/3}},
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(a_c\)</span> can be evaluated by
 substituting in the constants to be 0.72 MeV. Note that <span
 class="math inline">\(B_3\)</span> is a negative term since the Coulomb
@@ -412,11 +419,13 @@ stable with a slight excess of neutrons (due to the closer spacing of
 higher energy levels, again we will discuss this more later). We can
 capture this <span class="math inline">\(A\)</span> dependence with the
 following term:</p>
-<p><span class="math display">\[B_4 = -a_{symm}\frac{(A-2Z)^2}{A}
-.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    B_4 = -a_{symm}\frac{(A-2Z)^2}{A} .
+\end{equation}\]</span></p>
 <p>Since <span class="math inline">\(A = Z + N\)</span> we can also
-write <span class="math display">\[B_4 =
--a_{symm}\frac{(N-Z)^2}{A}.\]</span></p>
+write <span class="math display">\[\begin{equation}
+    B_4 = -a_{symm}\frac{(N-Z)^2}{A}.
+\end{equation}\]</span></p>
 <p>The physical justification for this form of the <span
 class="math inline">\(A\)</span> dependence may not be so clear, but a
 bit of thought (or plotting it out) should convince you that this gives
@@ -436,7 +445,7 @@ class="math inline">\(^{10}\)</span>B and <span
 class="math inline">\(^{14}\)</span>N) compared to over 160 nuclei with
 even <span class="math inline">\(N\)</span> and even <span
 class="math inline">\(Z\)</span>! This is not accounted for by the terms
-we have introduce so far, so we need to add an additional term called
+we have introduced so far, so we need to add an additional term called
 the pairing term, sometimes labelled <span
 class="math inline">\(\delta\)</span>.</p>
 <ul>
@@ -482,8 +491,8 @@ model of a nucleus. They are often referred to as the <strong>liquid
 drop model</strong> by analogy to a drop of liquid which is held
 together by molecular forces. The symmetry and pairing terms are quantum
 mechanical in nature, and are sometimes referred to as the <strong>Fermi
-gas</strong> terms; their origin and will be considered later in the
-context of the shell model.</p>
+gas</strong> terms; their origin will be considered later in the context
+of the shell model.</p>
 <h2 id="mass-formula">Mass formula</h2>
 <p>To obtain the mass of a given nuclei, we now add up the masses of the
 constituent protons and neutrons and <em>subtract</em> the binding
@@ -501,26 +510,30 @@ Suppose we would like to find the most stable nuclide among all those
 with the same atomic mass number, <span
 class="math inline">\(A\)</span>. For a given number of nucleons, <span
 class="math inline">\(A\)</span>, we therefore want a minimum in the
-mass (largest binding energy), i.e.: <span class="math display">\[\bigg(
-\frac{  \partial M}{\partial Z} \bigg ) _A = 0\]</span></p>
+mass (largest binding energy), i.e.: <span
+class="math display">\[\begin{equation}
+    \bigg( \frac{  \partial M}{\partial Z} \bigg ) _A = 0
+\end{equation}\]</span></p>
 <p>Differentiating the expression for mass w.r.t <span
 class="math inline">\(Z\)</span> gives</p>
-<p><span class="math display">\[z_{min} = \frac{(m_n - m_p)c^2 +
-a_cA^{-1/3} + 4 a_{sym}}{2a_cA^{-1/3} + 8a_{sym}A^{-1}}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+    z_{min} = \frac{(m_n - m_p)c^2 + a_cA^{-1/3} + 4
+a_{sym}}{2a_cA^{-1/3} + 8a_{sym}A^{-1}}.
+\end{equation}\]</span></p>
 <p>Since <span class="math inline">\(a_c \ll a_{sym}\)</span> the first
 two terms on the numerator are very small, and so <span
-class="math display">\[z_{min} \approx \frac{A}{2} \frac{1} {1 +
-\frac{1}{4}A^{2/3} a_c / a_{sym}}.\]</span></p>
+class="math display">\[\begin{equation}
+    z_{min} \approx \frac{A}{2} \frac{1} {1 + \frac{1}{4}A^{2/3} a_c /
+a_{sym}}.
+\end{equation}\]</span></p>
 <p>When <span class="math inline">\(A\)</span> is small <span
 class="math inline">\(\frac{1}{4}A^{2/3} a_c / a_{sym} \approx
 0\)</span> and so <span class="math inline">\(Z \approx A/2\)</span>.
 When <span class="math inline">\(Z\)</span> is larger, <span
 class="math inline">\(Z/A \approx 0.4\)</span>. This is what we observe
 for stable nuclei in practice, and so the model is a good fit. Less
-stable nuclei decay into more stable nuclei (i.e. heavier nuclei decay
-into lighter nuclei (with the same <span
-class="math inline">\(A\)</span>). This can be achieved by converting a
-neutron into a proton or a proton into a neutron (<span
+stable nuclei decay into more stable nuclei. This can be achieved by
+converting a neutron into a proton or a proton into a neutron (<span
 class="math inline">\(\beta\)</span> decay - more on this later). Heavy
 nucleons that are far from the line of stability with excess neutrons
 may also decay by alpha emission (2 protons and 2 neutrons)</p>

@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Nuclear Physics Section 1 - Nuclear Properties</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -181,8 +184,8 @@
 nuclei. At this stage we will simply describe some simple properties and
 give definitions without any real attempt to explain <em>why</em> things
 are this way. In later sections we will try to develop models of the
-nucleus that allows us, to a greater or lesser extent, to predict some
-of these properties.</em></p>
+nucleus that allow us, to a greater or lesser extent, to predict some of
+these properties.</em></p>
 <h1 id="nuclear-scales">Nuclear Scales</h1>
 <p>An atom consists of a positively charged nucleus surrounded by a
 cloud of negatively charged electrons. Atoms are typically <span
@@ -196,16 +199,17 @@ nuclei.</p>
 <strong>neutrons</strong>, which are collectively known as
 <strong>nucleons</strong>. A nucleus is typically <span
 class="math inline">\(10^{-14}\)</span> m in diameter, four orders of
-magnitude smaller than the atom. We will therefore often work in lengths
+magnitude smaller than the atom. We will therefore often work in length
 scales of <strong>femtometres</strong> (fm), <span
 class="math inline">\(10^{-15}\)</span> m. Femtometres are also
 sometimes referred to as Fermis (after Enrico Fermi) which conveniently
 has the same abbreviation of fm. Nuclear diameters are usually in the
 range of 1 to 7 fm (we will come back to what exactly we <em>mean</em>
 by the diameter of a nucleus later). Since nucleons are not fundamental
-particles they have a finite diameter of around 1.7 fm. (The exact value
-is still under investigation<a href="#fn1" class="footnote-ref"
-id="fnref1" role="doc-noteref"><sup>1</sup></a>).</p>
+particles, they have a finite diameter of around 1.7 fm. (The exact
+value is still under investigation and may be as small as 0.833 fm<a
+href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a>).</p>
 <h2 id="nuclear-charge">Nuclear charge</h2>
 <p>Nucleons are each made of three quarks. Protons have a charge of +1e,
 where <span class="math inline">\(e\)</span> is the fundamental charge,
@@ -213,8 +217,8 @@ where <span class="math inline">\(e\)</span> is the fundamental charge,
 uncharged. The nucleus has a positive charge of <span
 class="math inline">\(Ze\)</span> where <span
 class="math inline">\(Z\)</span> is the number of protons. An atom with
-a full set of <span class="math inline">\(Z\)</span> electrons of charge
-<span class="math inline">\(-e\)</span> is therefore exactly
+a full set of <span class="math inline">\(Z\)</span> electrons, each of
+charge <span class="math inline">\(-e\)</span>, is therefore exactly
 neutral.</p>
 <h2 id="energy-units">Energy units</h2>
 <p>For energy we will work in units of <strong>electronvolts</strong>
@@ -271,18 +275,14 @@ naturally correspond to only around 90 elements. That is to say that the
 list of stable nuclides includes isotopes of many elements (same number
 of protons but different number of neutrons). Stable nuclei typically
 have <span class="math inline">\(N\)</span> slightly larger than <span
-class="math inline">\(Z\)</span>, i.e. slightly more neutrons that
+class="math inline">\(Z\)</span>, i.e. slightly more neutrons than
 protons, as shown in Figure <a href="#fig:nuclei"
 data-reference-type="ref" data-reference="fig:nuclei">1</a>.</p>
-<figure id="fig:nuclei">
-<img src="figs/nuclei.png" style="width:2.5in" />
-<figcaption>Plot of nuclides, showing N against Z. The diagonal black
-line is a plot of <span class="math inline">\(Z=N\)</span>, showing that
-the stable nuclei (in black) generally have <span
-class="math inline">\(N &gt; Z\)</span> for all but very small <span
-class="math inline">\(Z\)</span>. The decay modes of the non-stable
-nuclei are also shown, these are discussed later in the course. License:
-CC BY-SA 3.0.</figcaption>
+<figure id="fig:nuclei" data-latex-placement="H">
+<p><img src="figs/nuclei.png"
+alt="Plot of nuclei neutron number versus proton number. A diagonal line shows where where the numbers are equal, with all stable nuclei lying either on this line (for small A) or above it (larger number of protons than neutrons for large A)." /></p>
+<figcaption>Plot of nuclei neutron number versus proton number. The line
+of stability is shown as a diagonal black line.</figcaption>
 </figure>
 <p>Most nuclides are <strong>spherical in shape</strong>, but some are
 deformed. We will discuss the reasons for this later on.</p>
@@ -292,7 +292,7 @@ unit</strong>, <span class="math inline">\(u = 1.661 \times
 10^{-27}\)</span> kg, which is 1/12th the mass of a neutral carbon atom.
 The mass of a proton is <span class="math inline">\(m_p =
 1.00727u\)</span>, and a neutron is <span class="math inline">\(m_n =
-1.0087u\)</span>. We also sometimes give masses in units of <span
+1.00866u\)</span>. We also sometimes give masses in units of <span
 class="math inline">\(\mathrm{MeV/c^2}\)</span>, using the mass energy
 relationship <span class="math inline">\(E = mc^2\)</span> (Consult your
 Stage 1 special relativity notes for more on this). We have then that
@@ -310,34 +310,33 @@ nucleons would be about <span class="math inline">\(8u\)</span> short.)
 This is known as the <strong>mass deficit</strong> or <strong>mass
 defect</strong>. The existence of the mass deficit is obvious for
 Carbon-12 which has a mass of exactly <span
-class="math inline">\(12u\)</span>; since protons and neutrons both
-haves masses of greater than <span class="math inline">\(u\)</span>,
-their total mass must be greater than <span
-class="math inline">\(12u\)</span> even before we count the electrons.
-The mass deficit is associated with the binding energy of the nucleus
-which is discussed in the next section.</p>
+class="math inline">\(12u\)</span>; since protons and neutrons both have
+masses of greater than <span class="math inline">\(u\)</span>, their
+total mass must be greater than <span class="math inline">\(12u\)</span>
+even before we count the electrons. The mass deficit is associated with
+the binding energy of the nucleus which is discussed in the next
+section.</p>
 <p>The mass of a nucleus can be measured with a <strong>mass
 spectrometer</strong>, where essentially a magnetic field bends a stream
 of ionised nuclei into an arc with a radius of curvature depending on
-the mass of the nuclei. Refer back to the PHYS3220 notes (provided on
-the PHYS6660 Moodle page) for details on the mass spectrometer, or see
-<em>Krane Section 3.2</em>. A mass spectrometer can also be used to find
-the <strong>relative abundance</strong> of different isotopes within a
-sample, since nuclides of each isotope will have a different mass and
-hence strike the detector of the mass spectrometer at a different
-point.</p>
+the mass of the nuclei. You can look up details of how a mass
+spectrometer works, or see <em>Krane Section 3.2</em>. A mass
+spectrometer can also be used to find the <strong>relative
+abundance</strong> of different isotopes within a sample, since nuclides
+of each isotope will have a different mass and hence strike the detector
+of the mass spectrometer at a different point.</p>
 <h1 id="discovery-of-the-nucleus-revision">Discovery of the nucleus
 (Revision)</h1>
 <p>It was understood since the discovery of the electron in 1897 that
 atoms consist of positive and negatively charged elements. After he
-discovered the electron, J.J. Thompson proposed in 1904 the <strong>Plum
+discovered the electron, J.J. Thomson proposed in 1904 the <strong>Plum
 Pudding Model</strong>, in which the negatively charged electrons are
 imagined to be distributed in some continuous positively charged medium.
 (If you’re wondering why this is a ‘plum pudding’, in those days people
 called raisins plums, so it is really a raisin pudding!) This model was
 not completely accepted and raised some questions over whether charges
 could penetrate each other.</p>
-<p>In 1909, Hands Geiger and Ernest Marsden, under the supervision of
+<p>In 1909, Hans Geiger and Ernest Marsden, under the supervision of
 Ernest Rutherford, were conducting experiments in Manchester. They were
 firing alpha particles at pieces of thin gold foil. You will study alpha
 emission later, but for now you should know that alpha particles are
@@ -366,8 +365,9 @@ interaction time, and a change in velocity of</p>
 t}{m_\alpha},\]</span></p>
 <p>where <span class="math inline">\(m_\alpha\)</span> is the mass of
 the alpha particle.</p>
-<figure id="fig:rutherford">
-<img src="figs/scattering.png" style="width:2.5in" />
+<figure id="fig:rutherford" data-latex-placement="H">
+<p><img src="figs/scattering.png" style="width:2.5in"
+alt="Rutherford scattering in the Plum Pudding Model, showing deflection of an alpha particle due to Coulomb repulsion. Alpha particle initially has some x component of velocity, and obtains an additional y component due to repulsion as it passes close to the nucleus." /></p>
 <figcaption>Rutherford scattering in the Plum Pudding Model, showing
 deflection of an alpha particle due to Coulomb repulsion.</figcaption>
 </figure>
@@ -385,7 +385,7 @@ class="math inline">\(\theta\)</span> of less than <span
 class="math inline">\(0.02^o\)</span>. We have made a lot of assumptions
 and approximations here, but we can at least say that we expect a very
 small deflection.</p>
-<p>What Geiger and Muller actually found was that some alpha particles
+<p>What Geiger and Marsden actually found was that some alpha particles
 were indeed deflected by a small angle while others seemed to pass
 through without any deflection at all. But some were scattered at huge
 angles, some even heading back the way they had come. These particles
@@ -397,7 +397,7 @@ happened to go near or hit this dense region of positive charge, it
 would experience a large force of repulsion and be scattered at a large
 angle. This was the discovery of the nucleus, and the idea that the
 electrons orbited this positively charged centre.</p>
-<p>Rutherford, Geiger and Muller refined this model over a series of
+<p>Rutherford, Geiger and Marsden refined this model over a series of
 further experiments, allowing them to estimate the size and charge of
 the nucleus. The model did have a huge problem (essentially that in
 classical physics, the electrons, as accelerating charges, would quickly
@@ -413,8 +413,9 @@ class="math inline">\(E_K\)</span>. It will be slowed by Coulomb
 repulsion as it approaches the nucleus, eventually slowing to a complete
 stop before it begins to accelerate back away. The electrostatic
 potential energy a distance <span class="math inline">\(d\)</span> from
-the nucleus will be <span class="math display">\[U = \frac{1}{4 \pi
-\epsilon_0} \frac{(2e)(Ze)}{d},\]</span></p>
+the nucleus will be <span class="math display">\[\begin{equation}
+    U = \frac{1}{4 \pi \epsilon_0} \frac{(2e)(Ze)}{d},
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(Z\)</span> is the atomic number of
 the nucleus and <span class="math inline">\(e\)</span> is the
 fundamental charge. At the turn-around point all of the kinetic energy
@@ -442,10 +443,13 @@ electrons where the kinetic energy dominates over the rest energy, <span
 class="math inline">\(p \approx E_K/c\)</span>). Let’s imagine we see a
 first order minimum at an angle of <span
 class="math inline">\(44^o\)</span>.</p>
-<p>The angle <span class="math inline">\(\theta\)</span> of the first
-minimum of the diffraction pattern from a circular apertures of diameter
-<span class="math inline">\(d\)</span> is given by: <span
-class="math display">\[\sin \theta = 1.22\frac{\lambda}{d}\]</span></p>
+<p>Let’s approximate the nucleus as a circular aperture. The angle <span
+class="math inline">\(\theta\)</span> of the first minimum of the
+diffraction pattern from a circular aperture with diameter <span
+class="math inline">\(d\)</span> is given by: <span
+class="math display">\[\begin{equation}
+    \sin \theta = 1.22\frac{\lambda}{d}
+\end{equation}\]</span></p>
 <p>Putting in the numbers for <span class="math inline">\(\theta =
 44^o\)</span> gives <span class="math inline">\(d= 4.3\)</span> fm.
 Despite the approximations involved (e.g. treating a spherical object of
@@ -453,16 +457,17 @@ unknown charge distribution as a uniform disc of charge) this turns out
 to be in agreement with other ways of estimating the size of a
 nucleus.</p>
 <p>In general, the radii of nuclei are found to approximately follow the
-rule that: <span class="math display">\[r = r_0A^{1/3}\]</span> where
-<span class="math inline">\(r_0 = 1.25\)</span> fm. (Slight variations
-on this value will be found in different texts). <span
-class="math inline">\(r_0\)</span> does not have any particularly
-physical meaning; it is a fitted parameter. Note that since the volume
-of the nucleus is simply <span class="math inline">\(V \propto
-r^3\)</span>, this means that the volume is roughly proportional to the
-number of nucleons, <span class="math inline">\(A\)</span>, suggesting
-that the packing of the nucleons (and hence the nuclear density)
-<strong>doesn’t change much with <span
+rule that: <span class="math display">\[\begin{equation}
+    r = r_0A^{1/3}
+\end{equation}\]</span> where <span class="math inline">\(r_0 =
+1.25\)</span> fm. (Slight variations on this value will be found in
+different texts). <span class="math inline">\(r_0\)</span> does not have
+any particularly physical meaning; it is a fitted parameter. Note that
+since the volume of the nucleus is simply <span class="math inline">\(V
+\propto r^3\)</span>, this means that the volume is roughly proportional
+to the number of nucleons, <span class="math inline">\(A\)</span>,
+suggesting that the packing of the nucleons (and hence the nuclear
+density) <strong>doesn’t change much with <span
 class="math inline">\(A\)</span></strong>.</p>
 <h1 id="nuclear-charge-and-mass-distribution-and-skin-thickness">Nuclear
 charge and mass distribution, and skin thickness</h1>
@@ -478,16 +483,17 @@ of the nucleus is called the <strong>skin thickness</strong>, or <span
 class="math inline">\(t\)</span>. Interestingly, this turns out to be
 largely independent of the atomic mass, with <span
 class="math inline">\(t \approx 2.3\)</span> fm.</p>
-<figure id="fig:mskin">
-<img src="figs/thickness.png" style="width:2.5in" />
+<figure id="fig:mskin" data-latex-placement="H">
+<p><img src="figs/thickness.png" style="width:2.5in"
+alt="Skin thickness is the radial range over which the nuclear charge density drops between 0.9 and 0.1 of the maximum." /></p>
 <figcaption>Skin thickness is the radial range over which the nuclear
-charge density drops between 0.9 and 0.1 of the maximum. </figcaption>
+charge density drops between 0.9 and 0.1 of the maximum.</figcaption>
 </figure>
-<p>Note that, since electron scattering experiment involve only the
+<p>Note that, since electron scattering experiments involve only the
 Coulomb force, these are only telling us about the distribution of the
 charged nucleons, the protons. It could be, for example, that the
 neutrons are arranged entirely differently (for example surrounding the
-protons), giving a much large radius of nuclear matter (as opposed to
+protons), giving a much larger radius of nuclear matter (as opposed to
 radius of nuclear charge).</p>
 <p>If we were to fire helium nuclei (alpha particles) at a heavier
 nucleus, as in Rutherford’s experiments, at sufficiently high energies
@@ -499,10 +505,10 @@ suggesting that the protons and neutrons are intermingled. We will
 therefore not really need to distinguish between these two definitions
 of the nuclear radius.</p>
 <h1 id="review-of-radioactive-decay-and-half-life-revision">Review of
-Radioactive Decay and Half Life (Revision)</h1>
+Radioactive Decay and Half-Life (Revision)</h1>
 <p>Most nuclides are unstable and decay over time periods ranging from
 fractions of a second to millions of years. The three most common types
-of decay (alpha, beta and gamma) are studied is more detail in Section
+of decay (alpha, beta and gamma) are studied in more detail in Section
 5, but briefly:</p>
 <ul>
 <li><p>Alpha Decay is the emission of a helium nucleus (2p2n) and occurs
@@ -531,7 +537,7 @@ exponentially.</p>
 <ul>
 <li><p>The activity, A as the number of decays in a sample per unit
 time. We define 1  (Becquerel) as 1 decay per second.</p></li>
-<li><p>The half life, <span class="math inline">\(t_{1/1}\)</span>, as
+<li><p>The half-life, <span class="math inline">\(t_{1/2}\)</span>, as
 the time for half of the sample to decay</p></li>
 <li><p>The specific activity, as the number of decays per unit time per
 amount of sample (e.g. measured by mass or number of nuclei).</p></li>

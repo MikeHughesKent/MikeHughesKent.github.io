@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Mike Hughes" />
+  <title>Nuclear Physics Appendix - More on the Collective Model</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js"
+  type="text/javascript"></script>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Nuclear Physics Appendix - More on the Collective
+Model</h1>
+<p class="author">Mike Hughes</p>
+<p class="date">Physics and Astronomy, University of Kent</p>
+</header>
+<p><em>This appendix contains additional notes on the collective model -
+<strong>this is purely for interest and will not be assessed or
+examined.</strong></em></p>
+<h1 id="introduction">Introduction</h1>
+<p>The collective model goes beyond the shell model to include effects
+which encompass all the nucleons, hence - ‘collective’. The
+modifications due to this model are most apparent for those nuclei that
+have large number of nucleons in unfilled shells - ‘valence
+nucleons’.</p>
+<p>Evidence for the collective model comes from the behaviour of excited
+states. (Recall that so far we have always assumed that our nuclei are
+in the ground state). Essentially, there are three ways in which a
+nucleus can become excited:</p>
+<ul>
+<li><p>A proton or neutron is placed in a higher energy level.</p></li>
+<li><p>The nucleus gains vibrational energy.</p></li>
+<li><p>The nucleus gain rotational energy. This mainly occurs for nuclei
+with <span class="math inline">\(150 &lt; A &lt; 190\)</span> and <span
+class="math inline">\(A &gt; 230\)</span>.</p></li>
+</ul>
+<h1 id="pair-breaking">Pair Breaking</h1>
+<p>Suppose we have an even-even nucleus and we would like to prepare it
+in an excited state. All the nucleons are paired, and so to place one of
+the nucleons in a higher energy level we need to break a pair.</p>
+<p>As an example, take <span class="math inline">\(^{130}Sn\)</span>, an
+even-even nucleus which we would expect to have a ground state which is
+<span class="math inline">\(0+\)</span> (i.e. 0 spin, even parity). Some
+more details on this nucleus are in Krane p134.</p>
+<p>This nucleus has 50 protons and 80 neutrons. Going by the shell
+model, in the ground state we would expect 50 protons to completely fill
+up to the <span class="math inline">\(g_{9/2}\)</span> shell and the 80
+neutrons would be two short of filling the <span
+class="math inline">\(h_{11/2}\)</span> shell.</p>
+<p>To put this in a low-energy excited state we would expect to move a
+neutron into a higher level (the protons have a full shell and so a lot
+of energy would be needed to promote a proton). It turns out that
+promoting <span class="math inline">\(h_{11/2}\)</span> neutrons would
+also require a lot of energy because there would be large energy gap to
+cross to reach the next level. What could happen is that one of the
+neutrons from the very bottom of the shell, in <span
+class="math inline">\(1s_{1/2}\)</span>, is instead promoted to the
+<span class="math inline">\(h_{11/2}\)</span> level.</p>
+<p>The total spin and parity of the nucleus then results from the
+coupling between these two unpaired neutrons in the <span
+class="math inline">\(s_{1/2}\)</span> and <span
+class="math inline">\(h_{11/2}\)</span> shells. If we recall the rules
+for combining angular momentum, this means that <span
+class="math inline">\(j\)</span> could run in integer steps from <span
+class="math inline">\(|j_1 - j_2|\)</span> to <span
+class="math inline">\(|j_1 + j_2|\)</span> which in this case gives
+<span class="math inline">\(j = 5\)</span> or <span
+class="math inline">\(j=6\)</span>. And we would expect an odd parity,
+from combining an odd (‘<span class="math inline">\(s\)</span>’) parity
+with an even (‘<span class="math inline">\(h\)</span>’) parity. And
+indeed, we do find excited states with these properties (<span
+class="math inline">\(5-\)</span>, <span
+class="math inline">\(6+\)</span>).</p>
+<p>Of course, there are other possibilities as well such as promoting a
+<span class="math inline">\(1d_{3/2}\)</span> level neutron, for which
+we could also work out the expected spin and parity, and again we see
+these excited states experimentally at energies of around <span
+class="math inline">\(2\)</span> MeV. These are shown in Figure <a
+href="#fig:SnStates" data-reference-type="ref"
+data-reference="fig:SnStates">1</a>.</p>
+<figure id="fig:SnStates" data-latex-placement="H">
+<img src="figs/Sn80 Levels.png" style="width:2.5in" />
+<figcaption>Observed ground and excited states for Sn-80. States are
+labelled with the measured spin and parity. Reproduced from <em>Krane,
+Introductory Nuclear Physics, p135</em></figcaption>
+</figure>
+<p>However, we also see a <span class="math inline">\(2+\)</span>
+excited state at around 1 MeV. As an exercise you can try to see which
+neutron(s) to promote to achieve this. There are a few possibilities,
+but they all involve breaking a pair of neutrons. So how can this
+excited state be created with an input of just 1 MeV, when all the other
+pair-breaking possibilities seem to require 2 MeV?</p>
+<p>This 1 MeV level turns out to exist for a very large number of
+even-even nuclei. So it is not some quirk of this particular
+configuration, but rather a general property of many nuclei. This leads
+to the idea of collective features of the nucleus (vibrations and
+rotations), as opposed to the ‘extreme single particle’ model we have
+worked with so far.</p>
+<h1 id="vibrational-states">Vibrational States</h1>
+<p>Nuclear vibrations are often thought of as being similar to a liquid
+drop vibrating at high frequencies. The idea is that, while the nucleus
+remains a spherical shape when averaged over time, instantaneously it is
+deformed.</p>
+<p>If we label the (angular) frequency of vibration by <span
+class="math inline">\(\omega\)</span>, then the energy associated with
+that vibration is <span class="math inline">\(E=hf = \hbar
+\omega\)</span>. This is the quantum world, and so it isn’t possible to
+have any arbitrary frequency of vibration, instead this is quantised in
+a way analogous to the quantum harmonic oscillator: <span
+class="math display">\[\begin{equation}
+        E = (n + 1/2) \hbar \omega.
+    
+\end{equation}\]</span> This quantisation can be thought of as a
+standing wave on the surface of the nucleus.</p>
+<p>These discrete units of vibrational energy are called
+<strong>‘phonons’</strong>, in a similar manner to how the basic units
+of electromganetic energy are called photons.</p>
+<p>We parameterise the different vibrational modes with the symbol <span
+class="math inline">\(\lambda\)</span>. If we consider a point on the
+surface of the nucleus, its radial position varies in time according to:
+<span class="math display">\[\begin{equation}
+        R(t) = R_av + \sum_{\lambda} \sum_{\mu} \alpha_{\lambda
+\mu}(t)Y_{\lambda,\mu}(\theta, \phi).
+    
+\end{equation}\]</span></p>
+<p>Here, <span class="math inline">\(Y_{\lambda \mu}\)</span> are the
+spherical harmonics, with <span class="math inline">\(-\lambda \leq \mu
+\leq \lambda\)</span>, and <span class="math inline">\(\alpha\)</span>
+specifies the amplitude of each <span class="math inline">\(\lambda,
+\mu\)</span> spherical harmonic component as a function of time. Note
+that <span class="math inline">\(\lambda\)</span> and <span
+class="math inline">\(\mu\)</span> are analogous to the parameters we
+label <span class="math inline">\(l\)</span> and <span
+class="math inline">\(m_l\)</span> when solving the Schrödinger
+equation, and so we have the normal rule <span class="math inline">\(\mu
+= -\lambda ... ,-2,-1, 0, 1, 2, ... \lambda\)</span>.</p>
+<p><span class="math inline">\(\lambda = 0\)</span> is clearly not a
+very interesting term since there is no angular variation. Examples for
+the first three <span class="math inline">\(\lambda\)</span>s are shown
+in Figure <a href="#fig:vibrations" data-reference-type="ref"
+data-reference="fig:vibrations">2</a>. It can be seen that the <span
+class="math inline">\(\lambda = 1\)</span> mode results in a shift in
+the centre of mass of the nucleus. You will recall from classical
+mechanics that an object cannot shift its centre of mass from internal
+re-arrangement, and so this mode cannot occur.</p>
+<figure id="fig:vibrations" data-latex-placement="H">
+<img src="figs/vibrations.png" style="width:3.5in" />
+<figcaption>Vibrational energy states. Reproduced from <em>Lilley,
+Nuclear Physics: Principles and Applications, Fig. 2.13.</em>
+</figcaption>
+</figure>
+<p>So, the first excited state is <span class="math inline">\(\lambda =
+2\)</span>. This is equivalent to an <span
+class="math inline">\(l=2\)</span> state, giving 2 units of angular
+momentum and even parity (<span class="math inline">\(2+\)</span>).
+Adding this to the ground state angular momentum of an even-even nucleus
+(which has <span class="math inline">\(O+\)</span>) gives a total of
+<span class="math inline">\(2+\)</span>. (In case it’s not obvious,
+adding wavefunctions with even parity results in another wavefunction
+with even parity). We can think of this as adding two phonons of energy.
+This explains our mysterious <span class="math inline">\(0+\)</span>
+state - this is what we find experimentally for the first excited state
+of even-even nuclei. So far, so good.</p>
+<p>What about the next excited state? Suppose we add another two
+phonons. Now, for each <span class="math inline">\(\lambda = 2\)</span>
+phonon there are 5 possible values of <span
+class="math inline">\(\mu\)</span> (-2,-1,0,1,2). We have two phonons so
+there are 25 possible combinations of values giving a total <span
+class="math inline">\(\mu_T = \mu_1 + \mu_2\)</span> as shown in
+Table <a href="#tab:twoPhonon" data-reference-type="ref"
+data-reference="tab:twoPhonon">1</a>.</p>
+<div id="tab:twoPhonon">
+<table>
+<caption>Possible value for total <span
+class="math inline">\(\mu\)</span> for a two quadrupole phonon
+vibration. The value of <span class="math inline">\(\mu\)</span> for one
+of the phonons is on the vertical, and the value for the other is on the
+horizontal.</caption>
+<thead>
+<tr>
+<th style="text-align: right;"></th>
+<th style="text-align: right;">-2</th>
+<th style="text-align: right;">-1</th>
+<th style="text-align: right;">0</th>
+<th style="text-align: right;">+1</th>
+<th style="text-align: right;">+2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;"><strong>-4</strong></td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">-3</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0 </td>
+<td style="text-align: right;">+1</td>
+</tr>
+<tr>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">-2</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">+1</td>
+<td style="text-align: right;">+2</td>
+</tr>
+<tr>
+<td style="text-align: right;">+1</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">+1</td>
+<td style="text-align: right;">+2</td>
+<td style="text-align: right;">+3</td>
+</tr>
+<tr>
+<td style="text-align: right;">+2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">+1</td>
+<td style="text-align: right;">+2</td>
+<td style="text-align: right;">+3</td>
+<td style="text-align: right;">+4</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>However, not all of these combination are possible in practice as we
+have another rule to observe. Phonons have integer spins and so
+symmetric total wavefunctions (recall that this is fundamental
+difference between particles that do and do not obey Pauli’s exclusion
+principle). So this means that the total wavefunction must also be
+symmetric.</p>
+<p>A symmetric wavefunction can be obtained either by combining two
+symmetric wavefunctions, or two antisymmetric wavefunctions, but not
+from a symmetric plus an antisymmetric. As a result only those states
+with even <span class="math inline">\(\lambda\)</span> are allowed:</p>
+<ul>
+<li><p><span class="math inline">\(\lambda = 4\)</span>: <span
+class="math inline">\(\mu =-4,-3,-2,-1, 0,1,2,3,4\)</span></p></li>
+<li><p><span class="math inline">\(\lambda  = 2\)</span>: <span
+class="math inline">\(\mu = -2,-1,0,1,2,\)</span></p></li>
+<li><p><span class="math inline">\(\lambda  = 0\)</span>: <span
+class="math inline">\(\mu = 0\)</span></p></li>
+</ul>
+<p>So we would expect to find a triplet of excited states (0+, 2+, 4+).
+Figure <a href="#fig:TeStatesH" data-reference-type="ref"
+data-reference="fig:TeStatesH">3</a> shows the low-lying levels of <span
+class="math inline">\(^{120}\mathrm{Te}\)</span> reproduced from Krane.
+And indeed we do observe these groups at low energies, strong evidence
+in favour of the existence of vibrational states. There is some
+complications, for example they are not all exactly the same energy
+despite involving 2 phonons, but it suggest the vibrational model is
+reasonable first approximation.</p>
+<p>We can do similar calculations for <span
+class="math inline">\(\lambda = 3\)</span> and we do indeed find the
+predicted energy levels (see Figure <a href="#fig:TeStatesH"
+data-reference-type="ref" data-reference="fig:TeStatesH">3</a>).
+However, as we go to higher energies the pattern is less clear as we
+start to observe pair breaking.</p>
+<figure id="fig:TeStatesH" data-latex-placement="H">
+<img src="figs/Te120 State.png" style="width:2.5in" />
+<figcaption>Observed ground and excited states for Te-120. States are
+labelled with the measured spin and parity. Reproduced from <em>Krane,
+Introductory Nuclear Physics, p141</em></figcaption>
+</figure>
+<h1 id="rotational-states">Rotational States</h1>
+<p>Rotational states only occur for deformed nuclei (i.e. that have
+non-spherical equilibrium states). Deformation arises due to the way
+valence nucleons arrange themselves in the unfilled shells. The most
+deformed nuclei happen to be found for <span class="math inline">\(150
+&lt; A &lt; 190\)</span>. The most common deformed shape is an
+ellipsoid, rugby ball shape.</p>
+<p>Recall from classical mechanics that the rotational angular momentum
+of a body with moment of inertia <span class="math inline">\(I\)</span>
+rotating at an angular frequency of <span
+class="math inline">\(\omega\)</span> is given by <span
+class="math display">\[\begin{equation}
+        L = I \omega,
+    
+\end{equation}\]</span> and rotational energy by <span
+class="math display">\[\begin{equation}
+        E = 1/2 I \omega^2 = \frac{(I \omega)^2}{2I} = \frac{L^2}{2I}.
+    
+\end{equation}\]</span> Using <span class="math inline">\(L^2 =
+l(l+1)\hbar^2\)</span>, <span class="math display">\[\begin{equation}
+        E = \frac{l(l+1)}{2I} \hbar^2.
+    
+\end{equation}\]</span></p>
+<p>For even-even nuclei, which have a <span
+class="math inline">\(0+\)</span> ground state, only rotational states
+with even values of <span class="math inline">\(l\)</span> are allowed
+(due to the need for mirror symmetry). We therefore expect excited
+states at energies corresponding to <span
+class="math inline">\(l=2\)</span>, <span
+class="math inline">\(l=4\)</span> etc. And indeed, if we look at the
+observed excited states for <span
+class="math inline">\(^{180}\mathrm{Hf}\)</span> in Figure <a
+href="#fig:HfStates" data-reference-type="ref"
+data-reference="fig:HfStates">4</a> we find the energies follow the
+<span class="math inline">\(l(l+1)\)</span> dependence very well.</p>
+<figure id="fig:HfStates" data-latex-placement="H">
+<img src="figs/Hf_states.png" style="width:1.5in" />
+<figcaption>Low-lying rotational energy levels for Hf-180. Reproduced
+from <em>Lilley, Nuclear Physics: Principles and Applications (Fig
+2.16)</em>.</figcaption>
+</figure>
+<p>This works for many nuclei very well. Above <span
+class="math inline">\(l = 8\)</span> the dependency deviates slightly;
+this can be interpreted as a the moment of inertia, <span
+class="math inline">\(I\)</span>, not being totally independent of <span
+class="math inline">\(l\)</span>, suggesting that the nucleus is to some
+degree ‘soft’, its internal structure can be affected by the forces
+involved in rotation.</p>
+</body>
+</html>
