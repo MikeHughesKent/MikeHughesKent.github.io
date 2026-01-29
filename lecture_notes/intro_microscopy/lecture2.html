@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Michael Hughes" />
-  <title>PH800 Biomedical Optics Introduction to Microscopy Lecture 2 Lateral Resolution</title>
+  <meta name="author" content="Mike Hughes Physics &amp; Astronomy, University of Kent" />
+  <title>Biomedical Optics Introduction to Microscopy Lecture 2 Resolution in Microscopy</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -173,116 +176,88 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">PH800 Biomedical Optics<br />
+<h1 class="title">Biomedical Optics<br />
 <strong>Introduction to Microscopy</strong><br />
-Lecture 2 Lateral Resolution</h1>
-<p class="author">Michael Hughes</p>
+Lecture 2 Resolution in Microscopy</h1>
+<p class="author">Mike Hughes<br />
+<em>Physics &amp; Astronomy, University of Kent</em></p>
 </header>
 <h1 id="reading">Reading</h1>
 <p>The notes below are a summary of the key points needed for the exam.
 For more details and background they should be read in conjunction with
-linked documents, papers or websites and the general reading:</p>
+the additional reading:</p>
 <ol>
-<li><p>Olympus Microcsopy Resource Centre: <a
-href="https://www.olympus-lifescience.com/en/microscope-resource/">https://www.olympus-lifescience.com/en/microscope-resource/</a></p></li>
-<li><p>Nikon MicroscopyU <a
-href="https://www.microscopyu.com/">https://www.microscopyu.com/</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/microscopy-basics/resolution">Resolution</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/tutorials/imageformation-airyna">Numerical
+Aperture</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/tutorials/spatial-resolution-in-digital-imaging">Pixel
+Sampling</a></p></li>
+<li><p><a
+href="https://evidentscientific.com/en/microscope-resource/tutorials/mtf/spatialvariation">MTF</a></p></li>
+<li><p><a
+href="https://evidentscientific.com/en/microscope-resource/tutorials/mtf/airydisksize">Airy
+disc</a></p></li>
+<li><p><a
+href="https://evidentscientific.com/en/microscope-resource/tutorials/mtf/modulation">NA
+and MTF</a></p></li>
 </ol>
-<p>The resolution of a microscope is fundamentally limited by
-diffraction. The image of an infinitesimal point will be ‘blurred’ by
-the system’s point spread function (PSF). In the spatial frequency
-domain we can think of this as an attenuation of higher spatial
-frequency components, described by the modulation transfer function
-(MTF). These terms are defined more rigorously later.</p>
-<p>The finite resolution of a microscope can be understood in terms of
-the spatial frequencies which are passed from the object to the image
-plane. Roughly speaking, to reconstruct a feature of a certain small
-size, our microscope must transmit spatial frequencies on the order of
-the feature’s size.</p>
-<h1 id="abbe-limit">Abbe Limit</h1>
-<p>To understand what happens to a given spatial frequency, consider a
-fine sinusoidal periodic structure in the object, as shown in Fig. <a
-href="#cutoff1" data-reference-type="ref"
-data-reference="cutoff1">1</a>. The structures are separated by a
-distance <span class="math inline">\(d\)</span> and so have spatial
-frequency <span class="math inline">\(1/d\)</span>. This structure acts
-like a diffraction grating, and hence if we consider only the first
-diffraction order, normally incident light of wavelength <span
-class="math inline">\(\lambda\)</span> will be diffracted by an angle
-<span class="math inline">\(\theta\)</span>, where:</p>
-<p><span class="math display">\[d \sin \theta = \lambda\]</span></p>
-<figure id="cutoff1">
-<img src="figs/cutoff1.png" style="width:8cm" />
-<figcaption>Cut-off frequency for planar illumination.</figcaption>
-</figure>
-<p>In order to capture a spatial frequency of <span
-class="math inline">\(1/d\)</span>, our lens must collect light
-diffracted at an angle <span class="math inline">\(\theta\)</span>. If
-the lens is at a focal length of <span class="math inline">\(f\)</span>,
-then it must have an aperture diameter, <span
-class="math inline">\(D\)</span>, such that: <span
-class="math display">\[\frac{D}{2f} = \sin \theta.\]</span></p>
-<p>We define the numerical aperture of our microscope objective as <span
-class="math display">\[NA = n \sin \theta = D / 2f,\]</span> where <span
-class="math inline">\(n\)</span> is the refractive index of the medium
-between the sample and the objective. In general this is air, and so
-<span class="math inline">\(n = 1\)</span>, but in oil immersion
-objectives it can be higher.</p>
-<p>Hence, for our microscope to capture a spatial frequency <span
-class="math inline">\(1/d\)</span>, and resolve objects of size <span
-class="math inline">\(d\)</span>, we have: <span
-class="math display">\[d = \frac{\lambda}{NA}\]</span></p>
-<p>However, this assumes we illuminate the sample with plane waves. Say
-now we illuminate from all angles using a condenser with the same NA as
-the objective. Now, as shown in Fig <a href="#cutoff2"
-data-reference-type="ref" data-reference="cutoff2">2</a>, we can collect
-spatial frequencies which have been diffracted through <span
-class="math inline">\(2 \theta\)</span>, and hence which are twice as
-high. So our final formula becomes:</p>
-<figure id="cutoff2">
-<img src="figs/cutoff2.png" style="width:8cm" />
-<figcaption>Cut-off frequency for high NA illumination.</figcaption>
-</figure>
-<p><span class="math display">\[d_{abbe} =
-\frac{\lambda}{2NA}\]</span></p>
-<p>This is known as the <strong>Abbe limit</strong>, it tells us the
-maximum spatial frequency we can collect, known as the <strong>cut-off
-frequency</strong>. Alternatively it tells us the objective NA we
-require in order to capture features with a certain spatial frequency.
-However, it is not necessarily the best way to determine if we can
-actually resolve those objects, as we are ignoring the extent to which
-these frequencies are attenuated through diffraction.</p>
-<h1
-id="incoherent-point-spread-function-psf-and-modulation-transfer-function-mtf">Incoherent
-Point Spread Function (PSF) and Modulation Transfer Function (MTF)</h1>
-<p>For an incoherent imaging system, an infinitesimally small point of
-intensity at the object plane will be spread out at the image plane. The
-‘spreading out’ is defined by the <strong>incoherent point spread
-function</strong> (PSF). Ideally the PSF is shift invariant, i.e. it is
-the same for all positions in the object/image, but in practice this is
-never quite the case. The PSF is a 2D function, but when it is radially
-symmetric we often plot a 1D profile through it.</p>
-<p>We can consider any intensity distribution at the object plane to be
-a super-position of an arbitrarily large number of infinitesimal points.
-Hence, the image can be expressed as a summation of PSFs, one for each
-point on the object. Mathematically, we express this as a
-convolution.</p>
+<h1 id="introduction">Introduction</h1>
+<p>In microscopy, resolution refers to the ability of a microscope to
+distinguish between two points in the sample, i.e. to determine that
+they are separate and distinct from one another. The closer the points
+can be before they can no longer be distinguished and they blur into one
+another, the better the resolution of the microscope. The resolution
+therefore determines the level of detail that can be observed,
+essentially how clear and sharp the image appears.</p>
+<p>Resolution is distinct from <em>magnification</em>. The magnification
+is how many times larger the image appears in the eyepiece or on the
+camera. In a digital microscope we can digitally zoom into the image on
+screen as well. As we increase the magnification (or the digital zoom)
+we reach a point where we don’t see any finer details because we have
+reached the <strong>resolution limit</strong>. Magnification beyond this
+point is referred to as <strong>empty magnification</strong>.</p>
+<h1 id="the-point-spread-function-psf">The Point Spread Function,
+PSF</h1>
+<p>The resolution of a microscope can be characterised by the
+<strong>Point Spread Function (PSF)</strong>. This describes how a
+single point on the sample is transferred to the image. In an ideal
+optical system, a point object would appear as a single, perfectly sharp
+point in the image. However, due to the wave nature of light and
+imperfections in the optical system, that point becomes a blurred spot.
+The 2D distribution of intensity in this blurred spot is the PSF.</p>
+<p>The PSF is particularly useful because we can consider any object to
+be a collection, or sum, of a large number of points. The image is
+therefore a sum of the PSF from each of those points.</p>
 <p>Consider an object <span class="math inline">\(O(u,v)\)</span>, where
 <span class="math inline">\(u\)</span> and <span
 class="math inline">\(v\)</span> are the lateral co-ordinates at the
 object plane. For some perfect (and physically impossible) imaging
 system (i.e. one which exactly reproduces the object), we can write the
-image <span class="math inline">\(I(x_0,y_0)\)</span> as</p>
-<p><span class="math display">\[I(x,y) = \int \int O(u,v) \delta(x_0 -u,
-y_0 - u)~du~dv,\]</span> where <span
-class="math inline">\(\delta\)</span> is the delta function. For any
-real system we replace this delta function with a finite point spread
-function <span class="math inline">\(PSF(x_i,y_i)\)</span>, and the
-image is then similarly given by:</p>
-<p><span class="math display">\[I(x_0,y_0) = \int \int O(u,v) PSF(x_i -
-u,y_i - v)~du~dv\]</span></p>
-<p>or <span class="math display">\[I= O\ast PSF\]</span> where <span
-class="math inline">\(*\)</span> represents convolution.</p>
+image <span class="math inline">\(I(x,y)\)</span> as</p>
+<p><span class="math display">\[I(x,y) = \int \int O(u,v) \delta(x - u,
+y - v)~du~dv,\]</span></p>
+<p>where <span class="math inline">\(\delta\)</span> is the delta
+function. We haven’t explicitly included the magnification factor, but
+since we have used different co-ordinates for <span
+class="math inline">\(I\)</span> and <span
+class="math inline">\(O\)</span> (<span
+class="math inline">\(x,y\)</span> and <span
+class="math inline">\(u,v\)</span>) we can accommodate any magnification
+implicitly.</p>
+<p>For any real system we replace this delta function with a finite
+point spread function <span
+class="math inline">\(\mathrm{PSF}(x_i,y_i)\)</span>, and the image is
+then similarly given by:</p>
+<p><span class="math display">\[I(x,y) = \int \int O(u,v) \mathrm{PSF}(x
+- u, y - v)~du~dv\]</span></p>
+<p>or,</p>
+<p><span class="math display">\[I(x,y)= O(u,v) \ast
+\mathrm{PSF},\]</span></p>
+<p>where <span class="math inline">\(\ast\)</span> represents
+convolution.</p>
 <p>In the spatial frequency domain, the analogue of the PSF is the
 <strong>modulation transfer function</strong>, MTF (i.e. the 2D MTF is
 the 2D Fourier transform of the 2D PSF).</p>
@@ -296,7 +271,9 @@ fraction of each frequency of <em>modulation</em> the system is able to
 This contains the same information as the MTF but also describes the
 phase delay that different spatial frequency components receive. Usually
 the OTF is expressed as a complex number, and the MTF is then the
-magnitude/modulus of the OTF.</p>
+magnitude/modulus of the OTF,</p>
+<p><span class="math display">\[\mathrm{MTF} = | \mathrm{OTF}
+|\]</span></p>
 <p>We further define the <strong>pupil function</strong>, which tells us
 how the amplitude of light passing through different points of the
 aperture of the microscope is attenuated (as well as any phase change).
@@ -306,47 +283,210 @@ circle.</p>
 So we can think of this as effectively a ‘spatial frequency plane’, the
 size of the pupil determines the cut-off spatial frequency (refer to the
 discussion earlier).</p>
-<p>The PSF is the absolute square of the Fourier transform of the pupil
-function. This means, from Fourier theory, that the OTF is the
-autocorrelation of the pupil function, and the MTF is the magnitude of
-this. This is a slightly confusing point and requires some thought.</p>
+<p>For incoherent imaging, such as with light from a lamp or
+fluorescence imaging, the PSF is the absolute square of the Fourier
+transform of the pupil function, <span class="math inline">\(P\)</span>.
+This means, from Fourier theory, that the OTF is the autocorrelation of
+the pupil function, and the MTF is the magnitude of this,</p>
+<p><span class="math display">\[\mathrm{PSF} =
+|\mathcal{F}(P)|^2\]</span></p>
+<p><span class="math display">\[\mathrm{MTF} = |P \ast P|\]</span></p>
+<p>This is a slightly confusing point and requires some thought.</p>
 <p>An example of a pupil function and the corresponding PSF and MTF are
-shown in Fig. <a href="#pupil" data-reference-type="ref"
-data-reference="pupil">3</a>. Matlab code to generate these plots is on
-Moodle. We can see from the MTF plot that a microscope is a low-pass
-filtering system with a cut-off frequency.</p>
-<p>Some caution is needed here, these are slices through 2D functions,
-not 1D functions. The slice through the MTF is not simply the
-autocorrelation of the slice through the pupil function, we must perform
-the 2D autocorrelation on the 2D pupil function and then take the slice.
-Otherwise the MTF would be a triangular function (the autocorrelation of
-a ‘rect’ function) whereas careful observation will reveal a slight
-curvature.</p>
-<figure id="pupil">
-<img src="figs/pupil.png" style="width:16cm" />
-<figcaption>Profiles through an example (circular) pupil function and
-the corresponding PSF and MTF. These plots are for a wavelength of
-500 nm and a numerical aperture of 0.5.</figcaption>
+shown in Fig. <a href="#pupil_psf_mtf" data-reference-type="ref"
+data-reference="pupil_psf_mtf">1</a>. We can see from the MTF plot that
+a microscope is a low-pass filtering system with a cut-off
+frequency.</p>
+<p><em><strong>Aside:</strong> Some caution is needed here, these are
+slices through 2D functions, not 1D functions. The slice through the MTF
+is not simply the autocorrelation of the slice through the pupil
+function, we must perform the 2D autocorrelation on the 2D pupil
+function and then take the slice. Otherwise the MTF would be a
+triangular function (the autocorrelation of a ‘rect’ function) whereas
+careful observation will reveal a slight curvature.</em></p>
+<figure id="pupil_psf_mtf" data-latex-placement="H">
+<p><img src="figs_small/pupil_psf_mtf.png" style="width:14cm"
+alt="2D intensity plots (top row) and profiles through (bottom row) an example circular pupil function and the corresponding PSF and MTF." /></p>
+<figcaption>2D intensity plots (top row) and profiles through (bottom
+row) an example circular pupil function and the corresponding PSF and
+MTF. These plots are for a wavelength of 500 nm and a numerical aperture
+of 0.4.</figcaption>
 </figure>
-<p>A final subtlety is that, again, a 1D slice thought the 2D MTF is
-<strong>NOT</strong> the 1D Fourier transform of a 1D profile through
-the 2D PSF (You may need to convince yourself this is the case). The 1D
-Fourier transform of the MTF is actually the line spread funtion (LSF),
-which describes how a line, rather than a point, spreads. It is related
-to the PSF via the Abel transform. An excellent tutorial discussing this
-is available here:</p>
+<p>A final, non-examinable, subtlety is that, again, a 1D slice through
+the 2D MTF is <strong>NOT</strong> the 1D Fourier transform of a 1D
+profile through the 2D PSF (You may need to convince yourself this is
+the case). The 1D Fourier transform of the MTF is actually the line
+spread function (LSF), which describes how a line, rather than a point,
+spreads. It is related to the PSF via the Abel transform. An excellent
+tutorial discussing this is available here:</p>
 <p><a
 href="https://www.dspguide.com/ch25/1.htm">https://www.dspguide.com/ch25/1.htm</a></p>
-<h1 id="coherent-point-spread-function">Coherent Point Spread
-Function</h1>
+<h1 id="fundamental-limits-on-resolution">Fundamental Limits on
+Resolution</h1>
+<p>The finite resolution of a microscope can be understood in terms of
+the spatial frequencies which are passed from the object to the image
+plane (i.e. the MTF). Roughly speaking, to reconstruct a feature of a
+certain small size, our microscope must transmit spatial frequencies on
+the order of the feature’s size.</p>
+<p>To understand what happens to a given spatial frequency, consider a
+fine sinusoidal periodic structure in the object, as shown in Fig. <a
+href="#cutoff1" data-reference-type="ref"
+data-reference="cutoff1">2</a>. The structures are separated by a
+distance <span class="math inline">\(d\)</span> and so have spatial
+frequency <span class="math inline">\(1/d\)</span>. This structure acts
+like a diffraction grating, and hence if we consider only the first
+diffraction order, normally incident light of wavelength <span
+class="math inline">\(\lambda\)</span> will be diffracted by an angle
+<span class="math inline">\(\theta\)</span>, where:</p>
+<p><span class="math display">\[d \sin \theta = \lambda\]</span></p>
+<figure id="cutoff1">
+<p><img src="figs_small/cutoff1.png" style="width:10cm"
+alt="Diagram showing the largest angle ray that can pass through a lens aperture." /></p>
+<figcaption>Cut-off frequency for planar illumination.</figcaption>
+</figure>
+<p>In order to capture a spatial frequency of <span
+class="math inline">\(1/d\)</span>, our lens must collect light
+diffracted at an angle <span class="math inline">\(\theta\)</span>. If
+the lens is at a focal length of <span class="math inline">\(f\)</span>,
+then it must have an aperture diameter, <span
+class="math inline">\(D\)</span>, such that,</p>
+<p><span class="math display">\[\frac{D}{2f} \approx \sin
+\theta,\]</span></p>
+<p>where we have made the small angle approximation, <span
+class="math inline">\(\sin \theta \approx \theta\)</span>.</p>
+<p>We define the <strong>numerical aperture</strong> of our microscope
+objective as,</p>
+<p><span class="math display">\[\mathrm{NA} = n \sin \theta \approx nD /
+2f,\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the refractive index
+of the medium between the sample and the objective. In general this is
+air, and so <span class="math inline">\(n = 1\)</span>, but in oil
+immersion objectives it can be higher.</p>
+<p>Hence, for our microscope to capture a spatial frequency <span
+class="math inline">\(1/d\)</span>, and resolve objects of size <span
+class="math inline">\(d\)</span>, we have,</p>
+<p><span class="math display">\[d =
+\frac{n\lambda}{\mathrm{NA}}.\]</span></p>
+<p>However, this assumes we illuminate the sample with plane waves. Say
+now we illuminate from all angles using a condenser with the same NA as
+the objective. Now, as shown in Fig <a href="#cutoff2"
+data-reference-type="ref" data-reference="cutoff2">3</a>, we can collect
+spatial frequencies which have been diffracted through <span
+class="math inline">\(2 \theta\)</span>, and hence which are twice as
+high. So our final formula becomes,</p>
+<p><span class="math display">\[d_{abbe} =
+\frac{\lambda}{2\mathrm{NA}}.\]</span></p>
+<figure id="cutoff2" data-latex-placement="H">
+<p><img src="figs_small/cutoff2.png" style="width:10cm"
+alt="Diagram showing the largest angle ray that can pass through a lens aperture, when the illumination is at an angle." /></p>
+<figcaption>Cut-off frequency for high NA illumination.</figcaption>
+</figure>
+<p>This is known as the <strong>Abbe limit</strong>; it tells us the
+maximum spatial frequency we can collect, known as the <strong>cut-off
+frequency</strong>. Alternatively it tells us the objective NA we
+require in order to capture features with a certain spatial frequency.
+It does not necessarily mean that we can resolve features of that size
+in practice, for that we need to look at the PSF/MTF, and also consider
+how noisy the image is. It also does not correspond exactly to either
+the Rayleigh or Sparrow criteria.</p>
+<p>In the example of Fig. <a href="#pupil_psf_mtf"
+data-reference-type="ref" data-reference="pupil_psf_mtf">1</a>, the NA
+was 0.4 and the wavelength 500 nm, and so the predicted cut-off spatial
+frequency (Abbe limit) can be calculated as <span
+class="math inline">\(1.6\, \mathrm{\mu m^{-1}}\)</span>. We can see
+that the MTF does indeed go to zero at this spatial frequency.</p>
+<h2 id="airy-pattern">Airy pattern</h2>
+<p>For a perfect, diffraction-limited objective, the corresponding PSF
+is an Airy pattern. This is shown in Fig. <a href="#airy"
+data-reference-type="ref" data-reference="airy">4</a>, with the left
+panel showing a 1D slice through the disc, the centre showing the full
+2D pattern and the right showing a log-scaled pattern to make the
+ringing (circular patterns) clearer.</p>
+<figure id="airy" data-latex-placement="H">
+<p><img src="figs_small/airy.png" style="width:14cm"
+alt="Diagram showing Airy pattern, a bright central disc with fainter outer rings." /></p>
+<figcaption>Airy pattern, the PSF of an ideal microscope, shown in 1D
+(left) and 2D (centre and right). The right image has been log-scaled to
+make the rings more obvious, the centre image is a true linearly-mapped
+image.</figcaption>
+</figure>
+<p>This is in fact the 2D Fourier transform of a circular aperture, as
+discussed above. Mathematically it is given by,</p>
+<p><span class="math display">\[I =
+I_0\Big[\frac{2J_1(kr)}{kr}\Big]^2,\]</span></p>
+<p>where <span class="math inline">\(I_0\)</span> is the maximum
+intensity at the centre of the pattern, <span
+class="math inline">\(J_1\)</span> is a 1st order Bessel function of the
+first kind, <span class="math inline">\(k\)</span> is the wavenumber
+(<span class="math inline">\(2\pi/\lambda\)</span>) and <span
+class="math inline">\(r\)</span> is the radial co-ordinate. The first
+minimum occurs at a distance of,</p>
+<p><span class="math display">\[r = 0.61 \lambda/NA.\]</span></p>
+<p>The central disc inside this radius is called the Airy disc.</p>
+<h2 id="psf-full-width-half-maximum">PSF Full-Width Half Maximum</h2>
+<p>One way to characterise the PSF is with the full-width half maximum
+(FWHM). This is the width of the PSF at half of its maximum height, as
+shown in Fig. <a href="#fig:fwhm" data-reference-type="ref"
+data-reference="fig:fwhm">5</a>.</p>
+<figure id="fig:fwhm">
+<p><img src="figs_small/fwhm.png" style="width:10cm"
+alt="Diagram showing the FWHM is the width of the PSF at half its maximum value." /></p>
+<figcaption>Full-width half-maximum (FWHM) of a PSF (in this case an
+Airy pattern). For a wavelength of 500 nm and an NA of 0.4, we expect a
+FWHM of 0.64 μm, which is what we obtain, compared with a Rayleigh
+resolution of 0.76 μm, which is also the radius of the first
+minimum.</figcaption>
+</figure>
+<p>For the Airy disc, the FWHM is similar to the resolution as defined
+by the Rayleigh criteria (around 85% of it, in fact). A convenient way
+to characterise the resolution of a microscope is therefore to plot the
+PSF and measure the FWHM, as this is easier to do than to identify the
+first minimum of the Airy disc (which may be lost in noise). However,
+this does not capture any information about the <em>shape</em> of the
+PSF, which will vary due to optical imperfections in the microscope.</p>
+<p>Remember also that the PSF is really a <strong>2D function</strong>
+and again, for an imperfect microscope, may not be exactly radially
+symmetrical. We could choose to measure the FWHM for two perpendicular
+directions, or take a radial average.</p>
+<h1 id="experimental-determination-of-the-psf">Experimental
+Determination of the PSF</h1>
+<p>The PSF can be measured experimentally by imaging a small spherical
+object, such as a plastic micro-bead, which is much smaller than the
+resolution of the system. This approximates a point object, and so the
+image is simply the PSF. Alternatively, if such a small bead cannot be
+imaged, an image of a larger bead of a known size can be imaged, and the
+image deconvolved by the known shape of the bead to obtain the PSF.</p>
+<p>Yet another method is known as edge-imaging. If we image a sharp edge
+and take a profile across the edge, differentiation yields what is known
+as the <strong>line spread function (LSF)</strong>. This is not exactly
+equal to the PSF (a profile across a line is not the same as the profile
+across a point), but there is a simple mathematical relationship between
+the two for a radially symmetric PSF, called the Abel transform. To
+avoid the camera pixel grid interfering with this measurement, the edge
+is usually slanted with respect to the grid, and the LSF is built up
+from multiple measurements at different positions along the edge.</p>
+<figure id="edge">
+<p><img src="figs_small/edge.png" style="width:14cm"
+alt="Diagram showing an image of a blurred edge, a plot of the profile across the edge, and the LSF." /></p>
+<figcaption>Illustration of edge method, showing a simulated image of an
+edge (left), a profile across the edge (ESF) (centre), and the line
+spread function (LSF) obtained by taking the derivative of the ESF
+(right).</figcaption>
+</figure>
+<p>You are <strong>not</strong> expected to know all the details of
+these measurement, or do these calculations in the exam (they require a
+computer in any case) but you should understand the basic idea.</p>
+<h1 id="coherent-point-spread-function-not-examinable">Coherent Point
+Spread Function (Not Examinable)</h1>
 <p>The incoherent point spread function is an <em>intensity</em> point
 spread function, i.e. it allows the intensity value at the camera plane
 to be written in terms of the intensity values at the object plane. This
 is possible because an incoherent microscope is linear in intensity.</p>
-<p>We cannot define an intensity point spread function for a coherent
-imaging system due to the presence of interference. An coherent
-microscopy is linear in electric field, not the intensity. The image
-therefore depends on the phase of the object.</p>
+<p>We cannot rigorously define an intensity point spread function for a
+coherent imaging system (e.g. microscopy with a laser) due to the
+presence of interference. A coherent microscope is linear in electric
+field, not the intensity. The image therefore depends on the phase of
+the object.</p>
 <p>Instead of the incoherent PSF we must define an <strong>amplitude
 point spread function</strong>, also known as the <strong>coherent point
 spread function</strong> or cPSF, which acts on the complex electric
@@ -355,60 +495,48 @@ point spread function we can then take the square modulus to determine
 the resulting intensity on the camera. Note that this is emphatically
 <strong>not</strong> the same as convolving the object plane intensity
 with the square of the amplitude PSF.</p>
-<p>A detailed (and excellent) discussion on this and the ways can define
-resolution for coherent imaging systems was published in Nature
-Photonics in 2016:</p>
+<p>In practice, these details are often ignored, even in academic
+publications, which has led to some confusion. A detailed (and
+excellent) discussion on this and the ways we can define resolution for
+coherent imaging systems was published in Nature Photonics in 2016.
+:</p>
 <p><a
 href="https://www.nature.com/articles/nphoton.2015.279">https://www.nature.com/articles/nphoton.2015.279</a></p>
-<h1 id="airy-pattern">Airy pattern</h1>
-<p>For a perfect, diffraction-limited objective, the corresponding PSF
-is an Airy pattern, as shown in Fig. <a href="#airy"
-data-reference-type="ref" data-reference="airy">4</a>. The left version
-of the image has been scaled to make the ringing clearer.</p>
-<figure id="airy">
-<img src="figs/airy.png" style="width:8cm" />
-<figcaption>Airy pattern, the PSF of an ideal microscope. The left image
-has been scaled to make the rings more obvious, the right image is a
-true linearly-mapped image.</figcaption>
-</figure>
-<p>This is in fact the 2D Fourier transform of a circular aperture, as
-discussed above. Mathematically it is given by <span
-class="math display">\[{I = I_0\Big(\frac{2J_1(r)}{r}\Big)},\]</span>
-where <span class="math inline">\(I_0\)</span> is the maximum intensity
-at the centre of the pattern, <span class="math inline">\(J_1\)</span>
-is a 1st order Bessel function of the first kind, and <span
-class="math inline">\(r\)</span> is the radial co-ordinate. The first
-minimum occurs at a distance of: <span class="math display">\[r = 0.61
-\lambda/NA\]</span></p>
-<p>The central disk inside this radius is called the Airy disc.</p>
+<p><strong>This section is not required for the exam.</strong></p>
 <h1 id="rayleigh-and-sparrow-criteria">Rayleigh and Sparrow
 Criteria</h1>
-<p>Resolution is not unambiguously defined. Informally, it is usually
+<p>We can characterise the resolution of microscope using the PSF or
+MTF, but these are functions that we would have to plot. Often we want
+to quote a single number as the resolution. However, resolution as a
+single number is not unambiguously defined. Informally, it is usually
 taken to mean the ability to tell whether two point objects are actually
 two separate objects, but in practice this depends on things other than
-the MTF of the microscope (such as noise levels). To quantify resolution
-we require a formal definition of when two points can be resolved. These
-are illustrated in Fig <a href="#res_crit" data-reference-type="ref"
-data-reference="res_crit">5</a>.</p>
+the PSF/MTF of the microscope (such as noise levels). To quantify
+resolution we therefore require a formal definition of when two points
+can be resolved. These are illustrated in Fig <a href="#res_crit"
+data-reference-type="ref" data-reference="res_crit">7</a>.</p>
 <p>The <strong>Rayleigh criterion</strong> states that two points can be
 distinguished when the peak of the Airy pattern from one of the points
 is aligned with the first minimum of the Airy pattern from the second.
-For an ideal microscope with a circular aperture, this comes out to be:
-<span class="math display">\[d_{Rayleigh} = 0.61
-\frac{\lambda}{NA}\]</span></p>
+For an ideal microscope with a circular aperture, this comes out to
+be:</p>
+<p><span class="math display">\[\begin{equation}
+    d_{Rayleigh} = 0.61 \frac{\lambda}{NA}
+\end{equation}\]</span></p>
 <p>The <strong>Sparrow criterion</strong>, says instead that the two
 objects can be resolved when the sum of their intensity patterns no
 longer has a dip (see diagram). This occurs at</p>
-<p><span class="math display">\[d_{Sparrow} = 0.47 \frac{\lambda}{2
-NA}\]</span></p>
-<figure id="res_crit">
-<img src="figs/res_crit.png" style="width:8cm" />
+<p><span class="math display">\[d_{Sparrow} = 0.47
+\frac{\lambda}{\mathrm{NA}}\]</span></p>
+<figure id="res_crit" data-latex-placement="H">
+<p><img src="figs_small/res_crit.png" style="width:8cm"
+alt="Diagam showing the Rayelight and Sparrow resolution criteria." /></p>
 <figcaption>Rayleigh and Sparrow resolution criteria.</figcaption>
 </figure>
-<p>So the Sparrow limit gives a smaller (better) value for resolution
+<p>So, the Sparrow limit gives a smaller (better) value for resolution
 than either the Rayleigh or Abbe limits. In all cases, the rule of thumb
-is that the resolution is of order <span class="math inline">\(\lambda
-/2NA\)</span>.</p>
+is that the <strong>resolution is on the order of <span
+class="math inline">\(\lambda /2NA\)</span></strong>.</p>
 <h1 id="sampling-limit">Sampling Limit</h1>
 <p>All the resolution considerations above do not affect our choice of
 magnification. However, when a pixelated detector, such as a camera is
@@ -421,29 +549,38 @@ pixel.</p>
 <p><strong>The fill factor:</strong> Ratio of the pixel size to the
 pixel pitch.</p>
 <p>From the point of view of sampling theory, it is the pixel pitch
-which matters. Nyquist theory tells us that the sampling pitch must be
-half the spacing corresponding to the highest spatial frequency in order
-to sample that frequency without aliasing. (Or equivalently, the
-sampling frequency must be twice the maximum spatial frequency we wish
-to sample.)</p>
+which matters most (and in most cases the fill factor is close to 1, so
+the size and pitch are similar).</p>
+<p>Nyquist theory tells us that the sampling pitch must be half the
+spacing corresponding to the highest spatial frequency in order to
+sample that frequency without aliasing. (Or equivalently, the sampling
+frequency must be twice the maximum spatial frequency we wish to
+sample.)</p>
 <p>This does not trivially relate to the resolution criteria defined
 above, but the common rule of thumb is to assume we require a pixel
-pitch which is twice the diffraction limited resolution as magnified
-onto the camera. For example, if our resolution is 1 m and we have a 40X
-magnification, then we require a pixel pitch of less than 20 m.</p>
-<p><em><strong>Aside:</strong> There is a secondary effect due to the
-fact that each pixel integrates over an area. This reduces the contrast
-of higher spatial frequencies, and so may reduced the signal to noise
-ratio for the spatial frequencies to such a point that they cannot be
-observed, but this is different from the sampling theory.</em></p>
+pitch which is half the diffraction limited resolution as magnified onto
+the camera. For example, suppose our resolution is 1 μm and we have a
+40X magnification onto the camera. Each 1 μm resolution element
+therefore has a size of 40 μm on the camera. We then require a pixel
+pitch of less than 20 μm.</p>
+<p>In practice, cameras come with certain pixel sizes, and so you may
+instead need to match the magnification to the camera pixel size.</p>
+<p><em><strong>Aside:</strong> There is a secondary effect of the pixel
+size, due to the fact that each pixel integrates over an area. This
+reduces the contrast of higher spatial frequencies, and so may reduce
+the signal to noise ratio for the spatial frequencies to such a point
+that they cannot be observed in practice, but this is distinct from the
+sampling theory. For a fill-factor of 1, this results in around a 35%
+loss in contrast at the Nyquist frequency.</em></p>
 <p>In the (usually avoided) case where the pixel pitch is too large to
 sample the highest spatial frequency reaching the camera, then the
 resolution is pixel-limited. Pixel limited resolution is shift variant -
-the ability to resolve two objects depends on their position relative to
-the pixel grid. So we cannot define a shift invariant point spread
-function or define an unambiguous MTF.</p>
-<figure id="nyq">
-<img src="figs/nyquist.png" style="width:8cm" />
+the ability to resolve two objects depends somewhat on their position
+relative to the pixel grid. So we cannot define a shift invariant point
+spread function or define an unambiguous MTF.</p>
+<figure id="nyq" data-latex-placement="H">
+<p><img src="figs_small/nyquist.png" style="width:8cm"
+alt="Diagram showing Nyquist sampling" /></p>
 <figcaption>Examples of Nyquist sampling and under-sampling. The light
 blue sinusoid is the true signal and the intensities of the squares are
 the measured pixel values. In the top pane, the sinusoid is sampled at
@@ -454,5 +591,26 @@ sampling frequency is 1.5 times the signal frequency, and the measured
 samples appear to correspond to a sinusoid of a different spatial
 frequency, an effect known as aliasing</figcaption>
 </figure>
+<h1 id="learning-outcomes">Learning Outcomes</h1>
+<p>You should be able to:</p>
+<ul>
+<li><p>Explain the meaning of resolution in microscopy.</p></li>
+<li><p>Explain the meaning of the PSF, MTF and Pupil Functions,
+sketching examples, and explain how they are related.</p></li>
+<li><p>Understand the basics of how the PSF is measured
+experimentally.</p></li>
+<li><p>Explain how the the FWHM of the PSF is measured and understand
+its significance in terms of resolution.</p></li>
+<li><p>Calculate the diffraction-limited spatial frequency and
+resolution of a microscope based on the NA and wavelength.</p></li>
+<li><p>Describe and use the Rayleigh and Sparrow criteria for
+resolution.</p></li>
+<li><p>Sketch and explain the Airy disc and explain how the
+zero-crossings relate to diffraction-limited resolution.</p></li>
+<li><p>Calculate the pixel-limited spatial frequency and
+resolution.</p></li>
+<li><p>Calculate the magnification required to match the pixel-limited
+resolution to the diffraction-limited resolution.</p></li>
+</ul>
 </body>
 </html>

@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Michael Hughes" />
-  <title>PH800 Biomedical Optics Introduction to Microscopy Lecture 3. Optical Sectioning</title>
+  <meta name="author" content="Mike Hughes Physics &amp; Astronomy, University of Kent" />
+  <title>Biomedical Optics Introduction to Microscopy Lecture 3 Optical Sectioning in Microscopy</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -173,55 +176,44 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">PH800 Biomedical Optics<br />
+<h1 class="title">Biomedical Optics<br />
 <strong>Introduction to Microscopy</strong><br />
-Lecture 3. Optical Sectioning</h1>
-<p class="author">Michael Hughes</p>
+Lecture 3 Optical Sectioning in Microscopy</h1>
+<p class="author">Mike Hughes<br />
+<em>Physics &amp; Astronomy, University of Kent</em></p>
 </header>
 <h1 id="reading">Reading</h1>
 <p>The notes below are a summary of the key points needed for the exam.
 For more details and background they should be read in conjunction with
-linked documents, papers or websites and the general reading:</p>
+the additional reading:</p>
 <ol>
-<li><p>Jerome Mertz, Introduction to Microscopy, Chapters 5, 14 and
-15.</p></li>
-<li><p>Olympus Microscopy Resource Centre: Concepts in Confocal
-Microscopy.<br />
-<a
-href="http://olympus.magnet.fsu.edu/primer/techniques/confocal/index.html">http://olympus.magnet.fsu.edu/primer/techniques/confocal/index.html</a></p></li>
-<li><p>M.A.A. Neil, R.Juskaitis, and T.Wilson, Method of obtaining
-optical sectioning by using structured light in a conventional
-microscope, Opt Lett 22(24), 1905 (1997).<br />
-<a
-href="http://www.eng.ox.ac.uk/som/publications/som_1997_3%20-1.PDF">http://www.eng.ox.ac.uk/som/publications/som_1997_3%20-1.PDF</a></p></li>
-<li><p>Dejan Karadaglić and Tony Wilson, Image formation in structured
-illumination wide-field fluorescence microscopy, Micron 39(7), 808-181
-(2008),<br />
-<a
-href="https://www.sciencedirect.com/science/article/pii/S0968432808000267">https://www.sciencedirect.com/science/article/pii/S0968432808000267</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/techniques/confocal/introductory-confocal-concepts">Confocal
+Concepts</a></p></li>
 </ol>
 <h1 id="depth-of-field-and-optical-sectioning">Depth of Field and
 Optical Sectioning</h1>
-<p>In Lecture 2 we derived the incoherent point spread function (PSF) of
-a microscope. We found that, for a microscope objective with a circular
+<p>In Lecture 2 we introduced the point spread function (PSF) of a
+microscope. We found that, for a microscope objective with a circular
 aperture, the PSF is an Airy pattern (a Bessel function). When we did
 this we were implicitly working at the focal plane of the microscope. As
 we move away from the focal plane, the PSF widens (or, equivalently, the
 MTF narrows) and so the resolution drops.</p>
 <p>A full description of this can be derived from scalar diffraction
-theory which we will not cover (see Mertz for details). Far from focus
-we can approximate the effect with simple geometrical optics, as shown
-in Fig. <a href="#geodefocus" data-reference-type="ref"
+theory which we will not cover. Far from focus we can approximate the
+effect with simple geometrical optics, as shown in Fig. <a
+href="#geodefocus" data-reference-type="ref"
 data-reference="geodefocus">1</a>. Recalling that <span
 class="math inline">\(\mathrm{NA} = \sin\theta\)</span>, this suggests
 that the diameter of the PSF should be on the order of <span
 class="math inline">\(D\approx2z\mathrm{NA}\)</span> where <span
 class="math inline">\(z\)</span> is the defocus. This is increasingly
 incorrect as we get close to the focus. However, it’s sufficient to show
-us that the higher the NA, the quicker the PSF broadens as we move away
-from the focus.</p>
+us that <strong>the higher the NA, the quicker the PSF broadens</strong>
+as we move away from the focus.</p>
 <figure id="geodefocus">
-<img src="figs/geo_spread.png" style="width:8cm" />
+<p><img src="figs_small/geo_spread.png" style="width:14cm"
+alt="Diagram showing a microscope. Away from the focus, the rays are not focused to a point, but to a disc which increased in size with defocus." /></p>
 <figcaption>Geometric explanation for why PSF enlargens with
 defocus.</figcaption>
 </figure>
@@ -231,34 +223,38 @@ Fig. <a href="#defocus_axial" data-reference-type="ref"
 data-reference="defocus_axial">2</a> shows the geometric and Stokseth’s
 approximation of the PSF for an objective of NA = 0.2.</p>
 <figure id="defocus_axial">
-<img src="figs/axial_spread2.png" style="width:15cm" />
-<figcaption>Change in PSF with defocus. Top row is geometric PSF, bottom
-row is Stokseth’s approximation. Calculated for 0.2NA, <span
-class="math inline">\(\lambda\)</span> = 500 nm. Each image is
-50x50m.</figcaption>
+<p><img src="figs_small/axial_spread.png" style="width:15cm"
+alt="Diagram showing that PSF increases in size with defocus." /></p>
+<figcaption>Change in PSF with defocus (<span
+class="math inline">\(z\)</span>). Top row is geometric PSF, bottom row
+is Stokseth’s approximation. Calculated for NA of 0.2, <span
+class="math inline">\(\lambda\)</span> = 500 nm.</figcaption>
 </figure>
 <p>The depth of focus is the distance from focus over which the PSF does
-not widen significantly. It is often defined by the Rayleigh range,
-which is the distance from focus where the spot size increases by <span
-class="math inline">\(\sqrt(2)\)</span> (and so the area doubles). We
-can then define the depth of focus as twice this range. For high NAs
-used in microscopes, assuming a Gaussian beam, the depth of focus, <span
-class="math inline">\(R\)</span>, is given by</p>
-<p><span class="math display">\[R = \frac{n\lambda}{NA^2},\]</span>
-where <span class="math inline">\(n\)</span> is the refractive index of
-the medium.</p>
-<p>Therefore, high NA objectives have a shorter depth of field. Note
-that the depth of field depends on the inverse square of the NA, whereas
-the resolution (by any definition) depends inversely on NA. (This is
+not widen significantly. It is often defined by the <strong>Rayleigh
+range</strong>, which is the distance from focus where the spot size
+increases by <span class="math inline">\(\sqrt{2}\)</span> (and so the
+area doubles). We can then define the depth of focus as twice this
+range. For low NAs, assuming a Gaussian beam, the depth of focus, <span
+class="math inline">\(R\)</span>, is given by,</p>
+<p><span class="math display">\[\begin{equation}
+    R = \frac{n\lambda}{NA^2},
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the refractive index
+of the medium. This is not strictly valid for high NAs as used in
+microscopy, but will give the correct order of magnitude. In any case,
+high NA objectives will have a shorter depth of field. Note that the
+depth of field depends on the inverse square of the NA, whereas the
+resolution (by any definition) depends inversely on NA. (This is
 particularly fortuitous for many reasons, including for OCT!)</p>
-<p>However, just because an object is out of focus, it does not mean we
-don’t collect light from it. This can be seen simply from conservation
-of energy - the same intensity of light reaches each depth, and so we
-expect the same total signal back. The effect when we image thick tissue
-is that the in-focus image is super-imposed with out-of-focus images
-from all the other planes in the sample. This serves to reduce image
-contrast and resolution. In conventional microscopy this makes it
-necessary to slice tissue into thin layers before imaging.</p>
+<p>However, just because an object is out of focus, <strong>it does not
+mean we don’t collect light from it</strong>. This can be seen simply
+from conservation of energy - the same intensity of light reaches each
+depth, and so we expect the same total signal back. The effect when we
+image thick tissue is that the in-focus image is super-imposed with
+out-of-focus images from all the other planes in the sample. This serves
+to reduce image contrast and resolution. In conventional microscopy this
+makes it necessary to slice tissue into thin layers before imaging.</p>
 <p>The aim of optical sectioning in microscopy is to allow imaging of
 thick objects (under epi illumination) by selecting only the light (or
 image information) from the in-focus layer. Using the methods we discuss
@@ -273,26 +269,27 @@ case that limit is not imposed.</p>
 light emitted from a region away from the focal plane is physically
 blocked by a pinhole. The basic idea is shown in Fig <a href="#confocal"
 data-reference-type="ref" data-reference="confocal">3</a>. Rather than
-illuminating in the whole of the sample, we focus light onto a single
+illuminating the whole of the sample, we focus light onto a single
 point. In order to do this, we need to use a laser. This point is then
 imaged onto the pinhole, so that only light from the in-focus plane
 passes through. To generate an image we then need to scan this point
 around in two dimensions (or move the sample, which is physically
 equivalent but generally less convenient).</p>
-<p>Confocal microscopy is almost always operated under epi-illumination,
-the same objective is used both for illumination and imaging. A pair of
-x-y scanning mirrors are used to scan the imaged point in 2D. The
-collected light retraces the path and so is de-scanned by the mirrors
-before being pulled off onto the pinhole. Behind the pinhole there is a
-photodetector, and an image is built up by measuring the intensity of
-light passing through the pinhole for each point on the sample. Details
-of optical systems for point-scanning imaging are covered in other parts
-of PH800, and you can see various configurations of confocal microscopes
-at:<br />
+<p>Confocal microscopy is almost always operated under
+<strong>epi-illumination</strong>, the same objective is used both for
+illumination and imaging. A pair of x-y scanning mirrors are used to
+scan the imaged point in 2D. The collected light retraces the path and
+so is de-scanned by the mirrors before being pulled off onto the
+pinhole. Behind the pinhole there is a photodetector, and an image is
+built up by measuring the intensity of light passing through the pinhole
+for each point on the sample. You can see various configurations of
+confocal microscopes at:<br />
 <a
-href="http://olympus.magnet.fsu.edu/primer/techniques/confocal/index.html">http://olympus.magnet.fsu.edu/primer/techniques/confocal/index.html</a></p>
+href="https://www.microscopyu.com/techniques/confocal/introductory-confocal-concepts">Confocal
+Concepts</a>.</p>
 <figure id="confocal">
-<img src="figs/confocal.png" style="width:8cm" />
+<p><img src="figs_small/confocal.png" style="width:12cm"
+alt="Diagram of confocal microscope, showing that light illuminates the sample from a laser, and that light from that point on the sample is imaged through a pinhole onto the detector." /></p>
 <figcaption>Simple schematic of confocal microscope. Many details, such
 as scanning mirrors and fluorescence filters, are not
 shown.</figcaption>
@@ -306,26 +303,29 @@ will fall quadratically. Fig. <a href="#confocal_axial"
 data-reference-type="ref" data-reference="confocal_axial">4</a> shows an
 example plot of this for a microscope of 0.2 NA at 500 nm wavelength for
 an infinitesimal pinhole and a 1 AU pinhole. We see that only light from
-near the focus plane reaches the detector in any significant intensity.
-Hence the optical sectioning effect we described above.</p>
+near the focus plane reaches the detector with any significant
+intensity. Hence the optical sectioning effect we described above.</p>
 <figure id="confocal_axial">
-<img src="figs/confocal_axial.png" style="width:6cm" />
+<p><img src="figs_small/confocal_axial.png" style="width:6cm"
+alt="Plot showing that intensity drops rapidly with defocus" /></p>
 <figcaption>Fall-off in collected light as function of defocus for a
-confocal microscope.</figcaption>
+confocal microscope. Plots generated using Stokseth’s
+approximation.</figcaption>
 </figure>
-<p>The highest axial spatial frequency that can be transmitted is given
-by:</p>
-<p><span
-class="math display">\[d_{axial,SF}=\frac{n\lambda}{2\mathrm{NA}^2}\]</span></p>
-<p>as derived in Mertz Chapter 14. But, as discussed previously,
-limiting spatial frequency is not usually a good way to define
-resolution. We can define the axial resolution (the width of the optical
-section) as the full width half maximum of this drop-off curve. We find
-that, at best, the axial resolution is given by:</p>
-<p><span
-class="math display">\[d_{axial,FWHM}=\frac{0.64\lambda}{n-\sqrt{n-\mathrm{NA}^2}}\]</span></p>
+<p>The highest axial spatial frequency that can be transmitted is,</p>
+<p><span class="math display">\[\begin{equation}
+    d_{\mathrm{axial,SF}}=\frac{n\lambda}{2\mathrm{NA}^2}.
+\end{equation}\]</span></p>
+<p>But, as discussed previously, limiting spatial frequency is not
+usually a good way to define resolution. We can define the axial
+resolution (the width of the optical section) as the full width half
+maximum of this drop-off curve. While there are different definitions of
+the axial resolution, the best case is on the order of,</p>
+<p><span class="math display">\[\begin{equation}
+    d_{\mathrm{axial,FWHM}}=\frac{0.64\lambda}{n-\sqrt{n-\mathrm{NA}^2}},
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(n\)</span> is the refractive index.
-We say ’at best’ because the achieved axial resolution depends on the
+We say ‘best’ because the achieved axial resolution depends on the
 pinhole size, the larger the pinhole the more out-of-focus light reaches
 the detector. However, sometime we need more light to achieve an image
 with a reasonable signal level, and so pinhole size has to be optimised.
@@ -336,8 +336,8 @@ application can be selected.</p>
 Confocal Microscopy</h2>
 <p>In Lecture 2 we determined the point spread function and (and so the
 resolution) of a microscope which was imaging a uniformly-illuminated
-system. We call this widefield illumination, and hence define this PSF
-as the widefield PSF, <span
+system. We call this <strong>widefield illumination</strong>, and hence
+define this PSF as the <strong>widefield PSF</strong>, <span
 class="math inline">\(PSF_{widefield}\)</span>.</p>
 <p>In a confocal microscope, we illuminate only a single point on the
 tissue at any time. Therefore, we do not need any resolution in our
@@ -348,13 +348,15 @@ objective. You can think of this as though we are imaging a point at
 infinity onto the sample. Optics is reciprocal (invariant to a change in
 direction) and so we are limited by the same spatial frequency cut-off
 and hence point spread function as when we are imaging the sample onto a
-camera. So the illumination point is (ideally) an airy pattern, with the
-radius of first minimum given by:</p>
-<p><span class="math display">\[d=0.61
-\frac{\lambda}{\mathrm{NA}}\]</span></p>
-<p>and a full width half maximum of:</p>
-<p><span class="math display">\[d_{FWHM}=0.51
-\frac{\lambda}{\mathrm{NA}}\]</span></p>
+camera. So the illumination point is (ideally) an Airy pattern, with the
+radius of first minimum,</p>
+<p><span class="math display">\[\begin{equation}
+    d=0.61 \frac{\lambda}{\mathrm{NA},}
+\end{equation}\]</span></p>
+<p>and a full width half maximum of (FWHM),</p>
+<p><span class="math display">\[\begin{equation}
+    d_{\mathrm{FWHM}}=0.51 \frac{\lambda}{\mathrm{NA}}.
+\end{equation}\]</span></p>
 <p>So, at first glance, the resolution is exactly the same as a
 conventional microscope with widefield illumination. However, we also
 have to take account of the fact that we then image this point onto a
@@ -362,9 +364,11 @@ pinhole. The resulting PSF then has to be multiplied by an image of the
 pinhole (as imaged onto the sample plane). Of course the image of the
 pinhole at the sample plane (or the sample plane at the pinhole) is also
 affected by the PSF, so we need to convolve the pinhole function with
-the detection PSF. Hence, the resulting total PSF is given by:</p>
-<p><span class="math display">\[PSF_{confocal} = PSF_{illumination}
-\times PSF_{detection} \ast H_{pinhole}\]</span></p>
+the detection PSF. Hence, the resulting total PSF is,</p>
+<p><span class="math display">\[\begin{equation}
+    \mathrm{PSF_{confocal} = PSF_{illumination} \times (PSF_{detection}}
+\ast H_{\mathrm{pinhole}}).
+\end{equation}\]</span></p>
 <p>Here, <span class="math inline">\(H\)</span> is a function which
 defines the pinhole. In 2D space, it is a circle with <span
 class="math inline">\(1\)</span> for the hole and <span
@@ -372,16 +376,17 @@ class="math inline">\(0\)</span> for the barrier. For a very small
 pinhole, <span class="math inline">\(H\)</span> tends to a delta
 function. If we illuminate and collect with the same objective then,
 ignoring any Stoke’s shift in fluorescence imaging, <span
-class="math inline">\(PSF_{illumination} = PSF_{detection} =
-PSF_{widefield}\)</span>. We can see then that for an infinitesimally
+class="math inline">\(\mathrm{PSF_{illumination} = PSF_{detection} =
+PSF_{widefield}}\)</span>. We can see then that for an infinitesimally
 small pinhole, our PSF is now the square of the PSF of widefield
-microscope.</p>
-<p><span class="math display">\[PSF_{confocal} =
-PSF_{widefield}^2\]</span></p>
+microscope,</p>
+<p><span class="math display">\[\begin{equation}
+    \mathrm{PSF_{confocal} = (PSF_{widefield})^2 }.
+\end{equation}\]</span></p>
 <p>The position of the minimum doesn’t change, but the central lobe (the
 airy disc) is now narrower. If we square the airy pattern the full width
-half maximum reduces by 40%, as can be seen in the top left pane of Fig.
-<a href="#confocal_lateral" data-reference-type="ref"
+half maximum reduces by about 40%, as can be seen in the top left pane
+of Fig. <a href="#confocal_lateral" data-reference-type="ref"
 data-reference="confocal_lateral">5</a>. From Fourier theory, this means
 that the MTF is also wider, the confocal MTF is the autocorrelation of
 the widefield MTF. We therefore increase the spatial frequency support
@@ -399,15 +404,17 @@ this size as one Airy Unit (AU), not to be confused of course with the
 AU distance from Astronomy). The PSF and MTF of a confocal microscope
 for infinitesimal and 1AU pinholes are shown in Fig <a
 href="#confocal_lateral" data-reference-type="ref"
-data-reference="confocal_lateral">5</a>. (Matlab code available on
-Moodle). We can see that, for a pinhole of 1 AU, the resolution
-improvement is almost negligible. So we generally use confocal
-microscopy because it provides optical sectioning, and not because it
-improves lateral resolution.</p>
+data-reference="confocal_lateral">5</a>. We can see that, for a pinhole
+of 1 AU, the resolution improvement is almost negligible. So we
+generally use confocal microscopy because it provides optical
+sectioning, and not because it improves lateral resolution.</p>
 <figure id="confocal_lateral">
-<img src="figs/confocal_lateral.png" style="width:15cm" />
+<p><img src="figs_small/confocal_lateral.png" style="width:13cm"
+alt="Diagram showing PSFs and MTFs for confocal and widefield, showing essentially no difference for a 1AU pinhole and only a minor improvement for an infinitesimal pinhole." /></p>
 <figcaption>Confocal microscope lateral resolution (PSF and MTF)
-compared to widefield microscope.</figcaption>
+compared to widefield microscope, both with an infinitesimal pinhole,
+and a pinhole set with a radius equal to the Airy disc
+(1AU).</figcaption>
 </figure>
 <h2 id="limitations-of-confocal-microscopy">Limitations of Confocal
 Microscopy</h2>
@@ -442,18 +449,20 @@ away from focus the pattern will be blurred. This means that the
 in-focus part of the image is spatially modulated while the out-of-focus
 part is not. We therefore need only select the modulated part of the
 image in order to obtain optical sectioning.</p>
-<figure id="defocus">
-<img src="figs/si_focus.png" style="width:8cm" />
+<figure id="defocus" data-latex-placement="H">
+<p><img src="figs_small/si_focus.png" style="width:8cm"
+alt="Diagram showing line pattern blurring with defocus." /></p>
 <figcaption>Structured illumination patterns at focus, near focus and
 far from focus.</figcaption>
 </figure>
 <p>The most robust way to demodulate a signal such as this is called
 ‘three phase demodulation’, in which we acquire three images with the
 illumination pattern shifted by a third of the pattern pitch between
-each. For each pixel of the image, the demodulated signal is then given
-by:</p>
-<p><span class="math display">\[I_{SI} = \sqrt{(I_2 - I_1)^2 +
-(I_3-I_2)^2 + (I_1 - I_3)^2}\]</span></p>
+each. For each pixel of the image, the demodulated signal is,</p>
+<p><span class="math display">\[\begin{equation}
+    I_{\mathrm{SIM}} = \sqrt{(I_2 - I_1)^2 + (I_3-I_2)^2 + (I_1 -
+I_3)^2}.
+\end{equation}\]</span></p>
 <p>Intuitively, it can be seen that any unmodulated signal (from an
 out-of-focus layer), which will be the same for all three images, will
 simply cancel out due to the subtractions. If we calculated <span
@@ -461,9 +470,10 @@ class="math inline">\(I_{SI}\)</span> for each pixel, we therefore
 obtain an optically sectioned image.</p>
 <p>To simulate an image that was created with widefield illumination, we
 can simply add the three images together, as the sum of three sine waves
-which are each 120 degrees out of phase is a constant:</p>
-<p><span class="math display">\[I_{widefield} = I_1 + I_2 +
-I_3\]</span></p>
+which are each 120 degrees out of phase is a constant,</p>
+<p><span class="math display">\[\begin{equation}
+    I_{\mathrm{widefield}} = I_1 + I_2 + I_3.
+\end{equation}\]</span></p>
 <p>To acquire the three phase-stepped images we need to shift the
 grating by the correct distance between successive acquisition of image
 frames. Alternatively, the patterns can be generated by some type of
@@ -485,26 +495,46 @@ contrast-to-noise ratio is required.</p>
 of Structured Illumination Microscopy</h2>
 <p>Whereas confocal microscopy physically blocks light from out-of-focus
 planes, in SI microscopy we collect the light but then digitally
-subtract it. This means we also collect all the noise (recall that when
-we subtract one signal from another the noise still adds in quadrature).
-So SI is inherently a noisier technique and cannot be used anywhere near
-as deep into tissue as confocal. For moving objects it is also very
-sensitive to motion artefacts, there can essentially be no motion
-between acquisition of the three successive frames. Any mechanical
-variation in the generation of the three patterns may also lead to
-artefacts.</p>
-<p><strong>Aside:</strong> An alternative approach, called HiLo
-microscopy, requires only two images, but requires more complex
-processing. Read more at: <a
-href="http://biomicroscopy.bu.edu/research/hilo-microscopy">http://biomicroscopy.bu.edu/research/hilo-microscopy</a></p>
-<h1 id="light-sheet-microscopy">Light Sheet Microscopy</h1>
+subtract it. This means we also collect all the noise (when we subtract
+one signal from another the noise still adds in quadrature). So SI is
+inherently a noisier technique and cannot be used anywhere near as deep
+into tissue as confocal. For moving objects it is also very sensitive to
+motion artefacts, there can essentially be no motion between acquisition
+of the three successive frames (although for interest you may want to
+look at <a href="https://doi.org/10.1117/1.JBO.25.2.026501">this
+paper</a> from my lab, where we try to address this problem for
+endoscopic SI Microscopy). Any mechanical variation in the generation of
+the three patterns may also lead to artefacts.</p>
+<h1 id="other-optical-sectioning-techniques-not-examinable">Other
+Optical Sectioning Techniques (Not Examinable)</h1>
+<p>While confocal microscopy is by far the most common way of achieving
+optical sectioning in microscopy, there are various other techniques
+which you may want to look into for interest only.</p>
+<h2
+id="spinning-disk-and-line-scanning-microscopy-not-examinable">Spinning
+Disk and Line Scanning Microscopy (Not Examinable)</h2>
+<p>Spinning Disk Confocal uses a disk with a pattern of holes in it
+rather than scanning a laser beam. This can be spun very fast, leading
+to higher frame rates, and the image can be formed directly onto a
+camera, although there are trade-offs in light throughout versus optical
+sectioning strength. (See <a
+href="https://andor.oxinst.com/learning/view/article/what-is-spinning-disk-confocal-microscopy">this
+page</a> for more details). Another way of doing confocal microscopy is
+to focus a line of light onto the sample, and image this through a slit
+rather than a pinhole. The optical sectioning effect isn’t as strong,
+but a line can be scanned in 1D much faster than a point can be scanned
+in 2D. I have previously done some work applying this to endoscopic
+microscopy (see for example <a
+href="https://doi.org/10.1364/BOE.7.002257">this paper</a>).</p>
+<h2 id="light-sheet-microscopy-not-examinable">Light Sheet Microscopy
+(Not Examinable)</h2>
 <p>In light sheet microscopy we illuminate the sample from the side (or
 some oblique angle) with a planar sheet of light (this can be done with
 a cylindrical lens and an objective). If we align this light sheet with
 the focal plane of the microscope then only the focal plane will be
 illuminated, and so when we form an image on the camera we have
 immediate optical sectioning. This is a simple and fast way of achieving
-sectioning, with particular applications more monitoring dynamic
+sectioning, with particular applications in monitoring dynamic
 processes. It also minimises photo-damage since only the plane actually
 being imaged is illuminated, but it doesn’t work well for thick, highly
 scattering samples where the planar illumination beam will be highly
@@ -516,11 +546,12 @@ excitation light sheet, these can be tackled with multi-view or
 multi-angle approaches, where the angle of the illumination beams is
 varied and artefact-free images synthesis from multiple
 acquisitions.</p>
-<p>This section is non-examinable, but you can read a recent review
-at:<br />
+<p>This section is <strong>non-examinable</strong>, but you can read a
+review at:<br />
 <a
 href="http://iopscience.iop.org/article/10.1088/2040-8986/aab58a">http://iopscience.iop.org/article/10.1088/2040-8986/aab58a</a></p>
-<h1 id="two-photon-microscopy">Two Photon Microscopy</h1>
+<h2 id="two-photon-microscopy-not-examinable">Two Photon Microscopy (Not
+Examinable)</h2>
 <p>In two photon microscopy, optical sectioning occurs because two
 photon excitation rates depend quadratically on light intensity, and so
 essentially only occur at the focus of a scanning laser beam. This
@@ -532,9 +563,26 @@ increases the maximum imaging depth significantly, to over 1 mm in some
 cases. The downside is the need for expensive high-power pulsed lasers
 to overcome the small probability of two photon excitation
 occurring.</p>
-<p>This section is non-examinable, but you can read a recent review
-at:</p>
+<p>This section is <strong>non-examinable</strong>, but you can read a
+review at:</p>
 <p><a
 href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3846297/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3846297/</a></p>
+<h1 id="learning-outcomes">Learning Outcomes</h1>
+<p>You should be able to:</p>
+<ul>
+<li><p>Explain how the PSF and MTF change away from the focal
+plane.</p></li>
+<li><p>Explain what is meant by <em>depth of focus</em> and explain what
+determines it.</p></li>
+<li><p>Explain the need for optical sectioning in microscopy.</p></li>
+<li><p>Explain the basic principles of confocal microscopy.</p></li>
+<li><p>Compare axial and lateral resolution in confocal and widefield
+microscopy.</p></li>
+<li><p>Explain the limitations of confocal microscopy.</p></li>
+<li><p>Explain the principles of structured illumination for optical
+sectioning.</p></li>
+<li><p>Explain the limitations of structured illumination for optical
+sectioning.</p></li>
+</ul>
 </body>
 </html>

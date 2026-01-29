@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <meta name="author" content="Michael Hughes" />
-  <title>PH800 Biomedical Optics Introduction to Microscopy Lecture 1 Principles of Microscopy</title>
+  <meta name="author" content="Mike Hughes Physics &amp; Astronomy, University of Kent" />
+  <title>Biomedical Optics Introduction to Microscopy Section 1: Principles of Microscopy</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -173,166 +176,144 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">PH800 Biomedical Optics<br />
+<h1 class="title">Biomedical Optics<br />
 <strong>Introduction to Microscopy</strong><br />
-Lecture 1 Principles of Microscopy</h1>
-<p class="author">Michael Hughes</p>
+Section 1: Principles of Microscopy</h1>
+<p class="author">Mike Hughes<br />
+<em>Physics &amp; Astronomy, University of Kent</em></p>
 </header>
 <h1 id="reading">Reading</h1>
 <p>The notes below are a summary of the key points needed for the exam.
-For more details and background they should be read in conjunction with
-linked documents, papers or websites and the general reading:</p>
+For more details and background, they should be read in conjunction with
+reading on Nikon MicroscopyU:</p>
 <ol>
-<li><p>Olympus Microcsopy Resource Centre: <a
-href="https://www.olympus-lifescience.com/en/microscope-resource/">https://www.olympus-lifescience.com/en/microscope-resource/</a></p></li>
-<li><p>Nikon MicroscopyU <a
-href="https://www.microscopyu.com/">https://www.microscopyu.com/</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/microscopy-basics/components">Microscopy
+Imaging Basics</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/microscopy-basics/infinity-optical-systems">Infinity
+Conjugate/Infinity Space</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/microscopy-basics/introduction-to-microscope-objectives">Microscope
+Objectives</a></p></li>
+<li><p><a
+href="https://www.microscopyu.com/microscopy-basics/microscope-objective-specifications">Microscope
+Objectives Specifications</a></p></li>
 </ol>
 <h1 id="simple-microscopes">Simple Microscopes</h1>
 <p>In this section we will review some fundamental concepts from
-geometrical optics which will already be familiar to most, and begin
-thinking about the design of a simple microscope.</p>
+geometrical optics which may be familiar to some but not all, and we
+begin by thinking about the design of a simple microscope.</p>
 <h2 id="the-thin-lens">The Thin Lens</h2>
-<p>A lens is piece of glass or plastic with one or both of its surfaces
-curved in such a way as to cause light rays to converge or diverge due
-to refraction. In what is follows, we use the <strong>thin lens
-approximation</strong>, which ignores the thickness of the lens. In
-which case, the locations of the object (<span
-class="math inline">\(s\)</span>) and image (<span
-class="math inline">\(s&#39;\)</span>), see Fig. <a href="#lens"
-data-reference-type="ref" data-reference="lens">1</a>, for a lens are
-linked to the focal length of the lens, <span
-class="math inline">\(f\)</span>, by the <strong>lens
+<p>A lens is a piece of glass or plastic with one or both of its
+surfaces curved in such a way as to cause light rays to converge or
+diverge due to refraction. In particular, it can be used to form images,
+or to convert a bundle of diverging light rays into a collimated bunch
+of light rays (i.e. all travelling parallel to each other). In what
+follows, we use the <strong>thin lens approximation</strong>, which
+ignores the thickness of the lens - more accurate modelling of real
+lenses is best left to optical raytracing software.</p>
+<p>If a collimated beam (light rays parallel) passes through a lens, the
+rays will be brought to focus at the focal distance, <span
+class="math inline">\(f\)</span>, which depends on the design of the
+lens, as shown in Fig <a href="#fig:lensFocus" data-reference-type="ref"
+data-reference="fig:lensFocus">1</a>.</p>
+<figure id="fig:lensFocus" data-latex-placement="H">
+<p><img src="figs_small/lens_focus.png" style="width:10cm"
+alt="Diagram showing parallel rays focused to a point by a lens." /></p>
+<figcaption>A lens brings a collimated beam of light to focus at the
+focal length of the lens.</figcaption>
+</figure>
+<p>We can also use the lens to create an image of an object, as shown in
+Fig <a href="#fig:lens_imaging" data-reference-type="ref"
+data-reference="fig:lens_imaging">2</a>. If the object is a distance
+(<span class="math inline">\(s\)</span>) from the lens, then we obtain
+an image a distance (<span class="math inline">\(s&#39;\)</span>) on the
+other side of the lens, determined by the focal length of the lens,
+<span class="math inline">\(f\)</span>, and given by the <strong>lens
 equation:</strong></p>
 <p><span class="math display">\[\frac{1}{f} = \frac{1}{s} +
-\frac{1}{s&#39;}\]</span> If we have a lens of focal length <span
-class="math inline">\(f\)</span>, and we place an object a distance of
-<span class="math inline">\(s\)</span> one side of the lens, we obtain
-an image a distance <span class="math inline">\(s&#39;\)</span> the
-other side of the lens.</p>
+\frac{1}{s&#39;}\]</span></p>
 <p><strong>Note that <span class="math inline">\(s\)</span> and <span
 class="math inline">\(s&#39;\)</span> are both measured from the lens
 outwards</strong> (i.e. in a system such as that shown in Fig. <a
-href="#lens" data-reference-type="ref" data-reference="lens">1</a>,
-where the object is to the left of the lens, <span
-class="math inline">\(s\)</span> is measured from right to left and
-<span class="math inline">\(s&#39;\)</span> is measured from left to
-right.) An object to the left of the lens has a positive <span
-class="math inline">\(s\)</span> and an image to the right of the lens
-has a positive <span class="math inline">\(s&#39;\)</span>. This is
-called the <strong>Gaussian co-ordinate system</strong>. An alternative
-system, the Cartesian co-ordinate system, measures everything from left
-to right which is useful when dealing with some kinds of systems. In
-this system, the lens equation would have a minus sign before the <span
-class="math inline">\(1/s&#39;\)</span> term.</p>
+href="#lens_imaging" data-reference-type="ref"
+data-reference="lens_imaging">[lens_imaging]</a>, where the object is to
+the left of the lens, <span class="math inline">\(s\)</span> is measured
+from right to left and <span class="math inline">\(s&#39;\)</span> is
+measured from left to right.) An object to the left of the lens has a
+positive <span class="math inline">\(s\)</span> and an image to the
+right of the lens has a positive <span
+class="math inline">\(s&#39;\)</span>. This is called the
+<strong>Gaussian co-ordinate system</strong>.</p>
+<figure id="fig:lens_imaging" data-latex-placement="H">
+<p><img src="figs_small/lens_imaging.png" style="width:14cm"
+alt="Diagram showing diverging rays from an object reaching a lens and being re-directed to reconverge at the image." /></p>
+<figcaption>A lens forming an image of an object.</figcaption>
+</figure>
+<p>There are some positions of the object, <span
+class="math inline">\(s\)</span>, for which <span
+class="math inline">\(s&#39;\)</span> is negative. In these cases we
+don’t obtain a real image at all. Instead this distance is now the
+apparent location of a virtual image, from which light rays appear to
+emerge from.</p>
 <p>The focal length <span class="math inline">\(f\)</span> is fixed for
-a given lens, it depends on the curvature of its surface according to
-the <strong>lens makers’ equation</strong>: <span
-class="math display">\[\frac{1}{f}
+a given lens, it depends on the curvature of its surfaces and the
+refractive index of its material, according to the <strong>lensmakers’
+equation</strong>:</p>
+<p><span class="math display">\[\frac{1}{f}
 =(n-1)\bigg(\frac{1}{r_1}-\frac{1}{r_2} \bigg)\]</span></p>
 <p>where <span class="math inline">\(r_1\)</span> is the radius of
 curvature of the first surface of the lens, <span
 class="math inline">\(r_2\)</span> is the radius of curvature of the
 second surface, and <span class="math inline">\(n\)</span> is the
 refractive index of the lens material.</p>
-<figure id="lens">
-<img src="figs/thinlens2.png" style="width:10cm" />
-<figcaption>Notation for the the lens. Focal length is denoted by <span
-class="math inline">\(f\)</span>.</figcaption>
-</figure>
-<p>A real image is obtained for <span class="math inline">\(s &gt;
-f\)</span>. Otherwise there will be no real image, and <span
-class="math inline">\(s&#39;\)</span> is negative, with rays appearing
-to diverge from a virtual image at <span
-class="math inline">\(s&#39;\)</span> (i.e. on the left side of the
-lens, as drawn).</p>
-<p>The linear magnification, the ratio of the size of the image to the
-size of the object, <span class="math inline">\(M\)</span>, is given by
-<span class="math display">\[M = -\frac{s&#39;}{s}\]</span></p>
-<p>The minus sign tells us that the image is inverted.</p>
-<h2 id="simple-magnifier">Simple magnifier</h2>
-<p>Let’s consider the eye to be a simple imaging system, consisting of a
-thin converging lens (eye lens and cornea) and a screen (the retina).
-The distance from the lens to the retina is fixed, but the focal length
-of the thin lens, <span class="math inline">\(f\)</span>, can be changed
-by the muscles in the eye (known as accommodation). If the object has
-size <span class="math inline">\(y\)</span> then the size of the image
-on the retina, <span class="math inline">\(y&#39;\)</span>, depends on
-the object’s distance from the lens, <span
-class="math inline">\(s\)</span> as shown in Figure <a href="#eye"
-data-reference-type="ref" data-reference="eye">2</a>.</p>
-<p>Under the paraxial approximation, an object of size <span
-class="math inline">\(y\)</span> subtends an angle <span
-class="math inline">\(\theta = y/s\)</span>. In principle we can make an
-object as big as we like by bringing it arbitrarily close the lens.
-However, this requires <span class="math inline">\(f\)</span> to be
-adjusted, and there is a limit to how far the eye can accommodate. The
-closest an object can be brought and still focused on the retina is
-called the <strong>near point</strong> of the eye, and is comfortably
-around <span class="math inline">\(x_{np} = 25\)</span> cm for a healthy
-eye. The angle subtended by the object is approximately <span
-class="math inline">\(y/x_{np}\)</span>.</p>
-<figure id="eye">
-<img src="figs/eye.png" style="width:14cm" />
-<figcaption>Left: A simple model of the eye as a converging lens. Right:
-Use of a converging lens as a simple magnifier. The magnifier allows the
-object to be brought closer than the near point of the eye, increasing
-the angle it subtends and hence making it appear larger.</figcaption>
-</figure>
-<p>A simple magnifier is a converging lens placed in front of the eye
-lens, with an object we wish to view placed at the focal length of the
-lens. The lens makes the object appear as though it is at infinity. The
-eye can then fully relax, as it is when accommodated to view objects at
-infinity, but the image size on the retina is the same as if the object
-was placed at <span class="math inline">\(f\)</span>. That is to say
-that the angle subtended by the object, <span
-class="math inline">\(\theta\)</span> is the same. Since this angle is
-now given by <span class="math inline">\(y/f\)</span>, we can write the
-angular magnification of the magnifier as <span class="math display">\[M
-= \frac{x_{np}}{f}\]</span></p>
-<p>This is also the ratio of the size of the object on the retina when
-viewed through the magnifying glass, at a distance of <span
-class="math inline">\(f\)</span>, compared to the size if we viewed it
-without the magnifying glass, when we would need to move the object out
-to the near point, <span class="math inline">\(x_{np}\)</span></p>
-<h2 id="the-compound-microscope">The compound microscope</h2>
-<p>Consider an ideal thin lens of focal length, <span
-class="math inline">\(f\)</span>. Recall that an object at infinity is
-imaged a distance <span class="math inline">\(f\)</span> behind the
-lens. If an object is placed a distance <span
-class="math inline">\(s\)</span> in front of the lens, it will be imaged
-a distance <span class="math inline">\(s&#39;\)</span> behind the lens,
-where <span class="math display">\[1/f = 1/s + 1/s&#39;,\]</span> with a
-linear magnification, <span class="math inline">\(M =
--s&#39;/s\)</span></p>
-<p>For a thin aberration-free lens in geometrical optics we can obtain
-arbitrarily high magnification through our choice of <span
-class="math inline">\(s\)</span>, and if we place a camera at the
-position of the image, we have a microscope.</p>
-<p>More traditional compound microscopes, where we can look directly at
-the image, require an extra element called an eye-piece. This is because
-the image formed by the objective is still quite small, to get it to
-fill a decent portion of the eye’s angular field of view we would have
-to get very close to it, closer than the near point. The job of the
-eyepiece is to take the image and make it appear as though it is at
-infinity, allowing our eyes to relax - the same job as the simple
-magnifier. This is done by placing the eyepiece so that the image of the
-object is at its focal length, <span class="math inline">\(f_e\)</span>.
-This is shown in Figure <a href="#microscope" data-reference-type="ref"
-data-reference="microscope">3</a></p>
-<figure id="microscope">
-<img src="figs/microscope.png" style="width:14cm" />
+<p>The linear magnification <span class="math inline">\(M\)</span>,
+defined as the ratio of the size of the image to the size of the object,
+is given by,</p>
+<p><span class="math display">\[M = -\frac{s&#39;}{s},\]</span></p>
+<p>where the minus sign tells us that the image is inverted.</p>
+<h2 id="compound-microscope">Compound Microscope</h2>
+<p>We have seen above how a single ideal lens can be used to make a
+microscope of sorts, we produced a magnified image of an object by
+placing it a distance <span class="math inline">\(s\)</span> in front of
+the lens, producing an image a distance <span
+class="math inline">\(s&#39;\)</span> behind the lens, where,</p>
+<p><span class="math display">\[1/f = 1/s + 1/s&#39;,\]</span></p>
+<p>with a linear magnification, <span class="math inline">\(M =
+-s&#39;/s\)</span>.</p>
+<p>To be able to see this intermediate image, we then look at it with
+our eye, and our eye lens/cornea acts as another lens to form a final
+image on our retina. But in a microscope we are typically looking at
+objects that are only perhaps a few hundred micrometers in size. Even if
+we arrange our lens to have a 20X magnification, we still have an
+intermediate image that is only millimetres in size. We can make things
+appear large (i.e. to fill a large fraction of our field-of-view) by
+bringing them close to your eyes, but to see such a tiny intermediate
+image we would need to bring it very close indeed, causing eye strain
+even for those with young eyes.</p>
+<p>This is why, in a traditional compound microscope, we also have an
+<strong>eye-piece</strong>. The role of the eye-piece is to allow us to
+put the intermediate image very close to our eye, but view it as though
+it were at infinity, with our eye fully relaxed. The first lens, the one
+that is doing the magnification, we refer to as the <strong>objective
+lens</strong>. This is shown in Fig. <a href="#fig:compound"
+data-reference-type="ref" data-reference="fig:compound">3</a>.</p>
+<figure id="fig:compound" data-latex-placement="!h">
+<p><img src="figs_small/compound.png" style="width:14cm"
+alt="Diagram showing a compound microscopy made up of two lenses" /></p>
 <figcaption>Simple diagram of a compound microscope. The objective, on
-the left, forms a magnified image of the object. The eyepiece allows
-this image to be viewed at infinity.</figcaption>
+the left, forms a magnified image of the object, the intermediate image.
+This intermediate image is placed at the focal length of the eyepiece,
+so that the image appears at infinity for the user.</figcaption>
 </figure>
-<p>For the objective, of focal length <span
+<p>For the objective lens, of focal length <span
 class="math inline">\(f_o\)</span>, the linear magnification is given by
 <span class="math inline">\(-s&#39;/s\)</span>. However, we may also
-write this magnification as approximately: <span
-class="math display">\[M = -\frac{L}{f_o}\]</span> where <span
-class="math inline">\(L\)</span> is the distance between the focal
-points of the objective and the eye-piece. This is called the
+write this magnification as approximately,</p>
+<p><span class="math display">\[M = -\frac{L}{f_o},\]</span></p>
+<p>where <span class="math inline">\(L\)</span> is the distance between
+the focal points of the objective and the eye-piece. This is called the
 <strong>tube length</strong>. This approximation is valid because we
 typically want a large magnification, and so <span
 class="math inline">\(s&#39; \gg s\)</span>. This means that the object
@@ -341,30 +322,85 @@ is quite close to the focal point, i.e. <span class="math inline">\(s
 such that <span class="math inline">\(L \approx s&#39;\)</span>.</p>
 <p>The magnification of the entire microscope includes the angular
 magnification of the eyepiece (<span
-class="math inline">\(x_{np}/f_e\)</span>) and so the total
-magnification is:</p>
+class="math inline">\(x_{np}/f_e\)</span>), where <span
+class="math inline">\(x_{np}\)</span> is near-point distance of the eye
+(conventionally chosen to be 25 cm) and <span
+class="math inline">\(f_e\)</span> is the focal length of the eye-piece
+lens. (The idea is essentially that the eye-piece allows you to bring
+the intermediate image closer to the eye by this factor). The total
+magnification is therefore,</p>
 <p><span class="math display">\[M =
--\frac{L}{f_o}\frac{x_{np}}{f_e}\]</span></p>
-<p>In practice, we find the resolution of this microscope would be very
-poor. We will see shortly that the ultimate limit on resolution is given
-by the numerical aperture of the lens. However, in practice, as we
-increase the numerical aperture of simple spherical lens, we find that
-the image resolution is instead limited by optical aberrations. Using an
-aspheric lens it’s possible to minimise aberrations on-axis, but it
-isn’t possible to design a single surface lens which provides high
-resolution across a meaningful field of view.</p>
+-\frac{L}{f_o}\frac{x_{np}}{f_e}.\]</span></p>
+<p>So, when you use a microscope, the final magnification is the product
+of the magnification written on the objective and the magnification
+written on the eye-piece. Typically, the eyepiece magnification is 10x
+and the objective magnification ranges from 4x to 100x, giving total
+magnifications of between 40x and 1000x.</p>
+<h1 id="a-simple-digital-microscope">A Simple Digital Microscope</h1>
+<p>Most modern microscopes do not use eye-pieces at all. Instead we can
+simply place a camera at the plan of the image formed by the objective.
+Since camera pixels are small (typically 1-20 microns), there is no
+difficulty in capturing this image directly (we will explore this more
+thoroughly when we discuss resolution). This is illustrated on the left
+side of Fig. <a href="#fig:digital" data-reference-type="ref"
+data-reference="fig:digital">4</a>; the objective is referred to as
+finite conjugate, because it is forming an image a finite distance from
+itself (<em>conjugate</em> planes in optics refer to the object and
+image planes).</p>
+<p>Another design for a digital microscope is to make use of both an
+objective and a tube lens. In this design, the object is placed at the
+focal length of the objective, and so the objective collimates the rays
+from the object, and the tube lens focuses them to form an image on the
+camera. The spacing between the two lenses is the sum of their focal
+lengths. This is illustrated on the right side of Fig. <a
+href="#fig:digital" data-reference-type="ref"
+data-reference="fig:digital">4</a>; the objective is referred to as
+infinite conjugate because (by itself) the image it forms would be
+infinitely far away since the rays are collimated.</p>
+<p>The magnification in this case is given by the ratio of the focal
+lengths of the two lenses,</p>
+<p><span class="math display">\[M = \frac{f_L}{f_o}\]</span></p>
+<p>The main advantage of this two-lens design is that the space between
+the lenses where the light is collimated (known as ‘infinity’ space) can
+be used to introduce optical elements without affecting the focus
+position of the microscope. If we were to try the same thing with the
+single lens microscope, we would find that the focus position changes
+due to refraction of light as it passes in to and out of the optical
+element.</p>
+<figure id="fig:digital" data-latex-placement="!h">
+<p><img src="figs_small/microscopes.png" style="width:14cm"
+alt="Two diagrams, one showing use of a single lens to form an image on a camera, and the second showing use of two lenses to achieve the same effect" /></p>
+<figcaption>Left: A digital microscopes using a finite conjugate
+objective. Right: A digital microscope using an infinite conjugate
+objective and a tube lens.</figcaption>
+</figure>
+<h1 id="optical-aberrations">Optical Aberrations</h1>
+<p>The above theory is only exactly the case for an idealised thin lens.
+Any real lens has a finite thickness, and the thickness must be
+sufficient to accommodate the curvature of its surfaces over the
+required lens diameter. It is therefore very hard to make a lens with a
+short focus length (large curvature needed) of a reasonable diameter
+without it being very thick.</p>
+<p>Thick lenses cause optical aberrations. Essentially this means that
+the light rays from a point on the object do not all converge at a
+single point in the image, instead they are smeared over a larger area,
+resulting in a blurred image. We will not study these in detail, but you
+should know that in general it is hard to make a lens with a short focal
+length able to image over a large field of view without introducing lots
+of aberrations. But that is exactly what we want to do in
+microscopy!</p>
 <h1 id="the-microscope-objective">The Microscope Objective</h1>
 <p>Practical objectives are multi-element, i.e. they contain multiple
 surfaces which are optimised to minimise aberrations. For colour, or
-multi-wavelength imaging, they must also be achromatic (i.e. different
-wavelengths are focused to the same point) and flat-field, meaning that
-the in-focus image is formed on a plane, and not a curved surface.
-Generally, the more you are willing to pay, the better these correction
-will be. There are a bizarre (for historical reasons) set of names for
-the different levels of correction available, which you can read all
-about here:</p>
-<p><a
-href="https://www.olympus-lifescience.com/en/microscope-resource/primer/anatomy/specifications/">https://www.olympus-lifescience.com/en/microscope-resource/primer/anatomy/specifications/</a></p>
+multi-wavelength imaging, they must also be <strong>achromatic</strong>
+(i.e. different wavelengths are focused to the same point) and
+<strong>flat-field</strong>, meaning that the in-focus image is formed
+on a plane, and not a curved surface. Generally, the more you are
+willing to pay, the better these correction will be. There is a bizarre
+(for historical reasons) set of names for the different levels of
+correction available, which you can read all about <a
+href="https://www.microscopyu.com/microscopy-basics/microscope-objective-specifications">here</a>
+(but do not need to memorise for the exam):</p>
 <p>An important distinction is between <em>finite conjugate</em> and
 <em>infinite conjugate</em> objectives:</p>
 <p><strong>Finite Conjugate:</strong> An objective designed to form an
@@ -373,9 +409,10 @@ be placed at a specific distance (<span
 class="math inline">\(s&#39;\)</span>), usually either 160 mm (DIN
 standard) or 180 mm (RIS standard). Of course, you can form an image at
 different distances, providing you also change the distance to the
-object, <span class="math inline">\(s\)</span>, but the corrections
-won’t be as good. Objectives are specified in terms of their
-magnification, such as x10, or x40, and you only obtain this
+object, <span class="math inline">\(s\)</span>, but the aberration
+corrections won’t be as good. Objectives are specified in terms of their
+magnification, such as <span class="math inline">\(10\times\)</span>, or
+<span class="math inline">\(40\times\)</span>, and you only obtain this
 magnification with the camera placed at the correct distance. For direct
 visualisation of the image, an eyepiece is also required. This also has
 a magnification specified, and the total magnification is given by the
@@ -383,33 +420,42 @@ product of the two.</p>
 <p><strong>Infinite Conjugate:</strong> An infinite conjugate microscope
 objective is designed to be used with the object placed at the focal
 length, <span class="math inline">\(f\)</span>, and so form an image at
-infinity. They therefore require a second lens, known as tube lens, to
-form an image on the camera. These objectives are again specified by
-magnification, but now this depends on using a tube lens of the
-specified focal length. There is also usually a range of tube lengths
-(distance between the objective and the tube lens) which are
-recommended. Some infinite conjugate objectives are designed to work
-with a specific tube lens in order for the correct aberration correction
-to be achieved.</p>
+infinity (another way of saying they collimate the light rays). They
+therefore require a second lens, known as tube lens, to form an image on
+the camera. These objectives are again specified by magnification, but
+now this depends on using a tube lens of the specified focal length.
+There is also usually a range of tube lengths (distance between the
+objective and the tube lens) which are recommended. It might seem that
+you can get arbitrarily high magnification by using a very long focal
+length tube lens, and to an extent this is true, but this magnification
+is not <em>useful</em> - you will see why when we discuss resolution.
+Some infinite conjugate objectives are designed to work with a specific
+tube lens; the two are designed together in order to achieve the
+specified aberration correction.</p>
 <p><strong>Advantages of infinite conjugate objectives:</strong>
 Elements with optical thickness (such as filters and beamsplitters) can
 be placed in the optical path without affecting the magnification.
 Infinite conjugate objectives are also needed in scanning laser systems
-such as confocal microscopes (more on this in lecture 3).</p>
+such as confocal microscopes (more on this in a later lecture).</p>
 <h1 id="the-condenser">The Condenser</h1>
 <p>The condenser is the element used to illuminate the sample. The
 condenser has an important role to play in resolution, as discussed
 later, the theoretical resolution of a transmission microscope cannot be
 achieved if the numerical aperture does not match the numerical aperture
-of the objective. In some configurations, illumination light is sent
-through the objective, in which case the objective and the condenser are
-one and the same.</p>
+of the objective. In a good quality microscopy, the condenser is usually
+set up to provide <strong>Köhler illumination</strong> which provides
+uniform illumination (i.e. the shape of the bulb filament is not
+visible) and allows the light intensity to be controlled using an iris,
+independently of the field (in Lecture 2 we will see that this also
+provides optimal resolution). In some configurations, illumination light
+is sent through the objective, in which case the objective and the
+condenser are one and the same.</p>
 <h1 id="contrast">Contrast</h1>
 <p>To observe features in a sample there must be some difference in
 intensity or colour between those features and other areas of the image.
 The contrast depends not only on the sample, but on the design of the
 microscope and illumination.</p>
-<p><strong>Brightfield:</strong> Most simple microscopes operative in
+<p><strong>Brightfield:</strong> Most simple microscopes operate in
 bright field transmission mode. The sample is illuminated from the back,
 and we obtain contrast because the sample absorbs or (to a lesser
 extent) scatters light. Of course the sample must be at least partly
@@ -424,24 +470,30 @@ contrast, particularly for unstained samples (e.g. live samples),
 case, the sample is illuminated at a high angle of incidence, such that
 undeflected light cannot reach the objective. We therefore only see
 light which is scattered by the sample, and the background is dark.</p>
-<p>Read more:<br />
-<a
-href="https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/darkfieldindex/"><span
-class="uri">https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/darkfieldindex</span></a></p>
+<p><a
+href="https://evidentscientific.com/en/insights/what-is-darkfield-microscopy">Read
+more online</a></p>
+<figure id="fig:contrast" data-latex-placement="!h">
+<p><img src="figs_small/contrast.png" style="width:10cm"
+alt="Diagrams showing brightfield and darkfield microscopes." /></p>
+<figcaption>Left: A digital microscopes using a finite conjugate
+objective. Right: A digital microscope using an infinite conjugate
+objective and a tube lens.</figcaption>
+</figure>
 <p><strong>Fluorescence Microscopy:</strong> When certain molecules,
 called fluorophores, absorb light of certain wavelength, they re-emit
 light at a longer wavelength. The difference between the excitation and
-emission wavelengths is called the Stoke’s shift. Physically, an
-incident photon excites an electron to a higher energy level. It then
-relaxes to a slightly lower level via internal energy transfer
-processes, before re-emitting and dropping back down to the original
-level. Since the drop is now a smaller change in energy, the emitted
-photon is lower energy and so has a longer wavelength.</p>
+emission wavelengths is called the Stokes shift. Physically, an incident
+photon excites an electron to a higher energy level. It then relaxes to
+a slightly lower level via internal energy transfer processes, before
+re-emitting and dropping back down to the original level. Since the drop
+is now a smaller change in energy, the emitted photon is lower energy
+and so has a longer wavelength.</p>
 <p>When a sample is naturally fluorescent, we call this
 <em>intrinsic</em> or <em>auto</em>fluorescence. More often, we apply
-fluorescent stains or generically engineer an organism to contain
+fluorescent stains or genetically engineer an organism to contain
 fluorescent proteins.</p>
-<p>To image fluorescene we introduce a fluorecence filter set. The
+<p>To image fluorescence we introduce a fluorescence filter set. The
 excitation filter ensures we illuminate the sample only with the correct
 excitation wavelength, and the emission filter selects only the
 fluorescent emission. Without the use of filters, the fluorescence
@@ -450,16 +502,42 @@ camera.</p>
 <p>The direction of the emitted photon is random and doesn’t depend on
 the direction the excitation came from. So there is no distinction
 between bright-field and dark-field imaging. Fluorescence microscopy is
-often performed in <em>epi</em> configuration, meaning that the sample
-is excited from the sample side as it is imaged, via the same objective.
-A dichroic mirror, which reflects light below a certain threshold
-wavelength and transmits light above this threshold (or vice versa) is
-then used to separate the excitation and emission optical paths.</p>
-<p>Read more:<br />
-<a
-href="https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/fluorescence/fluorhome/"><span
-class="uri">https://www.olympus-lifescience.com/en/microscope-resource/primer/techniques/fluorescence/fluorhome</span></a></p>
-<p><strong>Phase contrast microscopy</strong> will be discussed in
-Lecture 3.</p>
+often performed in <em>epi</em>-illumination configuration, meaning that
+the sample is excited from the sample side as it is imaged, via the same
+objective. A <strong>dichroic mirror</strong>, which reflects light
+below a certain threshold wavelength and transmits light above this
+threshold (or vice versa) is then used to separate the excitation and
+emission optical paths.</p>
+<p><a
+href="https://evidentscientific.com/en/microscope-resource/knowledge-hub/techniques/fluorescence/fluorhome">Read
+more online.</a></p>
+<p><strong>Phase Contrast Microscopy</strong>: This relies on changes in
+optical path length (physical path length multiplied by refractive
+index) of the light rays passing through different parts of the sample,
+effectively making the microscopy sensitive to variations in refractive
+index. This helps provide contrast even when the sample does not absorb
+or scatter much light.</p>
+<p><a
+href="https://evidentscientific.com/en/microscope-resource/knowledge-hub/techniques/phasecontrast/phase">Read
+more online.</a></p>
+<h1 id="learning-outcomes">Learning Outcomes</h1>
+<p>You should be able to:</p>
+<ul>
+<li><p>Use the lens formula to relate the position of the object and
+image for a lens of a particular focal length.</p></li>
+<li><p>Describe how a simple compound microscope works, including the
+role of the eye-piece and objective.</p></li>
+<li><p>Describe how a simple digital microscope works, using either a
+finite or infinite conjugate objective.</p></li>
+<li><p>Calculate magnification for all three types of
+microscope.</p></li>
+<li><p>Explain the role of the condenser.</p></li>
+<li><p>Explain the difference between finite and infinite conjugate
+objectives and understand what the specified magnification signifies for
+each.</p></li>
+<li><p>Explain the role and importance of a tube lens.</p></li>
+<li><p>Explain the difference between light-field, dark-field and
+fluorescence as common imaging modes.</p></li>
+</ul>
 </body>
 </html>
