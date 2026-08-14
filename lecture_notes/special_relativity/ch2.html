@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 2 - The Lorentz Transformations</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -177,7 +180,7 @@
 <p class="author">Mike Hughes</p>
 <p class="date">Physics and Astronomy, University of Kent</p>
 </header>
-<p>In this lecture we will resolve the problem we discovered in Lecture
+<p>In this section we will resolve the problem we discovered in Section
 1 in applying the Galilean transforms to electromagnetic radiation and
 the speed of light. We will do this by modifying the transformations in
 such a way that they reproduce the familiar classical results at low,
@@ -196,72 +199,68 @@ different ways, but in essence are:</p>
 cannot detect one’s absolute velocity by conducting any
 experiment.</p></li>
 <li><p>The speed of light is independent of the source, and is constant
-in all reference frames.</p></li>
+<span class="math inline">\(c\)</span> in a vacuum as measured in all
+inertial reference frames.</p></li>
 </ol>
 </div>
 <p>Together, these statements are not compatible with the Galilean
-velocity transformations stated in Lecture 1. Consider the following: I
-am travelling on a train at <span
-class="math inline">\(50\,\mathrm{m/s}\)</span> , and you are standing
-by the side of the track. If I throw a ball forwards along the train at
-<span class="math inline">\(10\, \mathrm{m/s}\)</span> you will say the
-speed of the ball is <span class="math inline">\(50 + 10 =
-60\,\mathrm{m/s}\)</span>. This is simply applying the velocity
-transformations.</p>
-<p>But now let’s say I do the same thing, except rather than throwing a
-ball, I shine light from a torch along the direction the train is moving
-in. The second postulate says that, from my point of view, the speed of
-light is equal to <span class="math inline">\(c\)</span>. If we apply
-the velocity transforms, the speed you measure would be <span
-class="math inline">\((c + 50)\,\mathrm{m/s}\)</span>. But the second
-postulate says that you also measure the speed of light to be equal to
-<span class="math inline">\(c\)</span>. Therefore, if we accept the
-postulates, then we need to modify the Gailean transformations.</p>
-<p>We stated the Galilean transformations between two inertial frames of
-reference, <span class="math inline">\(S\)</span> and <span
-class="math inline">\(S&#39;\)</span>, to be:</p>
-<p><span class="math display">\[\begin{aligned}
+velocity transformations which we stated to be:</p>
+<p><span class="math display">\[\begin{align}
 x&#39;&amp;=x-ut \iff x = x&#39; + ut           
 \\y&#39;&amp;=y
 \\z&#39;&amp;=z
 \\t&#39;&amp;=t
-\end{aligned}\]</span></p>
-<p>We know that these equations work well for most objects that we
-interact with, so the modified form of the equations must be such that
-they still give (approximately) the same answer for situations where we
-know the Galilean transformations work.</p>
+\end{align}\]</span></p>
+<p>If I am travelling on a train at <span
+class="math inline">\(50\,\mathrm{m/s}\)</span>, and you are standing by
+the side of the track, and I throw a ball forwards along the train at
+<span class="math inline">\(10\, \mathrm{m/s}\)</span> then the Galilean
+transformations you will say the speed of the ball is <span
+class="math inline">\(50 + 10 = 60\,\mathrm{m/s}\)</span>.</p>
+<p>But if instead I shine light from a torch along the direction the
+train is moving in, the second postulate says that, from my point of
+view, the speed of light is equal to <span
+class="math inline">\(c\)</span>. If we apply the velocity transforms,
+the speed you measure would be <span class="math inline">\((c +
+50)\,\mathrm{m/s}\)</span>. But the second postulate says that you also
+measure the speed of light to be equal to <span
+class="math inline">\(c\)</span>. Therefore, the postulates contradict
+the Galilean transformations.</p>
+<p>We therefore need a modified form of the equations that give
+(approximately) the same answer for situations where we know the
+Galilean transformations work, but which are also consistent with the
+principles of relativity.</p>
 <h2 data-number="2" id="statement-of-the-lorentz-transformations"><span
 class="header-section-number">2</span> Statement of the Lorentz
 Transformations</h2>
 <p>The correct transformations between reference frames are called the
-Lorentz transformations. They had been discovered before Einstein’s
-paper by Lorentz as a somewhat <em>ad hoc</em> solution to the problem
-of the Michelson-Morley experiment, although Lorentz still very much
-believed in the ether. The transformations are:</p>
+Lorentz transformations. Equivalent equations had been written down
+before Einstein’s paper by Hendrik Lorentz, which is why they bear his
+name, although his physical understanding of them was somewhat
+different. In any case, the transformations are:</p>
 <div class="framed">
-<p><span class="math display">\[\begin{aligned}
-x&#39;&amp;=\gamma (x-ut)
+<p><span class="math display">\[\begin{align}
+x&#39;&amp;=\gamma (x-ut) \quad
+\Longleftrightarrow  \quad  x=\gamma(x&#39;+ut&#39;)
 \\y&#39;&amp;=y
 \\z&#39;&amp;=z
-\\t&#39;&amp;=\gamma(t-ux/c^2)
-\end{aligned}\]</span></p>
-<p><span class="math display">\[\begin{aligned}
-x&amp;=\gamma(x&#39;+ut&#39;)
-\\y&amp;=y&#39;
-\\z&amp;=z&#39;
-\\t&amp;=\gamma(t&#39;+ux&#39;/c^2)
-\end{aligned}\]</span></p>
+\\t&#39;&amp;=\gamma(t-ux/c^2) \quad \Longleftrightarrow  \quad
+t&amp;=\gamma(t&#39;+ux&#39;/c^2)
+\end{align}\]</span></p>
 <p>where</p>
-<p><span class="math display">\[\gamma =
-\sqrt{\frac{1}{1-u^2/c^2}}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\gamma = \frac{1}{\sqrt{1-u^2/c^2}}
+\end{equation}\]</span></p>
 </div>
 <p>The <span class="math inline">\(\gamma\)</span> term is the ‘Lorentz
 factor’, often simply called <strong>gamma</strong>. Sometimes, we also
 define <span class="math inline">\(\beta = u/c\)</span> to simplify
 equations, such that <span class="math inline">\(\gamma =
-\sqrt{1/(1-\beta^2)}\)</span>.</p>
-<figure id="fig:gamma">
-<p><img src="pictures/gamma_plot.png"
+1/\sqrt{1-\beta^2}\)</span>. Again, these equations are only valid for
+the standard configuration of reference frames that we established in
+Section 1.</p>
+<figure id="fig:gamma" data-latex-placement="H">
+<p><img src="images_small/gamma_plot.png"
 alt="Plot of Lorentz factor as a function of speed." /></p>
 <figcaption>Plot of <span class="math inline">\(\gamma\)</span> as a
 function of speed, <span class="math inline">\(u\)</span>.</figcaption>
@@ -269,10 +268,11 @@ function of speed, <span class="math inline">\(u\)</span>.</figcaption>
 <p>Notice that to switch between the two sets of equations (primed to
 non-primed and non-primed to primed) is simply a matter of replacing
 <span class="math inline">\(u\)</span> with <span
-class="math inline">\(-u\)</span>. That is to be expected, after all
-there is nothing special about which set of co-ordinates we call <span
+class="math inline">\(-u\)</span>. That is to be expected: there is
+nothing special about which set of co-ordinates we call <span
 class="math inline">\(S\)</span> and which we call <span
-class="math inline">\(S&#39;\)</span>.</p>
+class="math inline">\(S&#39;\)</span>, and we should obtain the same
+physical results if we swap them.</p>
 <p>We can check that the Lorentz transformation do indeed reduce to the
 Galilean transformations for most situations within our experience. The
 key thing to notice is the <span class="math inline">\(u^2/c^2\)</span>
@@ -283,25 +283,32 @@ class="math inline">\(t&#39;\)</span>). <span
 class="math inline">\(c\)</span> is a very large number, <span
 class="math inline">\(3\times10^8 \,\mathrm{m/s}\)</span>, whereas most
 velocities we deal with tend to be quite small.</p>
-<p>For example, if we go back to our <span class="math inline">\(50
+<p>For example, for the <span class="math inline">\(50
 \,\mathrm{m/s}\)</span> train, <span
 class="math inline">\(u^2/c^2\)</span> is of the order of <span
 class="math inline">\(10^{-14}\)</span>. So if we calculate <span
 class="math inline">\(\gamma\)</span>: <span
-class="math display">\[\gamma = \sqrt{\frac{1}{1-u^2/c^2}} =
-\sqrt{\frac{1}{1 -10^{-14}}}  \approx 1\]</span></p>
-<p>So if <span class="math inline">\(\gamma \approx 1\)</span>, then
-<span class="math inline">\(x&#39; \approx x - ut\)</span>, which is the
-same as the Galilean transformation. More generally we can say that
-<span class="math inline">\(\gamma \rightarrow 1\)</span> for <span
+class="math display">\[\begin{equation}
+\gamma = \sqrt{\frac{1}{1-u^2/c^2}} = \sqrt{\frac{1}{1
+-10^{-14}}}  \approx 1
+\end{equation}\]</span></p>
+<p>If <span class="math inline">\(\gamma \approx 1\)</span>, then <span
+class="math inline">\(x&#39; \approx x - ut\)</span>, which is the same
+as the Galilean transformation. More generally we can say that <span
+class="math inline">\(\gamma \rightarrow 1\)</span> for <span
 class="math inline">\(u \ll c\)</span>. Similarly, for the <span
-class="math inline">\(t\)</span> transformation, assuming <span
-class="math inline">\(ux \ll c^2\)</span> we similarly have <span
-class="math inline">\(t \approx t&#39;\)</span>. So, at the kinds of
-speeds we typically experience, the Galilean and Lorentz transformation
-give essentially the the same result. We therefore only need to use the
-more complicated Lorentz transformations when we have speeds are some
-reasonable fraction of <span class="math inline">\(c\)</span>.</p>
+class="math inline">\(t\)</span> transformation, if <span
+class="math inline">\(\gamma \approx 1\)</span> and <span
+class="math inline">\(ux/c^2 \ll t\)</span> then we similarly have <span
+class="math inline">\(t \approx t&#39;\)</span>.</p>
+<p>Therefore, at the kinds of speeds we typically experience, the
+Galilean and Lorentz transformation give essentially the the same
+result. We therefore only need to use the more complicated Lorentz
+transformations when we have speeds are some reasonable fraction of
+<span class="math inline">\(c\)</span>. What ’reasonable‘ means depends
+on the level of accuracy you require. For example, for <span
+class="math inline">\(u = 0.01c\)</span> the correction factor is
+approximately <span class="math inline">\(5 \times 10^{-5}\)</span>.</p>
 <h2 data-number="3" id="derivation-of-the-lorentz-transformations"><span
 class="header-section-number">3</span> Derivation of the Lorentz
 Transformations</h2>
@@ -310,12 +317,13 @@ transformations that are consistent with the two postulates of special
 relativity.</p>
 <p>We will assume that space is isotropic and homogeneous. That is to
 say that the laws of physics do not depend on the direction we are
-moving in or where we are in space. If that is the case then we can
-write the most general possible transformations between two inertial
-frames as <span class="math display">\[\begin{aligned}
+moving in or where we are in space. Together with some other
+considerations which are set out in more detail in Rindler, it turns out
+that the the most general possible transformations between two inertial
+frames as <span class="math display">\[\begin{align}
 x&#39; &amp;= \gamma(x-ut)
 \\x &amp;= \gamma(x&#39;+ut&#39;)
-\end{aligned}\]</span> Note that we are calling the constant <span
+\end{align}\]</span> Note that we are calling the constant <span
 class="math inline">\(\gamma\)</span>, but at this point in the
 derivation we don’t know what <span
 class="math inline">\(\gamma\)</span> is yet!</p>
@@ -326,10 +334,12 @@ class="math inline">\(x\)</span> then this would violate homogeneity.
 This means that <span class="math inline">\(\gamma\)</span> cannot be a
 function of <span class="math inline">\(x\)</span> (although it may be a
 function of <span class="math inline">\(u\)</span>). There cannot be a
-constant term since this would violate isotropy. And for the same reason
-the two transforms (i.e. for <span class="math inline">\(x\)</span> and
-<span class="math inline">\(x&#39;\)</span>) must be identical except
-for exchanging <span class="math inline">\(u\)</span> with <span
+constant term since this would violate our chosen standard configuration
+that at <span class="math inline">\(t=t&#39;\)</span> we have <span
+class="math inline">\(x=x&#39;\)</span>. And for similar reasons the two
+transforms (i.e. for <span class="math inline">\(x\)</span> and <span
+class="math inline">\(x&#39;\)</span>) must be identical except for
+exchanging <span class="math inline">\(u\)</span> with <span
 class="math inline">\(-u\)</span>.</p>
 <p>Prior to the development of special relativity we would have said
 that time is measured the same in both frames of reference, and hence
@@ -337,13 +347,13 @@ that time is measured the same in both frames of reference, and hence
 into the equations above, the only way to make it work is if <span
 class="math inline">\(\gamma=1\)</span>. This gives us the Galilean
 transformations.</p>
-<p>But now let’s abandon the constraint that <span
-class="math inline">\(t=t&#39;\)</span> and see what happens. Moving to
-the second postulate, we have that light travels at the same speed in
-both <span class="math inline">\(S\)</span> and <span
-class="math inline">\(S&#39;\)</span>. So if we imagine a pulse of light
+<p>Instead, we don’t assume <span
+class="math inline">\(t=t&#39;\)</span> and instead apply the second
+postulate, that light travels at the same speed in both <span
+class="math inline">\(S\)</span> and <span
+class="math inline">\(S&#39;\)</span>. We consider a pulse of light
 moving in <span class="math inline">\(S\)</span> at <span
-class="math inline">\(c\)</span> the distance it will travel in time
+class="math inline">\(c\)</span>. The distance it will travel in time
 <span class="math inline">\(t\)</span> is simply given by <span
 class="math inline">\(x=ct\)</span>. In reference frame <span
 class="math inline">\(S&#39;\)</span> we similarly have that <span
@@ -354,46 +364,57 @@ reference frames (i.e. <span
 class="math inline">\(c&#39;=c\)</span>).</p>
 <p>Now, if we substitute <span class="math inline">\(x=ct\)</span> and
 <span class="math inline">\(x&#39;=ct&#39;\)</span> into our general
-transformations, we have: <span class="math display">\[ct&#39; =
-\gamma(ct-ut) = \gamma t(c-u)
-\\ct = \gamma(ct&#39;+ut&#39;) = \gamma t&#39;(c+u)\]</span> From the
-second equation we have <span class="math display">\[t = \gamma t&#39;
-\frac{(c+u)}{c}.\]</span> Substitute this into the first equation and we
-have <span class="math display">\[ct&#39; = \gamma \frac{[\gamma t&#39;
-(c+u)](c-u)}{c}.\]</span> The <span
-class="math inline">\(t&#39;\)</span> on both sides cancel, and we can
-multiply both sides by <span class="math inline">\(c\)</span> to get
-<span class="math display">\[c^2 = \gamma^2(c+u)(c-u).\]</span> Now,
-<span class="math inline">\((c+u)(c-u)\)</span> is equal to <span
+transformations, we have: <span class="math display">\[\begin{equation}
+ct&#39; = \gamma(ct-ut) = \gamma t(c-u)
+\\ct = \gamma(ct&#39;+ut&#39;) = \gamma t&#39;(c+u)
+\end{equation}\]</span> From the second equation we have <span
+class="math display">\[\begin{equation}
+t = \gamma t&#39; \frac{(c+u)}{c}.
+\end{equation}\]</span> Substitute this into the first equation and we
+have <span class="math display">\[\begin{equation}
+ct&#39; = \gamma \frac{[\gamma t&#39; (c+u)](c-u)}{c}.
+\end{equation}\]</span> The <span class="math inline">\(t&#39;\)</span>
+on both sides cancel, and we can multiply both sides by <span
+class="math inline">\(c\)</span> to get <span
+class="math display">\[\begin{equation}
+c^2 = \gamma^2(c+u)(c-u).
+\end{equation}\]</span> Now, <span
+class="math inline">\((c+u)(c-u)\)</span> is equal to <span
 class="math inline">\(c^2-u^2\)</span> and so we have <span
-class="math display">\[\gamma^2 = \frac{c^2}{c^2-u^2}.\]</span> So,
-dividing through the right hand side by <span
-class="math inline">\(c^2\)</span> and taking the square root we have
-<span class="math display">\[\boxed{\gamma =
-\sqrt{\frac{1}{1-u^2/c^2}}}\]</span> which is exactly the <span
+class="math display">\[\begin{equation}
+\gamma^2 = \frac{c^2}{c^2-u^2}.
+\end{equation}\]</span> So, dividing through the right hand side by
+<span class="math inline">\(c^2\)</span> and taking the square root we
+have <span class="math display">\[\begin{equation}
+\boxed{\gamma = \sqrt{\frac{1}{1-u^2/c^2}}}
+\end{equation}\]</span> which is exactly the <span
 class="math inline">\(\gamma\)</span> factor in the Lorentz
 transformations.</p>
 <p>We can then obtain an expression for <span
 class="math inline">\(t&#39;\)</span> by substituting <span
 class="math inline">\(x&#39; = \gamma(x-ut)\)</span> into <span
 class="math inline">\(x = \gamma(x&#39;+ut&#39;)\)</span> giving <span
-class="math display">\[x = \gamma^2x - u\gamma^2t + u\gamma
-t&#39;.\]</span> From this point you could solve this directly for <span
-class="math inline">\(t&#39;\)</span> or <span
+class="math display">\[\begin{equation}
+x = \gamma^2x - u\gamma^2t + u\gamma t&#39;.
+\end{equation}\]</span> From this point you could solve this directly
+for <span class="math inline">\(t&#39;\)</span> or <span
 class="math inline">\(t\)</span> by substituting in the expression for
 <span class="math inline">\(\gamma\)</span>. Alternatively, we can
-rearrange to obtain <span class="math display">\[t&#39;= \gamma t -
-x\frac{\gamma^2 - 1}{u\gamma}.\]</span> We then need to know the
-following identity, which can be found from the definition of <span
+rearrange to obtain <span class="math display">\[\begin{equation}
+t&#39;= \gamma t - x\frac{\gamma^2 - 1}{u\gamma}.
+\end{equation}\]</span> We then need to know the following identity,
+which can be found from the definition of <span
 class="math inline">\(\gamma\)</span>, <span
-class="math display">\[\gamma^2 - 1 = \frac{u^2}{c^2}\gamma^2.\]</span>
-Substituting in this expression for <span class="math inline">\(\gamma^2
-- 1\)</span> leads directly to <span
-class="math display">\[\boxed{t&#39; = \gamma\bigg(t -
-\frac{ux}{c^2}\bigg)}\]</span> which again is what we want. We have
-therefore shown that the Lorentz transformations are the
-<strong>only</strong> possible transformations consistent with the
-postulates of special relativity.</p>
+class="math display">\[\begin{equation}
+\gamma^2 - 1 = \frac{u^2}{c^2}\gamma^2.
+\end{equation}\]</span> Substituting in this expression for <span
+class="math inline">\(\gamma^2 - 1\)</span> leads directly to <span
+class="math display">\[\begin{equation}
+\boxed{t&#39; = \gamma\bigg(t - \frac{ux}{c^2}\bigg)}
+\end{equation}\]</span> which again is what we want. We have therefore
+shown that the Lorentz transformations are the <strong>only</strong>
+possible transformations consistent with the postulates of special
+relativity.</p>
 <h2 data-number="4" id="working-with-the-lorentz-transformations"><span
 class="header-section-number">4</span> Working with the Lorentz
 Transformations</h2>
@@ -408,25 +429,25 @@ class="math inline">\(S&#39;\)</span>, providing we know the velocity,
 <span class="math inline">\(u\)</span> which <span
 class="math inline">\(S&#39;\)</span> is moving with relative to <span
 class="math inline">\(S\)</span>. Bear in mind that, when not otherwise
-stated, we are assuming that we are working in our standard co-ordinate
-system, where the two observers agree that <span class="math inline">\(t
-= t&#39;\)</span> at the instant when the zero of the <span
-class="math inline">\(S&#39;\)</span> frame moves past the zero of the
-<span class="math inline">\(S\)</span> frame.</p>
+stated, we are assuming that we are working in the standard
+configuration, where the two observers agree that <span
+class="math inline">\(t = t&#39;\)</span> at the instant when the zero
+of the <span class="math inline">\(S&#39;\)</span> frame moves past the
+zero of the <span class="math inline">\(S\)</span> frame.</p>
 <p>Another factor to keep in mind is the light travel time. When we talk
 about the <span class="math inline">\(t\)</span> co-ordinates of an
 event being measured by an observer, we don’t mean the time at which an
 observer would see the event if they were looking at it through a
-telescope, This is because it would take some amount of time for the
+telescope. This is because it would take some amount of time for the
 light to travel from the event to the observer and her telescope. This
 is <em>not</em> what the Lorentz transformations are telling us about.
-The Lorentz transformations tell us what the observer would measure even
-if they corrected their measurement to allow for the travel time of the
-light. To put it another way, special relativity is not telling us about
-some apparent change in time due to the time it takes light to travel,
-but a real physical effect.</p>
-<p>One way this is sometimes expressed is to imagine a reference frame,
-<span class="math inline">\(S\)</span> or <span
+Informally, we can think of the Lorentz transformations telling us what
+the observer would measure even if they corrected their measurement to
+allow for the travel time of the light. To put it another way, special
+relativity is not telling us about some apparent change in time due to
+the time it takes light to travel, but a real physical effect.</p>
+<p>A more formal way to think about this is to imagine a reference
+frame, <span class="math inline">\(S\)</span> or <span
 class="math inline">\(S&#39;\)</span>, as being an infinite lattice of
 clocks, moving rigidly together, with all the clocks perfectly
 synchronised. The Lorentz transformations tell us what would be measured
@@ -456,20 +477,20 @@ class="math inline">\(x&#39;\)</span>, respectively.</p></li>
 <li><p>So in <span class="math inline">\(S&#39;\)</span>: <span
 class="math inline">\(x&#39;\)</span> = 1 ly, <span
 class="math inline">\(t&#39;\)</span> = 1 year</p></li>
-<li><p>And in <span class="math inline">\(S&#39;\)</span>: <span
-class="math inline">\(x&#39;\)</span> = ?, <span
-class="math inline">\(t&#39;\)</span> = ?</p></li>
+<li><p>And in <span class="math inline">\(S\)</span>: <span
+class="math inline">\(x\)</span> = ?, <span
+class="math inline">\(t\)</span> = ?</p></li>
 <li><p>And we have <span class="math inline">\(u = c/2\)</span></p></li>
 </ul>
 <p>To find the time measured from Earth: <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
     t &amp;= \gamma(t&#39; + ux&#39;/c^2) \\
       &amp;= \frac{1}{\sqrt{1-u^2/c^2}} (t&#39; + ux&#39;/c^2) \\
       &amp;= \frac{1}{\sqrt{1-(1/2)^2}} (1 \mathrm{[yr]} + 1/2
 \mathrm{[yr]}) \\
       &amp;= 2\frac{\sqrt{3}}{3}\frac{3}{2}~\mathrm{yrs}\\
       &amp;= \sqrt{3}\approx 1.7~\mathrm{yrs}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>If you’re wondering where the <span class="math inline">\(c\)</span>s
 went, one cancels with the <span class="math inline">\(c\)</span> in the
 velocity (<span class="math inline">\(c/2\)</span>). The other converts
@@ -477,12 +498,12 @@ the distance in light years to a time in years (<span
 class="math inline">\(x&#39; = 1\, \mathrm{ly}\)</span> and so <span
 class="math inline">\(\frac{x&#39;}{c} = 1 \, \mathrm{yr}\)</span>).</p>
 <p>To find the distance measured from Earth, we similarly use: <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
     x &amp;= \gamma(x&#39; + ut&#39;) \\
     &amp;= 2\frac{\sqrt{3}}{3} \bigg(1~\mathrm{[ly]} +
 (c/2)(1~\mathrm{[yrs]}) \bigg) \\
     &amp;= 2\frac{\sqrt{3}}{3} (3/2~\mathrm{[ly]}) \\
     &amp;= \sqrt{3}\approx 1.7~\mathrm{ly}  
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 </body>
 </html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="../simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../research.html">Research</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../lecture_notes/index.html">Lecture Notes</a>
+            <a href="../software.html">Software</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+    	<h1>A Rigid Robotic Scanner</h1>
+    </header>
+    <main>
+        <p>We recently published one of the final pieces of work I carried out at Imperial College in the journal <em>Transactions on Biomedical Engineering</em>. The paper, which is called <em><a href="https://doi.org/10.1109/TBME.2018.2837058">Intraoperative robotic-assisted large-area high-speed microscopic imaging and intervention</a></em>, demonstrates a robotic scanning device for an endomicroscopy probe.</p>
+
+        <img src="img/robotic_scanner.png">
+
+        <p>As anyone who reads this blog will know, endomicroscopes are thin, flexible microscopes which allow us to get high-resolution images of human tissue without taking a biopsy. One of the downsides of miniaturisation is a fairly severe trade-off between resolution and image size, resulting in an image diameter of typically half a millimetre or less.</p>
+
+        <p>In this work, we used the robot to scan an endomicroscopy probe along a spiral trajectory. We then registered and combined the individual images in real time to form a large mosaic, increasing the effective image diameter up to 3 mm. While it takes a few seconds to generate this larger image, we think this will make endomicroscopy a more useful technique for applications such as tumour margin identification, giving the operator the option to visualise a much larger area of tissue.</p>
+
+        <p>The scanning probe itself was designed and built by Chris Payne and Petros Giataganas, who have now moved on to Harvard and Touch Surgical, respectively. It was made from a combination of off-the-shelf motors and drivers with 3D-printed and conventionally machined plastic and metal components. We used the scanning robot with a high-frame-rate endomicroscopy system that I had developed in-house (with the exception of the probe itself, which came from the commercially available Cellvizio system). Because we developed both the hardware and the software for all parts of the system ourselves, this gave us the freedom to ensure everything was customised and optimised for what we wanted to do.</p>
+
+        <p>One of the most interesting outcomes was that we could use the images from the endomicroscope as an input to the control system of the robot. (In fact, it was really this that allowed us to justify calling it a robot.) We did this to help overcome one of the problems of robotic scanning of endomicroscope probes: as the probe moves, it tends to drag tissue with it, deforming the surface in a fairly unpredictable way. So, while we might think we're scanning a spiral pattern, the resulting mosaic is often distorted, either with gaps between the spiral loops or with some parts oversampled.</p>
+
+        <p>To tackle this problem, we used the real-time mosaic to correct the trajectory of the scan on-the-fly. We were then able to ensure we scanned a spiral pattern relative to the deforming tissue rather than some notional, pre-programmed spiral. Of course, all the corrections had to be performed at high speed, bearing in mind that the whole scan completes in only a few seconds.</p>
+
+        <p>There are some limitations to what we could do with the hardware we had. We couldn't correct sudden or dramatic motion (such as patient breathing), the robot didn't have enough range, and the control system didn't have a high enough bandwidth. This was fine, though - the system was only designed to correct small, slow deformations due to the effect of scanning the endomicroscopy probe, and that job it does very well, at least in the <em>ex vivo</em> experiments we performed.</p>
+
+        <p>As a final step, we also integrated a CO<sub>2</sub> laser ablation fibre into the robot. This meant that we could both image and ablate tissue with the same device. The two fibres were offset, but we could use the robot to quickly shift the positions of the fibres, allowing us to ablate at the centre of the area we had just imaged. This was only a preliminary demonstration, but we think this is the first time anyone has shown anything like this, and it will hopefully inspire further research into how optical biopsy systems can be better integrated with interventional tools.</p>
+
+
+            
+    </main>
+
+
+</body>
+</html>
+

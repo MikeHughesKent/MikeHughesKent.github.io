@@ -87,6 +87,24 @@ a.home-link:hover {
     color: #003d73;
 }
 
+
+
+nav {
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 0.8em;
+    text-decoration: none;
+    color: #222;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     body {

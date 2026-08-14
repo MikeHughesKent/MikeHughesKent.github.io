@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 5 - Relativistic Doppler Effect</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -197,7 +200,7 @@ otherwise would be, and further apart when it is moving away. Closer
 wave crests means a higher frequency or pitch. This is illustrated in
 Figure <a href="#fig:doppler" data-reference-type="ref"
 data-reference="fig:doppler">1</a>.</p>
-<figure id="fig:doppler">
+<figure id="fig:doppler" data-latex-placement="H">
 <p><img src="pictures/doppler.png" style="width:14cm"
 alt="Illustration of Doppler effect for sound. When the source and receiver are not moving, crests of waves leaving the source arrive at the receiver at the same rate, i.e. the frequency is unchanged. When the source is moving towards the observer, each crest is created at positions that are successively closer to the receiver and so the crests are bunched together; the receiver sees a higher frequency. When the source is moving away the opposite happens, each crest is created further away, and so the crests are more spaced out when arriving at the receiver and they see a lower frequency." /></p>
 <figcaption>Illustration of Doppler effect for sound. When the source
@@ -229,20 +232,23 @@ a time <span class="math inline">\(u\Delta t / v\)</span> earlier than
 it otherwise would have.</p>
 <p>So, if we call the time difference between each peak as measured by
 the observer <span class="math inline">\(\Delta t&#39;\)</span>, then:
-<span class="math display">\[\Delta t&#39; = \Delta t -u \Delta t /v =
-\Delta t(1-u/v)\]</span></p>
+<span class="math display">\[\begin{equation}
+\Delta t&#39; = \Delta t -u \Delta t /v = \Delta t(1-u/v)
+\end{equation}\]</span></p>
 <p>Now if we remember that the frequency of a wave is the inverse of the
 period, <span class="math inline">\(f = 1 / \Delta T\)</span>, and we
 label the frequency seen by the observer as <span
 class="math inline">\(f_{obs} = 1/ \Delta t&#39;\)</span> and the
 frequency sent by the source as <span class="math inline">\(f_{source} =
 1/ \Delta t\)</span>, then we have:</p>
-<p><span class="math display">\[\boxed{f_{obs} =
-\frac{1}{1-u/v}f_{source}}\]</span> A similar argument shows that, if
-the observer is moving towards the source with velocity <span
+<p><span class="math display">\[\begin{equation}
+\boxed{f_{obs} = \frac{1}{1-u/v}f_{source}}
+\end{equation}\]</span> A similar argument shows that, if the observer
+is moving towards the source with velocity <span
 class="math inline">\(u\)</span>, <span
-class="math display">\[\boxed{f_{obs} =
-\bigg(1+\frac{u}{v}\bigg)f_{source}}\]</span></p>
+class="math display">\[\begin{equation}
+\boxed{f_{obs} = \bigg(1+\frac{u}{v}\bigg)f_{source}}
+\end{equation}\]</span></p>
 <p>These are the equations for the non-relativistic Doppler effect.</p>
 <h2 data-number="2" id="relativistic-doppler-effect"><span
 class="header-section-number">2</span> Relativistic Doppler Effect</h2>
@@ -251,11 +257,15 @@ and the observer can move relative to. So it can only be the velocity of
 the source relative to the observer than can matter.</p>
 <p>The correct equation for the relativistic Doppler effect is:</p>
 <div class="framed">
-<p><span class="math display">\[f_{obs} =
-\sqrt{\frac{1+u/c}{1-u/c}}f_{source}\]</span> where <span
-class="math inline">\(u\)</span> is velocity of the source relative to
-the observer.</p>
+<p><span class="math display">\[\begin{equation}
+f_{obs} = \sqrt{\frac{1+u/c}{1-u/c}}f_{source}
+\end{equation}\]</span> where <span class="math inline">\(u\)</span> is
+velocity of the source relative to the observer.</p>
 </div>
+<p>Note that this equation is only correct when the relative motion is
+along the same direction as the light is travelling. More generally it
+would also depend on the angle between the relative motion and the light
+travel.</p>
 <h2 data-number="3"
 id="derivation-of-the-relativistic-doppler-effect"><span
 class="header-section-number">3</span> Derivation of the Relativistic
@@ -264,23 +274,27 @@ Doppler Effect</h2>
 the reference frame of the observer. The source is therefore moving at
 velocity <span class="math inline">\(u\)</span>. If we think back to our
 equation for the observed time spacing between peaks arriving at the
-observer: <span class="math display">\[\Delta t&#39; = \Delta
-t(1-u/v)\]</span> then we need to make two changes to accommodate
+observer: <span class="math display">\[\begin{equation}
+\Delta t&#39; = \Delta t(1-u/v)
+\end{equation}\]</span> then we need to make two changes to accommodate
 working with light. The first is that the velocity, <span
 class="math inline">\(v\)</span>, is now the velocity of light, <span
 class="math inline">\(c\)</span>. The second is that, since the observer
 sees the source in motion, we need to allow for time dilation. We
-therefore have <span class="math display">\[\Delta t&#39; = \gamma
-(1-u/c)\Delta t.\]</span> That’s all the physics we need, so now we
-expand out the <span class="math inline">\(\gamma\)</span> term to
-obtain: <span class="math display">\[\begin{aligned}
+therefore have <span class="math display">\[\begin{equation}
+    \Delta t&#39; = \gamma (1-u/c)\Delta t.
+\end{equation}\]</span> That’s all the physics we need, so now we expand
+out the <span class="math inline">\(\gamma\)</span> term to obtain:
+<span class="math display">\[\begin{align}
     \Delta t&#39; &amp;= \frac{1-u/c}{\sqrt{1-u^2/c^2}}\Delta t \\
     &amp;= \sqrt{\frac{(1-u/c)^2}{(1+u/c)(1-u/c)}} \Delta t \\
     &amp; = \sqrt{\frac{1-u/c}{1+u/c}   }\Delta t .
-\end{aligned}\]</span> Frequency is <span class="math inline">\(1/\Delta
-t\)</span> and so, we obtain <span class="math display">\[\boxed{f_{obs}
-= \sqrt{\frac{1+u/c}{1-u/c}}f_{source}}\]</span> We derived this for the
-case that the source was moving towards the observer with velocity <span
+\end{align}\]</span> Frequency is <span class="math inline">\(1/\Delta
+t\)</span> and so, we obtain <span
+class="math display">\[\begin{equation}
+    \boxed{f_{obs} = \sqrt{\frac{1+u/c}{1-u/c}}f_{source}}
+\end{equation}\]</span> We derived this for the case that the source was
+moving towards the observer with velocity <span
 class="math inline">\(u\)</span>. If the source is moving away, we need
 to use <span class="math inline">\(-u\)</span>, so that <span
 class="math inline">\(1+u/c\)</span> becomes <span
@@ -303,41 +317,47 @@ that there are lines at wavelengths corresponding to certain atomic
 transitions. The wavelengths that these lines should appear at are
 well-known from studies here on Earth. When we look at the stars, we
 notice that the positions of these lines appear to be shifted in
-wavelength. This is due to the relativistic Doppler effect, telling us
-that the stars are moving relative to us. (In fact they are almost
-always moving away, but that is another discussion).</p>
+wavelength.</p>
 <p>As an example, consider measuring the spectrum from a star. We know
 that there should be a highly characteristic dark line in the spectrum
-at a wavelength of <span class="math inline">\(479.8 \,
+at a wavelength of <span class="math inline">\(656.3 \,
 \mathrm{nm}\)</span>, which is due to the presence of hydrogen (called
 the H-alpha line). However, when we observe the star we instead see the
-line at <span class="math inline">\(537.4 \, \mathrm{nm}\)</span>. How
-fast must the star be moving?</p>
+line at <span class="math inline">\(735.0 \, \mathrm{nm}\)</span>. How
+fast must the star be moving according to special relativity?</p>
 <p>First we need to remember that <span class="math inline">\(\lambda =
 c/f\)</span> where <span class="math inline">\(\lambda\)</span> is
 wavelength and <span class="math inline">\(f\)</span> is frequency. So
 if we rewrite the Doppler equation in terms of wavelength, we have:
-<span class="math display">\[\begin{aligned}
+<span class="math display">\[\begin{align}
     \lambda_{obs}/c &amp;= \sqrt{\frac{1-u/c}{1+u/c}}\lambda_{source}/c
 \\
     \lambda_{obs} &amp;= \sqrt{\frac{1-u/c}{1+u/c}}\lambda_{source}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>A bit of algebra gives us:</p>
-<p><span class="math display">\[\boxed{u/c = \frac{\lambda_{source}^2
--\lambda_{obs}^2}{\lambda_{source}^2 +\lambda_{obs}^2}}\]</span> which
-is useful to remember. If we can substitute in our known source
-wavelength (<span class="math inline">\(\lambda_{source} = 479.8 \,
-\mathrm{nm}\)</span>) and our wavelength observed here on Earth (<span
-class="math inline">\(\lambda_{obs} = 537.4 \, \mathrm{ nm}\)</span>),
+<p><span class="math display">\[\begin{equation}
+\boxed{u/c = \frac{\lambda_{source}^2
+-\lambda_{obs}^2}{\lambda_{source}^2 +\lambda_{obs}^2}}
+\end{equation}\]</span> which is useful to remember. If we can
+substitute in our known source wavelength (<span
+class="math inline">\(\lambda_{source} = 656.3 \, \mathrm{nm}\)</span>)
+and our wavelength observed here on Earth (<span
+class="math inline">\(\lambda_{obs} = 735.9 \, \mathrm{ nm}\)</span>),
 we find that the star is moving with a velocity of <span
-class="math display">\[u = -0.11c\]</span></p>
+class="math display">\[\begin{equation}
+u = -0.113c
+\end{equation}\]</span></p>
 <p>Notice that the observed wavelength was longer than the source
 wavelength. Longer wavelengths are towards the red end of the visible
-spectrum, and so we call this redshift. Redshifted light implies that
-the source is moving away from us. Hence we had a negative value for
+spectrum, and so we call this redshift. Red-shifted light implies that
+the source is moving away from us. Hence, we had a negative value for
 <span class="math inline">\(u\)</span> (remember that we derived this
 equation for a source moving towards the observer with velocity <span
 class="math inline">\(u\)</span>). Therefore the star is moving away at
-a velocity of <span class="math inline">\(0.11c\)</span>.</p>
+a velocity of <span class="math inline">\(0.113c\)</span>.</p>
+<p>(In reality that the cosmological redshift is more complicated than
+this as it involves the expansion of space itself. For some stars this
+calculation would imply a velocity greater than the speed of light! This
+is beyond the scope of this course).</p>
 </body>
 </html>

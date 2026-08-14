@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 6 - Relativistic Velocity</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -207,16 +210,20 @@ the direction.</p>
 <p>The relativistic velocity transformations between frames <span
 class="math inline">\(S\)</span> and <span
 class="math inline">\(S&#39;\)</span>, where <span
-class="math inline">\(S\)</span> is moving with velocity <span
+class="math inline">\(S&#39;\)</span> is moving with velocity <span
 class="math inline">\(u\)</span> along the x-axis with respect to <span
-class="math inline">\(S&#39;\)</span> are: <span
-class="math display">\[v_x = \frac{v_x&#39; + u}{1 + uv_x&#39;/c^2},
-\qquad v_y = \frac{v_y&#39;}{\gamma(1 + uv_x&#39;/c^2)}, \qquad v_z =
-\frac{v_z&#39;}{\gamma(1 + uv_x&#39;/c^2)}\]</span></p>
+class="math inline">\(S\)</span> are: <span
+class="math display">\[\begin{equation}
+v_x = \frac{v_x&#39; + u}{1 + uv_x&#39;/c^2}, \qquad v_y =
+\frac{v_y&#39;}{\gamma(1 + uv_x&#39;/c^2)}, \qquad v_z =
+\frac{v_z&#39;}{\gamma(1 + uv_x&#39;/c^2)}
+\end{equation}\]</span></p>
 <p>Similarly, we have the inverse transforms</p>
-<p><span class="math display">\[v_x&#39; = \frac{v_x - u}{1 - uv_x/c^2},
-\qquad v_y&#39; = \frac{v_y}{\gamma(1 - uv_x/c^2)}, \qquad v_z&#39; =
-\frac{v_z}{\gamma(1 - uv_x/c^2)}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+v_x&#39; = \frac{v_x - u}{1 - uv_x/c^2}, \qquad v_y&#39; =
+\frac{v_y}{\gamma(1 - uv_x/c^2)}, \qquad v_z&#39; = \frac{v_z}{\gamma(1
+- uv_x/c^2)}
+\end{equation}\]</span></p>
 </div>
 <p>As for the Lorentz transformation, it should be the case that these
 reduce to our familiar Galilean velocity transformation for speeds far
@@ -234,15 +241,16 @@ this is one of the postulates on which the Lorentz transformations are
 based. We can confirm this for light moving along the x-axis by
 substituting in <span class="math inline">\(v_x&#39;=c\)</span>, so
 that:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 v_x &amp;= \frac{c+ u}{1 + uc/c^2} \\
 &amp;= \frac{c+ u}{1 + u/c} \\
 &amp;= \frac{c(c+ u)}{c + u} \\
 &amp; = c
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>For light moving along the y-axis, we can show the same thing. If we
-simply substitute <span class="math inline">\(v_y = c\)</span> into the
-equation for <span class="math inline">\(v_y&#39;\)</span> we get <span
+simply substitute <span class="math inline">\(v_y = c\)</span> and <span
+class="math inline">\(v_x = 0\)</span> into the equation for <span
+class="math inline">\(v_y&#39;\)</span> we see that <span
 class="math inline">\(v_y&#39; = c/\gamma\)</span>. However, we have to
 remember that there will be both an <span
 class="math inline">\(x\)</span> and <span
@@ -298,56 +306,65 @@ class="math inline">\(dt\)</span>. Then we also note that the x, y and z
 components of velocity can be written <span class="math inline">\(v_x =
 dx/dt\)</span>, and so on. So, starting with the velocity in the
 x-direction, we have the following to work with:</p>
-<p><span class="math display">\[dx = \gamma(dx&#39; + udt&#39;), \qquad
-dt = \gamma\bigg(dt&#39; + u\frac{dx&#39;}{c^2}\bigg),\]</span></p>
+<p><span class="math display">\[\begin{equation}
+dx = \gamma(dx&#39; + udt&#39;), \qquad dt = \gamma\bigg(dt&#39; +
+u\frac{dx&#39;}{c^2}\bigg),
+\end{equation}\]</span></p>
 <p>and</p>
-<p><span class="math display">\[v_x = \frac{dx}{dt}, \qquad v_x&#39; =
-\frac{dx&#39;}{dt&#39;}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+v_x = \frac{dx}{dt}, \qquad v_x&#39; = \frac{dx&#39;}{dt&#39;}.
+\end{equation}\]</span></p>
 <p>Now, plug in the expressions for <span
 class="math inline">\(dx\)</span> and <span
 class="math inline">\(dt\)</span> into the equation for <span
 class="math inline">\(v_x\)</span>, giving us</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 v_x &amp;= \frac{dx}{dt} \\
 &amp;= \frac{\gamma(dx&#39; + udt&#39;)}{\gamma(dt&#39; + udx&#39;/c^2)}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>The <span class="math inline">\(\gamma\)</span> factors cancel,</p>
-<p><span class="math display">\[v_x = \frac{dx&#39; + udt&#39;}{dt&#39;
-+ udx&#39;/c^2}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+v_x = \frac{dx&#39; + udt&#39;}{dt&#39; + udx&#39;/c^2}.
+\end{equation}\]</span></p>
 <p>We want to end up with an equation containing velocities, <span
 class="math inline">\(v_x&#39;\)</span>, so let’s divide through every
 term by <span class="math inline">\(dt&#39;\)</span></p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 v_x &amp;= \frac{dx&#39;/dt&#39; + u}{1 + udx&#39;/c^2dt&#39;}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Now, we can simply substitute in <span class="math inline">\(v_x&#39;
 = dx&#39;/dt&#39;\)</span> to get the equation for <span
 class="math inline">\(v_x\)</span> in terms of <span
 class="math inline">\(v_x&#39;\)</span>.</p>
-<p><span class="math display">\[\boxed{v_x = \frac{v_x&#39; + u}{1 +
-uv_x&#39;/c^2}.}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\boxed{v_x = \frac{v_x&#39; + u}{1 + uv_x&#39;/c^2}.}
+\end{equation}\]</span></p>
 <p>To derive the velocity in the <span class="math inline">\(y\)</span>
 direction, <span class="math inline">\(v_y\)</span>, we similarly start
 with</p>
-<p><span class="math display">\[dy = dy&#39;, \qquad dt = \gamma(dt&#39;
-+ u\frac{dx&#39;}{c^2}),\]</span></p>
+<p><span class="math display">\[\begin{equation}
+dy = dy&#39;, \qquad dt = \gamma(dt&#39; + u\frac{dx&#39;}{c^2}),
+\end{equation}\]</span></p>
 <p>and</p>
-<p><span class="math display">\[v_y = \frac{dy}{dt}, \qquad v_y&#39; =
-\frac{dy&#39;}{dt&#39;}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+v_y = \frac{dy}{dt}, \qquad v_y&#39; = \frac{dy&#39;}{dt&#39;}.
+\end{equation}\]</span></p>
 <p>We perform a similar substitution to get</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 v_y = \frac{dy}{dt} = \frac{dy&#39;}{\gamma(dt&#39; + udx&#39;/c^2)}.
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Notice it looks a bit different to the <span
 class="math inline">\(v_x\)</span> case, we no longer have a <span
 class="math inline">\(\gamma\)</span> on the top, because <span
 class="math inline">\(dy = dy&#39;\)</span>. Again, we divide through by
 <span class="math inline">\(dt&#39;\)</span> to get velocities:</p>
-<p><span class="math display">\[v_y = \frac{dy&#39;/dt&#39;}{\gamma(1 +
-udx&#39;/c^2dt)},\]</span></p>
+<p><span class="math display">\[\begin{equation}
+v_y = \frac{dy&#39;/dt&#39;}{\gamma(1 + udx&#39;/c^2dt)},
+\end{equation}\]</span></p>
 <p>and so</p>
-<p><span class="math display">\[\boxed{v_y = \frac{v_y&#39;}{\gamma(1 +
-uv_x&#39;/c^2)}.}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\boxed{v_y = \frac{v_y&#39;}{\gamma(1 + uv_x&#39;/c^2)}.}
+\end{equation}\]</span></p>
 <p>The derivation for <span class="math inline">\(v_z\)</span> is the
 same, replacing <span class="math inline">\(z\)</span> every time you
 see a <span class="math inline">\(y\)</span>.</p>
@@ -362,9 +379,9 @@ rocket measure for the velocity of the other?</em></p>
 transformations) would tell us <span class="math inline">\(c\)</span>.
 But we know that’s not right. Instead, let’s use the velocity
 transformation:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
     v_x&#39; = \frac{v_x - u}{1 - uv_x/c^2}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>We need to decide what <span class="math inline">\(v_x\)</span> and
 <span class="math inline">\(u\)</span> are. The velocities of the
 rockets are measured to be <span class="math inline">\(c/2\)</span> in
@@ -376,12 +393,12 @@ class="math inline">\(S&#39;\)</span>), so that we know what velocity
 rocket B measures rocket A to have. The reference frame of Rocket B is
 moving relative to Earth at <span class="math inline">\(u=c/2\)</span>,
 and so:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
         v_x&#39; &amp;= \frac{v_x - u}{1 - uv_x/c^2} \\
-        v_x &amp;= \frac{-c/2 - c/2}{1 - (-c/2)(c/2)/c^2} \\
-        v_x &amp;= \frac{-c}{1 + 1/4} \\
-        v_x &amp;= -0.8c
-\end{aligned}\]</span></p>
+        v_x&#39; &amp;= \frac{-c/2 - c/2}{1 - (-c/2)(c/2)/c^2} \\
+        v_x&#39; &amp;= \frac{-c}{1 + 1/4} \\
+        v_x&#39; &amp;= -0.8c
+\end{align}\]</span></p>
 <p>Which, as we would expect, is less than <span
 class="math inline">\(c\)</span>.</p>
 </body>

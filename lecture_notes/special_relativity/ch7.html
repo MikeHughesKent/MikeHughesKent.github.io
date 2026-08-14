@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 7 - Relativistic Momentum</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -184,7 +187,9 @@ not surprising that our non-relativistic definition will need to be
 modified.</p>
 <h2 id="non-relativistic-momentum">Non-Relativistic Momentum</h2>
 <p>In Newtonian mechanics, momentum is defined as:</p>
-<p><span class="math display">\[p = mv\]</span></p>
+<p><span class="math display">\[\begin{equation}
+p = mv
+\end{equation}\]</span></p>
 <p>At first glance, there is no obvious reason why the thing that we
 call momentum should be defined in this way. Why not define momentum to
 be <span class="math inline">\(p = m/v\)</span> or <span
@@ -199,7 +204,7 @@ and the other is moving towards it at a velocity of <span
 class="math inline">\(10\,\mathrm{m/s}\)</span>, as shown in the diagram
 in Figure <a href="#fig:momentum" data-reference-type="ref"
 data-reference="fig:momentum">1</a>.</p>
-<figure id="fig:momentum">
+<figure id="fig:momentum" data-latex-placement="H">
 <p><img src="pictures/collision.png" style="width:12cm"
 alt="Illustration of before and after a collision between two blocks. The left diagram shows the two blocks moving together, A moving to the right with speed 10 metres per second and B stationary. The right diagram shows the blocks after the collision, with A moving to the left with speed 5 metres per second and the speed of B is unknown." /></p>
 <figcaption>Before and after a collision between two blocks. The left
@@ -211,21 +216,21 @@ A moving to the left with speed <span class="math inline">\(5 \,
 </figure>
 <p>The total momentum of the system before the two blocks collide is
 given by:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 p &amp;= m_1v_1 + m_2v_2 \\
 &amp;= (1~\mathrm{kg})(10~\mathrm{ms^{-1}}) + (1 ~\mathrm{kg})(0) \\
 &amp;= 10 \; ~\mathrm{kgms^{-1}}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>After the collision, the total momentum will still be equal to <span
 class="math inline">\(10 \, \mathrm{kgm/s}\)</span>. So if, for example,
 the left-most block bounces back at <span class="math inline">\(5 \,
 \mathrm{m/s}\)</span>, the second block must have a velocity <span
 class="math inline">\(v_2\)</span> such that:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 p &amp;= 10~\mathrm{kgms^{-1}} = (1~\mathrm{kg})(-5~\mathrm{ms^{-1}}) +
 (1~\mathrm{kg})v_2 \\
 v_2 &amp;= 15 \; \mathrm{ms^{-1}}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>Using the Galilean transformation between inertial frames, if
 momentum is conserved in one frame of reference then it will also be
 conserved in another. This doesn’t mean that we calculate the same value
@@ -256,8 +261,8 @@ Momentum Conservation (Not Examinable)</h2>
 relativistic situations, consider the situation shown in Figure <a
 href="#fig:momentumBA" data-reference-type="ref"
 data-reference="fig:momentumBA">2</a>. There are two balls, ball A and
-ball B which are going to collide. We will consider two reference
-frames, <span class="math inline">\(S\)</span> and <span
+ball B, of equal mass, which are going to collide. We will consider two
+reference frames, <span class="math inline">\(S\)</span> and <span
 class="math inline">\(S&#39;\)</span>. <span
 class="math inline">\(S&#39;\)</span> is moving with respect to <span
 class="math inline">\(S\)</span> with a velocity <span
@@ -268,9 +273,9 @@ class="math inline">\(v_{A,y}\)</span>. In reference frame <span
 class="math inline">\(S&#39;\)</span>, B moving directly down the y-axis
 (i.e. it has zero x-velocity) with velocity <span
 class="math inline">\(v_{B,y} = -v_{A,y}\)</span>.</p>
-<figure id="fig:momentumBA">
-<p><img src="pictures/momentum.png" style="width:8cm"
-alt="Collision between two balls, A and B, viewed from two different frames of reference, S and S Prime. The x and y axes are drawn for each frame. In S, before the collision A is moving up and B is moving diagonally down and right. After the collision A is moving down and B is moving up and to the right. In S Prime, before the collision B is moving down and A is moving diagonally up and to the right. After the collision, A is moving diagonally down and to the left while B is moving up." />
+<figure id="fig:momentumBA" data-latex-placement="H">
+<p><img src="images_small/momentum.png" style="width:8cm"
+alt="Collision between two balls of equal mass, A and B, viewed from two different frames of reference, S and S Prime. The x and y axes are drawn for each frame. In S, before the collision A is moving up and B is moving diagonally down and right. After the collision A is moving down and B is moving up and to the right. In S Prime, before the collision B is moving down and A is moving diagonally up and to the right. After the collision, A is moving diagonally down and to the left while B is moving up." />
 <span id="fig:momentumBA" data-label="fig:momentumBA"></span></p>
 <figcaption>Collision between two balls, A and B, viewed from two
 different frames of reference, <span class="math inline">\(S\)</span>
@@ -285,32 +290,37 @@ the opposite velocity and momentum to ball A. After a totally elastic
 collision, they would each then have the opposite velocity and momentum
 in the y direction.</p>
 <p>In the relativistic case, however, we must use the relativistic
-velocity transform <span class="math display">\[v_y =
-\frac{v_y&#39;}{\gamma(1+uv_x&#39;/c^2)}.\]</span> Ball B has no
-x-velocity in <span class="math inline">\(S&#39;\)</span>, so <span
+velocity transform <span class="math display">\[\begin{equation}
+v_y = \frac{v_y&#39;}{\gamma(1+uv_x&#39;/c^2)}.
+\end{equation}\]</span> Ball B has no x-velocity in <span
+class="math inline">\(S&#39;\)</span>, so <span
 class="math inline">\(v_x&#39; = 0\)</span>, and so we simply have:
-<span class="math display">\[v_y = \frac{v_y&#39;}{\gamma}\]</span> Or,
-to put it another way, the y-velocity of B is smaller than that for A,
-and so the total momentum in the y-direction is not zero (it is positive
-because A, which is moving in the +y direction has more positive
-momentum than has B has negative momentum). But after the collision, the
-y-components of the velocity are reversed. Now there is more momentum in
-the -y direction, and so momentum is not conserved. Therefore, the
-classic definition of momentum is only approximately conserved for <span
-class="math inline">\(u &lt;&lt; c\)</span>. We need to work out a
-relativistic correction to momentum to recover its more general
-conservation.</p>
+<span class="math display">\[\begin{equation}
+v_y = \frac{v_y&#39;}{\gamma}
+\end{equation}\]</span> Or, to put it another way, the y-velocity of B
+is smaller than that for A, and so the total momentum in the y-direction
+is not zero (it is positive because A, which is moving in the +y
+direction has more positive momentum than has B has negative momentum).
+But after the collision, the y-components of the velocity are reversed.
+Now there is more momentum in the -y direction, and so momentum is not
+conserved. Therefore, the classic definition of momentum is only
+approximately conserved for <span class="math inline">\(u &lt;&lt;
+c\)</span>. We need to work out a relativistic correction to momentum to
+recover its more general conservation.</p>
 <h2 id="relativistic-momentum">Relativistic Momentum</h2>
 <p>The relativistic momentum of an object, measured in a reference frame
 in which the object is moving at velocity <span
 class="math inline">\(v\)</span>, is given by:</p>
 <div class="framed">
-<p><span class="math display">\[p = \gamma m_0 v\]</span></p>
+<p><span class="math display">\[\begin{equation}
+p = \gamma m_0 v
+\end{equation}\]</span></p>
 <p>Gamma is defined almost the same as before: <span
-class="math display">\[\gamma = \sqrt{\frac{1}{1 - v^2/c^2}}\]</span>
-<strong>except that we are using <span class="math inline">\(v\)</span>
-rather than the velocity of the reference frame, <span
-class="math inline">\(u\)</span>.</strong></p>
+class="math display">\[\begin{equation}
+\gamma = \sqrt{\frac{1}{1 - v^2/c^2}}
+\end{equation}\]</span> <strong>except that we are using <span
+class="math inline">\(v\)</span> rather than the velocity of the
+reference frame, <span class="math inline">\(u\)</span>.</strong></p>
 </div>
 <p>We have also introduced a new concept, the rest mass, <span
 class="math inline">\(m_0\)</span>.</p>
@@ -331,13 +341,17 @@ Relativistic Momentum</h2>
 <p>We can motivate <span class="math inline">\(p=\gamma m_0 v\)</span>
 in the following way. Since <span class="math inline">\(v=dx/dt\)</span>
 we can write</p>
-<p><span class="math display">\[p = m_0v = m_0\frac{dx}{dt}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+p = m_0v = m_0\frac{dx}{dt}
+\end{equation}\]</span></p>
 <p>When we change reference frame, then now <span
 class="math inline">\(dt&#39; \neq dt\)</span>. However, the proper
 time, <span class="math inline">\(d\tau\)</span>, (the time measured in
 the object’s reference frame) doesn’t change with the reference frame.
 So, let’s define:</p>
-<p><span class="math display">\[p = m_0 \frac{dx}{d\tau}.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+p = m_0 \frac{dx}{d\tau}.
+\end{equation}\]</span></p>
 <p>This is fine because in the rest frame of the object (<span
 class="math inline">\(\gamma = 1\)</span>), we have <span
 class="math inline">\(dt=d\tau\)</span> by definition, so this is in
@@ -345,8 +359,9 @@ agreement with non-relativistic physics in the limit <span
 class="math inline">\(v \ll c\)</span>. More generally, for any
 reference frame, <span class="math inline">\(dt = \gamma d\tau\)</span>,
 so we straight-away see that</p>
-<p><span class="math display">\[p = m_0 \gamma \frac{d x}{d t} = \gamma
-m_0 v.\]</span></p>
+<p><span class="math display">\[\begin{equation}
+p = m_0 \gamma \frac{d x}{d t} = \gamma m_0 v.
+\end{equation}\]</span></p>
 <p>This isn’t a true derivation of course, since we chose <span
 class="math inline">\(p=m_0(dx/d\tau)\)</span> without any real
 justification, but it shows that this is a plausible definition for

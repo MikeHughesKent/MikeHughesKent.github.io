@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 4 - Spacetime and the Relativity of Simultaneity</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -178,12 +181,12 @@ Simultaneity</h1>
 <p class="author">Mike Hughes</p>
 <p class="date">Physics and Astronomy, University of Kent</p>
 </header>
-<p>We will now looks at some deeper aspects of special relativity,
+<p>We will now look at some deeper aspects of special relativity,
 studying the breakdown in our ideas of absolute simultaneity. Some
 <strong>non-examinable</strong> ideas are also covered, including the
 spacetime interval, a quantity which <em>can</em> be considered absolute
 in the sense that it does not change under a Lorentz transformation.
-This is include here for interest, you will study it in more detail in
+This is included here for interest, you will study it in more detail in
 later courses.</p>
 <h2 data-number="1" id="ladder-paradox"><span
 class="header-section-number">1</span> Ladder Paradox</h2>
@@ -227,7 +230,9 @@ in more detail.</p>
 <h2 data-number="2" id="relativity-of-simultaneity"><span
 class="header-section-number">2</span> Relativity of Simultaneity</h2>
 <p>It is clear from the Lorentz transform for time: <span
-class="math display">\[t&#39; = \gamma(t - ux/c^2),\]</span></p>
+class="math display">\[\begin{equation}
+t&#39; = \gamma(t - ux/c^2),
+\end{equation}\]</span></p>
 <p>that time is measured differently for observers moving in different
 inertial frames. A consequence of this, which may not be immediately
 apparent, is that two events which are separated in space, and which one
@@ -252,12 +257,15 @@ class="math inline">\(S&#39;\)</span> moving at <span
 class="math inline">\(u\)</span>. From the Lorentz transformations, we
 can calculate the times of the events in <span
 class="math inline">\(S&#39;\)</span>: <span
-class="math display">\[t_1&#39; =\gamma(t_1 - ux_1/c^2) =
-\gamma(-ux_1/c^2)\]</span> and <span class="math display">\[t_2&#39;
-=\gamma(t_2 - ux_2/c^2) = \gamma(-ux_2/c^2)\]</span> It’s immediately
-obvious that <span class="math inline">\(t&#39;_1 \neq t&#39;_2\)</span>
-unless <span class="math inline">\(x_1 = x_2\)</span>. That is to say
-that events which are separated in space and are simultaneous in <span
+class="math display">\[\begin{equation}
+t_1&#39; =\gamma(t_1 - ux_1/c^2) = \gamma(-ux_1/c^2)
+\end{equation}\]</span> and <span
+class="math display">\[\begin{equation}
+t_2&#39; =\gamma(t_2 - ux_2/c^2) = \gamma(-ux_2/c^2)
+\end{equation}\]</span> It’s immediately obvious that <span
+class="math inline">\(t&#39;_1 \neq t&#39;_2\)</span> unless <span
+class="math inline">\(x_1 = x_2\)</span>. That is to say that events
+which are separated in space and are simultaneous in <span
 class="math inline">\(S\)</span> are not simultaneous in <em>any other
 frame</em> <span class="math inline">\(S&#39;\)</span>. We can also see
 that the order of <span class="math inline">\(t_1&#39;\)</span> and
@@ -288,8 +296,8 @@ her rest frame, she says that it is actually the Earth that moves away
 and then comes back. So from her point of view, everything is reversed,
 and she says that it will be the twin who stayed on Earth who will be
 the younger.</p>
-<figure id="fig:twin">
-<p><img src="pictures/twin.jpg"
+<figure id="fig:twin" data-latex-placement="H">
+<p><img src="images_small/twin.jpg"
 alt="Illustration of the twin paradox, from the point of view of the Earth (left) and the spaceship pilot (right). From the point of view of the Earth, the spaceship goes out and comes back. From the point of view of the spaceship pilot, it is the Earth that moves away and then turns around and comes back." /></p>
 <figcaption>Illustration of the twin paradox, from the point of view of
 the Earth (left) and the spaceship pilot (right). From the point of view
@@ -338,8 +346,8 @@ normally only interested in the position along the axis of motion, which
 we label as <span class="math inline">\(x\)</span>, we can draw useful
 spacetime diagrams only involving <span class="math inline">\(x\)</span>
 and <span class="math inline">\(t\)</span>.</p>
-<figure id="fig:spacetime">
-<p><img src="pictures/spacetime.png" style="width:10cm"
+<figure id="fig:spacetime" data-latex-placement="H">
+<p><img src="images_small/spacetime.png" style="width:10cm"
 alt="Four examples of spacetime diagrams. Each diagram has ct on the y-axis and x on the x-axis. The worldline of light is a line at 45 degrees from the origin. The worldline of a moving object is a line at a smaller angle than 45 degrees from the y-axis. Events are marked as a point in the diagram. The final figure shows a worldline of light from an event, in this case travelling at 45 degrees up and to the left, returning to x=0." /></p>
 <figcaption>Four examples of spacetime diagrams. Each diagram has <span
 class="math inline">\(ct\)</span> on the <span
@@ -391,8 +399,9 @@ class="math inline">\(t\)</span>) change, there is a value that we can
 calculate which is invariant. This invariant is called the
 <strong>spacetime interval</strong> or <strong>spacetime
 distance</strong> and is given by:</p>
-<p><span class="math display">\[(\Delta s)^2 = (\Delta x)^2 - (c\Delta
-t)^2\]</span></p>
+<p><span class="math display">\[\begin{equation}
+(\Delta s)^2 = (\Delta x)^2 - (c\Delta t)^2
+\end{equation}\]</span></p>
 <p>This looks a little similar to our circle invariant, although with
 some obvious differences. In particular, we notice that it is <span
 class="math inline">\(- (c\Delta t)^2\)</span> and not <span
@@ -406,10 +415,10 @@ is a little different from the Euclidean geometry we are used to.</p>
 <p>Whether the right-hand-side is positive or negative (or 0) has a very
 important physical meaning. First lets consider the very special case of
 <span class="math inline">\((\Delta s)^2\)</span> = 0. This means that
-<span class="math display">\[\begin{aligned}
+<span class="math display">\[\begin{align}
 (\Delta x)^2 &amp;= (c \Delta t)^2
 \\\Delta x&amp;=c \Delta t
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>If the distance travelled is <span class="math inline">\(c\)</span>
 times the time, then the velocity is obviously <span
 class="math inline">\(c\)</span>. We call this
@@ -453,8 +462,8 @@ light cone. Signals from events which are outside your past light cone
 (events which are <em>spacelike separated</em> from you) cannot possibly
 have reached you yet, and you cannot possibly send a signal to events
 outside your future light cone.</p>
-<figure id="fig:lightcone">
-<p><img src="pictures/lightcone.png" style="width:8cm"
+<figure id="fig:lightcone" data-latex-placement="H">
+<p><img src="images_small/lightcone.png" style="width:8cm"
 alt="Past and future lightcones illustrated on a spacetime diagram. The apex of each cone is at the origin, with the  past and future light cones lying between 45 degree lines emanating from the origin. Events that are timelike separated from the origin are inside the light-cone while events that are spacelike separated are outside the light-cone." /></p>
 <figcaption>Past and future lightcones illustrated on a spacetime
 diagram. Events that are timelike separated from the origin are inside

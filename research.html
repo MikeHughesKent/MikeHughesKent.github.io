@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="lecture_notes/index.html">Lecture Notes</a>
+            <a href="software.html">Software</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    	<h1>Research</h1>
+    </header>
+    <main>
+        My current and previous research is in the field of optical imaging and sensing, mostly on the topics of 
+        <a href="#oct">Optical Coherence Tomography</a>, <a href="#endomicroscopy">Endoscopic Microscopy</a>, 
+        and <a href="#holographic">Holographic Microscopy</a>.
+
+
+        <section>
+            <div id="oct"></div>
+
+            <h2>Optical Coherence Tomography</h2>
+            <p>
+            Optical Coherence Tomography (OCT) is a non-invasive 3D imaging technique that allows us to image up to around 1 mm into 
+            scattering tissue with high resolution. I have worked on-and-off in OCT since my PhD which, funded by the Leverhulme 
+            Trust, looked into applying OCT to imaging historical artworks and museum artefacts. I focused mainly on solving technical
+            challenges, including reducing speckle [<a href="https://doi.org/10.1364/AO.49.000099">Paper</a>] and improving the 
+            usable axial range.
+            </p>
+            <p>
+            I begin working in OCT again from 2017 when I returned to the University of Kent, initially focusing on 
+            robotic [<a href="https://doi.org/10.1364/BOE.444170">Paper</a>] and 
+            endoscopic [<a href="https://doi.org/10.1117/1.JBO.24.6.066006">Paper</a>] OCT. More recently, with NIHR funding, we have
+            been developing OCT-based sensors for opthalmic surgery [<a href="https://doi.org/10.1364/AO.566874">Paper</a>]. I am currently
+            working on approaches to low-cost, handheld OCT which has been funded by the MRC/BBSRC Impact Accelerator Accounts at Kent
+            </p>
+        </section>
+        <section>
+            <div id="endomicroscopy"></div>
+
+            <h2>Endoscopic Microscopy</h2>
+            <p>Endoscopic microscopes (or endomicroscopes) are thin imaging probes that allow us to image tissue at high resolution. 
+                Flexible endomicroscopes can be used endoscopically, potentially allowing clinicians to view tissue and make diagnosis 
+                without needing to take an invasive biopsy.
+            </p>
+            <p>
+            While at Imperial College London, working under Prof Guang-Zhong Yang, I focused on endomicroscopes that use fibre imaging bundles. 
+            Fibre bundles contain thousand of individual fibre cores, together acting as a flexible image relay. I worked on enhancing resolution and 
+            optical sectioning (selecting only light from the in-focus plane of the tissue) and on making devices lower cost and more accessible. 
+            </p>
+            <p>
+            We developed techniques for achieving high frame rate 
+            optically-sectioned fluorescence endomicroscopy using line scanning <a href="http://dx.doi.org/10.1364/BOE.6.001241">[Paper1</a>, 
+            <a href="http://dx.doi.org/10.1364/BOE.7.002257">Paper2</a>], as well as exploring white light microscopy via fibre bundles 
+            [<a href="http://dx.doi.org/10.1364/BOE.4.002781">Paper1</a>, 
+            <a href="http://dx.doi.org/10.1117/1.JBO.19.3.030501">Paper2</a>]. Working with various roboticists, we investigated how 
+            endomicroscopes could be used in conjunction with mechanical scanning systems to enable us to image larger areas of tissue 
+            [<a href="https://doi.org/10.1007/s10439-015-1493-2">Paper 1</a>,
+            <a href="https://doi.org/10.1109/TBME.2015.2455597">Paper 2</a>,
+            <a href="https://doi.org/10.1109/TBME.2018.2837058">Paper 3</a>]
+            </p>
+            <p>
+            While at Imperial College I also collaborated on studies looking at potential applications of endomicroscopy in breast cancer surgery 
+            [<a href="https://doi.org/10.1007/s10549-015-3543-8">Paper 1</a> <a href="https://doi.org/10.1117/1.JBO.22.2.020501">Paper 2</a>] 
+            and worked on a study for the Bill and Melinda Gates Foundation on potential applications in gut dysfunction. This work
+            involved assembling an advisory team and co-first-authoring a <a href="https://www.nature.com/articles/nrgastro.2017.147">position paper 
+            </a>. 
+            </p>
+            <p>
+                More recently, at Kent we have developed a new approach which allows a computational sectioning technique, 
+            structured illumination endomicroscopy, to be used with a moving probe 
+            [<a href="https://doi.org/10.1117/1.JBO.25.2.026501">Paper</a>] and made further improvements to 
+            line-scanning endomicroscopy [<a href="https://arxiv.org/abs/2012.04492">Paper</a>]. 
+            I developed and maintain <a href= "https://pyfibrebundle.readthedocs.io">PyFibreBundle</a>, a Python package for imaging with bundles 
+            [<a href="https://doi.org/10.1364/AO.503700">Paper</a>] and providing state-of-the-art performance 
+            in image reconstruction. 
+            </p>
+
+            
+        </section>
+    
+        <section>
+
+            <h2> Holographic Microscopy </h2>
+            <div id="holographic"></div>
+            Holographic microscopy involves collecting information about the phase of light as well as its amplitude. This can be
+            used to generate contrast in images, due to variations in refractive index, to make quantitative measurements or to 
+            numerically refocus images. With inline holographic microscopy, we can dispense with an objective lens altogether, relying
+            on refocusing the hologram to produce an image. My work has focused on performing inline holographic microscopy via fibre imaging
+            bundles, in the attempt to create thin, flexible probes. After showing this in principle in 2021 
+            [<a href="https://arxiv.org/abs/2006.09296">Paper</a>] our more recent work 
+            has focused on improving the resolution and working distance [<a href="https://doi.org/10.1364/BOE.516030">Paper 1</a>, <a href="https://kar.kent.ac.uk/104552/1/holobundle_range_improvement.pdf">Paper 2</a>]. 
+            I also develop <a href="https://pyholoscope.readthedocs.io/">PyHoloscope</a> an open source 
+            Python package for holographic microscopy. 
+
+        </section>
+
+    
+    
+    </main>
+
+
+</body>
+</html>
+

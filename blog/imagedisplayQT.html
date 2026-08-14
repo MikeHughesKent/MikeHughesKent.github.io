@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="../simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../research.html">Research</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../lecture_notes/index.html">Lecture Notes</a>
+            <a href="../software.html">Software</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+    	<h1>Showing Scientific Images in Python GUIs</h1>
+    </header>
+    <main>
+
+        <p>We've released ImageDisplayQT. This is an important part of our in-house GUI that we use with the various imaging and microscopy systems in my lab. Since we transitioned from LabVIEW to Python for our real-time systems, we were lacking a nice equivalent of LabVIEW&apos;s IMAQ image display that we could drop into our PyQt-based GUIs.</p>
+
+        <p>There were some ready-made options, such as the Matplotlib Qt backend and PyQtGraph. Matplotlib seemed slow when testing and really isn't designed for what we wanted to do - show live, video-rate images. PyQtGraph could have been a good choice, but in the end we went for our own, lightweight solution that was optimised for what we wanted.</p>
+
+        <p>ImageDisplayQT is a widget that you add to a PyQt GUI in the same way that you add any other widget. A single function call is then needed to display an image, and repeatedly calling that function (e.g. from a timer) updates it with the next image. We also added a status bar to display some information we care about, the ability to zoom in and out and pan (which turned out to be the hardest things to implement!), and to drag a ROI. Overlays can also easily be added.</p>
+
+        <p>More details and documentation: <a href="https://imagedisplayqt.readthedocs.io/">https://imagedisplayqt.readthedocs.io/</a></p>
+
+        <p>You can install it with:</p>
+
+        <pre>pip install ImageDisplayQT</pre>
+
+        <p>Or download it from GitHub (including an example GUI): <a href="https://github.com/MikeHughesKent/ImageDisplayQT">https://github.com/MikeHughesKent/ImageDisplayQT</a></p>
+
+        <p>Video: <a href="https://www.youtube.com/watch?v=Yak7tegc_DI">https://www.youtube.com/watch?v=Yak7tegc_DI</a></p>
+
+        <p><img src="img/ImageDisplayQT.png" alt="ImageDisplayQT integrated into a simple GUI" width="1057" height="739" /></p>
+        
+
+            
+    </main>
+
+
+</body>
+</html>
+

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="research.html">Research</a>
+            <a href="publications.html">Publications</a>
+            <a href="lecture_notes/index.html">Lecture Notes</a>
+            <a href="software.html">Software</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    	<h1>Mike Hughes Publications </h1>
+    </header>
+    <main>
+    <p>
+        Journal papers and selected conference papers that I have authored or co-authored are below:
+    </p>
+
+<details>
+  <summary>Real-time optical imaging acquisition and processing in Python: a practical guide using CAS</summary>
+  <p>
+    <strong>Authors:</strong> Michael R. Hughes<br>
+    <strong>Journal:</strong> Applied Optics <strong>64</strong>, 5837–5842  (2025)<br>
+    <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-64-20-5837" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://doi.org/10.6084/m9.figshare.28736513.v2" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Real-time data acquisition and processing is an important step in the development of new approaches to optical imaging in research laboratories. Python is increasingly used for scientific computing and allows for the straightforward application of artificial intelligence models using popular frameworks such as PyTorch. However, achieving high-speed image capture and processing in real time is challenging and requires extensive development work, a particular problem for academic labs where research teams may lack specialist expertise in software development. This note provides guidelines for achieving high performance in Python for optical imaging applications and introduces an open-source framework CAS; for rapid prototyping of imaging system software. CAS includes a hardware abstraction layer for cameras, a ready-made GUI, which can easily be customized, as well as support for using multiple CPU cores for parallelism. By providing an open-source and flexible Python-based solution, CAS can support research teams to more quickly develop real-time imaging systems.</p>
+</details>
+
+<details>
+  <summary>Fabrication and testing of lensed fiber-optic probes for distance sensing using common-path low-coherence interferometry</summary>
+  <p>
+    <strong>Authors:</strong> Radu-Florin Stancu, Michael Hughes, Taylor Sanderson, Manuel Marques, Lyndon da Cruz, Christos Bergeles, Adrian Podoleanu<br>
+    <strong>Journal:</strong> Applied Optics <strong>64</strong>, 5748–5753  (2025)<br>
+    <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-64-20-5748" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://doi.org/10.6084/m9.figshare.28869176" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Common-path low-coherence interferometry enables high-resolution distance measurements to be made via thin fiber-optic probes. This is particularly advantageous for applications such as ophthalmic vitreoretinal microsurgery, where the probes can be used to precisely locate the position of surgical tools relative to the retinal surface, but could also have a wide range of other medical and industrial applications. The performance of the fiber probes depends critically on the fabrication of a focusing lens at the distal tip and on creating a medium-independent partial reflection that is used for common-path interferometry. These are complex multi-step procedures that are not fully described in the literature. In this note, we detail a procedure to manufacture probes by fusing coreless and gradient index sections of fiber to single-mode fiber and to apply a thin gold coating to act as a partial reflector. We also explain how quality control of the fabrication can be performed, demonstrate how the probes can be coupled to a common-path swept-source interferometer, and describe algorithms to convert raw data to distance measurements. These procedures are intended to aid researchers in developing their own customized probes and develop new applications for distance sensors.</p>
+</details>
+
+<details>
+  <summary>Improved resolution in fiber bundle inline holographic microscopy using multiple illumination sources</summary>
+  <p>
+    <strong>Authors:</strong> Michael R. Hughes, Callum McCall<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>15</strong>, 1500–1514  (2024)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-15-3-1500" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://doi.org/10.6084/m9.figshare.24799095.v1" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Recent work has shown that high-quality inline holographic microscopy images can be captured through fiber imaging bundles. Speckle patterns arising from modal interference within the bundle cores can be minimized by use of a partially-coherent optical source such as an LED delivered via a multimode fiber. This allows numerical refocusing of holograms from samples at working distances of up to approximately 1 mm from the fiber bundle before the finite coherence begins to degrade the lateral resolution. However, at short working distances the lateral resolution is limited not by coherence, but by sampling effects due to core-to-core spacing in the bundle. In this article we demonstrate that multiple shifted holograms can be combined to improve the resolution by a factor of two. The shifted holograms can be rapidly acquired by sequentially firing LEDs, which are each coupled to their own, mutually offset, illumination fiber. Following a one-time calibration, resolution-enhanced images are created in real-time at an equivalent net frame rate of up to 7.5 Hz. The resolution improvement is demonstrated quantitatively using a resolution target and qualitatively using mounted biological slides. At longer working distances, beyond 0.6 mm, the improvement is reduced as resolution becomes limited by the source spatial and temporal coherence.</p>
+</details>
+
+<details>
+  <summary>Real-timing processing of fiber bundle endomicroscopy images in Python using PyFibreBundle</summary>
+  <p>
+    <strong>Authors:</strong> Michael R. Hughes<br>
+    <strong>Journal:</strong> Applied Optics <strong>62</strong>, 9041–9050  (2023)<br>
+    <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-62-34-9041" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://dx.doi.org/10.6084/m9.figshare.23932872" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Fiber imaging bundles allow the transfer of optical images from place-to-place along narrow and flexible conduits. Traditionally used extensively in medical endoscopy, bundles are now finding new applications in endoscopic microscopy and other emerging techniques. PyFibreBundle is an open-source Python package for fast processing of images acquired through imaging bundles. This includes detection and removal of the fiber core pattern by filtering or interpolation, and application of background and flat-field corrections. It also allows images to be stitched together to create mosaics and resolution to be improved by combining multiple shifted images. This paper describes the technical implementation of PyFibreBundle and provides example results from three endomicroscopy imaging systems: color transmission, monochrome transmission, and confocal fluorescence. This allows various processing options to be compared quantitatively and qualitatively, and benchmarking demonstrates that PyFibreBundle can achieve state-of-the-art performance in an open-source package. The paper demonstrates core removal by interpolation and mosaicing at over 100 fps, real-time multi-frame resolution enhancement and the first demonstration of real-time endomicroscopy image processing, including core removal, on a Raspberry Pi single board computer. This demonstrates that PyFibreBundle is potentially a valuable tool for the development of low-cost, high-performance fiber bundle imaging systems.</p>
+</details>
+
+<details>
+  <summary>Endoscopic en-face optical coherence tomography and fluorescence imaging using correlation-based probe tracking</summary>
+  <p>
+    <strong>Authors:</strong> Manuel J. Marques, Michael R. Hughes, Adrián F. Uceda, Grigory Gelikonov, Adrian Bradu, Adrian Podoleanu<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>13</strong>, 761–776  (2022)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-13-2-761" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Forward-viewing endoscopic optical coherence tomography (OCT) provides 3D imaging in vivo, and can be combined with widefield fluorescence imaging by use of a double-clad fiber. However, it is technically challenging to build a high-performance miniaturized 2D scanning system with a large field-of-view. In this paper we demonstrate how a 1D scanning probe, which produces cross-sectional OCT images (B-scans) and 1D fluorescence T-scans, can be transformed into a 2D scanning probe by manual scanning along the second axis. OCT volumes are assembled from the B-scans using speckle decorrelation measurements to estimate the out-of-plane motion along the manual scan direction. Motion within the plane of the B-scans is corrected using image registration by normalized cross correlation. En-face OCT slices and fluorescence images, corrected for probe motion in 3D, can be displayed in real-time during the scan. For a B-scan frame rate of 250 Hz, and an OCT lateral resolution of approximately 20μ m, the approach can handle out-of-plane motion at speeds of up to 4 mm/s.</p>
+</details>
+
+<details>
+  <summary>Reduced motion artifacts and speed improvements in enhanced line-scanning fiber bundle endomicroscopy</summary>
+  <p>
+    <strong>Authors:</strong> Andrew D. Thrapp, Michael R. Hughes<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>26</strong>, 056501  (2021)<br>
+    <a href="https://doi.org/10.1117/1.JBO.26.5.056501" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://doi.org/10.6084/m9.figshare.13303211" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Significance: Confocal laser scanning enables optical sectioning in fiber bundle endomicroscopy but limits the frame rate. To be able to better explore tissue morphology, it is useful to stitch sequentially acquired frames into a mosaic. However, low frame rates limit the maximum probe translation speed. Line-scanning (LS) confocal endomicroscopy provides higher frame rates, but residual out-of-focus light degrades images. Subtraction-based approaches can suppress this residue at the expense of introducing motion artifacts. Aim: To generate high-frame-rate endomicroscopy images with improved optical sectioning, we develop a high-speed subtraction method that only requires the acquisition of a single camera frame. Approach: The rolling shutter of a CMOS camera acts as both the aligned and offset detector slits required for subtraction-based sectioning enhancement. Two images of the bundle are formed on different regions of the camera, allowing both images to be acquired simultaneously. Results: We confirm improved optical sectioning compared to conventional LS, particularly far from focus, and show that motion artifacts are not introduced. We demonstrate high-speed mosaicing at frame rates of up to 240 Hz. Conclusion: High-speed acquisition of optically sectioned images using the new subtraction based-approach leads to improved mosaicing at high frame rates.</p>
+</details>
+
+<details>
+  <summary>Inline holographic microscopy through fiber imaging bundles</summary>
+  <p>
+    <strong>Authors:</strong> Michael R. Hughes<br>
+    <strong>Journal:</strong> Applied Optics <strong>60</strong>, A1–A7  (2021)<br>
+    <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-60-4-A1" target="_blank" rel="noopener noreferrer">Read Online</a>
+    <a href="https://arxiv.org/abs/2006.09296" target="_blank" rel="noopener noreferrer">Preprint</a> &nbsp; <a href="https://doi.org/10.6084/m9.figshare.c.5029235.v1" target="_blank" rel="noopener noreferrer">Data/Code</a>
+  </p>
+  <p>Fiber imaging bundles are widely used as thin, passive image conduits for miniaturized and endoscopic microscopy, particularly for confocal fluorescence imaging. Holographic microscopy through fiber bundles is more challenging; phase conjugation approaches are complex and require extensive calibration. This paper describes how simple inline holographic microscopy can be performed through an imaging bundle using a partially coherent illumination source from a multimode fiber. The sample is imaged in transmission, with the intensity hologram sampled by the bundle and transmitted to a remote camera. The hologram can then be numerically refocused for volumetric imaging, achieving a resolution of approximately 6 µm over a depth range of 1 mm. The scheme does not require any complex prior calibration and hence is insensitive to bending.</p>
+</details>
+
+<details>
+  <summary>Direct en-face, speckle-reduced images using angular-compounded Master–Slave optical coherence tomography</summary>
+  <p>
+    <strong>Authors:</strong> René Říha, Manuel J Marques, Michael R Hughes, Adrian Bradu, Adrian Podoleanu<br>
+    <strong>Journal:</strong> Journal of Optics <strong>22</strong>, 055302  (2020)<br>
+    <a href="https://doi.org/10.1088/2040-8986/ab8285" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>In this paper, an angular compounding method to achieve speckle contrast reduction in optical coherence tomography (OCT) imaging is explored in detail. The angular compounding approach involves collecting multiple images at different angles of incidence, registering the images to correct for induced distortions, and then incoherently summing the images to reduce speckle. The method was experimentally demonstrated with a spectrometer-based Master–Slave enhanced OCT instrument capable of directly generating en-face images. We have investigated the impact of the angular range and number of averaged frames on the degree of speckle artefact reduction, as well as the effect on image resolution and sharpness. The minimum angular step necessary to secure a sufficiently small speckle pattern correlation between the images has also been determined, and the method has subsequently been validated on a biological sample (potato cells).</p>
+</details>
+
+<details>
+  <summary>Automatic motion compensation for structured illumination endomicroscopy using a flexible fiber bundle</summary>
+  <p>
+    <strong>Authors:</strong> Andrew D. Thrapp, Michael R. Hughes<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>25</strong>, 026501  (2020)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-25/issue-02/026501/Automatic-motion-compensation-for-structured-illumination-endomicroscopy-using-a-flexible/10.1117/1.JBO.25.2.026501" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Significance: Confocal laser scanning enables optical sectioning in clinical fiber bundle endomicroscopes, but lower-cost, simplified endomicroscopes use widefield incoherent illumination instead. Opt</p>
+</details>
+
+<details>
+  <summary>En-face optical coherence tomography/fluorescence endomicroscopy for minimally invasive imaging using a robotic scanner</summary>
+  <p>
+    <strong>Authors:</strong> Manuel J. Marques, Michael R. Hughes, Khushi Vyas, Andrew Thrapp, Haojie Zhang, Adrian Bradu, Grigory Gelikonov, Petros Giataganas, Christopher J. Payne, Guang-Zhong Yang, Adrian Podoleanu<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>24</strong>, 066006  (2019)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-24/issue-06/066006/En-face-optical-coherence-tomography-fluorescence-endomicroscopy-for-minimally-invasive/10.1117/1.JBO.24.6.066006" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>We report a compact rigid instrument capable of delivering en-face optical coherence tomography (OCT) images alongside (epi)-fluorescence endomicroscopy (FEM) images by means of a robotic scanning device. Two working imaging channels are included: one for a one-dimensional scanning, forward-viewing OCT probe and another for a fiber bundle used for the FEM system. The robotic scanning system provides the second axis of scanning for the OCT channel while allowing the field of view (FoV) of the FEM channel to be increased by mosaicking. The OCT channel has resolutions of 25 / 60 μm (axial/lateral) and can provide en-face images with an FoV of 1.6 × 2.7 mm2. The FEM channel has a lateral resolution of better than 8 μm and can generate an FoV of 0.53 × 3.25 mm2 through mosaicking. The reproducibility of the scanning was determined using phantoms to be better than the lateral resolution of the OCT channel. Combined OCT and FEM imaging were validated with ex-vivo ovine and porcine tissues, with the instrument mounted on an arm to ensure constant contact of the probe with the tissue. The OCT imaging system alone was validated for in-vivo human dermal imaging with the handheld instrument. In both cases, the instrument was capable of resolving fine features such as the sweat glands in human dermal tissue and the alveoli in porcine lung tissue.</p>
+</details>
+
+<details>
+  <summary>Intraoperative Robotic-Assisted Large-Area High-Speed Microscopic Imaging and Intervention</summary>
+  <p>
+    <strong>Authors:</strong> Petros Giataganas, Michael Hughes, Christopher J. Payne, Piyamate Wisanuvej, Burak Temelkuran, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> IEEE Transactions on Biomedical Engineering <strong>66</strong>, 208–216  (2019)<br>
+    <a href="https://ieeexplore.ieee.org/document/8359328" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Objective: Probe-based confocal endomicroscopy is an emerging high-magnification optical imaging technique that provides in vivo and in situ cellular-level imaging for real-time assessment of tissue pathology. Endomicroscopy could potentially be used for intraoperative surgical guidance, but it is challenging to assess a surgical site using individual microscopic images due to the limited field-of-view and difficulties associated with manually manipulating the probe. Methods: In this paper, a novel robotic device for large-area endomicroscopy imaging is proposed, demonstrating a rapid, but highly accurate, scanning mechanism with image-based motion control, which is able to generate histology-like endomicroscopy mosaics. The device also includes, for the first time in robotic-assisted endomicroscopy, the capability to ablate tissue without the need for an additional tool. Results: The device achieves preprogrammed trajectories with positioning accuracy of less than 30 μm, while the image-based approach demonstrated that it can suppress random motion disturbances up to 1.25 mm s-1. Mosaics are presented from a range of ex vivo human and animal tissues, over areas of more than 3 mm2, scanned in approximate 10 s. Conclusion: This paper demonstrates the potential of the proposed instrument to generate large-area, high-resolution microscopic images for intraoperative tissue identification and margin assessment. Significance: This approach presents an important alternative to current histology techniques, significantly reducing the tissue assessment time, while simultaneously providing the capability to mark and ablate suspicious areas intraoperatively.</p>
+</details>
+
+<details>
+  <summary>Fiber bundle shifting endomicroscopy for high-resolution imaging</summary>
+  <p>
+    <strong>Authors:</strong> Khushi Vyas, Michael Hughes, Bruno Gil Rosa, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>9</strong>, 4649–4664  (2018)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-9-10-4649" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Flexible endomicroscopes commonly use coherent fiber bundles with high core densities to facilitate high-resolution in vivo imaging during endoscopic and minimally-invasive procedures. However, under-sampling due to the inter-core spacing limits the spatial resolution, making it difficult to resolve smaller cellular features. Here, we report a compact and rapid piezoelectric transducer (PZT) based bundle-shifting endomicroscopy system in which a super-resolution (SR) image is restored from multiple pixelation-limited images by computational means. A miniaturized PZT tube actuates the fiber bundle behind a GRIN micro-lens and a Delaunay triangulation based algorithm reconstructs an enhanced SR image. To enable real-time cellular-level imaging, imaging is performed using a line-scan confocal laser endomicroscope system with a raw frame rate of 120 fps, delivering up to 2 times spatial resolution improvement for a field of view of 350 µm at a net frame rate of 30 fps. The resolution enhancement is confirmed using resolution phantoms and ex vivo fluorescence endomicroscopy imaging of human breast specimens is demonstrated.</p>
+</details>
+
+<details>
+  <summary>The potential role of optical biopsy in the study and diagnosis of environmental enteric dysfunction</summary>
+  <p>
+    <strong>Authors:</strong> Alex J. Thompson, Michael Hughes, Salzitsa Anastasova, Laurie S. Conklin, Tudor Thomas, Cadman Leggett, William A. Faubion, Thomas J. Miller, Peter Delaney, François Lacombe, Sacha Loiseau, Alexander Meining, Rebecca Richards-Kortum, Guillermo J. Tearney, Paul Kelly, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Nature Reviews Gastroenterology &amp; Hepatology <strong>14</strong>, 727–738  (2017)<br>
+    <a href="https://doi.org/10.1038/nrgastro.2017.147" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Environmental enteric dysfunction (EED) is an important cause of impaired development and stunting in children in the developing world. In this Consensus Statement, the authors assess the potential of optical biopsy technologies to facilitate the study and diagnosis of this global burden.</p>
+</details>
+
+<details>
+  <summary>From Macro to Micro: Autonomous Multiscale Image Fusion for Robotic Surgery</summary>
+  <p>
+    <strong>Authors:</strong> Lin Zhang, Menglong Ye, Petros Giataganas, Michael Hughes, Adrian Bradu, Adrian Podoleanu, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> IEEE Robotics &amp; Automation Magazine <strong>24</strong>, 63–72  (2017)<br>
+    <a href="https://ieeexplore.ieee.org/document/7924395" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>In this paper an automated scanning framework for pCLE and OCT optical biopsy using the da Vinci surgical robot was presented. It is capable of generating large-area mosaics of both pCLE and OCT images. A crucial feature is that pCLE images are used to close the control loop, and mosaicing results from both static and deforming phantoms demonstrated that this effectively compensates kinematic errors. Furthermore, by using OCT images to maintain a constant distance to the tissue, and hence ensure consistent contact between the pCLE probe and the tissue, the system is able to compensate for target motion along the axial direction. This visual servoing allows for the correction of errors due to tissue deformation, robot positioning, and grasping of the pickup probe. The accuracy of this correction is better than the FoV of the pCLE probe, resulting in continuous 2-D mosaics without gaps or discontinuities, which represent a common problem for open-loop control.</p>
+</details>
+
+<details>
+  <summary>Flexible Robotic Scanning Device for Intraoperative Endomicroscopy in MIS</summary>
+  <p>
+    <strong>Authors:</strong> Siyang Zuo, Michael Hughes, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> IEEE/ASME Transactions on Mechatronics <strong>22</strong>, 1728–1735  (2017)<br>
+    <a href="https://ieeexplore.ieee.org/document/7915746" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Optical biopsy methods such as probe-based confocal endomicroscopy can provide intraoperative real-time assessment of tumour margins, including during minimally invasive surgery with flexible endoscopes or robotic platforms. Mosaics can be produced by translating the probe across the target, but it remains difficult to scan over a large field of view with a flexible endomicroscope. In this paper, we have developed a novel flexible scanning device for intraoperative endomicroscopy in minimally invasive surgery (MIS). A Schott leached imaging bundle was integrated into the device and enables the approach, via a flexible path, to deep and narrow spaces in the human body that otherwise would not accessible. The proposed device uses a gear-based flexible concentric tube scanning mechanism to facilitate large field-of-view mosaicing. Experimental results show that the device is able to scan different surface trajectories (e.g., a spiral pattern over a hemi-spherical surface). Results from lens tissue paper and porcine liver tissue are demonstrated, illustrating a viable scanning approach for endomicroscopy in MIS.</p>
+</details>
+
+<details>
+  <summary>Methylene-blue aided rapid confocal laser endomicroscopy of breast cancer</summary>
+  <p>
+    <strong>Authors:</strong> Khushi Vyas, Michael Hughes, Daniel R. Leff, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>22</strong>, 020501  (2017)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-22/issue-2/020501/Methylene-blue-aided-rapid-confocal-laser-endomicroscopy-of-breast-cancer/10.1117/1.JBO.22.2.020501" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Breast conserving surgery allows complete tumor resection while maintaining acceptable cosmesis for patients. Safe and rapid intraoperative margin assessment during the procedure is important to estab</p>
+</details>
+
+<details>
+  <summary>Line-scanning fiber bundle endomicroscopy with a virtual detector slit</summary>
+  <p>
+    <strong>Authors:</strong> Michael Hughes, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>7</strong>, 2257–2268  (2016)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-7-6-2257" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Coherent fiber bundles can be used to relay the image plane from the distal tip of an endomicroscope to an external confocal microscopy system. The frame rate is therefore determined by the speed of the microscope’s laser scanning system which, at 10-20 Hz, may be undesirably low for in vivo clinical applications. Line-scanning allows an increase in the frame rate by an order of magnitude in exchange for some loss of optical sectioning, but the width of the detector slit cannot easily be adapted to suit different imaging conditions. The rolling shutter of a CMOS camera can be used as a virtual detector slit for a bench-top line-scanning confocal microscope, and here we extend this idea to endomicroscopy. By synchronizing the camera rolling shutter with a scanning laser line we achieve confocal imaging with an electronically variable detector slit. This architecture allows us to acquire every other frame with the detector slit offset by a known distance, and we show that subtracting this second image leads to improved optical sectioning.</p>
+</details>
+
+<details>
+  <summary>Novel Balloon Surface Scanning Device for Intraoperative Breast Endomicroscopy</summary>
+  <p>
+    <strong>Authors:</strong> Siyang Zuo, Michael Hughes, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Annals of Biomedical Engineering <strong>44</strong>, 2313–2326  (2016)<br>
+    <a href="https://doi.org/10.1007/s10439-015-1493-2" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Recent advances in fluorescence confocal endomicroscopy have allowed real-time identification of residual tumour cells on the walls of the cavity left by breast conserving surgery. However, it is difficult to systematically survey the surgical site because of the small imaging field-of-view of these probes, compounded by tissue deformation and inconsistent probe-tissue contact when operated manually. Therefore, a new robotized scanning device is required for controlled, large area scanning and mosaicing. This paper presents a robotic scanning probe with an inflatable balloon, providing stable cavity scanning over undulating surfaces. It has a compact design, with an outer diameter of 4 mm and a working channel of 2.2 mm, suitable for a leached flexible fibre bundle endomicroscope probe. With the probe inserted, the tip positioning accuracy measured to be 0.26 mm for bending and 0.17 mm for rotational motions. Large area scanning was achieved (25–35 mm2) and the experimental results demonstrate the potential clinical value of the device for intraoperative cavity tumour margin evaluation.</p>
+</details>
+
+<details>
+  <summary>Imaging breast cancer morphology using probe-based confocal laser endomicroscopy: towards a real-time intraoperative imaging tool for cavity scanning</summary>
+  <p>
+    <strong>Authors:</strong> Tou Pin Chang, Daniel R. Leff, Sami Shousha, Dimitri J. Hadjiminas, Rathi Ramakrishnan, Michael R. Hughes, Guang-Zhong Yang, Ara Darzi<br>
+    <strong>Journal:</strong> Breast Cancer Research and Treatment <strong>153</strong>, 299–310  (2015)<br>
+    <a href="https://doi.org/10.1007/s10549-015-3543-8" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Current techniques for assessing the adequacy of tumour excision during breast conserving surgery do not provide real-time direct cytopathological assessment of the internal cavity walls within the breast. This study investigates the ability of probe-based confocal laser endomicroscopy (pCLE), an emerging imaging tool, to image the morphology of neoplastic and non-neoplastic breast tissues, and determines the ability of histopathologists and surgeons to differentiate these images. Freshly excised tumour samples and adjacent non-diseased sections from 50 consenting patients were stained with 0.01 \% acriflavine hydrochloride and imaged using pCLE. All discernible pCLE features were cross-examined with conventional histopathology. Following pattern recognition training, 17 histopathologists and surgeons with no pCLE experience interpreted 50 pCLE images independently whilst blinded to histopathology results. Three-hundred and fifty pCLE image mosaics were analysed. Consistent with histopathology findings, the glandular structures, adipocytes and collagen fibres of normal breast were readily visible on pCLE images. These were distinguishable from the morphological architecture exhibited by invasive and non-invasive carcinoma. The mean accuracy of pCLE image interpretation for histopathologists and surgeons was 94 and 92 \%, respectively. Overall, inter-observer agreement for histopathologists was ‘almost perfect’, κ = 0.82; and ‘substantial’ for surgeons, κ = 0.74. pCLE morphological features of neoplastic and non-neoplastic breast tissues are readily visualized and distinguishable with high accuracy by both histopathologists and surgeons. Further research is required to investigate a potential role for the use of pCLE intraoperatively for in situ detection of residual cancerous foci, thereby guiding operating decision-making based on real-time breast cavity scanning.</p>
+</details>
+
+<details>
+  <summary>Toward Intraoperative Breast Endomicroscopy With a Novel Surface-Scanning Device</summary>
+  <p>
+    <strong>Authors:</strong> Siyang Zuo, Michael Hughes, Carlo Seneci, Tou Pin Chang, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> IEEE Transactions on Biomedical Engineering <strong>62</strong>, 2941–2952  (2015)<br>
+    <a href="https://ieeexplore.ieee.org/document/7155496" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>New optical biopsy methods such as confocal endomicroscopy represent a promising tool for breast conserving surgery, allowing real-time assessment of tumor margins. However, it remains difficult to scan over a large surface area because of the small field-of-view. This paper presents a novel robotic instrument to perform automated scanning with a fiber bundle endomicroscope probe to expand the effective imaging area. The device uses a rigid concentric tube scanning mechanism to facilitate large-area mosaicking. It has a compact design with a diameter of 6 mm, incorporating a central channel with a diameter of 3 mm for passing through a fiber bundle probe. A bespoke bearing, an inflated balloon, and a passive linear structure are used to control image rotation and ensure consistent tool-tissue contact. Experimental results show that the device is able to scan a spiral trajectory over a large hemispherical surface. Detailed performance evaluation was performed and the bending angle ranges from -90° to 90° with high repeatability and minimal rotational hysteresis errors. The device has also been validated with breast phantom and ex vivo human breast tissue, demonstrating the potential clinical value of the system.</p>
+</details>
+
+<details>
+  <summary>Force adaptive robotically assisted endomicroscopy for intraoperative tumour identification</summary>
+  <p>
+    <strong>Authors:</strong> Petros Giataganas, Michael Hughes, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> International Journal of Computer Assisted Radiology and Surgery <strong>10</strong>, 825–832  (2015)<br>
+    <a href="https://doi.org/10.1007/s11548-015-1179-0" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>For effective tumour margin definition for cancer surgery, there is an increasing demand for the development of real-time intraoperative tissue biopsy techniques. Recent advances in miniaturized biophotonics probes have permitted the development of endomicroscopy techniques that are clinically attractive. With these approaches, cellular-level imaging can be achieved through millimetre-scale flexible probes and be performed in real-time, in vivo and in situ. Due to the limited field of view and flexibility of these probes, however, large area tissue coverage for acquiring histology-like images over complex three-dimensional surfaces is challenging. This is particularly the case because current surgical robots, such as the Da \$\$\textbackslashhbox \Vinci\\textasciicircum\textbackslashcircledR \$\$, lack haptic feedback, making it difficult to maintain optimum tissue contact when these probes are deployed in vivo.</p>
+</details>
+
+<details>
+  <summary>High speed, line-scanning, fiber bundle fluorescence confocal endomicroscopy for improved mosaicking</summary>
+  <p>
+    <strong>Authors:</strong> Michael Hughes, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>6</strong>, 1241–1252  (2015)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-6-4-1241" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>A significant limitation of fiber bundle endomicroscopy systems is that the field of view tends to be small, usually only several hundred micrometers in diameter. Image mosaicking techniques can increase the effective image size, but require careful manipulation of the probe to ensure sufficient overlap between adjacent frames. For confocal endomicroscopes, which typically have frame rates on the order of 10 fps, this is particularly challenging. In this paper we demonstrate that line-scanning confocal endomicroscopy can, by use of a high speed linear CCD camera, achieve a frame rate of 120 fps while maintaining sufficient resolution and signal-to-noise ratio to allow imaging of topically stained gastrointestinal tissues. This leads to improved performance of a cross-correlation based mosaicking algorithm when compared with lower frame-rate systems.</p>
+</details>
+
+<details>
+  <summary>Color reflectance fiber bundle endomicroscopy without back-reflections</summary>
+  <p>
+    <strong>Authors:</strong> Michael R. Hughes, Petros Giataganas, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>19</strong>, 030501  (2014)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-19/issue-3/030501/Color-reflectance-fiber-bundle-endomicroscopy-without-back-reflections/10.1117/1.JBO.19.3.030501" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Coherent fiber imaging bundles can be used as passive probes for reflectance-mode endomicroscopy providing that the back-reflections from the fiber ends are efficiently rejected. We describe an approa</p>
+</details>
+
+<details>
+  <summary>Fiber bundle endocytoscopy</summary>
+  <p>
+    <strong>Authors:</strong> Michael Hughes, Tou Pin Chang, Guang-Zhong Yang<br>
+    <strong>Journal:</strong> Biomedical Optics Express <strong>4</strong>, 2781–2794  (2013)<br>
+    <a href="https://opg.optica.org/boe/abstract.cfm?uri=boe-4-12-2781" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>Endocytoscopy is an optical biopsy technique which uses a miniaturized camera to capture white light microscopy images through an endoscope. We have developed an alternative design that instead relays images to an external camera via a coherent fiber bundle. In this paper we characterize the device and demonstrate microscopy of porcine tissue ex vivo. One advantage of our approach is the ease with which other bundle-compatible imaging modalities can be deployed simultaneously. We show this by acquiring quasi-simultaneous endocytoscopy and fluorescence confocal endomicroscopy images through a single fiber bundle. This opens up possibilities for multi-modal endomicroscopy, combining white light and fluorescence imaging.</p>
+</details>
+
+<details>
+  <summary>En face optical coherence tomography investigation of apical microleakage after laser-assisted endodontic treatment</summary>
+  <p>
+    <strong>Authors:</strong> Carmen Todea, Cosmin Balabuc, Cosmin Sinescu, Laura Filip, Cristina Kerezsi, Mircea Calniceanu, Meda Negrutiu, Adrian Bradu, Michael Hughes, Adrian Gh. Podoleanu<br>
+    <strong>Journal:</strong> Lasers in Medical Science <strong>25</strong>, 629–639  (2010)<br>
+    <a href="https://doi.org/10.1007/s10103-009-0680-5" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>The aim of our study was to evaluate the potential of en face optical coherence tomography (OCT) for the detection of apical microleakage after 980 nm and 1,064 nm laser-assisted endodontic treatment. Ninety, human, single-rooted teeth with one straight root canal and closed apices were used. All roots were prepared biomechanically to the working length at an apical size 30 and 0.06 taper. The teeth were divided into three equal groups of 30 samples each, according to the treatment to be applied to the root canal. Group I received 980 nm diode laser (3 W, 0.01 s on time, 0.01 s off time, 5 s per procedure, four procedures); group II received neodymium:yttrium–aluminum–garnet (Nd:YAG) laser (1.5 W, 15 Hz, 5 s per procedure, four procedures). In group III the root canals were approached conventionally only. In all groups the root canal filling was performed with AH Plus endodontic sealer and gutta-percha points. An en face OCT prototype was used for the investigation of apical microleakage. According to one-way analysis of variance (ANOVA) and en face OCT, the number of defects in the laser groups was significantly lower (P \textless 0.005) than in the control group. No statistical differences were noted between the laser groups (P = 0.049). En face OCT imaging proved that laser-assisted endodontic treatment improved the prognosis of root canal filling and led to a reduction in apical microleakage.</p>
+</details>
+
+<details>
+  <summary>Speckle noise reduction in optical coherence tomography of paint layers</summary>
+  <p>
+    <strong>Authors:</strong> Michael Hughes, Marika Spring, Adrian Podoleanu<br>
+    <strong>Journal:</strong> Applied Optics <strong>49</strong>, 99–107  (2010)<br>
+    <a href="https://opg.optica.org/ao/abstract.cfm?uri=ao-49-1-99" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>We present and characterize a sequential angular compounding method for reducing speckle contrast in optical coherence tomography images of paint layers. The results are compared with postprocessing methods, and we show that the compounding technique can improve the speckle contrast ratio in B-scans by better than a factor of 2 in exchange for a negligible loss of resolution. As a result, image aesthetics are improved, thin layers become more distinct, and edge-detection algorithms work more efficiently. The effect of varying the angular scan size and number of averages is investigated, and it is found that a degree of statistical correlation between speckle patterns exists, even for relatively large changes in angle of incidence. Angular compounding is also performed on three-dimensional data sets and compared with a method whereby en face slices are averaged over depth.</p>
+</details>
+
+<details>
+  <summary>Simplified dynamic focus method for time domain OCT</summary>
+  <p>
+    <strong>Authors:</strong> M. Hughes, A.Gh. Podoleanu<br>
+    <strong>Journal:</strong> Electronics Letters <strong>45</strong>, 623–624  (2009)<br>
+    <a href="https://digital-library.theiet.org/doi/abs/10.1049/el.2009.0672" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>A new optical arrangement for performing dynamic focus in time domain optical coherence tomography (OCT) is demonstrated. Unlike previously reported schemes which require mechanical coupling of the object and reference arms, this method is confined to the object arm only and therefore does not impose design constraints on the OCT system layout. The scheme is tested on a high lateral resolution OCT system (NA=0.13) and it is shown that the effective depth of focus is extended from 200 µm to better than 2 mm. The optimum correction is for media with a mean refractive index of 1.4.</p>
+</details>
+
+<details>
+  <summary>Control of visibility profile in spectral low-coherence interferometry</summary>
+  <p>
+    <strong>Authors:</strong> M. Hughes, D. Woods, A.Gh. Podoleanu<br>
+    <strong>Journal:</strong> Electronics Letters <strong>45</strong>, 182–183  (2009)<br>
+    <a href="https://digital-library.theiet.org/doi/abs/10.1049/el%3A20092512" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>It is demonstrated that, by obstructing half of one of the two beams from a low coherence interferometer before it is incident on the diffraction grating in a spectral interferometry setup, an asymmetric profile can be generated for the visibility of the channelled spectrum (V) with optical path difference (OPD). Together with a lateral shift of the beam, as inspired by Talbot bands studies, this can be used to optimise V(OPD). The model for the visibility of Talbot bands is improved by considering the spectrometer resolution and an improved Talbot band experiment is demonstrated. It is also shown that it is possible to obtain regions of no interference around zero OPD.</p>
+</details>
+
+<details>
+  <summary>Quasi-simultaneous optical coherence tomography and confocal imaging</summary>
+  <p>
+    <strong>Authors:</strong> Irina Trifanov, Michael Hughes, Adrian G. P. Podoleanu, Richard B. Rosen M.d<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>13</strong>, 044015  (2008)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-13/issue-04/044015/Quasi-simultaneous-optical-coherence-tomography-and-confocal-imaging/10.1117/1.2957051" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>A new approach of acquiring quasi-simultaneous optical coherence tomography (OCT) and confocal images is presented. The two images are generated using different principles, OCT and confocal microscopy</p>
+</details>
+
+<details>
+  <summary>Quality assessment of dental treatments using en-face optical coherence tomography</summary>
+  <p>
+    <strong>Authors:</strong> Cosmin G. H. Sinescu M.d, Meda-Lavinia V. Negrutiu M.d, Carmen Colojoara Todea M.d, Cosmin I. Balabuc M.d, Laura Maria Filip M.d, Roxana Rominu M.d, Adrian Bradu, Michael R. Hughes, Adrian G. P. Podoleanu<br>
+    <strong>Journal:</strong> Journal of Biomedical Optics <strong>13</strong>, 054065  (2008)<br>
+    <a href="https://www.spiedigitallibrary.org/journals/journal-of-biomedical-optics/volume-13/issue-05/054065/Quality-assessment-of-dental-treatments-using-en-face-optical-coherence/10.1117/1.2992593" target="_blank" rel="noopener noreferrer">Read Online</a>
+    
+  </p>
+  <p>The present study evaluates the potential of en-face optical coherence tomography (OCT) as a possible noninvasive high resolution method for supplying necessary information on the material defects of</p>
+</details>
+
+
+
+</main>
+
+
+</body>
+</html>
+

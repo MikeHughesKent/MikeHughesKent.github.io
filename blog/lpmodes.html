@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="../simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../research.html">Research</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../lecture_notes/index.html">Lecture Notes</a>
+            <a href="../software.html">Software</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+    	<h1>LPModes in Python</h1>
+    </header>
+    <main>
+        <p>A few years back I uploaded a collection of <a href="https://uk.mathworks.com/matlabcentral/fileexchange/77497-fibre-mode-solver-and-simulator">Matlab scripts to MathWorks</a> that allowed for solving LP modes for step-index fibres. For those who aren&apos;t overly familiar with this, it essentially involves solving Maxwell&apos;s equations to tell you the allowed electric field distributions within the fibre. Each allowed distribution is called a &lsquo;mode&rsquo;, with the number of available modes ranging from 1 for small-diameter &lsquo;single mode&apos; fibres to many thousands in larger-diameter &lsquo;multimode&apos; fibres. If we couple coherent light into a fibre, the pattern of light exiting the other end is some coherent combination of these modes, and usually ends up looking like a random speckle pattern whenever the fibre supports more than a few modes.</p>
+
+        <p>While solving the general problem is quite hard, for reasonably low numerical aperture fibres there is a well-known simplification that reduces the problem to finding solutions of a single &lsquo;characteristic&rsquo; equation. This is all very well-known; the Matlab code doesn&apos;t do anything novel, but it provided a convenient implementation (or at least convenient for what I wanted to do at the time).</p>
+
+        <p>While the Matlab code worked well enough, I&apos;ve long since switched to using Python, and as I had a need to do some modelling that needed LP mode solutions, I decided to port the code. I could have done something quickly (or found someone else&apos;s code), but since I was still getting a trickle of monthly downloads for the Matlab code (and over 1,000 in total), I decided to do a proper job and make a public package in the hope that others might find it useful.</p>
+
+        <p>So, here it is: LPModes is available on GitHub, <a href="https://github.com/MikeHughesKent/lpmodes">https://github.com/MikeHughesKent/lpmodes</a>, or by:</p>
+
+        <pre>pip install lpmodes</pre>
+
+        <p>and the documentation is on Read the Docs: <a href="https://lpmodes.readthedocs.io/en/latest/">https://lpmodes.readthedocs.io/en/latest/</a>.</p>
+
+        <p>I think the Python package is actually a lot better than the Matlab original. It includes a GUI and some additional functionality around propagating electric fields along a length of fibre. You can calculate the parameters of each mode, and plot its amplitude and intensity. You can also simulate coupling of arbitrary beams (E-fields), calculating the resulting power in each mode and the total coupled power, and plot the amplitude, phase and intensity distributions at entry or after propagation of any distance along the fibre.</p>
+
+        <p>It would be interesting to see if there are more potential users. How many still prefer Matlab for this kind of work?</p>
+
+        <img src="img/lp_modes_gui.png" alt="Screenshot of GUI" width="1219" height="857" />
+
+
+    </main>
+
+
+</body>
+</html>
+

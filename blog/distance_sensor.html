@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="../simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../research.html">Research</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../lecture_notes/index.html">Lecture Notes</a>
+            <a href="../software.html">Software</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+    	<h1>Building a very small distance sensor</h1>
+    </header>
+    <main>
+       <p>In the Applied Optics Group, we've recently been working on ultra-thin, fibre-optic distance sensors. The idea is to use low-coherence interferometry, the concept underpinning optical coherence tomography, to measure the distance from the tip of an optical fibre. We look at the interference between the object and the reflection from the tip of the fibre itself. Modulation in the spectrum of the interference pattern tells us the distance to the object.</p>
+
+<p>The idea is not new, but we've spent a lot of time working out how to build these fibre probes so that they work well, especially for our applications of interest in retinal surgery. It's very helpful to add a lens onto the end by splicing short (10s of microns long) lengths of a special fibre called gradient-index, or GRIN, fibre onto the end of the main fibre. Controlling the reflectivity of the tip is also important, especially if you want to be able to use the probes in water, where we can't rely on much of a Fresnel reflection.</p>
+
+<p>To help others working on similar ideas, we've published an Application Note in the <em>Applied Optics</em> journal. Led by Dr Radu-Florin Stancu, the paper describes in detail the steps for fabricating fused-fibre sensor probes (using GRIN fibre as a lens), sputtering a gold coating to control end-tip reflectivity, and building this into an OCT-based sensor system. We also include details on how to characterise the probe performance and have example Python code to turn the raw data into a distance measurement.</p>
+
+<p>You can find the paper, open access, here: <a href="https://doi.org/10.1364/AO.566874">https://doi.org/10.1364/AO.566874</a> and the code and data repository here: <a href="https://doi.org/10.1364/AO.566874">https://doi.org/10.1364/AO.566874</a>.</p>
+
+<p>This work was part of an NIHR (National Institute for Health and Care Research) funded collaboration with Christos Bergeles' group at King's College London and Lyndon da Cruz at Moorfields Eye Hospital to develop image-guided and sensorised robotic retinal surgical interventions. The University of Kent team also includes Adrian Podoleanu, Manuel Jorge Marques and Taylor Sanderson.</p>
+
+<p>More papers on this are hopefully coming soon!</p>
+    </main>
+
+
+</body>
+</html>
+

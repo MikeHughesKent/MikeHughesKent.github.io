@@ -7,6 +7,9 @@
   <meta name="author" content="Mike Hughes" />
   <title>Section 3 - Time Dilation and Length Contraction</title>
   <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
     html {
       color: #1a1a1a;
       background-color: #fdfdfd;
@@ -108,8 +111,8 @@
      overflow: visible;
     }
     hr {
-      background-color: #1a1a1a;
       border: none;
+      border-top: 1px solid #1a1a1a;
       height: 1px;
       margin: 1em 0;
     }
@@ -177,34 +180,21 @@
 <p class="author">Mike Hughes</p>
 <p class="date">Physics and Astronomy, University of Kent</p>
 </header>
-<p>In this section we will determine some general consequences of the
-Lorentz transformations. We will show that, if I am moving relative to
-you, my clock will appear to you to be running slow by a factor of <span
-class="math inline">\(\gamma\)</span>, and that my length in the
-direction of motion will contract by a factor of <span
-class="math inline">\(\gamma\)</span> (i.e. divided by <span
-class="math inline">\(\gamma\)</span>). However, from my point of view,
-it is <em>you</em> who is moving, and <em>your</em> clock that will run
-slow and <em>you</em> that will be length contracted. It might seem that
-this leads to paradoxes - how can your clock run slower than mine if
-mine is running slower than yours?. We will explore the resolution of
-this (and other) apparent paradoxes, and see that framework of special
-relativity is in fact, entirely consistent (and, as far as we know,
-correct).</p>
+<p>In this section we will explore two well-known consequences of the
+Lorentz transformations: time dilation and length contraction.</p>
 <h2 data-number="1" id="the-light-clock"><span
 class="header-section-number">1</span> The Light Clock</h2>
 <p>The light clock is a thought experiment which provides an
 introduction to time dilation without using the Lorentz transformations,
-and can provide an intuitive explanation of why we must abandon notions
-of absolute time if the postulates of special relativity are to be
-accepted.</p>
+and can provide an intuitive explanation of why we must abandon the idea
+of absolute time.</p>
 <p>Imagine a pair of mirrors, with a pulse of light bouncing between
 them. Each time light hits a mirror, we can think of this as the tick of
 a clock, and we measure the time interval between two of these
 <em>ticks</em>. The distance between the mirrors we call <span
 class="math inline">\(h\)</span>.</p>
-<figure id="fig:lightClock">
-<p><img src="Pictures/clock.png"
+<figure id="fig:lightClock" data-latex-placement="H">
+<p><img src="images_small/clock.png"
 alt="Illustration of the light clock as observed by an observer moving with the clock  or relative to the clock. For the observer moving with the clock, the light pulse travels directly up. For the observer who sees the clock moving, the light pulse travels diagonally." /></p>
 <figcaption>The light clock as observed by an observer moving with the
 clock (left, <span class="math inline">\(S\)</span>) or relative to the
@@ -233,13 +223,13 @@ h^2 + (ut&#39;)^2\)</span>. It travels this distance in a time <span
 class="math inline">\(t&#39; = d/c\)</span>, and so substituting in
 <span class="math inline">\(d=ct&#39;\)</span> and <span
 class="math inline">\(h=ct\)</span> from above we obtain: <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
 c^2t&#39;^2 &amp;= c^2t^2 + u^2t&#39;^2 \\
 t&#39;^2(c^2 - u^2) &amp;= c^2t^2 \\
 t&#39;^2 &amp;= t^2 \frac{c^2}{c^2 - u^2} \\
 t&#39; &amp;= t\sqrt{\frac{1}{1-u^2/c^2}} \\
 t&#39; &amp;= \gamma t
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>As we will see below, this is exactly the time dilation equation.</p>
 <h2 data-number="2" id="statement-of-time-dilation"><span
 class="header-section-number">2</span> Statement of Time Dilation</h2>
@@ -259,7 +249,9 @@ moving.</p>
 reference frame who has their own clock. So for them, the original clock
 is moving. During a tick of the original moving clock, the time interval
 measured by the observer on their clock will be: <span
-class="math display">\[\Delta t = \gamma \Delta \tau\]</span></p>
+class="math display">\[\begin{equation}
+    \Delta t = \gamma \Delta \tau   
+\end{equation}\]</span></p>
 <p>where <span class="math inline">\(\gamma\)</span> is the normal gamma
 factor and <span class="math inline">\(\Delta \tau\)</span> is the time
 interval measured on the moving clock in that clock’s <em>rest
@@ -290,19 +282,23 @@ clock, which we will call <span class="math inline">\(S\)</span>). The
 first flash we will label event 1, and the second flash event 2.</p>
 <p>In <span class="math inline">\(S\)</span> the bulb is not moving, it
 is always at the same place, so we can say: <span
-class="math display">\[x_1 = x_2 = 0\]</span></p>
+class="math display">\[\begin{equation}
+    x_1 = x_2 = 0
+\end{equation}\]</span></p>
 <p>We’ll call the time of the first flash <span
 class="math inline">\(t_1 = 0\)</span> and the second flash <span
 class="math inline">\(t_2 = \Delta t\)</span>.</p>
 <p>Now let’s use the Lorentz transformations to figure out what someone
 who is moving with respect to the bulb, in frame <span
 class="math inline">\(S&#39;\)</span>, sees: <span
-class="math display">\[t&#39;_2 = \gamma(t_2 -
-\frac{ux_2}{c^2})\]</span></p>
+class="math display">\[\begin{equation}
+    t&#39;_2 = \gamma(t_2 - \frac{ux_2}{c^2})
+\end{equation}\]</span></p>
 <p>Since <span class="math inline">\(x_2=0\)</span> this is simply <span
-class="math display">\[t&#39;_2 = \Delta t&#39; = \gamma \Delta
-t.\]</span> This is the same as the time dilation equation (albeit with
-slightly different nomenclature).</p>
+class="math display">\[\begin{equation}
+t&#39;_2 = \Delta t&#39; = \gamma \Delta t.
+\end{equation}\]</span> This is the same as the time dilation equation
+(albeit with slightly different nomenclature).</p>
 <h2 data-number="4" id="solving-time-dilation-problems"><span
 class="header-section-number">4</span> Solving Time Dilation
 Problems</h2>
@@ -318,11 +314,11 @@ the time dilation equation, <span class="math inline">\(t=\gamma
 \tau\)</span>. First, we know that <span
 class="math inline">\(u=c/4\)</span> so we can calculate <span
 class="math inline">\(\gamma\)</span>: <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
 \gamma &amp;= \sqrt{\frac{1}{1-u^2/c^2} }\\
 &amp;= \sqrt{\frac{1}{1-(1/4)^2}} \\
 &amp;= 1.03
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <ul>
 <li><p>Define <span class="math inline">\(S\)</span> as the Earth rest
 frame, <span class="math inline">\(S&#39;\)</span> as the spaceship rest
@@ -344,13 +340,13 @@ unknown and not needed.</p></li>
 class="math inline">\(t&#39; = \gamma(t - ux/c^2)\)</span> and <span
 class="math inline">\(t = \gamma(t&#39; + ux&#39;/c^2)\)</span>. Since
 <span class="math inline">\(x\)</span> is unknown, use <span
-class="math display">\[\begin{aligned}
+class="math display">\[\begin{align}
     t &amp;= \gamma(t&#39; + ux&#39;/c^2) \\
     &amp;= \gamma(t&#39; + 0) \\
     &amp;= \gamma t&#39; \\
     1~\mathrm{yr} &amp;= 1.03t&#39;\\
     t&#39;&amp;= 0.97~\mathrm{yrs}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <p>If we want to start straight from the time dilation equation (<span
 class="math inline">\(t = \gamma \tau\)</span>), we need to be careful
 to work out which time is <span class="math inline">\(t\)</span> and
@@ -363,22 +359,18 @@ definition.</p>
 1, in this case, was the spaceship leaving Earth, and Event 2 was the
 spaceship arriving at its destination. For somebody on Earth, these two
 events are at different locations. For somebody on the spaceships these
-two events are at the same location. So, it is the spaceship that
-measures the proper time (<span class="math inline">\(\tau\)</span>). We
-therefore have:</p>
-<p><span class="math display">\[\begin{aligned}
+two events are at the same location. In the frame where the two events
+are at the same location we measure the proper time, <span
+class="math inline">\(\tau\)</span>. In this case, this is the
+spaceship. We therefore have:</p>
+<p><span class="math display">\[\begin{align}
 t &amp;= \gamma \tau \\
 1~\mathrm{yr} &amp;= (1.03)\tau \\
 \tau &amp;= 0.97~\mathrm{years}
-\end{aligned}\]</span></p>
-<p>Another way to think about it is that, for an observer on Earth, the
-spaceship is moving. Therefore the observer sees their moving clock run
-slow, i.e it will tick up less time than the clock on Earth.</p>
-<p>The confusion comes because the observer on the spaceship also sees
-the Earth’s clock run slow. The question doesn’t ask you about this, but
-you see how you can easily get it confused. <strong>So, if in doubt,
-start with the Lorentz transformations</strong>; providing you carefully
-define your reference frames then you can’t really go wrong.</p>
+\end{align}\]</span></p>
+<p>If in doubt, start with the Lorentz transformations; providing you
+carefully define your reference frames then you can’t really go
+wrong.</p>
 <h2 data-number="5" id="statement-of-length-contraction"><span
 class="header-section-number">5</span> Statement of Length
 Contraction</h2>
@@ -393,7 +385,9 @@ measured in its rest frame.</p>
 length of the object along the direction of motion will reduce by a
 factor of <span class="math inline">\(\gamma\)</span>:</p>
 <div class="framed">
-<p><span class="math display">\[L = \frac{L_0}{\gamma},\]</span></p>
+<p><span class="math display">\[\begin{equation}
+L = \frac{L_0}{\gamma},
+\end{equation}\]</span></p>
 </div>
 <p>where <span class="math inline">\(L_0\)</span> is the length of the
 object in its <em>rest frame</em>. This is called <strong>length
@@ -411,29 +405,42 @@ Contraction from Lorentz Equations</h2>
 class="math inline">\(S&#39;\)</span>, moving past a rod. We will call
 the rest frame of the rod <span class="math inline">\(S\)</span>. We
 will synchronise clocks as the observer passes the front of the rod, and
-call this event 1, so that: <span class="math display">\[x_1 = 0, \quad
-t_1 = 0, \quad x&#39;_1 = 0, \quad t&#39;_1 = 0\]</span> At exactly the
-same time, the moving observer measures the position of the back of the
-rod, <span class="math inline">\(x&#39;_2\)</span>. Their measurement of
-the length of the rod, <span class="math inline">\(L&#39;\)</span>, is
-<span class="math display">\[L&#39; = x&#39;_2 - x&#39;_1 = x&#39;_2 - 0
-= x&#39;_2\]</span></p>
+call this event 1, so that: <span
+class="math display">\[\begin{equation}
+x_1 = 0, \quad t_1 = 0, \quad x&#39;_1 = 0, \quad t&#39;_1 = 0
+\end{equation}\]</span> At exactly the same time, the moving observer
+measures the position of the back of the rod, <span
+class="math inline">\(x&#39;_2\)</span>. Their measurement of the length
+of the rod, <span class="math inline">\(L&#39;\)</span>, is <span
+class="math display">\[\begin{equation}
+L&#39; = x&#39;_2 - x&#39;_1 = x&#39;_2 - 0 = x&#39;_2
+\end{equation}\]</span></p>
 <p>Since the measurements must be made at the same time <span
-class="math display">\[t&#39;_1 = t&#39;_2 = 0\]</span></p>
+class="math display">\[\begin{equation}
+t&#39;_1 = t&#39;_2 = 0
+\end{equation}\]</span></p>
 <p>Finally, we know that in the rod’s rest frame the distance between
 the front and back of the rod is its length, i.e. <span
-class="math display">\[L = x_2 - x_1 = x_2 - 0 = x_2\]</span></p>
+class="math display">\[\begin{equation}
+L = x_2 - x_1 = x_2 - 0 = x_2
+\end{equation}\]</span></p>
 <p>Now we can use the Lorentz transformation: <span
-class="math display">\[x_2 = \gamma(x&#39;_2 + ut&#39;_2)\]</span> and
-since <span class="math inline">\(t&#39;_2 = 0\)</span>, we have <span
-class="math inline">\(x_2 = \gamma x&#39;_2\)</span> and hence: <span
-class="math display">\[x&#39;_2 = \frac{x_2}{\gamma},\]</span> or <span
-class="math display">\[L&#39; = \frac{L}{\gamma},\]</span> as we wanted.
-Now, you might wonder, what would happen if we used the inverse
-transform <span class="math display">\[x&#39;_2 = \gamma(x_2 -
-ut_2)\]</span> If we say <span class="math inline">\(t_2 = 0\)</span>
-then we would have <span class="math inline">\(x&#39;_2 = \gamma
-x_2\)</span> and so <span class="math inline">\(L&#39; = \gamma
+class="math display">\[\begin{equation}
+x_2 = \gamma(x&#39;_2 + ut&#39;_2)
+\end{equation}\]</span> and since <span class="math inline">\(t&#39;_2 =
+0\)</span>, we have <span class="math inline">\(x_2 = \gamma
+x&#39;_2\)</span> and hence: <span
+class="math display">\[\begin{equation}
+x&#39;_2 = \frac{x_2}{\gamma},
+\end{equation}\]</span> or <span class="math display">\[\begin{equation}
+L&#39; = \frac{L}{\gamma},
+\end{equation}\]</span> as we wanted. Now, you might wonder, what would
+happen if we used the inverse transform <span
+class="math display">\[\begin{equation}
+x&#39;_2 = \gamma(x_2 - ut_2)
+\end{equation}\]</span> If we say <span class="math inline">\(t_2 =
+0\)</span> then we would have <span class="math inline">\(x&#39;_2 =
+\gamma x_2\)</span> and so <span class="math inline">\(L&#39; = \gamma
 L\)</span>! rather than <span class="math inline">\(L&#39; =
 \frac{L}{\gamma}\)</span>, and they can’t both be right!</p>
 <p>The answer is that we have absolutely no business saying that <span
@@ -459,11 +466,11 @@ length of the train to be?</em></p>
 the length measured by any other observer moving relative to the train,
 to be less than this. In this case, <span class="math inline">\(\gamma
 =1.15\)</span> and so:</p>
-<p><span class="math display">\[\begin{aligned}
+<p><span class="math display">\[\begin{align}
 L &amp;= L_0/\gamma\\
 &amp;= (100~\mathrm{m})/1.15 \\
 &amp;= 87~ \mathrm{m}
-\end{aligned}\]</span></p>
+\end{align}\]</span></p>
 <h2 data-number="8" id="muon-flight-time"><span
 class="header-section-number">8</span> Muon Flight Time</h2>
 <p>An experimental demonstration of the effect of time dilation on Earth

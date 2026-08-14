@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Hughes</title>
+    <link rel="stylesheet" href="../simple.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="../research.html">Research</a>
+            <a href="../publications.html">Publications</a>
+            <a href="../lecture_notes/index.html">Lecture Notes</a>
+            <a href="../software.html">Software</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+
+    	<h1>PyFibreBundle</h1>
+    </header>
+    <main>
+
+        <p>Meeting a goal for 2022 (just!), we have the first stable release of PyFibreBundle now available for download. This is a Python package for working with fibre imaging bundles, particularly for endoscopic microscopy, but it might also be useful for endoscopy and other applications (please let me know if it is).</p>
+
+        <p>The simplest way to set up the package is:</p>
+
+        <pre>pip install pyfibrebundle</pre>
+
+        <p>Or you can download everything, including examples and tests, from GitHub: <a href="https://github.com/MikeHughesKent/PyFibreBundle">https://github.com/MikeHughesKent/PyFibreBundle</a>. Even if you're installing via pip, I recommend grabbing the examples and tests from GitHub as it's probably the easiest way to get started. The example image files used in the examples are in the <code>test/data</code> folder, so you should download <code>test</code> even if you don&apos;t want to run the tests. Detailed documentation is on Read the Docs: <a href="https://pyfibrebundle.readthedocs.io">https://pyfibrebundle.readthedocs.io</a>.</p>
+
+        <p>The package was developed as part of my lab's work on endoscopic microscopy, so the features are geared towards this application and my research interests. The core functionality is to take a raw image, crop to the bundle and remove the core pattern, as well as doing background subtraction and flat-fielding (normalisation). An example of doing that for an image of a USAF resolution target is here:</p>
+
+        <p><img class="wp-image-147 aligncenter" src="img/pyb_interp_example.png" alt="Image of USAF target through fibre bundle, showing core pattern, and same image after core removal by triangular linear interpolation. A zoom on a region of both images shows that the prominent core pattern can no longer be seen after processing." width="563" height="254" /></p>
+
+        <p>You can do some other simple bits of processing, such as spatial filtering. There are functions for locating all the cores, as well as identifying the fibre bundle as a whole. The <code>PyBundle</code> class simplifies using most of these lower-level functions. See <a href="https://pyfibrebundle.readthedocs.io/">the docs</a> for all the details.</p>
+
+        <p>One of the things I've been working on for a while is resolution enhancement using shifted versions of the image (see <a href="https://doi.org/10.1364/boe.9.004649">this paper</a>, for example). The <code>SuperRes</code> class allows you to register and combine the images using triangular linear interpolation. This is an example of combining eight images of a USAF target:</p>
+
+        <p><img class="wp-image-148 aligncenter" src="img/pyb_sr_example.png" alt="Two images of USAF resolution target through fibre bundle, showing a single image and a super-resolution image created from 8 shifted images. There is a zoom on Group 7 showing improved visibility of line patterns." width="548" height="277" /></p>
+
+        <p>The idea behind the package was that it would be used both for offline development work as well as powering the GUIs for our various fibre bundle endomicroscopy systems. It replaces a combination of Matlab (for offline work) and LabVIEW (for GUIs) which, for various reasons, I wanted to move away from. As a result, the package has to be both versatile (implementing everything we might want to do experimentally) and fast (for real-time imaging). It just about manages this, being competitive with our previous GUI (LabVIEW + NI Vision + DLLs made in C++/OpenCV) for core removal and mosaicing, achieving &gt;100 fps on some mediocre hardware (an Intel Core i5 laptop).</p>
+
+        <p>This is my first attempt to release a fully documented, pip-installable Python package, so all feedback and comments are welcome. Also, please give it a GitHub star!</p>
+
+        <p>Follow-up releases may include PyHoloscope (<a href="https://github.com/MikeHughesKent/PyHoloscope">already on GitHub, pre-release</a>) as well as our Python system for creating imaging system GUIs (Kent-CAS). Although making the latter useful for third parties will be a lot of work, so I would like to hear if there is interest.</p>
+        
+
+            
+    </main>
+
+
+</body>
+</html>
+
